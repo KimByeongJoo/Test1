@@ -83,9 +83,8 @@ public class FriendButton : MonoBehaviour
     }
 
     void OnClickFriendDeleteYes(string fid)
-    {
-        // ##############
-        FriendPanel.RequestDeleteFriend(fid);
+    {        
+        //FriendPanel.RequestDeleteFriend(fid);
 
         FriendPanel.RequestDeleteFriend2(fid);
 
@@ -108,10 +107,10 @@ public class FriendButton : MonoBehaviour
     public void OnClickCheckBox()
     {
         present_chk = present_Toggle.value;
-        FriendPanel.Instance.SetColorPresentSendButton();
 
-        FriendPanel.Instance.OnClickCheckBox(raw_friend_id, present_chk);
-        SetCheckBox(present_chk);
+        FriendPanel.Instance.OnClickCheckBox(raw_friend_id, present_Toggle.value);
+        FriendPanel.Instance.SetColorPresentSendButton2();
+        SetCheckBox(present_Toggle.value);
     }    
 
     public void SetCheckBox(bool chk)

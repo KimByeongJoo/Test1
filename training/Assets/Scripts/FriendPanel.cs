@@ -263,6 +263,7 @@ public class FriendPanel : Singleton<FriendPanel> {
         FriendData data = FindDataByFriendID(fid);
 
         data._deleteMask = true;
+        data._chkBox = false;
 
         wrap.WrapContent(true);
     }
@@ -298,16 +299,16 @@ public class FriendPanel : Singleton<FriendPanel> {
 
     public List<FriendData> GetPresentSelectedCheckBoxs2()
     {
-        List<FriendData> tempLst = new List<FriendData>();
+        List<FriendData> datas = new List<FriendData>();
 
-        for (int i = lstDatas.Count - 1; i >= 0; i--)
+        for(int i=0; i<lstDatas.Count; i++)
         {
-            if (lstDatas[i]._chkBox == true)
+            if(lstDatas[i]._chkBox)
             {
-                tempLst.Add(lstDatas[i]);
+                datas.Add(lstDatas[i]);
             }
         }
-        return tempLst;
+        return datas;
     }
 
     public List<FriendButton> GetPresentSelectedCheckBoxs()
@@ -336,6 +337,20 @@ public class FriendPanel : Singleton<FriendPanel> {
         {
             presentSendButton.color = Color.gray;
         }        
+    }
+
+    public void SetColorPresentSendButton2()
+    {
+        List<FriendData> selectedLst = GetPresentSelectedCheckBoxs2();
+
+        if (selectedLst.Count > 0)
+        {
+            presentSendButton.color = Color.white;
+        }
+        else
+        {
+            presentSendButton.color = Color.gray;
+        }
     }
 
     public void OnClickPresentSendButton()

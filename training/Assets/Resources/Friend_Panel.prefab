@@ -3284,7 +3284,6 @@ GameObject:
   - 65: {fileID: 6562424}
   - 114: {fileID: 11409428}
   - 114: {fileID: 11454334}
-  - 114: {fileID: 11457374}
   m_Layer: 20
   m_Name: present_button
   m_TagString: Untagged
@@ -8927,11 +8926,11 @@ MonoBehaviour:
   onDeselect: []
   onClick:
   - mTarget: {fileID: 11441258}
-    mMethodName: SetColorPresentSendButton
+    mMethodName: SetColorPresentSendButton2
     mParameters: []
     oneShot: 0
   - mTarget: {fileID: 11441258}
-    mMethodName: OnClickPresentSendButton
+    mMethodName: OnClickPresentSendButton2
     mParameters: []
     oneShot: 0
   onDoubleClick: []
@@ -15469,17 +15468,6 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!114 &11457374
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a930c997dc22e5c4cbe8e1c8da50338d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11457418
 MonoBehaviour:
   m_ObjectHideFlags: 1
