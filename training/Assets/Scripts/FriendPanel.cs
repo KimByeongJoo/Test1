@@ -244,19 +244,37 @@ public class FriendPanel : Singleton<FriendPanel> {
         {
             Instance._RequestDeleteFriend(fid);
         }
-    }
+    }   
 
     void _RequestDeleteFriend(string fid)
     {
-        for(int i = lst.Count - 1; i >= 0; i--)
+        for (int i = lst.Count - 1; i >= 0; i--)
         {
-            if(lst[i].raw_friend_id == fid)
+            if (lst[i].raw_friend_id == fid)
             {
                 lst[i].DisableButton();
-                return;               
+                return;
             }
-        } 
+        }
     }
+
+    void _RequestDeleteFriend2(string fid)
+    {
+        FriendData data = FindDataByFriendID(fid);
+
+        data._deleteMask = true;
+
+        wrap.WrapContent(true);
+    }
+
+    static public void RequestDeleteFriend2(string fid)
+    {
+        if (Instance != null)
+        {
+            Instance._RequestDeleteFriend2(fid);
+        }
+    }
+
 
     public void OnClickCheckBox(string raw_friend_id, bool chk)
     {

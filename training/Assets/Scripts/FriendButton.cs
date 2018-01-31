@@ -84,7 +84,10 @@ public class FriendButton : MonoBehaviour
 
     void OnClickFriendDeleteYes(string fid)
     {
+        // ##############
         FriendPanel.RequestDeleteFriend(fid);
+
+        FriendPanel.RequestDeleteFriend2(fid);
 
         // 친구 삭제 시 체크 해제
         present_chk = false;
