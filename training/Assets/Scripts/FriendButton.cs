@@ -35,7 +35,7 @@ public class FriendButton : MonoBehaviour
     [System.NonSerialized]
     public bool present_chk = false;
     
-    private void Start()
+    private void Awake()
     {
         uiButton = GetComponent<UIButton>();
     }
@@ -114,7 +114,7 @@ public class FriendButton : MonoBehaviour
     public void SetCheckBox(bool chk)
     {
         present_Toggle.value = chk;
-
+        
         if (chk)
         {
             uiButton.normalSprite = "achievement_bg_active";

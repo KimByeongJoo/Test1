@@ -274,6 +274,7 @@ public class UIWrapContent : MonoBehaviour
     virtual public void WrapContent(bool forceUpdate = false)
     {
         float extents = itemSize * mChildren.Count * 0.5f;
+        
         Vector3[] corners = mPanel.worldCorners;
 
         for (int i = 0; i < 4; ++i)

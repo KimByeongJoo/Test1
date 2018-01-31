@@ -82,6 +82,8 @@ public class FriendPanel : Singleton<FriendPanel> {
             }
         }
 
+        wrap.SortBasedOnScrollMovement();
+
         //init sort
         SortingID();
 
@@ -260,7 +262,8 @@ public class FriendPanel : Singleton<FriendPanel> {
     {
         FriendData data = FindDataByFriendID(raw_friend_id);
 
-        data._chkBox = chk;
+        if(data != null)
+            data._chkBox = chk;
     }
 
     public FriendData FindDataByFriendID(string fid)
