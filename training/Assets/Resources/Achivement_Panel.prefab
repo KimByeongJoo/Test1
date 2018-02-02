@@ -5798,11 +5798,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickDailyTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11409080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8166,6 +8162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrap: {fileID: 11406110}
+  grid_tab: {fileID: 11418840}
   scrollView: {fileID: 11433456}
   current_tab: 0
 --- !u!114 &11429922
@@ -8192,11 +8189,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickBattleTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11430178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8504,11 +8497,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickConstructTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11433316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9541,11 +9530,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickPlayerTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11444552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12016,11 +12001,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickHeroTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11468106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13727,11 +13708,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 11429782}
-    mMethodName: OnClickWeeklyTab
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &11483336
 MonoBehaviour:
   m_ObjectHideFlags: 1

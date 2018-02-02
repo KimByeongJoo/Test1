@@ -8,6 +8,8 @@ public class AchivementPanel : MonoBehaviour {
     [SerializeField]
     UIWrapContent wrap;
     [SerializeField]
+    UIGrid grid_tab;
+    [SerializeField]
     UIScrollView scrollView;
     
     [SerializeField]
@@ -20,6 +22,33 @@ public class AchivementPanel : MonoBehaviour {
     }
     void Start()
     {
+        var buttons = grid_tab.GetComponentsInChildren<UIButton>();
+        
+        EventDelegate del1 = new EventDelegate(this, "OnClickTab");
+        del1.parameters[0].value = Main.AchivementTab.Weekly;
+        buttons[0].onClick.Add(del1);
+
+        EventDelegate del2 = new EventDelegate(this, "OnClickTab");
+        del2.parameters[0].value = Main.AchivementTab.Daily;
+        buttons[1].onClick.Add(del2);
+
+        EventDelegate del3 = new EventDelegate(this, "OnClickTab");
+        del3.parameters[0].value = Main.AchivementTab.Hero;
+        buttons[2].onClick.Add(del3);
+
+        EventDelegate del4 = new EventDelegate(this, "OnClickTab");
+        del4.parameters[0].value = Main.AchivementTab.Battle;
+        buttons[3].onClick.Add(del4);
+
+        EventDelegate del5 = new EventDelegate(this, "OnClickTab");
+        del5.parameters[0].value = Main.AchivementTab.Construct;
+        buttons[4].onClick.Add(del5);
+
+        EventDelegate del6 = new EventDelegate(this, "OnClickTab");
+        del6.parameters[0].value = Main.AchivementTab.Player;
+        buttons[5].onClick.Add(del6);
+
+        OnClickTab(current_tab);
         WrapSetting();
     }
 
@@ -88,8 +117,8 @@ public class AchivementPanel : MonoBehaviour {
         else if (conditionData[rand]._reward_gold != 0)
             reward_value = conditionData[rand]._reward_gold;
         
-        string _desciption = typeData[lstIndex]._description;
-        _desciption = _desciption.Replace("{0}", conditionData[rand]._counter.ToString());
+        string _description = typeData[lstIndex]._description;
+        _description = _description.Replace("{0}", conditionData[rand]._counter.ToString());
 
         int reward_kingdom_or_exp = conditionData[rand]._reward_kingdom_point;
         string sprite_name = "crown";
@@ -100,38 +129,13 @@ public class AchivementPanel : MonoBehaviour {
             sprite_name = "player_exp";
         }
 
-        button.Set(typeData[lstIndex]._name, _desciption,
+        button.Set(typeData[lstIndex]._name, _description,
             reward_kingdom_or_exp, sprite_name, reward_value);        
     }
 
-    public void OnClickWeeklyTab()
+    public void OnClickTab(Main.AchivementTab tab)
     {
-        current_tab = Main.AchivementTab.Weekly;
-        WrapSetting();
-    }
-    public void OnClickDailyTab()
-    {
-        current_tab = Main.AchivementTab.Daily;
-        WrapSetting();
-    }
-    public void OnClickHeroTab()
-    {
-        current_tab = Main.AchivementTab.Hero;
-        WrapSetting();
-    }
-    public void OnClickPlayerTab()
-    {
-        current_tab = Main.AchivementTab.Player;
-        WrapSetting();
-    }
-    public void OnClickBattleTab()
-    {
-        current_tab = Main.AchivementTab.Battle;
-        WrapSetting();
-    }
-    public void OnClickConstructTab()
-    {
-        current_tab = Main.AchivementTab.Construct;
+        current_tab = tab;
         WrapSetting();
     }
 }

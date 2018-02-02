@@ -71,4 +71,3 @@ public class AskPanel : MonoBehaviour {
             scrollView.ResetPosition();
     }
 }
-
