@@ -1,0 +1,177 @@
+id,name,order,daily,weekly,tab,category,description,option,google,gamecenter,disabled,sprite
+daily-clear-daily,숙제의 달인,1,1,,,clear-daily,모든 일일임무를 완료하세요,,,,,tree
+daily-win-campaign,전쟁 기계,2,1,,,counter,시나리오 일반 전투에서 {0}번 승리하세요,move campaignlist,,,,tree
+daily-win-elite-campaign,전투의 신,3,1,,,counter,시나리오 정예 전투에서 {0}번 승리하세요,"move campaign,elite",,,,tree
+daily-win-arena,투기장의 영웅,4,1,,,counter,투기장에서 {0}번 참여하세요,"move click_object_tag,Button,colosseum",,,,tree
+daily-ladder,장수대전의 영웅,5,1,,,counter,장수대전에 {0}번 참여하세요,"move click_object_tag,Button,ladder",,,,tree
+daily-win-crusade,토벌의 대가,6,1,,,counter,토벌전에서 {0}번 참여하세요,"move click_object_tag,Button,crusade",,,,tree
+daily-boss,보스 사냥꾼,7,1,,,counter,보스전에 {0}번 참여하세요,"move click_object_tag,Button,boss",,,,tree
+daily-upgrade-skill,일일 책략 교습소,8,1,,,counter,장수의 책략을 {0}번 높이세요,move heroui,,,1,tree
+daily-enchant-item,대장장이,9,1,,,counter,대장간에서 무기와 방어구를 {0}번 강화하세요,"move execute_building_menu,forge",,,1,tree
+daily-upgrade-item,연장이 좋아야,10,1,,,counter,장수의 장비를 {0}번 승급하세요,move heroui,,,1,tree
+daily-open-party-hero,연회 중독,11,1,,,counter,장수 연회로 장수 등용서를 {0}장 획득하세요,move partyroom,,,,tree
+daily-enhanceup-hero,강화의 대가,12,1,,,counter,연무장에서 장수를 {0}번 강화하세요,"move execute_building_menu,tourney",,,,tree
+daily-gradeup-hero,승급의 대가,13,1,,,counter,연무장에서 장수를 3성 이상으로 승급하세요,"move execute_building_menu,tourney",,,,tree
+daily-levelup-hero,전수의 대가,14,1,,,counter,연무장에서 장수 전수에 {0}명의 장수나 등용서를 사용하세요,"move execute_building_menu,tourney",,,,tree
+weekly-clear-weekly,과제의 달인,1,,1,,clear-weekly,모든 주간 임무를 완료하세요,,,,,tree
+weekly-win-campaign,전쟁 그 자체,2,,1,,counter,시나리오 일반 전투에서 {0}번 승리하세요,move campaignlist,,,,tree
+weekly-win-elite-campaign,전투의 귀신,3,,1,,counter,시나리오 정예 전투에서 {0}번 승리하세요,"move campaign,elite",,,,tree
+weekly-win-arena,투기장의 거성,4,,1,,counter,투기장에서 {0}번 승리하세요,"move click_object_tag,Button,colosseum",,,,tree
+weekly-ladder,장수대전의 거성,5,,1,,counter,장수대전에 {0}번 참여하세요,"move click_object_tag,Button,ladder",,,,tree
+weekly-win-boss,보스 학살자,6,,1,,counter,보스전에서 {0}번 승리하세요,"move click_object_tag,Button,boss",,,,tree
+weekly-win-crusade,토벌의 거장,7,,1,,counter,토벌전에서 {0}번 승리하세요,"move click_object_tag,Button,crusade",,,,tree
+weekly-win-alliance,연합전의 대가,8,,1,,counter,연합전 전투에서 {0}번 승리하세요,"move worldmap
+worldoption alliance",,,,tree
+weekly-win-dungeon,미궁 정복,9,,1,,counter,미궁 {0}층을 돌파하세요,"move click_object_tag,Button,dungeon",,,,tree
+weekly-open-party-hero-cash,연회의 별,10,,1,,counter,고급 장수 연회로 장수를 {0}명 이상 획득하세요,move partyroom,,,,tree
+weekly-gradeup-hero-5,승급의 거장,11,,1,,counter,연무장에서 장수 {0}명을 5성 이상으로 승급시키세요,"move execute_building_menu,tourney",,,,tree
+level-up,신분 상승,,,,player,counter,군주 레벨을 {0}까지 올리세요,,,,,tree
+level-gold,두꺼비 3! 6! 9!,,,,player,counter,군주 레벨을 {0}까지 올리고 두꺼비를 모으세요,,,,,tree
+win-campaign,승전고를 울려라,,,,battle,counter,시나리오 전투에서 누적 {0}승을 달성하세요,"move campaign,normal",,,,tree
+clear-campaign,역사 공부,,,,battle,campaign,{0} 시나리오를 완료하세요,"move campaign,normal",,,,tree
+win-bio,위인전 탐독,,,,battle,counter,평전 전투에서 누적 {0}승을 달성하세요,"move biography
+worldoption biography",,,,tree
+clear-bio,영웅 시대,,,,battle,biography,{0} 평전을 완료하세요,"move biography
+worldoption biography",,,,tree
+perfect-bio,거성 승천,,,,battle,biography,{0} 평전에서 모든 별을 획득하세요.,"move biography
+worldoption biography",,,,tree
+win-trial,시련은 있어도 실패는 없다,,,,battle,counter,시련에서 누적 {0}승을 달성하세요,"move trial
+worldoption trial",,,,tree
+win-rebel,국지 방어,,,,battle,counter,침략군을 {0}번 물리치세요,move worldmap,CgkI2ZO3uPMQEAIQCg,,,tree
+clear-region,장수의 길,,,,battle,counter,도시 {0}개를 점령하세요.,move worldmap,,,,tree
+unite-kingdom,황제의 길,,,,battle,counter,모든 도시를 점령해서 천하를 통일하세요,"hide_slider
+move worldmap",,,,tree
+negotiate-rebel,협상의 제왕,,,,battle,counter,침략군을 돈으로 {0}번 매수하세요,move worldmap,,,,tree
+governor,태수 임명,,,,player,counter,태수를 {0}명 임명하세요,move worldmap,CgkI2ZO3uPMQEAIQEQ,,,tree
+win-arena,투기장 승리,,,,battle,counter,투기장에서 {0}승을 획득하세요,"move click_object_tag,Button,colosseum",,,,tree
+arena-serial-win,투기장 승부사,,,,battle,counter,투기장에서 {0}연승을 하세요,"move click_object_tag,Button,colosseum",,,,tree
+win-ladder,장수대전 승리,,,,battle,counter,장수대전에서 누적 {0}승을 달성하세요,"move click_object_tag,Button,ladder",,,,tree
+win-championship,천하제일 장수대전 정규전 승리,,,,battle,counter,천하제일 장수대전 정규전에서 누적 {0}승을 달성하세요,"move focus_worldmap_spot,champ
+worldoption championship",,,,tree
+win-crusade,토벌전 승리,,,,battle,counter,토벌전에서 누적 {0}승을 달성하세요,"move click_object_tag,Button,crusade",,,,tree
+clear-crusade,토벌 종결자,,,,battle,counter,토벌전 전체 승리를 {0}번을 완료하세요,"move click_object_tag,Button,crusade",,,,tree
+win-boss,보스전 승리,,,,battle,counter,보스전에서 누적 {0}승을 달성하세요,"move click_object_tag,Button,boss",CgkI2ZO3uPMQEAIQEA,,,tree
+win-alliance,연합전 승리,,,,battle,counter,연합전에서 누적 {0}승을 달성하세요,"move worldmap
+worldoption alliance",,,,tree
+win-guild-battle,군단전 승리,,,,battle,counter,군단전에서 누적 {0}승을 달성하세요,,,,,tree
+win-dungeon,미궁 탐험,,,,battle,counter,미궁에서 누적 {0}승을 달성하세요,"move click_object_tag,Button,dungeon",,,,tree
+clear-dungeon,미궁 정복,,,,battle,counter,미궁 정복을 {0}번을 완료하세요,"move click_object_tag,Button,dungeon",,,,tree
+levelup-relic,보물 승급,,,,battle,counter,보물을 {0}번 승급하세요,,,,,tree
+enchant-rune,보패 강화,,,,battle,counter,보패를 {0}번 강화하세요,move heroui,,,,tree
+win-raid,공격대 전투 승리,,,,battle,counter,공격대 전투에서 누적 {0}승을 달성하세요,move worldmap,,,,tree
+upgrade-headquarter,본영 증축,,,,construct,counter,본영을 {0}레벨까지 증축하세요,"move focus_building_upgrade,headquarter",,,,tree
+construct-farm,부농의 길,,,,construct,counter,새로운 밭을 {0}개 개간하세요,"move popup_construction,farm",CgkI2ZO3uPMQEAIQDg,,,tree
+upgrade-farm,농지 개량,,,,construct,counter,밭을 {0}레벨까지 개량하세요,"move focus_building_upgrade,farm
+building_check farm,farm6",,,,tree
+construct-granary,식량창고 건설,,,,construct,counter,식량창고를 {0}개 건설하세요,"move popup_construction,granary",,,,tree
+upgrade-granary,식량창고 확장,,,,construct,counter,식량창고를 {0}레벨까지 증축하세요,"move focus_building_upgrade,granary
+building_check granary",,,,tree
+construct-mine,광맥 탐사,,,,construct,counter,금광을 {0}개 건설하세요,"move popup_construction,mine",,,,tree
+upgrade-mine,깊이 더 깊이,,,,construct,counter,금광을 {0}레벨까지 개발하세요,"move focus_building_upgrade,mine",,,,tree
+construct-warehouse,보물창고 건설,,,,construct,counter,보물창고를 {0}개 건설하세요,"move popup_construction,warehouse",,,,tree
+upgrade-warehouse,보물창고 확장,,,,construct,counter,보물창고를 {0}레벨까지 확장하세요,"move focus_building_upgrade,warehouse
+building_check warehouse",,,,tree
+construct-alchemy,약재상 건설,,,,construct,counter,약재상을 건설하세요,"move popup_construction,alchemy",,,,tree
+construct-spa,온천 건설,,,,construct,counter,온천을 건설하세요,"move popup_construction,spa",,,,tree
+construct-rampart,성벽 증설,,,,construct,counter,성벽을 {0}개 증설하세요,"move popup_construction,rampart",,,,tree
+construct-school,태학 건설,,,,construct,counter,태학을 {0}개 건설하세요,"move popup_construction,school",,,,tree
+construct-guest-house,영빈관 건설,,,,construct,counter,영빈관을 건설하세요,"move popup_construction,guest-house",,,,tree
+construct-hero-ground,장수전시대 건설,,,,construct,counter,장수전시대를 {0}개 건설하세요,"move popup_construction,hero-ground",,,,tree
+construct-basecamp-shop,상가 분양,,,,construct,counter,상점을 건설하세요,"move popup_construction,basecamp-shop",,,,tree
+construct-forge,대장간 건설,,,,construct,counter,대장간을 건설하세요,"move popup_construction,forge",,,,tree
+construct-guildcastle,군단성 건설,,,,construct,counter,군단성을 건설하세요,"move popup_construction,guildcastle",,,,tree
+construct-granary-cash,화려한 식량창고 건설,,,,construct,counter,화려한 식량창고를 {0}개 건설하세요,"move popup_construction,granary-cash",,,,tree
+upgrade-granary-cash,화려한 식량창고 확장,,,,construct,counter,화려한 식량창고를 {0}레벨까지 증축하세요,"move focus_building_upgrade,granary-cash
+building_check granary-cash",,,,tree
+construct-warehouse-cash,화려한 보물창고 건설,,,,construct,counter,화려한 보물창고를 {0}개 건설하세요,"move popup_construction,warehouse-cash",,,,tree
+upgrade-warehouse-cash,화려한 보물창고 확장,,,,construct,counter,화려한 보물창고를 {0}레벨까지 증축하세요,"move focus_building_upgrade,warehouse-cash
+building_check warehouse-cash",,,,tree
+construct-trainingyard,훈련장 건설,,,,construct,counter,훈련장을 건설하세요,"move popup_construction,trainingyard",,,,tree
+upgrade-trainingyard,훈련장 확장,,,,construct,counter,훈련장을 {0}레벨까지 증축하세요,"move focus_building_upgrade,trainingyard
+building_check trainingyard",,,,tree
+destroy-obstacle,지역 개발,,,,construct,counter,영지의 숲과 바위를 {0}번 제거하세요.,move focus_obstacle,,,,tree
+upgrade-item,장비 장착,,,,hero,counter,장수의 무기나 방어구를 {0}번 장착하세요,move heroui,,,,tree
+upgrade-skill,책략 강화,,,,hero,counter,장수의 책략을 {0}번 강화하세요,move heroui,,,,tree
+create-hero-with-token,호패 수집가,,,,hero,counter,"정예, 천하통일, 고급 상점에서 장수 호패를 수집해서 {0}명의 장수를 등용하세요",move hero_token,,,,tree
+levelup-hero,전수 중독,,,,hero,counter,연무장에서 장수 전수에 {0}명의 장수나 등용서를 사용하세요,"move execute_building_menu,tourney
+building_check tourney",CgkI2ZO3uPMQEAIQFA,,,tree
+enhanceup-hero,강화 중독,,,,hero,counter,연무장에서 장수 강화를 {0}번 완료하세요,"move execute_building_menu,tourney
+building_check tourney",CgkI2ZO3uPMQEAIQCw,,,tree
+gradeup-hero,승급 중독,,,,hero,counter,연무장에서 장수 승급을 {0}번 완료하세요,"move execute_building_menu,tourney
+building_check tourney",CgkI2ZO3uPMQEAIQEw,,,tree
+transcend-hero,초월 중독,,,,hero,counter,연무장에서 장수 초월을 {0}번 완료하세요,"move execute_building_menu,tourney
+building_check tourney",CgkI2ZO3uPMQEAIQDw,,,tree
+fusion-hero,합성 중독,,,,hero,counter,연무장에서 장수 합성을 {0}번 완료하세요,"move execute_building_menu,tourney
+building_check tourney",,,,tree
+train-hero,훈련 중독,,,,hero,counter,훈련장에서 장수 훈련을 {0}번 완료하세요,"move execute_building_menu,trainingyard
+building_check trainingyard",,,1,tree
+collect-hero,인재 모집,,,,hero,collect-hero,장수를 {0}명 수집하세요,,,,,tree
+open-party-item,보물 상자 수집,,,,hero,counter,보물 상자를 누적 {0}회 열어보세요,move partyroom,,,,tree
+open-party-hero,장수 연회 개최,,,,hero,counter,장수 연회를 누적 {0}회 개최하세요,move partyroom,CgkI2ZO3uPMQEAIQFQ,,,tree
+awaken-hero,신비한 힘,,,,hero,counter,연무장에서 {0}명의 장수를 초월 각성시키세요,,,,,
+extract-hero,숭고한 열정,,,,hero,counter,연무장에서 장수 분해를 {0}번 완료하세요,,,,,
+levelup-element,속성 강화,,,,hero,counter,장수의 속성 강화를 {0}번 완료하세요,move heroui,,,,tree
+facebook-mapping,페이스북 연동,,,,player,facebook-mapping,페이스북을 연동하여 계정을 안전하게 보호하세요.,move gameconfig,,,1,
+facebook-invite,페이스북 친구 초대,,,,player,facebook-invite,페이스북 친구를 {0}명 초대하세요,no_achv,,,,
+levelup-package,레벨업 패키지 구매,,,,player,levelup-package,레벨업 패키지 보상,no_achv,,,,
+levelup-package-2,레벨업 패키지 2 구매,,,,player,levelup-package-2,레벨업 패키지 보상,no_achv,,,,
+levelup-package-3,레벨업 패키지 3 구매,,,,player,levelup-package-3,레벨업 패키지 보상,no_achv,,,,
+vip-level,VIP 승급,,,,vip,vip-level,VIP 승급 보상,no_achv,,,,
+clear-campaign-star-normal-1,별 수집가 1,,,,battle,counter,시나리오 1장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-2,별 수집가 2,,,,battle,counter,시나리오 2장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-3,별 수집가 3,,,,battle,counter,시나리오 3장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-4,별 수집가 4,,,,battle,counter,시나리오 4장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-5,별 수집가 5,,,,battle,counter,시나리오 5장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-6,별 수집가 6,,,,battle,counter,시나리오 6장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-7,별 수집가 7,,,,battle,counter,시나리오 7장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-8,별 수집가 8,,,,battle,counter,시나리오 8장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-9,별 수집가 9,,,,battle,counter,시나리오 9장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-10,별 수집가 10,,,,battle,counter,시나리오 10장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-11,별 수집가 11,,,,battle,counter,시나리오 11장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-12,별 수집가 12,,,,battle,counter,시나리오 12장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-13,별 수집가 13,,,,battle,counter,시나리오 13장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-14,별 수집가 14,,,,battle,counter,시나리오 14장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-15,별 수집가 15,,,,battle,counter,시나리오 15장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-16,별 수집가 16,,,,battle,counter,시나리오 16장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-17,별 수집가 17,,,,battle,counter,시나리오 17장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-18,별 수집가 18,,,,battle,counter,시나리오 18장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-19,별 수집가 19,,,,battle,counter,시나리오 19장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-20,별 수집가 20,,,,battle,counter,시나리오 20장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-21,별 수집가 21,,,,battle,counter,시나리오 21장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-22,별 수집가 22,,,,battle,counter,시나리오 22장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-23,별 수집가 23,,,,battle,counter,시나리오 23장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-24,별 수집가 24,,,,battle,counter,시나리오 24장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-25,별 수집가 25,,,,battle,counter,시나리오 25장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-26,별 수집가 26,,,,battle,counter,시나리오 26장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-27,별 수집가 27,,,,battle,counter,시나리오 27장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-28,별 수집가 28,,,,battle,counter,시나리오 28장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-normal-29,별 수집가 29,,,,battle,counter,시나리오 29장의 일반 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-1,정예 별 수집가 1,,,,battle,counter,시나리오 1장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-2,정예 별 수집가 2,,,,battle,counter,시나리오 2장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-3,정예 별 수집가 3,,,,battle,counter,시나리오 3장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-4,정예 별 수집가 4,,,,battle,counter,시나리오 4장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-5,정예 별 수집가 5,,,,battle,counter,시나리오 5장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-6,정예 별 수집가 6,,,,battle,counter,시나리오 6장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-7,정예 별 수집가 7,,,,battle,counter,시나리오 7장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-8,정예 별 수집가 8,,,,battle,counter,시나리오 8장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-9,정예 별 수집가 9,,,,battle,counter,시나리오 9장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-10,정예 별 수집가 10,,,,battle,counter,시나리오 10장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-11,정예 별 수집가 11,,,,battle,counter,시나리오 11장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-12,정예 별 수집가 12,,,,battle,counter,시나리오 12장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-13,정예 별 수집가 13,,,,battle,counter,시나리오 13장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-14,정예 별 수집가 14,,,,battle,counter,시나리오 14장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-15,정예 별 수집가 15,,,,battle,counter,시나리오 15장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-16,정예 별 수집가 16,,,,battle,counter,시나리오 16장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-17,정예 별 수집가 17,,,,battle,counter,시나리오 17장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-18,정예 별 수집가 18,,,,battle,counter,시나리오 18장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-19,정예 별 수집가 19,,,,battle,counter,시나리오 19장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-20,정예 별 수집가 20,,,,battle,counter,시나리오 20장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-21,정예 별 수집가 21,,,,battle,counter,시나리오 21장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-22,정예 별 수집가 22,,,,battle,counter,시나리오 22장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-23,정예 별 수집가 23,,,,battle,counter,시나리오 23장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-24,정예 별 수집가 24,,,,battle,counter,시나리오 24장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-25,정예 별 수집가 25,,,,battle,counter,시나리오 25장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-26,정예 별 수집가 26,,,,battle,counter,시나리오 26장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-27,정예 별 수집가 27,,,,battle,counter,시나리오 27장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-28,정예 별 수집가 28,,,,battle,counter,시나리오 28장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree
+clear-campaign-star-elite-29,정예 별 수집가 29,,,,battle,counter,시나리오 29장의 정예 전투에서 별 {0}개를 얻으세요,no_achv,,,,tree

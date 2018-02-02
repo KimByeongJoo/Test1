@@ -1,5 +1,5 @@
 //	LumenWorks.Framework.IO.CSV.CsvReader.DataReaderValidations
-//	Copyright (c) 2005 Sébastien Lorion
+//	Copyright (c) 2005 S?astien Lorion
 //
 //	MIT license (http://en.wikipedia.org/wiki/MIT_License)
 //

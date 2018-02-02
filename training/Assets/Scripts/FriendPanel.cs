@@ -45,7 +45,7 @@ public class FriendPanel : Singleton<FriendPanel> {
         lstDatas = new List<FriendData>();
         
         //wrap dummy data setting
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1; i++)
         {
             int rand = Random.Range(0, 100000);
             FriendData data = new FriendData();

@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Main : Singleton<Main> {
     public GameObject uiTarget;
     
+    public enum AchivementTab
+    {
+        Weekly,
+        Daily,
+        Hero,
+        Player,
+        Battle,
+        Construct
+    }
+
     public AskPanel MakeAskPanel()
     {
         AskPanel askPanel = MakeObjectToTarget("Ask_Panel").GetComponent<AskPanel>();
