@@ -10,19 +10,26 @@ public class GlobalNavigationPanel : MonoBehaviour
     [SerializeField]
     UISprite bar;
 
-    bool isOpen = false;
+    bool isOpen = true;    
 
     public void OnOffGlobalBar()
     {
         if (isOpen)
         {
-            bar.rightAnchor.absolute = -30;
+            Vector3 pos = bar.transform.localPosition ;
+            pos.x += bar.width;
+            bar.transform.localPosition = pos;
+
+            //bar.rightAnchor.absolute = -30;
             arrow.flip = UIBasicSprite.Flip.Nothing;
             isOpen = false;
         }
         else
         {
-            bar.rightAnchor.absolute = 128;
+            Vector3 pos = bar.transform.localPosition;
+            pos.x -= bar.width;
+            bar.transform.localPosition = pos;
+
             arrow.flip = UIBasicSprite.Flip.Horizontally;
             isOpen = true;
         }

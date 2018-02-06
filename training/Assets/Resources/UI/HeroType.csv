@@ -1,0 +1,1300 @@
+id,name,nickname,category,kingdom,class,gender,tier,rarity,portrait,playable,hide_card,disabled,element
+ga_hu,가후,문화,hero,han,wizard,,S,SS,hero_ga_hu,1,,,dark
+gan_ong,간옹,헌화,hero,chock,wizard,,B,B,hero_gan_ong,1,,,poison
+gam_nyeong,감녕,흥패,hero,oh,tank,,S,SSS,hero_gam_nyeong,1,,,physic
+gang_yu,강유,백약,hero,chock,ranger,,S,SS,hero_gang_yu,1,,,dark
+go_ram,고람,,hero,han,tank,,S,AA,hero_go_ram,1,,,lightning
+go_sun,고순,,hero,han,ranger,,S,S,hero_go_sun,1,,,fire
+gong_son_wol,공손월,,hero,han,tank,,B,B,hero_gong_son_wol,1,,,poison
+gong_son_chan,공손찬,백규,hero,han,paladin,,S,AA,hero_gong_son_chan,1,,,divine
+gong_yung,공융,문거,hero,han,wizard,,B,B,hero_bard_d_han,1,,,ice
+gwak_ga,곽가,봉효,hero,wii,wizard,,S,SS,hero_gwak_ga,1,,,dark
+gwak_sa,곽사,,hero,han,rogue,,B,B,hero_gwak_sa,1,,,poison
+gwak_hoe,곽회,백제,hero,wii,rogue,,B,B,hero_rogue2_b_wii,1,,,poison
+gwan_u,관우,운장,hero,chock,tank,,S,SSS,hero_gwan_u,1,,,lightning
+gwan_pyeong,관평,,hero,chock,tank,,S,AA,hero_gwan_pyeong,1,,,lightning
+gwan_hae,관해,,hero,etc,tank,,S,SS,hero_gwan_hae,1,,,lightning
+gwan_heung,관흥,안국,hero,chock,tank,,B,B,hero_gwan_heung,1,,,physic
+goe_ryang,괴량,자유,hero,han,wizard,,A,A,hero_wizard_b_han,1,,,poison
+goe_wol,괴월,이도,hero,han,wizard,,A,A,hero_goe_wol,1,,,lightning
+geum_hwan_sam_gyeol,금환삼결,,hero,etc,tank,,B,B,hero_paladin_n_b_etc,1,,,lightning
+gi_ryeong,기령,,hero,han,rogue,,S,S,hero_rogue2_b_han,1,,,poison
+naeng_po,냉포,,hero,han,ranger,,A,A,hero_ranger_b_han,1,,,ice
+no_suk,노숙,자경,hero,oh,wizard,,S,SS,hero_no_suk,1,,,lightning
+noe_dong,뇌동,,hero,chock,tank,,B,B,hero_noe_dong,1,,,physic
+neung_jo,능조,,hero,oh,tank,,A,A,hero_neung_jo,1,,,lightning
+neung_tong,능통,공적,hero,oh,tank,,S,AA,hero_neung_tong,1,,,dark
+dae_gyo,대교,,hero,oh,wizard,female,S,S,hero_dae_gyo,1,,,divine
+dae_rae_dong_ju,대래동주,,hero,etc,tank,,D,C,hero_paladin_n_d_etc,1,,,physic
+do_gyeom,도겸,공조,hero,han,wizard,,B,B,hero_wizard_c_han,1,,,fire
+dong_do_na,동도나,,hero,etc,tank,,C,C,hero_tank_n_c_etc,1,,,physic
+dong_min,동민,숙영,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,lightning
+dong_yun,동윤,휴소,hero,chock,wizard,,A,A,hero_dong_yun,1,,,lightning
+dong_tak,동탁,중영,hero,han,paladin,,S,SS,hero_dong_tak,1,,,dark
+dong_hwa,동화,유재,hero,chock,wizard,,B,B,hero_dong_hwa,1,,,ice
+deung_ae,등애,사재,hero,wii,rogue,,S,AA,hero_deung_ae,1,,,ice
+deung_ji,등지,백묘,hero,chock,wizard,,B,B,hero_wizard_b_chock,1,,,poison
+ma_dae,마대,,hero,chock,tank,,S,AA,hero_ma_dae,1,,,physic
+ma_deung,마등,수성,hero,han,rogue,,B,B,hero_ma_deung,1,,,poison
+ma_ryang,마량,계상,hero,chock,wizard,,A,A,hero_ma_ryang,1,,,poison
+ma_sok,마속,유상,hero,chock,ranger,,A,A,hero_ma_sok,1,,,ice
+ma_cho,마초,맹기,hero,chock,rogue,,S,SS,hero_ma_cho,1,,,lightning
+man_chong,만총,백녕,hero,wii,rogue,,S,S,hero_man_chong,1,,,lightning
+mang_a_jang,망아장,,hero,etc,tank,,B,B,hero_tank_b_etc,1,,,dark
+maeng_dal,맹달,자도,hero,chock,rogue,,S,S,hero_maeng_dal,1,,,ice
+maeng_u,맹우,,hero,etc,ranger,,C,C,hero_ranger_c_etc,1,,,physic
+maeng_hoek,맹획,,hero,etc,paladin,,S,SSS,hero_maeng_hoek,1,,,poison
+mok_rok_dae_wang,목록대왕,,hero,etc,rogue,,C,C,hero_rogue_c_etc,1,,,poison
+mu_an_guk,무안국,,hero,han,tank,,A,A,hero_mu_an_guk,1,,,dark
+mun_bing,문빙,중업,hero,wii,rogue,,S,AA,hero_mun_bing,1,,,ice
+mun_ang,문앙,,hero,wii,rogue,,S,SS,hero_mun_ang,1,,,ice
+mun_chu,문추,,hero,han,tank,,S,S,hero_mun_chu,1,,,dark
+mi_bang,미방,자방,hero,chock,wizard,,C,C,hero_mi_bang,1,,,fire
+mi_chuk,미축,자중,hero,chock,wizard,,B,B,hero_mi_chuk,1,,,ice
+ban_bong,반봉,,hero,han,rogue,,B,B,hero_rogue2_b_han,1,,,poison
+ban_jang,반장,문규,hero,oh,tank,,S,AA,hero_ban_jang,1,,,physic
+bang_deok,방덕,영명,hero,wii,tank,,S,S,hero_bang_deok,1,,,dark
+bang_tong,방통,사원,hero,chock,wizard,,S,S,hero_bang_tong,1,,,fire
+bae_won_so,배원소,,hero,chock,rogue,,C,C,hero_rogue_d_chock,1,,,ice
+beop_jeong,법정,효직,hero,chock,wizard,,S,S,hero_beop_jeong,1,,,fire
+bo_jeul,보즐,자산,hero,oh,wizard,,B,B,hero_wizard_b_oh,1,,,fire
+bu_sa_in,부사인,군의,hero,chock,rogue,,C,C,hero_bu_sa_in,1,,,poison
+bi_ui,비의,문위,hero,chock,wizard,,A,A,hero_wizard_b_chock,1,,,poison
+sa_ma_ga,사마가,,hero,etc,tank,,A,A,hero_sa_ma_ga,1,,,poison
+sa_ma_sa,사마사,자원,hero,wii,paladin,,S,S,hero_sa_ma_sa,1,,,dark
+sa_ma_so,사마소,자상,hero,wii,paladin,,A,A,hero_sa_ma_so,1,,,dark
+sa_ma_yeom,사마염,안세,hero,wii,paladin,,A,A,hero_sa_ma_yeom,1,,,divine
+sa_ma_ui,사마의,중달,hero,wii,wizard,,S,SS,hero_sa_ma_ui,1,,,lightning
+sang_chong,상총,,hero,chock,rogue,,C,C,hero_rogue_c_chock,1,,,lightning
+seo_seo,서서,원직,hero,chock,wizard,,S,AA,hero_seo_seo,1,,,ice
+seo_seong,서성,문향,hero,oh,tank,,A,A,hero_seo_seong,1,,,physic
+seo_hwang,서황,공명,hero,wii,tank,,S,AA,hero_seo_hwang,1,,,fire
+so_gyo,소교,,hero,oh,wizard,female,S,AA,hero_so_gyo,1,,,divine
+son_geon,손건,공우,hero,chock,wizard,,B,B,hero_son_geon,1,,,fire
+son_gyeon,손견,문대,hero,oh,tank,,S,SS,hero_son_gyeon,1,,,divine
+son_gwon,손권,중모,hero,oh,paladin,,S,SS,hero_son_gwon,1,,,lightning
+son_deung,손등,자고,hero,oh,paladin,,A,A,hero_son_deung,1,,,divine
+son_sang_hyang,손상향,,hero,oh,rogue,female,A,A,hero_son_sang_hyang,1,,,dark
+son_chaek,손책,백부,hero,oh,rogue,,S,SS,hero_son_chaek,1,,,fire
+song_heon,송헌,,hero,han,tank,,B,B,hero_tank_b_han,1,,,poison
+sun_u_gyeong,순우경,중간,hero,han,tank,,B,B,hero_tank_c_han,1,,,lightning
+sun_uk,순욱,문약,hero,wii,wizard,,S,S,hero_sun_uk,1,,,ice
+sun_yu,순유,공증,hero,wii,wizard,,S,AA,hero_sun_yu,1,,,poison
+sin_bi,신비,자치,hero,wii,wizard,,B,B,hero_wizard_d_wii,1,,,lightning
+sin_heon_yeong,신헌영,,hero,wii,wizard,female,A,A,hero_sin_heon_yeong,1,,,divine
+sim_bae,심배,정남,hero,han,wizard,,A,A,hero_wizard_b_han,1,,,poison
+a_hoe_nam,아회남,,hero,etc,rogue,,B,B,hero_rogue_b_etc,1,,,dark
+ak_jin,악진,문겸,hero,wii,tank,,S,AA,hero_ak_jin,1,,,fire
+an_ryang,안량,,hero,han,rogue,,S,SS,hero_an_ryang,1,,,lightning
+yang_bu,양부,,hero,wii,wizard,,B,B,hero_wizard_c_wii,1,,,fire
+yang_su,양수,덕조,hero,wii,wizard,,A,A,hero_wizard_b_wii,1,,,fire
+yang_ho,양호,숙자,hero,wii,ranger,,S,AA,hero_yang_ho,1,,,lightning
+eom_baek_ho,엄백호,,hero,han,rogue,,C,C,hero_eom_baek_ho,1,,,lightning
+eom_an,엄안,,hero,chock,ranger,,S,AA,hero_eom_an,1,,,poison
+yeo_dae,여대,정공,hero,oh,rogue,,B,B,hero_rogue2_b_oh,1,,,poison
+yeo_mong,여몽,자명,hero,oh,rogue,,S,SS,hero_yeo_mong,1,,,dark
+yeo_po,여포,봉선,hero,han,tank,,S,SSS,hero_yeo_po,1,,,dark
+ol_dol_gol,올돌골,,hero,etc,rogue,,A,A,hero_ol_dol_gol,1,,,poison
+wang_rang,왕랑,경흥,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,physic
+wang_reung,왕릉,언운,hero,wii,rogue,,C,C,hero_rogue_c_wii,1,,,fire
+wang_ssang,왕쌍,자전,hero,wii,tank,,C,C,hero_tank_d_wii,1,,,physic
+wang_yun,왕윤,자사,hero,han,wizard,,B,B,hero_wizard_c_han,1,,,poison
+wang_pyeong,왕평,자균,hero,chock,rogue,,S,AA,hero_wang_pyeong,1,,,poison
+yo_hwa,요화,원검,hero,chock,rogue,,B,B,hero_rogue_b_chock,1,,,lightning
+u_geum,우금,문칙,hero,wii,tank,,A,A,hero_u_geum,1,,,physic
+u_beon,우번,중상,hero,oh,wizard,,C,C,hero_wizard_c_oh,1,,,dark
+won_sang,원상,현보,hero,han,paladin,,B,B,hero_won_sang,1,,,dark
+won_so,원소,본초,hero,han,paladin,,S,AA,hero_won_so,1,,,divine
+won_sul,원술,공로,hero,han,paladin,,A,A,hero_won_sul,1,,,divine
+won_hui,원희,현혁,hero,han,rogue,,C,C,hero_rogue_d_han,1,,,lightning
+wi_yeon,위연,문장,hero,chock,tank,,S,S,hero_wi_yeon,1,,,ice
+yu_bong,유봉,,hero,chock,rogue,,B,B,hero_rogue2_b_chock,1,,,fire
+yu_bi,유비,현덕,hero,chock,paladin,,S,SS,hero_yu_bi,1,,,divine
+yu_seon,유선,공사,hero,chock,paladin,,C,C,hero_yu_seon,1,,,divine
+yu_eon,유언,군랑,hero,han,wizard,,B,B,hero_wizard_b_han,1,,,poison
+yu_u,유우,백안,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,poison
+yu_jang,유장,계옥,hero,han,wizard,,B,B,hero_yu_jang,1,,,lightning
+yu_pyo,유표,경승,hero,han,wizard,,B,B,hero_wizard_c_han,1,,,ice
+yuk_son,육손,백언,hero,oh,ranger,,S,SS,hero_yuk_son,1,,,fire
+yuk_hang,육항,유절,hero,oh,rogue,,S,S,hero_yuk_hang,1,,,fire
+i_gak,이각,치연,hero,han,rogue,,C,C,hero_i_gak,1,,,physic
+i_eom,이엄,정방,hero,chock,rogue,,A,A,hero_rogue2_b_chock,1,,,poison
+i_yu,이유,,hero,han,wizard,,S,AA,hero_i_yu,1,,,fire
+i_jeon,이전,만성,hero,wii,rogue,,A,A,hero_rogue_b_wii,1,,,lightning
+jang_gak,장각,,hero,etc,paladin,,S,S,hero_jang_gak,1,,,lightning
+jang_goeng,장굉,자강,hero,oh,wizard,,B,B,hero_wizard_d_oh,1,,,poison
+jang_ryang,장량,,hero,etc,tank,,A,A,hero_jang_ryang,1,,,poison
+jang_ro,장로,공기,hero,han,paladin,,A,A,hero_jang_ro,1,,,dark
+jang_ryo,장료,문원,hero,wii,tank,,S,SSS,hero_jang_ryo,1,,,dark
+jang_bo,장보,,hero,etc,ranger,,A,A,hero_jang_bo,1,,,poison
+jang_bi,장비,익덕,hero,chock,tank,,S,SS,hero_jang_bi,1,,,fire
+jang_so,장소,자포,hero,oh,wizard,,A,A,hero_jang_so,1,,,ice
+jang_song,장송,자교,hero,chock,wizard,,B,B,hero_wizard_c_chock,1,,,dark
+jang_su,장수,,hero,han,tank,,A,A,hero_jang_su,1,,,physic
+jang_wan,장완,공염,hero,chock,wizard,,A,A,hero_wizard_b_chock,1,,,fire
+jang_ik,장익,백공,hero,chock,rogue,,B,B,hero_rogue2_c_chock,1,,,poison
+jang_po,장포,,hero,chock,tank,,A,A,hero_jang_po,1,,,dark
+jang_hap,장합,준예,hero,wii,tank,,S,S,hero_jang_hap,1,,,ice
+jeo_su,저수,,hero,han,wizard,,A,A,hero_jeo_su,1,,,poison
+jeon_ye,전예,국양,hero,wii,ranger,,A,A,hero_ranger_b_wii,1,,,fire
+jeon_wi,전위,,hero,wii,tank,,S,SS,hero_jeon_wi,1,,,physic
+jeon_pung,전풍,원호,hero,han,wizard,,S,S,hero_jeon_pung,1,,,dark
+jeon_hae,전해,,hero,han,rogue,,C,C,hero_rogue_c_han,1,,,lightning
+jeong_bo,정보,덕모,hero,oh,rogue,,A,A,hero_rogue2_b_oh,1,,,lightning
+jeong_bong,정봉,승연,hero,oh,tank,,A,A,hero_jeong_bong,1,,,physic
+jeong_uk,정욱,중덕,hero,wii,wizard,,S,AA,hero_jeong_uk,1,,,lightning
+jeong_won_ji,정원지,,hero,etc,tank,,A,A,hero_jeong_won_ji,1,,,physic
+je_gal_gak,제갈각,원손,hero,oh,wizard,,B,B,hero_wizard_c_oh,1,,,poison
+je_gal_geun,제갈근,자유,hero,oh,wizard,,S,AA,hero_je_gal_geun,1,,,fire
+je_gal_ryang,제갈량,공명,hero,chock,wizard,,S,SS,hero_je_gal_ryang,1,,,lightning
+je_gal_tan,제갈탄,공휴,hero,wii,wizard,,B,B,hero_wizard_b_wii,1,,,lightning
+jo_mu,조무,대영,hero,oh,tank,,A,A,hero_jo_mu,1,,,physic
+jo_bi,조비,자환,hero,wii,paladin,,S,AA,hero_jo_bi,1,,,dark
+jo_sik,조식,자건,hero,wii,wizard,,A,A,hero_jo_sik,1,,,poison
+jo_un,조운,자룡,hero,chock,rogue,,S,SSS,hero_jo_un,1,,,physic
+jo_in,조인,자효,hero,wii,ranger,,S,S,hero_jo_in,1,,,ice
+jo_jo,조조,맹덕,hero,wii,paladin,,S,SS,hero_jo_jo,1,,,dark
+jo_jin,조진,자단,hero,wii,ranger,,A,A,hero_crossbow_b_wii,1,,,lightning
+jo_chang,조창,자문,hero,wii,rogue,,A,A,hero_jo_chang,1,,,physic
+jo_hong,조홍,자렴,hero,wii,rogue,,B,B,hero_rogue_b_wii,1,,,lightning
+jong_yo,종요,원상,hero,wii,wizard,,C,C,hero_bard_c_wii,1,,,fire
+jong_hoe,종회,사계,hero,wii,rogue,,A,A,hero_rogue2_b_wii,1,,,poison
+ju_yu,주유,공근,hero,oh,wizard,,S,SS,hero_ju_yu,1,,,fire
+ju_chang,주창,,hero,chock,rogue,,B,B,hero_rogue_c_chock,1,,,fire
+ju_chi,주치,군리,hero,oh,tank,,C,C,hero_tank_n_c_oh,1,,,ice
+ju_tae,주태,유평,hero,oh,ranger,,S,AA,hero_ju_tae,1,,,fire
+jin_gung,진궁,공대,hero,han,wizard,,S,S,hero_jin_gung,1,,,fire
+jin_deung,진등,원룡,hero,wii,wizard,,A,A,hero_jin_deung,1,,,poison
+jin_rim,진림,공장,hero,han,wizard,,B,B,hero_wizard_b_han,1,,,fire
+jin_sik,진식,,hero,chock,ranger,,C,C,hero_ranger_d_chock,1,,,lightning
+jin_tae,진태,현백,hero,wii,rogue,,A,A,hero_rogue2_b_wii,1,,,poison
+chae_mo,채모,덕규,hero,wii,ranger,,C,C,hero_ranger_c_wii,1,,,ice
+chae_yeom,채염,문희,hero,wii,wizard,female,A,A,hero_chae_yeom,1,,,divine
+chae_hwa,채화,,hero,wii,ranger,,D,C,hero_ranger_c_wii,1,,,physic
+cho_seon,초선,,hero,han,rogue,female,S,AA,hero_cho_seon,1,,,divine
+chu_ssi,추부인,,hero,han,wizard,female,S,AA,hero_chu_ssi,1,,,divine
+chuk_yung_bu_in,축융부인,,hero,etc,tank,female,S,AA,hero_chuk_yung_bu_in,1,,,poison
+ta_sa_dae_wang,타사대왕,,hero,etc,wizard,,C,C,hero_wizard_c_etc,1,,,fire
+tae_sa_ja,태사자,자의,hero,oh,ranger,,S,SS,hero_tae_sa_ja,1,,,divine
+ha_jin,하진,수고,hero,han,tank,,C,C,hero_tank_d_han,1,,,lightning
+ha_hu_don,하후돈,원양,hero,wii,tank,,S,SS,hero_ha_hu_don,1,,,lightning
+ha_hu_sang,하후상,백인,hero,wii,tank,,B,B,hero_tank_n_b_wii,1,,,lightning
+ha_hu_yeon,하후연,묘재,hero,wii,ranger,,S,SS,hero_ha_hu_yeon,1,,,dark
+ha_hu_eun,하후은,,hero,wii,ranger,,C,C,hero_ranger_c_wii,1,,,poison
+ha_hu_pae,하후패,중권,hero,chock,tank,,B,B,hero_tank_b_chock,1,,,physic
+ha_hu_hyeon,하후현,태초,hero,wii,wizard,,B,B,hero_wizard_c_wii,1,,,fire
+hak_so,학소,백도,hero,wii,ranger,,S,AA,hero_hak_so,1,,,lightning
+han_dang,한당,의공,hero,oh,ranger,,B,B,hero_ranger_b_oh,1,,,ice
+han_su,한수,문약,hero,han,ranger,,A,A,hero_ranger_b_han,1,,,ice
+han_ho,한호,원사,hero,han,ranger,,C,C,hero_ranger_c_han,1,,,lightning
+heo_yu,허유,자원,hero,wii,wizard,,B,B,hero_wizard_c_wii,1,,,dark
+heo_jeo,허저,중강,hero,wii,tank,,S,S,hero_heo_jeo,1,,,fire
+hyeong_do_yeong,형도영,,hero,han,tank,,B,B,hero_tank_n_b_han,1,,,physic
+ho_geo_a,호거아,,hero,han,tank,,A,A,hero_ho_geo_a,1,,,physic
+hwa_ung,화웅,,hero,han,ranger,,S,AA,hero_hwa_ung,1,,,fire
+hwa_heum,화흠,자어,hero,wii,wizard,,C,C,hero_bard_d_wii,1,,,fire
+hwang_gae,황개,공복,hero,oh,rogue,,S,AA,hero_hwang_gae,1,,,fire
+hwang_gwon,황권,공형,hero,chock,wizard,,B,B,hero_wizard_d_chock,1,,,lightning
+hwang_wol_yeong,황월영,,hero,chock,tank,female,S,AA,hero_hwang_wol_yeong,1,,,divine
+hwang_jo,황조,,hero,han,ranger,,A,A,hero_ranger_b_han,1,,,physic
+hwang_chung,황충,한승,hero,chock,ranger,,S,SS,hero_hwang_chung,1,,,fire
+hu_seong,후성,,hero,han,ranger,,B,B,hero_ranger_b_han,1,,,lightning
+yu_byeok,유벽,,hero,han,ranger,,B,B,hero_ranger_b_han,1,,,poison
+jang_yeon,장연,,hero,han,tank,,B,B,hero_tank_b_han,1,,,physic
+han_seom,한섬,,hero,han,ranger,,C,C,hero_ranger_c_han,1,,,lightning
+byeon_hui,변희,,hero,etc,wizard,,C,C,hero_ywizard,1,,,lightning
+jang_man_seong,장만성,,hero,etc,rogue,,D,C,hero_yrogue2,1,,,poison
+geum_seon,금선,,hero,han,paladin,,B,B,hero_geum_seon,1,,,dark
+gong_ji,공지,,hero,han,ranger,,C,C,hero_ranger_c_han,1,,,poison
+geum_ui,금의,,hero,han,wizard,,D,C,hero_wizard_d_han,1,,,poison
+han_hyeon,한현,,hero,han,paladin,,B,B,hero_han_hyeon,1,,,divine
+jo_beom,조범,,hero,han,paladin,,B,B,hero_jo_beom,1,,,divine
+beon_ssi,변황후,,hero,wii,rogue,female,S,AA,hero_beon_ssi,1,,,poison
+po_ryung,포륭,,hero,han,rogue,,C,C,hero_rogue2_c_han,1,,,physic
+jin_eung,진응,,hero,han,rogue,,C,C,hero_rogue2_c_han,1,,,lightning
+yu_do,유도,,hero,han,paladin,,B,B,hero_yu_do,1,,,dark
+yu_hyeon,유현,,hero,han,rogue,,C,C,hero_rogue_c_han,1,,,lightning
+yeom_sang,염상,,hero,han,wizard,,B,B,hero_wizard_d_han,1,,,dark
+yang_hong,양홍,,hero,han,wizard,,B,B,hero_wizard_b_han,1,,,poison
+i_pung,이풍,,hero,han,ranger,,C,C,hero_ranger_c_han,1,,,lightning
+gong_son_beom,공손범,,hero,han,wizard,,C,C,hero_gong_son_beom,1,,,poison
+gong_son_sok,공손속,,hero,han,tank,,C,C,hero_gong_son_sok,1,,,poison
+ma_wan,마완,,hero,han,tank,,C,C,hero_tank_c_han,1,,,poison
+yeom_haeng,염행,,hero,han,rogue,,B,B,hero_rogue2_b_han,1,,,dark
+yang_heung,양흥,,hero,han,wizard,,C,C,hero_wizard_c_han,1,,,lightning
+seong_gong_yeong,성공영,,hero,han,ranger,,C,C,hero_ranger_c_han,1,,,physic
+yu_ban,유반,,hero,han,tank,,C,C,hero_tank_n_c_han,1,,,physic
+wang_wi,왕위,,hero,han,tank,,C,C,hero_paladin_n_c_han,1,,,physic
+go_seung,고승,,hero,etc,tank,,D,C,hero_ytank,1,,,physic
+pa_jae,파재,,hero,etc,tank,,D,C,hero_ytank_n,1,,,poison
+jo_hong2,조홍,,hero,etc,rogue,,D,C,hero_yrogue,1,,,physic
+deung_mu,등무,,hero,etc,ranger,,D,C,hero_yranger,1,,,lightning
+son_jung,손중,,hero,etc,ranger,,D,C,hero_ycrossbow,1,,,lightning
+han_chung,한충,,hero,etc,wizard,,D,C,hero_ywizard,1,,,poison
+ma_won_ui,마원의,,hero,etc,wizard,,D,C,hero_ywizard,1,,,fire
+baek_yo,백요,,hero,etc,tank,,D,C,hero_ytank,1,,,physic
+wu_dok,우독,,hero,etc,tank,,D,C,hero_ytank,1,,,dark
+hyo_go,휴고,,hero,etc,tank,,D,C,hero_ytank_n,1,,,physic
+eo_bu_ra,어부라,,hero,han,tank,,D,C,hero_tank_d_han,1,,,poison
+yuk_gang,육강,,hero,han,tank,,C,C,hero_tank_d_han,1,,,physic
+jang_young,장영,,hero,han,tank,,D,C,hero_tank_d_han,1,,,poison
+jin_hoeng,진횡,,hero,han,tank,,D,C,hero_tank_d_han,1,,,poison
+jak_yung,작융,,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,physic
+seol_lae,설례,,hero,han,tank,,D,C,hero_paladin_n_d_han,1,,,physic
+bun_nung,번능,,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,physic
+u_mi,우미,,hero,han,wizard,,D,C,hero_wizard_d_han,1,,,poison
+you_yo,유요,,hero,han,wizard,,D,C,hero_wizard_c_han,1,,,lightning
+eom_yeo,엄여,,hero,han,tank,,D,C,hero_tank_d_han,1,,,poison
+ju_heon,주흔,,hero,han,tank,,D,C,hero_tank_d_han,1,,,physic
+i_mong,이몽,,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,physic
+wang_bang,왕방,,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,lightning
+choi_yong,최용,,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,lightning
+jang_jae,장제,,hero,han,tank,,D,C,hero_paladin_n_d_han,1,,,lightning
+beon_jo,번조,,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,lightning
+i_rak,이락,,hero,han,tank,,D,C,hero_tank_d_han,1,,,poison
+ho_jae,호재,,hero,han,rogue,,D,C,hero_rogue2_b_han,1,,,lightning
+noe_bak,뇌박,,hero,han,tank,,D,C,hero_tank_d_han,1,,,lightning
+jin_ran,진란,,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,ice
+jang_pae,장패,,hero,han,tank,,C,C,hero_paladin_n_d_han,1,,,lightning
+yang_bong,양봉,,hero,han,rogue,,C,C,hero_rogue2_c_han,1,,,physic
+gyo_yu,교유,,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,lightning
+jang_hun,장훈,,hero,han,wizard,,D,C,hero_wizard_d_han,1,,,poison
+cha_ju,차주,,hero,han,rogue,,D,C,hero_rogue2_c_han_1,1,,,physic
+yu_dae,유대,,hero,han,tank,,D,C,hero_paladin_n_d_han,1,,,lightning
+wang_chung,왕충,,hero,han,rogue,,D,C,hero_rogue2_d_han,1,,,lightning
+sa_hwan,사환,,hero,wii,rogue,,D,C,hero_rogue2_d_wii,1,,,ice
+hu_nae,후내,,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,poison
+jo_seo,조성,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,poison
+i_chu,이추,,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,poison
+seong_ryum,성렴,,hero,han,rogue,,C,C,hero_rogue_d_han,1,,,lightning
+han_maeng,한맹,,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,lightning
+jang_gi,장기,,hero,han,tank,,D,C,hero_tank_d_han,1,,,lightning
+mok_won_jin,목원진,,hero,han,rogue,,C,C,hero_rogue_d_han,1,,,lightning
+han_geo_ja,한거자,,hero,han,ranger,,C,C,hero_ranger_d_han,1,,,physic
+yeo_yi_hwang,여위황,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+won_dam,원담,,hero,han,tank,,C,C,hero_tank_d_han,1,,,poison
+go_gan,고간,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,ice
+gwak_won,곽원,,hero,han,tank,,C,C,hero_paladin_n_d_han,1,,,physic
+chuk_oh,축오,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,poison
+ma_yeon,마연,,hero,han,tank,,D,C,hero_paladin_n_d_han,1,,,lightning
+jang_oe,장의,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+yun_hae,윤해,,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,lightning
+jeo_heok,저곡,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+yu_hun,유훈,,hero,han,wizard,,D,C,hero_wizard_b_han,1,,,lightning
+yu_hae,유해,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+heo_geon,허건,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,ice
+jang_da,장다,,hero,han,tank,,D,C,hero_tank_n_d_han,1,,,physic
+yu_ho,유호,,hero,han,wizard,,D,C,hero_wizard_d_han,1,,,poison
+deung_ryong,등룡,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,poison
+jin_chwi,진취,,hero,han,tank,,D,C,hero_paladin_n_d_han,1,,,physic
+chae_yang,채양,,hero,han,ranger,,D,C,hero_ranger_d_han,1,,,lightning
+jin_gi,진기,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+ak_chwi,악취,,hero,han,rogue,,D,C,hero_rogue_d_han,1,,,lightning
+jwa_ja,좌자,,hero,han,wizard,,B,B,hero_jwa_ja,,,,
+woo_gil,우길,,hero,han,wizard,,A,A,hero_woo_gil,,,,
+yeo_ryeong_gi,여령기,,hero,han,tank,female,S,AA,hero_yeo_ryeong_gi,1,,,dark
+seo_hwa,서화,,hero,etc,wizard,female,S,S,hero_seo_hwa,1,,,poison
+hwang_so,황소,,hero,etc,tank,,S,S,hero_hwang_so,1,,,lightning
+ha_man,하만,,hero,etc,rogue,,S,AA,hero_ha_man,1,,,lightning
+ha_ui,하의,,hero,etc,ranger,,S,S,hero_ha_ui,1,,,lightning
+ju_yeon,주연,의봉,hero,oh,tank,,S,S,hero_ju_yeon,1,,,fire
+hwa_ta,화타,,hero,"wii
+chock
+oh
+han
+etc",wizard,,S,SS,hero_hwa_ta,1,,,divine
+no_sik,노식,자간,hero,han,wizard,,S,AA,hero_no_sik,1,,,divine
+jang_chun_hwa,장춘화,,hero,wii,wizard,female,S,AA,hero_jang_chun_hwa,1,,,dark
+jang_sung_chae,장성채,,hero,chock,wizard,female,S,AA,hero_jang_sung_chae,1,,,poison
+jeon_jong,전종,자황,hero,oh,tank,,S,S,hero_jeon_jong,1,,,lightning
+nam_hwa_no_seon,남화노선,,hero,han,wizard,,S,AA,hero_nam_hwa_no_seon,,,,
+dap_don,답돈,,hero,etc,ranger,,S,SS,hero_dap_don,1,,,poison
+mun_heum,문흠,중약,hero,wii,rogue,,S,AA,hero_mun_heum,1,,,dark
+ga_bi_neung,가비능,,hero,etc,tank,,S,SS,hero_ga_bi_neung,1,,,physic
+yu_hyup,유협,백화,hero,han,paladin,,S,S,hero_yu_hyup,1,,,dark
+oh_ban,오반,원웅,hero,chock,rogue,,S,AA,hero_oh_ban,1,,,dark
+gwak_jun,곽준,중막,hero,chock,ranger,,S,S,hero_gwak_jun,1,,,ice
+sa_ma_jun,사마준,자장,hero,wii,ranger,,S,S,hero_sa_ma_jun,1,,,fire
+ju_hwan,주환,휴목,hero,oh,ranger,,S,S,hero_ju_hwan,1,,,ice
+son_hwan,손환,숙무,hero,oh,rogue,,S,AA,hero_son_hwan,1,,,ice
+ha_tae_hu,하태후,,hero,han,rogue,female,S,S,hero_ha_tae_hu,1,,,poison
+dok_bal_su_gi_neung,독발수기능,,hero,etc,rogue,,S,SS,hero_dok_bal_su_gi_neung,1,,,poison
+gyeon_hwang_hu,견황후,,hero,wii,ranger,female,S,S,hero_gyeon_hui,1,,,lightning
+na_heon,나헌,영칙,hero,chock,rogue,,S,S,hero_na_heon,1,,,fire
+do_hwang,도황,,hero,oh,ranger,,S,S,hero_do_hwang,1,,,divine
+seo_young,서영,,hero,han,tank,,S,S,hero_seo_young,1,,,fire
+yu_sim,유심,,hero,chock,paladin,,S,S,hero_yu_sim,1,,,divine
+son_no_ban,손노반,,hero,oh,paladin,female,S,S,hero_son_no_ban,1,,,dark
+jang_yang,장양,,hero,han,ranger,,S,AA,hero_jang_yang,1,,,poison
+wang_i,왕이,,hero,wii,rogue,female,S,SS,hero_wang_i,1,,,lightning
+jang_je,장제,자통,hero,wii,wizard,,S,S,hero_jang_je,1,,,ice
+gwan_en_byoung,관은병,,hero,chock,tank,female,S,SS,hero_gwan_en_byoung,1,,,lightning
+mi_bu_in,미부인,,hero,chock,ranger,female,S,S,hero_mi_bu_in,1,,,lightning
+bo_yeon_sa,보연사,,hero,oh,tank,female,S,SS,hero_bo_yeon_sa,1,,,divine
+jong_ri_mok,종리목,자간,hero,oh,wizard,,S,S,hero_jong_ri_mok,1,,,divine
+hwang_bo_sung,황보숭,의진,hero,han,tank,,S,SS,hero_hwang_bo_sung,1,,,physic
+dong_tae_hu,동태후,,hero,han,rogue,female,S,SS,hero_dong_tae_hu,1,,,fire
+gong_son_yeon,공손연,문의,hero,etc,tank,,S,S,hero_gong_son_yeon,1,,,poison
+hwa_man,화만,,hero,etc,wizard,female,S,SS,hero_hwa_man,1,,,poison
+ye_hyoung,예형,정평,hero,han,wizard,,S,S,hero_ye_hyoung,1,,,divine
+ma_un_rok,마운록,,hero,chock,tank,female,S,S,hero_ma_un_rok,1,,,fire
+yuk_jeok,육적,,hero,oh,rogue,,S,S,hero_yuk_jeok,1,,,divine
+ja_ha_seon_in,자하선인,,hero,han,wizard,,S,SS,hero_ja_ha_seon_in,,,,dark
+baek_gi,백기,,hero,ancient,tank,,S,SSS,hero_baek_gi,1,,,dark
+jin_si_hwang,진시황,,hero,ancient,paladin,,S,SS,hero_jin_si_hwang,1,,,divine
+yeo_bul_wi,여불위,,hero,ancient,wizard,,S,SS,hero_yeo_bul_wi,1,,,divine
+wang_jeon,왕전,,hero,ancient,rogue,,S,SS,hero_wang_jeon,1,,,physic
+young_gyu,영규,,hero,ancient,tank,female,S,SS,hero_young_gyu,1,,,dark
+yang_dan_hwa,양단화,,hero,ancient,wizard,female,S,SS,hero_yang_dan_hwa,1,,,divine
+oh_ja_seo,오자서,,hero,ancient,ranger,,S,SS,hero_oh_ja_seo,1,,,physic
+ak_ui,악의,,hero,ancient,tank,,S,SS,hero_ak_ui,1,,,divine
+yeom_pa,염파,,hero,ancient,tank,,S,SS,hero_yeom_pa,1,,,physic
+i_mok,이목,,hero,ancient,rogue,,S,SSS,hero_i_mok,1,,,dark
+hyeong_ga,형가,,hero,ancient,rogue,,S,S,hero_hyeong_ga,1,,,physic
+oh_gi,오기,,hero,ancient,ranger,,S,S,hero_oh_gi,1,,,dark
+ha_o_ma_ru,하오마루,,hero,samurai,tank,,S,SSS,hero_haomaru,1,,,physic
+cha_r_lot_te,샤를로트,,hero,samurai,tank,female,S,SS,hero_charlotte,1,,,divine
+han_zo,한조,핫토리,hero,samurai,rogue,,S,SS,hero_hanzo,1,,,physic
+mi_zu_ki,미즈키,라쇼진,hero,samurai,wizard,female,S,SS,hero_mizuki,1,,,dark
+shi_zu_ma_ru,시즈마루,히사메,hero,samurai,rogue,,S,SS,hero_shizumaru,1,,,divine
+ri_mu_ru_ru,리무루루,,hero,samurai,wizard,female,S,SS,hero_rimururu,1,,,ice
+kyo_shi_ro,쿄시로,센료,hero,samurai,tank,,S,SS,hero_kyoshiro,1,,,fire
+a_ma_ku_sa,아마쿠사,시로 도키사다,hero,samurai,paladin,,S,SS,hero_amakusa,1,,,dark
+mi_na,미나,마지키나,hero,samurai,ranger,female,S,SS,hero_mi_na,1,,,divine
+na_ko_ru_ru,나코루루,,hero,samurai,rogue,female,S,SSS,hero_nakoruru,1,,,divine
+gen_ju_ro,겐쥬로,키바가미,hero,samurai,tank,,S,SS,hero_genjuro,1,,,physic
+u_kyo,우쿄,타치바나,hero,samurai,rogue,,S,SS,hero_ukyo,1,,,physic
+gal_ford,갈포드,,hero,samurai,rogue,,S,SS,hero_galford,1,,,lightning
+zan_ku_rou,잔쿠로,미나즈키,hero,samurai,tank,,S,SS,hero_zankurou,1,,,dark
+u_mi_in,우미인,,hero,chohan,ranger,female,S,SS,hero_u_mi_in,1,,,divine
+hang_u,항우,,hero,chohan,tank,,S,SSS,hero_hang_u,1,,,lightning
+hang_ryang,항량,,hero,chohan,rogue,,S,SS,hero_hang_ryang,1,,,divine
+beom_jeung,범증,,hero,chohan,wizard,,S,SS,hero_beom_jeung,1,,,lightning
+young_po,영포,,hero,chohan,tank,,S,SS,hero_young_po,1,,,physic
+ui_jae,의제,,hero,chohan,paladin,,S,S,hero_ui_jae,1,,,divine
+han_sin,한신,,hero,chohan,rogue,,S,SSS,hero_han_sin,1,,,lightning
+beon_kwae,번쾌,,hero,chohan,tank,,S,SS,hero_beon_kwae,1,,,fire
+paeng_wol,팽월,,hero,chohan,tank,,S,SS,hero_paeng_wol,1,,,ice
+yeo_tae_hu,여태후,,hero,chohan,ranger,female,S,SS,hero_yeo_tae_hu,1,,,dark
+zang_ryang,장량,,hero,chohan,wizard,female,S,SS,hero_zang_ryang,1,,,lightning
+yu_bang,유방,,hero,chohan,paladin,,S,SS,hero_yu_bang,1,,,dark
+so_ha,소하,,hero,chohan,wizard,,S,S,hero_so_ha,1,,,dark
+i_sin,이신,,hero,ancient,rogue,,S,SS,hero_i_sin,1,,,fire
+chun_sin_gun,춘신군,,hero,ancient,paladin,,S,SS,hero_chun_sin_gun,1,,,dark
+mong_mu,몽무,,hero,ancient,tank,,S,SS,hero_mong_mu,1,,,physic
+in_sang_yeo,인상여,,hero,ancient,wizard,,S,S,hero_in_sang_yeo,1,,,divine
+chang_hae_yeok_sa,창해역사,,hero,chohan,tank,female,S,S,hero_chang_hae_yeok_sa,1,,,physic
+jin_seung,진승,,hero,chohan,rogue,,S,SS,hero_jin_seung,1,,,poison
+jang_han,장한,,hero,chohan,tank,,S,SS,hero_jang_han,1,,,lightning
+yong_jeo,용저,,hero,chohan,rogue,,S,S,hero_yong_jeo,1,,,ice
+seo_si,서시,,hero,"ancient
+chohan",wizard,female,S,SSS,hero_seo_si,1,,,divine
+z_jang_so,장소,자포,hero,oh,wizard,,S,S,hero_z_jang_so,1,,,lightning
+z_son_sang_hyang,손상향,,hero,oh,rogue,female,S,SS,hero_z_son_sang_hyang,1,,,lightning
+z_goe_wol,괴월,이도,hero,han,wizard,,S,S,hero_z_goe_wol,1,,,poison
+z_chae_yeom,채염,문희,hero,wii,wizard,female,S,S,hero_z_chae_yeom,1,,,ice
+z_ma_sok,마속,유상,hero,chock,ranger,,S,S,hero_z_ma_sok,1,,,ice
+z_won_sul,원술,공로,hero,han,paladin,,S,S,hero_z_won_sul,1,,,fire
+z_mu_an_guk,무안국,,hero,han,tank,,S,SS,hero_z_mu_an_guk,1,,,fire
+z_ol_dol_gol,올돌골,,hero,etc,rogue,,S,S,hero_z_ol_dol_gol,1,,,poison
+z_gwan_gu_geom,관구검,,hero,wii,tank,,S,SS,hero_gwan_gu_geom,1,,,ice
+dong_cheon_wang,동천왕,,hero,etc,tank,,S,SSS,hero_dong_cheon_wang,1,,,poison
+z_jang_po,장포,,hero,chock,tank,,S,SS,hero_z_jang_po,1,,,fire
+z_sin_heon_yeong,신헌영_z,,hero,wii,wizard,female,S,SS,hero_z_sin_heon_yeong,1,,,lightning
+z_sa_ma_ga,사마가_z,,hero,etc,tank,,S,SS,hero_z_sa_ma_ga,1,,,poison
+z_jo_chang,조창_z,자문,hero,wii,rogue,,S,S,hero_z_jo_chang,1,,,lightning
+z_yu_seon,유선_z,공사,hero,chock,paladin,,S,S,hero_z_yu_seon,1,,,fire
+z_ma_ryang,마량_z,계상,hero,chock,wizard,,S,S,hero_z_ma_ryang,1,,,ice
+oh_guk_tae,오국태,,hero,oh,paladin,female,S,SS,hero_oh_guk_tae,1,,,fire
+z_seo_seong,서성_z,문향,hero,oh,tank,,S,S,hero_z_seo_seong,1,,,lightning
+z_gwak_sa,곽사_z,,hero,han,rogue,,S,SS,hero_z_gwak_sa,1,,,poison
+z_i_gak,이각_z,치연,hero,han,tank,,S,S,hero_z_i_gak,1,,,poison
+z_jang_bo,장보_z,,hero,etc,ranger,,S,S,hero_z_jang_bo,1,,,lightning
+z_jeong_won_ji,정원지_z,,hero,etc,tank,,S,AA,hero_z_jeong_won_ji,1,,,physic
+z_bu_cheom,부첨_z,,hero,chock,rogue,,S,SS,hero_bu_cheom,1,,,fire
+ga_hu+,가후,문화,hero,han,wizard,,Z,SS,hero_ga_hu,1,,,dark
+gan_ong+,간옹,헌화,hero,chock,wizard,,Z,B,hero_gan_ong,1,,1,poison
+gam_nyeong+,감녕,흥패,hero,oh,tank,,Z,SSS,hero_gam_nyeong,1,,,physic
+gang_yu+,강유,백약,hero,chock,ranger,,Z,SS,hero_gang_yu,1,,,dark
+go_ram+,고람,,hero,han,tank,,Z,AA,hero_go_ram,1,,,lightning
+go_sun+,고순,,hero,han,ranger,,Z,S,hero_go_sun,1,,,fire
+gong_son_wol+,공손월,,hero,han,tank,,Z,B,hero_gong_son_wol,1,,1,poison
+gong_son_chan+,공손찬,백규,hero,han,paladin,,Z,AA,hero_gong_son_chan,1,,,divine
+gong_yung+,공융,문거,hero,han,wizard,,Z,B,hero_bard_d_han,1,,1,ice
+gwak_ga+,곽가,봉효,hero,wii,wizard,,Z,SS,hero_gwak_ga,1,,,dark
+gwak_sa+,곽사,,hero,han,rogue,,Z,B,hero_gwak_sa,1,,1,poison
+gwak_hoe+,곽회,백제,hero,wii,rogue,,Z,B,hero_rogue2_b_wii,1,,1,poison
+gwan_u+,관우,운장,hero,chock,tank,,Z,SSS,hero_gwan_u,1,,,lightning
+gwan_pyeong+,관평,,hero,chock,tank,,Z,AA,hero_gwan_pyeong,1,,,lightning
+gwan_hae+,관해,,hero,etc,tank,,Z,SS,hero_gwan_hae,1,,,lightning
+gwan_heung+,관흥,안국,hero,chock,tank,,Z,B,hero_gwan_heung,1,,1,physic
+goe_ryang+,괴량,자유,hero,han,wizard,,Z,A,hero_wizard_b_han,1,,1,poison
+goe_wol+,괴월,이도,hero,han,wizard,,Z,A,hero_goe_wol,1,,1,lightning
+geum_hwan_sam_gyeol+,금환삼결,,hero,etc,tank,,Z,B,hero_paladin_n_b_etc,1,,1,lightning
+gi_ryeong+,기령,,hero,han,rogue,,Z,S,hero_rogue2_b_han,1,,,poison
+naeng_po+,냉포,,hero,han,ranger,,Z,A,hero_ranger_b_han,1,,1,ice
+no_suk+,노숙,자경,hero,oh,wizard,,Z,SS,hero_no_suk,1,,,lightning
+noe_dong+,뇌동,,hero,chock,tank,,Z,B,hero_noe_dong,1,,1,physic
+neung_jo+,능조,,hero,oh,tank,,Z,A,hero_neung_jo,1,,1,lightning
+neung_tong+,능통,공적,hero,oh,tank,,Z,AA,hero_neung_tong,1,,,dark
+dae_gyo+,대교,,hero,oh,wizard,female,Z,S,hero_dae_gyo,1,,,divine
+dae_rae_dong_ju+,대래동주,,hero,etc,tank,,Z,C,hero_paladin_n_d_etc,1,,1,physic
+do_gyeom+,도겸,공조,hero,han,wizard,,Z,B,hero_wizard_c_han,1,,1,fire
+dong_do_na+,동도나,,hero,etc,tank,,Z,C,hero_tank_n_c_etc,1,,1,physic
+dong_min+,동민,숙영,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,lightning
+dong_yun+,동윤,휴소,hero,chock,wizard,,Z,A,hero_dong_yun,1,,1,lightning
+dong_tak+,동탁,중영,hero,han,paladin,,Z,SS,hero_dong_tak,1,,,dark
+dong_hwa+,동화,유재,hero,chock,wizard,,Z,B,hero_dong_hwa,1,,1,ice
+deung_ae+,등애,사재,hero,wii,rogue,,Z,AA,hero_deung_ae,1,,,ice
+deung_ji+,등지,백묘,hero,chock,wizard,,Z,B,hero_wizard_b_chock,1,,1,poison
+ma_dae+,마대,,hero,chock,tank,,Z,AA,hero_ma_dae,1,,,physic
+ma_deung+,마등,수성,hero,han,rogue,,Z,B,hero_ma_deung,1,,1,poison
+ma_ryang+,마량,계상,hero,chock,wizard,,Z,A,hero_ma_ryang,1,,1,poison
+ma_sok+,마속,유상,hero,chock,ranger,,Z,A,hero_ma_sok,1,,1,ice
+ma_cho+,마초,맹기,hero,chock,rogue,,Z,SS,hero_ma_cho,1,,,lightning
+man_chong+,만총,백녕,hero,wii,rogue,,Z,S,hero_man_chong,1,,,lightning
+mang_a_jang+,망아장,,hero,etc,tank,,Z,B,hero_tank_b_etc,1,,1,dark
+maeng_dal+,맹달,자도,hero,chock,rogue,,Z,S,hero_maeng_dal,1,,,ice
+maeng_u+,맹우,,hero,etc,ranger,,Z,C,hero_ranger_c_etc,1,,1,physic
+maeng_hoek+,맹획,,hero,etc,paladin,,Z,SSS,hero_maeng_hoek,1,,,poison
+mok_rok_dae_wang+,목록대왕,,hero,etc,rogue,,Z,C,hero_rogue_c_etc,1,,1,poison
+mu_an_guk+,무안국,,hero,han,tank,,Z,A,hero_mu_an_guk,1,,1,dark
+mun_bing+,문빙,중업,hero,wii,rogue,,Z,AA,hero_mun_bing,1,,,ice
+mun_ang+,문앙,,hero,wii,rogue,,Z,SS,hero_mun_ang,1,,,ice
+mun_chu+,문추,,hero,han,tank,,Z,S,hero_mun_chu,1,,,dark
+mi_bang+,미방,자방,hero,chock,wizard,,Z,C,hero_mi_bang,1,,1,fire
+mi_chuk+,미축,자중,hero,chock,wizard,,Z,B,hero_mi_chuk,1,,1,ice
+ban_bong+,반봉,,hero,han,rogue,,Z,B,hero_rogue2_b_han,1,,1,poison
+ban_jang+,반장,문규,hero,oh,tank,,Z,AA,hero_ban_jang,1,,,physic
+bang_deok+,방덕,영명,hero,wii,tank,,Z,S,hero_bang_deok,1,,,dark
+bang_tong+,방통,사원,hero,chock,wizard,,Z,S,hero_bang_tong,1,,,fire
+bae_won_so+,배원소,,hero,chock,rogue,,Z,C,hero_rogue_d_chock,1,,1,ice
+beop_jeong+,법정,효직,hero,chock,wizard,,Z,S,hero_beop_jeong,1,,,fire
+bo_jeul+,보즐,자산,hero,oh,wizard,,Z,B,hero_wizard_b_oh,1,,1,fire
+bu_sa_in+,부사인,군의,hero,chock,rogue,,Z,C,hero_bu_sa_in,1,,1,poison
+bi_ui+,비의,문위,hero,chock,wizard,,Z,A,hero_wizard_b_chock,1,,1,poison
+sa_ma_ga+,사마가,,hero,etc,tank,,Z,A,hero_sa_ma_ga,1,,1,poison
+sa_ma_sa+,사마사,자원,hero,wii,paladin,,Z,S,hero_sa_ma_sa,1,,,dark
+sa_ma_so+,사마소,자상,hero,wii,paladin,,Z,A,hero_sa_ma_so,1,,1,dark
+sa_ma_yeom+,사마염,안세,hero,wii,paladin,,Z,A,hero_sa_ma_yeom,1,,1,divine
+sa_ma_ui+,사마의,중달,hero,wii,wizard,,Z,SS,hero_sa_ma_ui,1,,,lightning
+sang_chong+,상총,,hero,chock,rogue,,Z,C,hero_rogue_c_chock,1,,1,lightning
+seo_seo+,서서,원직,hero,chock,wizard,,Z,AA,hero_seo_seo,1,,,ice
+seo_seong+,서성,문향,hero,oh,tank,,Z,A,hero_seo_seong,1,,1,physic
+seo_hwang+,서황,공명,hero,wii,tank,,Z,AA,hero_seo_hwang,1,,,fire
+so_gyo+,소교,,hero,oh,wizard,female,Z,AA,hero_so_gyo,1,,,divine
+son_geon+,손건,공우,hero,chock,wizard,,Z,B,hero_son_geon,1,,1,fire
+son_gyeon+,손견,문대,hero,oh,tank,,Z,SS,hero_son_gyeon,1,,,divine
+son_gwon+,손권,중모,hero,oh,paladin,,Z,SS,hero_son_gwon,1,,,lightning
+son_deung+,손등,자고,hero,oh,paladin,,Z,A,hero_son_deung,1,,1,divine
+son_sang_hyang+,손상향,,hero,oh,rogue,female,Z,A,hero_son_sang_hyang,1,,1,dark
+son_chaek+,손책,백부,hero,oh,rogue,,Z,SS,hero_son_chaek,1,,,fire
+song_heon+,송헌,,hero,han,tank,,Z,B,hero_tank_b_han,1,,1,poison
+sun_u_gyeong+,순우경,중간,hero,han,tank,,Z,B,hero_tank_c_han,1,,1,lightning
+sun_uk+,순욱,문약,hero,wii,wizard,,Z,S,hero_sun_uk,1,,,ice
+sun_yu+,순유,공증,hero,wii,wizard,,Z,AA,hero_sun_yu,1,,,poison
+sin_bi+,신비,자치,hero,wii,wizard,,Z,B,hero_wizard_d_wii,1,,1,lightning
+sin_heon_yeong+,신헌영,,hero,wii,wizard,female,Z,A,hero_sin_heon_yeong,1,,1,divine
+sim_bae+,심배,정남,hero,han,wizard,,Z,A,hero_wizard_b_han,1,,1,poison
+a_hoe_nam+,아회남,,hero,etc,rogue,,Z,B,hero_rogue_b_etc,1,,1,dark
+ak_jin+,악진,문겸,hero,wii,tank,,Z,AA,hero_ak_jin,1,,,fire
+an_ryang+,안량,,hero,han,rogue,,Z,SS,hero_an_ryang,1,,,lightning
+yang_bu+,양부,,hero,wii,wizard,,Z,B,hero_wizard_c_wii,1,,1,fire
+yang_su+,양수,덕조,hero,wii,wizard,,Z,A,hero_wizard_b_wii,1,,1,fire
+yang_ho+,양호,숙자,hero,wii,ranger,,Z,AA,hero_yang_ho,1,,,lightning
+eom_baek_ho+,엄백호,,hero,han,rogue,,Z,C,hero_eom_baek_ho,1,,1,lightning
+eom_an+,엄안,,hero,chock,ranger,,Z,AA,hero_eom_an,1,,,poison
+yeo_dae+,여대,정공,hero,oh,rogue,,Z,B,hero_rogue2_b_oh,1,,1,poison
+yeo_mong+,여몽,자명,hero,oh,rogue,,Z,SS,hero_yeo_mong,1,,,dark
+yeo_po+,여포,봉선,hero,han,tank,,Z,SSS,hero_yeo_po,1,,,dark
+ol_dol_gol+,올돌골,,hero,etc,rogue,,Z,A,hero_ol_dol_gol,1,,1,poison
+wang_rang+,왕랑,경흥,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,physic
+wang_reung+,왕릉,언운,hero,wii,rogue,,Z,C,hero_rogue_c_wii,1,,1,fire
+wang_ssang+,왕쌍,자전,hero,wii,tank,,Z,C,hero_tank_d_wii,1,,1,physic
+wang_yun+,왕윤,자사,hero,han,wizard,,Z,B,hero_wizard_c_han,1,,1,poison
+wang_pyeong+,왕평,자균,hero,chock,rogue,,Z,AA,hero_wang_pyeong,1,,,poison
+yo_hwa+,요화,원검,hero,chock,rogue,,Z,B,hero_rogue_b_chock,1,,1,lightning
+u_geum+,우금,문칙,hero,wii,tank,,Z,A,hero_u_geum,1,,1,physic
+u_beon+,우번,중상,hero,oh,wizard,,Z,C,hero_wizard_c_oh,1,,1,dark
+won_sang+,원상,현보,hero,han,paladin,,Z,B,hero_won_sang,1,,1,dark
+won_so+,원소,본초,hero,han,paladin,,Z,AA,hero_won_so,1,,,divine
+won_sul+,원술,공로,hero,han,paladin,,Z,A,hero_won_sul,1,,1,divine
+won_hui+,원희,현혁,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+wi_yeon+,위연,문장,hero,chock,tank,,Z,S,hero_wi_yeon,1,,,ice
+yu_bong+,유봉,,hero,chock,rogue,,Z,B,hero_rogue2_b_chock,1,,1,fire
+yu_bi+,유비,현덕,hero,chock,paladin,,Z,SS,hero_yu_bi,1,,,divine
+yu_seon+,유선,공사,hero,chock,paladin,,Z,C,hero_yu_seon,1,,1,divine
+yu_eon+,유언,군랑,hero,han,wizard,,Z,B,hero_wizard_b_han,1,,1,poison
+yu_u+,유우,백안,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,poison
+yu_jang+,유장,계옥,hero,han,wizard,,Z,B,hero_yu_jang,1,,1,lightning
+yu_pyo+,유표,경승,hero,han,wizard,,Z,B,hero_wizard_c_han,1,,1,ice
+yuk_son+,육손,백언,hero,oh,ranger,,Z,SS,hero_yuk_son,1,,,fire
+yuk_hang+,육항,유절,hero,oh,rogue,,Z,S,hero_yuk_hang,1,,,fire
+i_gak+,이각,치연,hero,han,rogue,,Z,C,hero_i_gak,1,,1,physic
+i_eom+,이엄,정방,hero,chock,rogue,,Z,A,hero_rogue2_b_chock,1,,1,poison
+i_yu+,이유,,hero,han,wizard,,Z,AA,hero_i_yu,1,,,fire
+i_jeon+,이전,만성,hero,wii,rogue,,Z,A,hero_rogue_b_wii,1,,1,lightning
+jang_gak+,장각,,hero,etc,paladin,,Z,S,hero_jang_gak,1,,,lightning
+jang_goeng+,장굉,자강,hero,oh,wizard,,Z,B,hero_wizard_d_oh,1,,1,poison
+jang_ryang+,장량,,hero,etc,tank,,Z,A,hero_jang_ryang,1,,1,poison
+jang_ro+,장로,공기,hero,han,paladin,,Z,A,hero_jang_ro,1,,1,dark
+jang_ryo+,장료,문원,hero,wii,tank,,Z,SSS,hero_jang_ryo,1,,,dark
+jang_bo+,장보,,hero,etc,ranger,,Z,A,hero_jang_bo,1,,1,poison
+jang_bi+,장비,익덕,hero,chock,tank,,Z,SS,hero_jang_bi,1,,,fire
+jang_so+,장소,자포,hero,oh,wizard,,Z,A,hero_jang_so,1,,1,ice
+jang_song+,장송,자교,hero,chock,wizard,,Z,B,hero_wizard_c_chock,1,,1,dark
+jang_su+,장수,,hero,han,tank,,Z,A,hero_jang_su,1,,1,physic
+jang_wan+,장완,공염,hero,chock,wizard,,Z,A,hero_wizard_b_chock,1,,1,fire
+jang_ik+,장익,백공,hero,chock,rogue,,Z,B,hero_rogue2_c_chock,1,,1,poison
+jang_po+,장포,,hero,chock,tank,,Z,A,hero_jang_po,1,,1,dark
+jang_hap+,장합,준예,hero,wii,tank,,Z,S,hero_jang_hap,1,,,ice
+jeo_su+,저수,,hero,han,wizard,,Z,A,hero_jeo_su,1,,1,poison
+jeon_ye+,전예,국양,hero,wii,ranger,,Z,A,hero_ranger_b_wii,1,,1,fire
+jeon_wi+,전위,,hero,wii,tank,,Z,SS,hero_jeon_wi,1,,,physic
+jeon_pung+,전풍,원호,hero,han,wizard,,Z,S,hero_jeon_pung,1,,,dark
+jeon_hae+,전해,,hero,han,rogue,,Z,C,hero_rogue_c_han,1,,1,lightning
+jeong_bo+,정보,덕모,hero,oh,rogue,,Z,A,hero_rogue2_b_oh,1,,1,lightning
+jeong_bong+,정봉,승연,hero,oh,tank,,Z,A,hero_jeong_bong,1,,1,physic
+jeong_uk+,정욱,중덕,hero,wii,wizard,,Z,AA,hero_jeong_uk,1,,,lightning
+jeong_won_ji+,정원지,,hero,etc,tank,,Z,A,hero_jeong_won_ji,1,,1,physic
+je_gal_gak+,제갈각,원손,hero,oh,wizard,,Z,B,hero_wizard_c_oh,1,,1,poison
+je_gal_geun+,제갈근,자유,hero,oh,wizard,,Z,AA,hero_je_gal_geun,1,,,fire
+je_gal_ryang+,제갈량,공명,hero,chock,wizard,,Z,SS,hero_je_gal_ryang,1,,,lightning
+je_gal_tan+,제갈탄,공휴,hero,wii,wizard,,Z,B,hero_wizard_b_wii,1,,1,lightning
+jo_mu+,조무,대영,hero,oh,tank,,Z,A,hero_jo_mu,1,,1,physic
+jo_bi+,조비,자환,hero,wii,paladin,,Z,AA,hero_jo_bi,1,,,dark
+jo_sik+,조식,자건,hero,wii,wizard,,Z,A,hero_jo_sik,1,,1,poison
+jo_un+,조운,자룡,hero,chock,rogue,,Z,SSS,hero_jo_un,1,,,physic
+jo_in+,조인,자효,hero,wii,ranger,,Z,S,hero_jo_in,1,,,ice
+jo_jo+,조조,맹덕,hero,wii,paladin,,Z,SS,hero_jo_jo,1,,,dark
+jo_jin+,조진,자단,hero,wii,ranger,,Z,A,hero_crossbow_b_wii,1,,1,lightning
+jo_chang+,조창,자문,hero,wii,rogue,,Z,A,hero_jo_chang,1,,1,physic
+jo_hong+,조홍,자렴,hero,wii,rogue,,Z,B,hero_rogue_b_wii,1,,1,lightning
+jong_yo+,종요,원상,hero,wii,wizard,,Z,C,hero_bard_c_wii,1,,1,fire
+jong_hoe+,종회,사계,hero,wii,rogue,,Z,A,hero_rogue2_b_wii,1,,1,poison
+ju_yu+,주유,공근,hero,oh,wizard,,Z,SS,hero_ju_yu,1,,,fire
+ju_chang+,주창,,hero,chock,rogue,,Z,B,hero_rogue_c_chock,1,,1,fire
+ju_chi+,주치,군리,hero,oh,tank,,Z,C,hero_tank_n_c_oh,1,,1,ice
+ju_tae+,주태,유평,hero,oh,ranger,,Z,AA,hero_ju_tae,1,,,fire
+jin_gung+,진궁,공대,hero,han,wizard,,Z,S,hero_jin_gung,1,,,fire
+jin_deung+,진등,원룡,hero,wii,wizard,,Z,A,hero_jin_deung,1,,1,poison
+jin_rim+,진림,공장,hero,han,wizard,,Z,B,hero_wizard_b_han,1,,1,fire
+jin_sik+,진식,,hero,chock,ranger,,Z,C,hero_ranger_d_chock,1,,1,lightning
+jin_tae+,진태,현백,hero,wii,rogue,,Z,A,hero_rogue2_b_wii,1,,1,poison
+chae_mo+,채모,덕규,hero,wii,ranger,,Z,C,hero_ranger_c_wii,1,,1,ice
+chae_yeom+,채염,문희,hero,wii,wizard,female,Z,A,hero_chae_yeom,1,,1,divine
+chae_hwa+,채화,,hero,wii,ranger,,Z,C,hero_ranger_c_wii,1,,1,physic
+cho_seon+,초선,,hero,han,rogue,female,Z,AA,hero_cho_seon,1,,,divine
+chu_ssi+,추부인,,hero,han,wizard,female,Z,AA,hero_chu_ssi,1,,,divine
+chuk_yung_bu_in+,축융부인,,hero,etc,tank,female,Z,AA,hero_chuk_yung_bu_in,1,,,poison
+ta_sa_dae_wang+,타사대왕,,hero,etc,wizard,,Z,C,hero_wizard_c_etc,1,,1,fire
+tae_sa_ja+,태사자,자의,hero,oh,ranger,,Z,SS,hero_tae_sa_ja,1,,,divine
+ha_jin+,하진,수고,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,lightning
+ha_hu_don+,하후돈,원양,hero,wii,tank,,Z,SS,hero_ha_hu_don,1,,,lightning
+ha_hu_sang+,하후상,백인,hero,wii,tank,,Z,B,hero_tank_n_b_wii,1,,1,lightning
+ha_hu_yeon+,하후연,묘재,hero,wii,ranger,,Z,SS,hero_ha_hu_yeon,1,,,dark
+ha_hu_eun+,하후은,,hero,wii,ranger,,Z,C,hero_ranger_c_wii,1,,1,poison
+ha_hu_pae+,하후패,중권,hero,chock,tank,,Z,B,hero_tank_b_chock,1,,1,physic
+ha_hu_hyeon+,하후현,태초,hero,wii,wizard,,Z,B,hero_wizard_c_wii,1,,1,fire
+hak_so+,학소,백도,hero,wii,ranger,,Z,AA,hero_hak_so,1,,,lightning
+han_dang+,한당,의공,hero,oh,ranger,,Z,B,hero_ranger_b_oh,1,,1,ice
+han_su+,한수,문약,hero,han,ranger,,Z,A,hero_ranger_b_han,1,,1,ice
+han_ho+,한호,원사,hero,han,ranger,,Z,C,hero_ranger_c_han,1,,1,lightning
+heo_yu+,허유,자원,hero,wii,wizard,,Z,B,hero_wizard_c_wii,1,,1,dark
+heo_jeo+,허저,중강,hero,wii,tank,,Z,S,hero_heo_jeo,1,,,fire
+hyeong_do_yeong+,형도영,,hero,han,tank,,Z,B,hero_tank_n_b_han,1,,1,physic
+ho_geo_a+,호거아,,hero,han,tank,,Z,A,hero_ho_geo_a,1,,1,physic
+hwa_ung+,화웅,,hero,han,ranger,,Z,AA,hero_hwa_ung,1,,,fire
+hwa_heum+,화흠,자어,hero,wii,wizard,,Z,C,hero_bard_d_wii,1,,1,fire
+hwang_gae+,황개,공복,hero,oh,rogue,,Z,AA,hero_hwang_gae,1,,,fire
+hwang_gwon+,황권,공형,hero,chock,wizard,,Z,B,hero_wizard_d_chock,1,,1,lightning
+hwang_wol_yeong+,황월영,,hero,chock,tank,female,Z,AA,hero_hwang_wol_yeong,1,,,divine
+hwang_jo+,황조,,hero,han,ranger,,Z,A,hero_ranger_b_han,1,,1,physic
+hwang_chung+,황충,한승,hero,chock,ranger,,Z,SS,hero_hwang_chung,1,,,fire
+hu_seong+,후성,,hero,han,ranger,,Z,B,hero_ranger_b_han,1,,1,lightning
+yu_byeok+,유벽,,hero,han,ranger,,Z,B,hero_ranger_b_han,1,,1,poison
+jang_yeon+,장연,,hero,han,tank,,Z,B,hero_tank_b_han,1,,1,physic
+han_seom+,한섬,,hero,han,ranger,,Z,C,hero_ranger_c_han,1,,1,lightning
+byeon_hui+,변희,,hero,etc,wizard,,Z,C,hero_ywizard,1,,1,lightning
+jang_man_seong+,장만성,,hero,etc,rogue,,Z,C,hero_yrogue2,1,,1,poison
+geum_seon+,금선,,hero,han,paladin,,Z,B,hero_geum_seon,1,,1,dark
+gong_ji+,공지,,hero,han,ranger,,Z,C,hero_ranger_c_han,1,,1,poison
+geum_ui+,금의,,hero,han,wizard,,Z,C,hero_wizard_d_han,1,,1,poison
+han_hyeon+,한현,,hero,han,paladin,,Z,B,hero_han_hyeon,1,,1,divine
+jo_beom+,조범,,hero,han,paladin,,Z,B,hero_jo_beom,1,,1,divine
+beon_ssi+,변황후,,hero,wii,rogue,female,Z,AA,hero_beon_ssi,1,,,poison
+po_ryung+,포륭,,hero,han,rogue,,Z,C,hero_rogue2_c_han,1,,1,physic
+jin_eung+,진응,,hero,han,rogue,,Z,C,hero_rogue2_c_han,1,,1,lightning
+yu_do+,유도,,hero,han,paladin,,Z,B,hero_yu_do,1,,1,dark
+yu_hyeon+,유현,,hero,han,rogue,,Z,C,hero_rogue_c_han,1,,1,lightning
+yeom_sang+,염상,,hero,han,wizard,,Z,B,hero_wizard_d_han,1,,1,dark
+yang_hong+,양홍,,hero,han,wizard,,Z,B,hero_wizard_b_han,1,,1,poison
+i_pung+,이풍,,hero,han,ranger,,Z,C,hero_ranger_c_han,1,,1,lightning
+gong_son_beom+,공손범,,hero,han,wizard,,Z,C,hero_gong_son_beom,1,,1,poison
+gong_son_sok+,공손속,,hero,han,tank,,Z,C,hero_gong_son_sok,1,,1,poison
+ma_wan+,마완,,hero,han,tank,,Z,C,hero_tank_c_han,1,,1,poison
+yeom_haeng+,염행,,hero,han,rogue,,Z,B,hero_rogue2_b_han,1,,1,dark
+yang_heung+,양흥,,hero,han,wizard,,Z,C,hero_wizard_c_han,1,,1,lightning
+seong_gong_yeong+,성공영,,hero,han,ranger,,Z,C,hero_ranger_c_han,1,,1,physic
+yu_ban+,유반,,hero,han,tank,,Z,C,hero_tank_n_c_han,1,,1,physic
+wang_wi+,왕위,,hero,han,tank,,Z,C,hero_paladin_n_c_han,1,,1,physic
+go_seung+,고승,,hero,etc,tank,,Z,C,hero_ytank,1,,1,physic
+pa_jae+,파재,,hero,etc,tank,,Z,C,hero_ytank_n,1,,1,poison
+jo_hong2+,조홍,,hero,etc,rogue,,Z,C,hero_yrogue,1,,1,physic
+deung_mu+,등무,,hero,etc,ranger,,Z,C,hero_yranger,1,,1,lightning
+son_jung+,손중,,hero,etc,ranger,,Z,C,hero_ycrossbow,1,,1,lightning
+han_chung+,한충,,hero,etc,wizard,,Z,C,hero_ywizard,1,,1,poison
+ma_won_ui+,마원의,,hero,etc,wizard,,Z,C,hero_ywizard,1,,1,fire
+baek_yo+,백요,,hero,etc,tank,,Z,C,hero_ytank,1,,1,physic
+wu_dok+,우독,,hero,etc,tank,,Z,C,hero_ytank,1,,1,dark
+hyo_go+,휴고,,hero,etc,tank,,Z,C,hero_ytank_n,1,,1,physic
+eo_bu_ra+,어부라,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+yuk_gang+,육강,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,physic
+jang_young+,장영,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+jin_hoeng+,진횡,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+jak_yung+,작융,,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,physic
+seol_lae+,설례,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,physic
+bun_nung+,번능,,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,physic
+u_mi+,우미,,hero,han,wizard,,Z,C,hero_wizard_d_han,1,,1,poison
+you_yo+,유요,,hero,han,wizard,,Z,C,hero_wizard_c_han,1,,1,lightning
+eom_yeo+,엄여,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+ju_heon+,주흔,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,physic
+i_mong+,이몽,,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,physic
+wang_bang+,왕방,,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,lightning
+choi_yong+,최용,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,lightning
+jang_jae+,장제,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,lightning
+beon_jo+,번조,,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,lightning
+i_rak+,이락,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+ho_jae+,호재,,hero,han,rogue,,Z,C,hero_rogue2_b_han,1,,1,lightning
+noe_bak+,뇌박,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,lightning
+jin_ran+,진란,,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,ice
+jang_pae+,장패,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,lightning
+yang_bong+,양봉,,hero,han,rogue,,Z,C,hero_rogue2_c_han,1,,1,physic
+gyo_yu+,교유,,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,lightning
+jang_hun+,장훈,,hero,han,wizard,,Z,C,hero_wizard_d_han,1,,1,poison
+cha_ju+,차주,,hero,han,rogue,,Z,C,hero_rogue2_c_han_1,1,,1,physic
+yu_dae+,유대,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,lightning
+wang_chung+,왕충,,hero,han,rogue,,Z,C,hero_rogue2_d_han,1,,1,lightning
+sa_hwan+,사환,,hero,wii,rogue,,Z,C,hero_rogue2_d_wii,1,,1,ice
+hu_nae+,후내,,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,poison
+jo_seo+,조성,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,poison
+i_chu+,이추,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,poison
+seong_ryum+,성렴,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+han_maeng+,한맹,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,lightning
+jang_gi+,장기,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,lightning
+mok_won_jin+,목원진,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+han_geo_ja+,한거자,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,physic
+yeo_yi_hwang+,여위황,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+won_dam+,원담,,hero,han,tank,,Z,C,hero_tank_d_han,1,,1,poison
+go_gan+,고간,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,ice
+gwak_won+,곽원,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,physic
+chuk_oh+,축오,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,poison
+ma_yeon+,마연,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,lightning
+jang_oe+,장의,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+yun_hae+,윤해,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,lightning
+jeo_heok+,저곡,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+yu_hun+,유훈,,hero,han,wizard,,Z,C,hero_wizard_b_han,1,,1,lightning
+yu_hae+,유해,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+heo_geon+,허건,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,ice
+jang_da+,장다,,hero,han,tank,,Z,C,hero_tank_n_d_han,1,,1,physic
+yu_ho+,유호,,hero,han,wizard,,Z,C,hero_wizard_d_han,1,,1,poison
+deung_ryong+,등룡,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,poison
+jin_chwi+,진취,,hero,han,tank,,Z,C,hero_paladin_n_d_han,1,,1,physic
+chae_yang+,채양,,hero,han,ranger,,Z,C,hero_ranger_d_han,1,,1,lightning
+jin_gi+,진기,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+ak_chwi+,악취,,hero,han,rogue,,Z,C,hero_rogue_d_han,1,,1,lightning
+yeo_ryeong_gi+,여령기,,hero,han,tank,female,Z,AA,hero_yeo_ryeong_gi,1,,,dark
+seo_hwa+,서화,,hero,etc,wizard,female,Z,S,hero_seo_hwa,1,,,poison
+hwang_so+,황소,,hero,etc,tank,,Z,S,hero_hwang_so,1,,,lightning
+ha_man+,하만,,hero,etc,rogue,,Z,AA,hero_ha_man,1,,,lightning
+ha_ui+,하의,,hero,etc,ranger,,Z,S,hero_ha_ui,1,,,lightning
+ju_yeon+,주연,의봉,hero,oh,tank,,Z,S,hero_ju_yeon,1,,,fire
+hwa_ta+,화타,,hero,"wii
+chock
+oh
+han
+etc",wizard,,Z,SS,hero_hwa_ta,1,,,divine
+no_sik+,노식,자간,hero,han,wizard,,Z,AA,hero_no_sik,1,,,divine
+jang_chun_hwa+,장춘화,,hero,wii,wizard,female,Z,AA,hero_jang_chun_hwa,1,,,dark
+jang_sung_chae+,장성채,,hero,chock,wizard,female,Z,AA,hero_jang_sung_chae,1,,,poison
+jeon_jong+,전종,자황,hero,oh,tank,,Z,S,hero_jeon_jong,1,,,lightning
+dap_don+,답돈,,hero,etc,ranger,,Z,SS,hero_dap_don,1,,,poison
+mun_heum+,문흠,중약,hero,wii,rogue,,Z,AA,hero_mun_heum,1,,,dark
+ga_bi_neung+,가비능,,hero,etc,tank,,Z,SS,hero_ga_bi_neung,1,,,physic
+yu_hyup+,유협,백화,hero,han,paladin,,Z,S,hero_yu_hyup,1,,,dark
+oh_ban+,오반,원웅,hero,chock,rogue,,Z,AA,hero_oh_ban,1,,,dark
+gwak_jun+,곽준,중막,hero,chock,ranger,,Z,S,hero_gwak_jun,1,,,ice
+sa_ma_jun+,사마준,자장,hero,wii,ranger,,Z,S,hero_sa_ma_jun,1,,,fire
+ju_hwan+,주환,휴목,hero,oh,ranger,,Z,S,hero_ju_hwan,1,,,ice
+son_hwan+,손환,숙무,hero,oh,rogue,,Z,AA,hero_son_hwan,1,,,ice
+ha_tae_hu+,하태후,,hero,han,rogue,female,Z,S,hero_ha_tae_hu,1,,,poison
+dok_bal_su_gi_neung+,독발수기능,,hero,etc,rogue,,Z,SS,hero_dok_bal_su_gi_neung,1,,,poison
+gyeon_hwang_hu+,견황후,,hero,wii,ranger,female,Z,S,hero_gyeon_hui,1,,,lightning
+na_heon+,나헌,영칙,hero,chock,rogue,,Z,S,hero_na_heon,1,,,fire
+do_hwang+,도황,,hero,oh,ranger,,Z,S,hero_do_hwang,1,,,divine
+seo_young+,서영,,hero,han,tank,,Z,S,hero_seo_young,1,,,fire
+yu_sim+,유심,,hero,chock,paladin,,Z,S,hero_yu_sim,1,,,divine
+son_no_ban+,손노반,,hero,oh,paladin,female,Z,S,hero_son_no_ban,1,,,dark
+jang_yang+,장양,,hero,han,ranger,,Z,AA,hero_jang_yang,1,,,poison
+wang_i+,왕이,,hero,wii,rogue,female,Z,SS,hero_wang_i,1,,,lightning
+jang_je+,장제,자통,hero,wii,wizard,,Z,S,hero_jang_je,1,,,ice
+gwan_en_byoung+,관은병,,hero,chock,tank,female,Z,SS,hero_gwan_en_byoung,1,,,lightning
+mi_bu_in+,미부인,,hero,chock,ranger,female,Z,S,hero_mi_bu_in,1,,,lightning
+bo_yeon_sa+,보연사,,hero,oh,tank,female,Z,SS,hero_bo_yeon_sa,1,,,divine
+jong_ri_mok+,종리목,자간,hero,oh,wizard,,Z,S,hero_jong_ri_mok,1,,,divine
+hwang_bo_sung+,황보숭,의진,hero,han,tank,,Z,SS,hero_hwang_bo_sung,1,,,physic
+dong_tae_hu+,동태후,,hero,han,rogue,female,Z,SS,hero_dong_tae_hu,1,,,fire
+gong_son_yeon+,공손연,문의,hero,etc,tank,,Z,S,hero_gong_son_yeon,1,,,poison
+hwa_man+,화만,,hero,etc,wizard,female,Z,SS,hero_hwa_man,1,,,poison
+ye_hyoung+,예형,정평,hero,han,wizard,,Z,S,hero_ye_hyoung,1,,,divine
+ma_un_rok+,마운록,,hero,chock,tank,female,Z,S,hero_ma_un_rok,1,,,fire
+yuk_jeok+,육적,,hero,oh,rogue,,Z,S,hero_yuk_jeok,1,,,divine
+baek_gi+,백기,,hero,ancient,tank,,Z,SSS,hero_baek_gi,1,,,dark
+jin_si_hwang+,진시황,,hero,ancient,paladin,,Z,SS,hero_jin_si_hwang,1,,,divine
+yeo_bul_wi+,여불위,,hero,ancient,wizard,,Z,SS,hero_yeo_bul_wi,1,,,divine
+wang_jeon+,왕전,,hero,ancient,rogue,,Z,SS,hero_wang_jeon,1,,,physic
+young_gyu+,영규,,hero,ancient,tank,female,Z,SS,hero_young_gyu,1,,,dark
+yang_dan_hwa+,양단화,,hero,ancient,wizard,female,Z,SS,hero_yang_dan_hwa,1,,,divine
+oh_ja_seo+,오자서,,hero,ancient,ranger,,Z,SS,hero_oh_ja_seo,1,,,physic
+ak_ui+,악의,,hero,ancient,tank,,Z,SS,hero_ak_ui,1,,,divine
+yeom_pa+,염파,,hero,ancient,tank,,Z,SS,hero_yeom_pa,1,,,physic
+i_mok+,이목,,hero,ancient,rogue,,Z,SSS,hero_i_mok,1,,,dark
+hyeong_ga+,형가,,hero,ancient,rogue,,Z,S,hero_hyeong_ga,1,,,physic
+oh_gi+,오기,,hero,ancient,ranger,,Z,S,hero_oh_gi,1,,,dark
+ha_o_ma_ru+,하오마루,,hero,samurai,tank,,Z,SSS,hero_haomaru,1,,,physic
+cha_r_lot_te+,샤를로트,,hero,samurai,tank,female,Z,SS,hero_charlotte,1,,,divine
+han_zo+,한조,핫토리,hero,samurai,rogue,,Z,SS,hero_hanzo,1,,,physic
+mi_zu_ki+,미즈키,라쇼진,hero,samurai,wizard,female,Z,SS,hero_mizuki,1,,,dark
+shi_zu_ma_ru+,시즈마루,히사메,hero,samurai,rogue,,Z,SS,hero_shizumaru,1,,,divine
+ri_mu_ru_ru+,리무루루,,hero,samurai,wizard,female,Z,SS,hero_rimururu,1,,,ice
+kyo_shi_ro+,쿄시로,센료,hero,samurai,tank,,Z,SS,hero_kyoshiro,1,,,fire
+a_ma_ku_sa+,아마쿠사,시로 도키사다,hero,samurai,paladin,,Z,SS,hero_amakusa,1,,,dark
+mi_na+,미나,마지키나,hero,samurai,ranger,female,Z,SS,hero_mi_na,1,,,divine
+na_ko_ru_ru+,나코루루,,hero,samurai,rogue,female,Z,SSS,hero_nakoruru,1,,,divine
+gen_ju_ro+,겐쥬로,키바가미,hero,samurai,tank,,Z,SS,hero_genjuro,1,,,physic
+u_kyo+,우쿄,타치바나,hero,samurai,rogue,,Z,SS,hero_ukyo,1,,,physic
+gal_ford+,갈포드,,hero,samurai,rogue,,Z,SS,hero_galford,1,,,lightning
+zan_ku_rou+,잔쿠로,미나즈키,hero,samurai,tank,,Z,SS,hero_zankurou,1,,,dark
+u_mi_in+,우미인,,hero,chohan,ranger,female,Z,SS,hero_u_mi_in,1,,,divine
+hang_u+,항우,,hero,chohan,tank,,Z,SSS,hero_hang_u,1,,,lightning
+hang_ryang+,항량,,hero,chohan,rogue,,Z,SS,hero_hang_ryang,1,,,divine
+beom_jeung+,범증,,hero,chohan,wizard,,Z,SS,hero_beom_jeung,1,,,lightning
+young_po+,영포,,hero,chohan,tank,,Z,SS,hero_young_po,1,,,physic
+ui_jae+,의제,,hero,chohan,paladin,,Z,S,hero_ui_jae,1,,,divine
+han_sin+,한신,,hero,chohan,rogue,,Z,SSS,hero_han_sin,1,,,lightning
+beon_kwae+,번쾌,,hero,chohan,tank,,Z,SS,hero_beon_kwae,1,,,fire
+paeng_wol+,팽월,,hero,chohan,tank,,Z,SS,hero_paeng_wol,1,,,ice
+yeo_tae_hu+,여태후,,hero,chohan,ranger,female,Z,SS,hero_yeo_tae_hu,1,,,dark
+zang_ryang+,장량,,hero,chohan,wizard,female,Z,SS,hero_zang_ryang,1,,,lightning
+yu_bang+,유방,,hero,chohan,paladin,,Z,SS,hero_yu_bang,1,,,dark
+so_ha+,소하,,hero,chohan,wizard,,Z,S,hero_so_ha,1,,,dark
+i_sin+,이신,,hero,ancient,rogue,,Z,SS,hero_i_sin,1,,,fire
+chun_sin_gun+,춘신군,,hero,ancient,paladin,,Z,SS,hero_chun_sin_gun,1,,,dark
+mong_mu+,몽무,,hero,ancient,tank,,Z,SS,hero_mong_mu,1,,,physic
+in_sang_yeo+,인상여,,hero,ancient,wizard,,Z,S,hero_in_sang_yeo,1,,,divine
+chang_hae_yeok_sa+,창해역사,,hero,chohan,tank,female,Z,S,hero_chang_hae_yeok_sa,1,,,physic
+jin_seung+,진승,,hero,chohan,rogue,,Z,SS,hero_jin_seung,1,,,poison
+jang_han+,장한,,hero,chohan,tank,,Z,SS,hero_jang_han,1,,,lightning
+yong_jeo+,용저,,hero,chohan,rogue,,Z,S,hero_yong_jeo,1,,,ice
+seo_si+,서시,,hero,"ancient
+chohan",wizard,female,Z,SSS,hero_seo_si,1,,,divine
+z_jang_so+,장소,자포,hero,oh,wizard,,Z,S,hero_z_jang_so,1,,,lightning
+z_son_sang_hyang+,손상향,,hero,oh,rogue,female,Z,SS,hero_z_son_sang_hyang,1,,,lightning
+z_goe_wol+,괴월,이도,hero,han,wizard,,Z,S,hero_z_goe_wol,1,,,poison
+z_chae_yeom+,채염,문희,hero,wii,wizard,female,Z,S,hero_z_chae_yeom,1,,,ice
+z_ma_sok+,마속,유상,hero,chock,ranger,,Z,S,hero_z_ma_sok,1,,,ice
+z_won_sul+,원술,공로,hero,han,paladin,,Z,S,hero_z_won_sul,1,,,fire
+z_mu_an_guk+,무안국,,hero,han,tank,,Z,SS,hero_z_mu_an_guk,1,,,fire
+z_ol_dol_gol+,올돌골,,hero,etc,rogue,,Z,S,hero_z_ol_dol_gol,1,,,poison
+z_gwan_gu_geom+,관구검,,hero,wii,tank,,Z,SS,hero_gwan_gu_geom,1,,,ice
+dong_cheon_wang+,동천왕,,hero,etc,tank,,Z,SSS,hero_dong_cheon_wang,1,,,poison
+z_jang_po+,장포,,hero,chock,tank,,Z,SS,hero_z_jang_po,1,,,fire
+z_sin_heon_yeong+,신헌영_z,,hero,wii,wizard,female,Z,SS,hero_z_sin_heon_yeong,1,,,lightning
+z_sa_ma_ga+,사마가_z,,hero,etc,tank,,Z,SS,hero_z_sa_ma_ga,1,,,poison
+z_jo_chang+,조창_z,자문,hero,wii,rogue,,Z,S,hero_z_jo_chang,1,,,lightning
+z_yu_seon+,유선_z,공사,hero,chock,paladin,,Z,S,hero_z_yu_seon,1,,,fire
+z_ma_ryang+,마량_z,계상,hero,chock,wizard,,Z,S,hero_z_ma_ryang,1,,,ice
+oh_guk_tae+,오국태,,hero,oh,paladin,female,Z,SS,hero_oh_guk_tae,1,,,fire
+z_seo_seong+,서성_z,문향,hero,oh,tank,,Z,S,hero_z_seo_seong,1,,,lightning
+z_gwak_sa+,곽사_z,,hero,han,rogue,,Z,SS,hero_z_gwak_sa,1,,,poison
+z_i_gak+,이각_z,치연,hero,han,tank,,Z,S,hero_z_i_gak,1,,,poison
+z_jang_bo+,장보_z,,hero,etc,ranger,,Z,S,hero_z_jang_bo,1,,,lightning
+z_jeong_won_ji+,정원지_z,,hero,etc,tank,,Z,AA,hero_z_jeong_won_ji,1,,,physic
+z_bu_cheom+,부첨_z,,hero,chock,rogue,,Z,SS,hero_bu_cheom,1,,,fire
+ztank_b_wii_mighty_1,위군 창병,,hero,wii,E_tank,,D,C,hero_tank_b_wii,,1,1,physic
+ztank_c_wii_mighty_3,위군 창병,,hero,wii,E_tank,,D,C,hero_tank_c_wii,,1,1,physic
+ztank_d_wii_mighty_2,위군 창병,,hero,wii,E_tank,,D,C,hero_tank_d_wii,,1,1,dark
+ztank_b_chock_mighty_1,촉군 창병,,hero,chock,E_tank,,D,C,hero_tank_b_chock,,1,1,poison
+ztank_c_chock_mighty_3,촉군 창병,,hero,chock,E_tank,,D,C,hero_tank_c_chock,,1,1,lightning
+ztank_d_chock_mighty_2,촉군 창병,,hero,chock,E_tank,,D,C,hero_tank_d_chock,,1,1,physic
+ztank_b_oh_mighty_1,오군 창병,,hero,oh,E_tank,,D,C,hero_tank_b_oh,,1,1,lightning
+ztank_c_oh_mighty_3,오군 창병,,hero,oh,E_tank,,D,C,hero_tank_c_oh,,1,1,physic
+ztank_d_oh_mighty_2,오군 창병,,hero,oh,E_tank,,D,C,hero_tank_d_oh,,1,1,physic
+ztank_b_han_mighty_1,한군 창병,,hero,han,E_tank,,D,C,hero_tank_b_han,,1,1,poison
+ztank_c_han_mighty_3,한군 창병,,hero,han,E_tank,,D,C,hero_tank_c_han,,1,1,poison
+ztank_d_han_mighty_2,한군 창병,,hero,han,E_tank,,D,C,hero_tank_d_han,,1,1,physic
+ztank_b_etc_mighty_1,이민족 창병,,hero,etc,E_tank,,D,C,hero_tank_b_etc,,1,1,physic
+ztank_c_etc_mighty_3,이민족 창병,,hero,etc,E_tank,,D,C,hero_tank_c_etc,,1,1,dark
+ztank_d_etc_mighty_2,이민족 창병,,hero,etc,E_tank,,D,C,hero_tank_d_etc,,1,1,poison
+ztank_n_b_wii_glaive_6,위군 병사,,hero,wii,E_tank,,D,C,hero_tank_n_b_wii,,1,1,physic
+ztank_n_c_wii_glaive_1,위군 병사,,hero,wii,E_tank,,D,C,hero_tank_n_c_wii,,1,1,physic
+ztank_n_d_wii_spear_1,위군 병사,,hero,wii,E_tank,,D,C,hero_tank_n_d_wii,,1,1,ice
+ztank_n_b_chock_glaive_6,촉군 병사,,hero,chock,E_tank,,D,C,hero_tank_n_b_chock,,1,1,lightning
+ztank_n_c_chock_glaive_1,촉군 병사,,hero,chock,E_tank,,D,C,hero_tank_n_c_chock,,1,1,physic
+ztank_n_d_chock_spear_1,촉군 병사,,hero,chock,E_tank,,D,C,hero_tank_n_d_chock,,1,1,physic
+ztank_n_b_oh_glaive_6,오군 병사,,hero,oh,E_tank,,D,C,hero_tank_n_b_oh,,1,1,physic
+ztank_n_c_oh_glaive_1,오군 병사,,hero,oh,E_tank,,D,C,hero_tank_n_c_oh,,1,1,physic
+ztank_n_d_oh_spear_1,오군 병사,,hero,oh,E_tank,,D,C,hero_tank_n_d_oh,,1,1,ice
+ztank_n_b_han_glaive_6,한군 병사,,hero,han,E_tank,,D,C,hero_tank_n_b_han,,1,1,physic
+ztank_n_c_han_glaive_1,한군 병사,,hero,han,E_tank,,D,C,hero_tank_n_c_han,,1,1,physic
+ztank_n_d_han_spear_1,한군 병사,,hero,han,E_tank,,D,C,hero_tank_n_d_han,,1,1,ice
+ztank_n_b_etc_glaive_6,이민족 병사,,hero,etc,E_tank,,D,C,hero_tank_n_b_etc,,1,1,lightning
+ztank_n_c_etc_glaive_1,이민족 병사,,hero,etc,E_tank,,D,C,hero_tank_n_c_etc,,1,1,physic
+ztank_n_d_etc_spear_1,이민족 병사,,hero,etc,E_tank,,D,C,hero_tank_n_d_etc,,1,1,physic
+zpaladin_n_b_wii_gauntlet_1,위군 수비대,,hero,wii,E_tank,,D,C,hero_paladin_n_b_wii,,1,1,poison
+zpaladin_n_c_wii_gauntlet_1,위군 수비대,,hero,wii,E_tank,,D,C,hero_paladin_n_c_wii,,1,1,lightning
+zpaladin_n_d_wii_gauntlet_1,위군 수비대,,hero,wii,E_tank,,D,C,hero_paladin_n_d_wii,,1,1,physic
+zpaladin_n_b_chock_gauntlet_1,촉군 수비대,,hero,chock,E_tank,,D,C,hero_paladin_n_b_chock,,1,1,poison
+zpaladin_n_c_chock_gauntlet_1,촉군 수비대,,hero,chock,E_tank,,D,C,hero_paladin_n_c_chock,,1,1,lightning
+zpaladin_n_d_chock_gauntlet_1,촉군 수비대,,hero,chock,E_tank,,D,C,hero_paladin_n_d_chock,,1,1,physic
+zpaladin_n_b_oh_gauntlet_1,오군 수비대,,hero,oh,E_tank,,D,C,hero_paladin_n_b_oh,,1,1,poison
+zpaladin_n_c_oh_gauntlet_1,오군 수비대,,hero,oh,E_tank,,D,C,hero_paladin_n_c_oh,,1,1,lightning
+zpaladin_n_d_oh_gauntlet_1,오군 수비대,,hero,oh,E_tank,,D,C,hero_paladin_n_d_oh,,1,1,physic
+zpaladin_n_b_han_gauntlet_1,한군 수비대,,hero,han,E_tank,,D,C,hero_paladin_n_b_han,,1,1,poison
+zpaladin_n_c_han_gauntlet_1,한군 수비대,,hero,han,E_tank,,D,C,hero_paladin_n_c_han,,1,1,lightning
+zpaladin_n_d_han_gauntlet_1,한군 수비대,,hero,han,E_tank,,D,C,hero_paladin_n_d_han,,1,1,physic
+zpaladin_n_b_etc_gauntlet_1,이민족 수비대,,hero,etc,E_tank,,D,C,hero_paladin_n_b_etc,,1,1,poison
+zpaladin_n_c_etc_gauntlet_1,이민족 수비대,,hero,etc,E_tank,,D,C,hero_paladin_n_c_etc,,1,1,lightning
+zpaladin_n_d_etc_gauntlet_1,이민족 수비대,,hero,etc,E_tank,,D,C,hero_paladin_n_d_etc,,1,1,physic
+zrogue_b_wii_spear_5,위군 섬멸대,,hero,wii,E_rogue,,D,C,hero_rogue_b_wii,,1,1,poison
+zrogue_c_wii_glaive_6,위군 섬멸대,,hero,wii,E_rogue,,D,C,hero_rogue_c_wii,,1,1,poison
+zrogue_d_wii_spear_1,위군 섬멸대,,hero,wii,E_rogue,,D,C,hero_rogue_d_wii,,1,1,poison
+zrogue_b_chock_spear_5,촉군 섬멸대,,hero,chock,E_rogue,,D,C,hero_rogue_b_chock,,1,1,ice
+zrogue_c_chock_glaive_6,촉군 섬멸대,,hero,chock,E_rogue,,D,C,hero_rogue_c_chock,,1,1,lightning
+zrogue_d_chock_spear_1,촉군 섬멸대,,hero,chock,E_rogue,,D,C,hero_rogue_d_chock,,1,1,dark
+zrogue_b_oh_spear_5,오군 섬멸대,,hero,oh,E_rogue,,D,C,hero_rogue_b_oh,,1,1,fire
+zrogue_c_oh_glaive_6,오군 섬멸대,,hero,oh,E_rogue,,D,C,hero_rogue_c_oh,,1,1,lightning
+zrogue_d_oh_spear_1,오군 섬멸대,,hero,oh,E_rogue,,D,C,hero_rogue_d_oh,,1,1,lightning
+zrogue_b_han_spear_5,한군 섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_b_han,,1,1,physic
+zrogue_c_han_glaive_6,한군 섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_c_han,,1,1,lightning
+zrogue_d_han_spear_1,한군 섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_d_han,,1,1,lightning
+zrogue_b_etc_spear_5,이민족 섬멸대,,hero,etc,E_rogue,,D,C,hero_rogue_b_etc,,1,1,fire
+zrogue_c_etc_glaive_6,이민족 섬멸대,,hero,etc,E_rogue,,D,C,hero_rogue_c_etc,,1,1,lightning
+zrogue_d_etc_spear_1,이민족 섬멸대,,hero,etc,E_rogue,,D,C,hero_rogue_d_etc,,1,1,physic
+zrogue2_b_wii_dualaxe_1,위군 기동대,,hero,wii,E_rogue,,D,C,hero_rogue2_b_wii,,1,1,poison
+zrogue2_c_wii_dualaxe_4,위군 기동대,,hero,wii,E_rogue,,D,C,hero_rogue2_c_wii,,1,1,lightning
+zrogue2_d_wii_dualaxe_3,위군 기동대,,hero,wii,E_rogue,,D,C,hero_rogue2_d_wii,,1,1,poison
+zrogue2_b_chock_dualaxe_1,촉군 기동대,,hero,chock,E_rogue,,D,C,hero_rogue2_b_chock,,1,1,poison
+zrogue2_c_chock_dualaxe_4,촉군 기동대,,hero,chock,E_rogue,,D,C,hero_rogue2_c_chock,,1,1,lightning
+zrogue2_d_chock_dualaxe_3,촉군 기동대,,hero,chock,E_rogue,,D,C,hero_rogue2_d_chock,,1,1,poison
+zrogue2_b_oh_dualaxe_1,오군 기동대,,hero,oh,E_rogue,,D,C,hero_rogue2_b_oh,,1,1,lightning
+zrogue2_c_oh_dualaxe_4,오군 기동대,,hero,oh,E_rogue,,D,C,hero_rogue2_c_oh,,1,1,poison
+zrogue2_d_oh_dualaxe_3,오군 기동대,,hero,oh,E_rogue,,D,C,hero_rogue2_d_oh,,1,1,physic
+zrogue2_b_han_dualaxe_1,한군 기동대,,hero,han,E_rogue,,D,C,hero_rogue2_b_han,,1,1,lightning
+zrogue2_c_han_dualaxe_4,한군 기동대,,hero,han,E_rogue,,D,C,hero_rogue2_c_han,,1,1,dark
+zrogue2_d_han_dualaxe_3,한군 기동대,,hero,han,E_rogue,,D,C,hero_rogue2_d_han,,1,1,physic
+zrogue2_b_etc_dualaxe_1,이민족 기동대,,hero,etc,E_rogue,,D,C,hero_rogue2_b_etc,,1,1,lightning
+zrogue2_c_etc_dualaxe_4,이민족 기동대,,hero,etc,E_rogue,,D,C,hero_rogue2_c_etc,,1,1,dark
+zrogue2_d_etc_dualaxe_3,이민족 기동대,,hero,etc,E_rogue,,D,C,hero_rogue2_d_etc,,1,1,physic
+zranger_b_wii_bow_2,위군 궁수,,hero,wii,E_ranger,,D,C,hero_ranger_b_wii,,1,1,physic
+zranger_c_wii_bow_1,위군 궁수,,hero,wii,E_ranger,,D,C,hero_ranger_c_wii,,1,1,poison
+zranger_d_wii_bow_0,위군 궁수,,hero,wii,E_ranger,,D,C,hero_ranger_d_wii,,1,1,lightning
+zranger_b_chock_bow_2,촉군 궁수,,hero,chock,E_ranger,,D,C,hero_ranger_b_chock,,1,1,ice
+zranger_c_chock_bow_1,촉군 궁수,,hero,chock,E_ranger,,D,C,hero_ranger_c_chock,,1,1,physic
+zranger_d_chock_bow_0,촉군 궁수,,hero,chock,E_ranger,,D,C,hero_ranger_d_chock,,1,1,poison
+zranger_b_oh_bow_2,오군 궁수,,hero,oh,E_ranger,,D,C,hero_ranger_b_oh,,1,1,ice
+zranger_c_oh_bow_1,오군 궁수,,hero,oh,E_ranger,,D,C,hero_ranger_c_oh,,1,1,lightning
+zranger_d_oh_bow_0,오군 궁수,,hero,oh,E_ranger,,D,C,hero_ranger_d_oh,,1,1,lightning
+zranger_b_han_bow_2,한군 궁수,,hero,han,E_ranger,,D,C,hero_ranger_b_han,,1,1,poison
+zranger_c_han_bow_1,한군 궁수,,hero,han,E_ranger,,D,C,hero_ranger_c_han,,1,1,lightning
+zranger_d_han_bow_0,한군 궁수,,hero,han,E_ranger,,D,C,hero_ranger_d_han,,1,1,poison
+zranger_b_etc_bow_2,이민족 궁수,,hero,etc,E_ranger,,D,C,hero_ranger_b_etc,,1,1,lightning
+zranger_c_etc_bow_1,이민족 궁수,,hero,etc,E_ranger,,D,C,hero_ranger_c_etc,,1,1,physic
+zranger_d_etc_bow_0,이민족 궁수,,hero,etc,E_ranger,,D,C,hero_ranger_d_etc,,1,1,physic
+zcross_b_wii_crossbow_2,위군 노병,,hero,wii,E_ranger,,D,C,hero_crossbow_b_wii,,1,1,physic
+zcross_c_wii_crossbow_1,위군 노병,,hero,wii,E_ranger,,D,C,hero_crossbow_c_wii,,1,1,poison
+zcross_d_wii_crossbow_1,위군 노병,,hero,wii,E_ranger,,D,C,hero_crossbow_d_wii,,1,1,lightning
+zcross_b_chock_crossbow_2,촉군 노병,,hero,chock,E_ranger,,D,C,hero_crossbow_b_chock,,1,1,ice
+zcross_c_chock_crossbow_1,촉군 노병,,hero,chock,E_ranger,,D,C,hero_crossbow_c_chock,,1,1,physic
+zcross_d_chock_crossbow_1,촉군 노병,,hero,chock,E_ranger,,D,C,hero_crossbow_d_chock,,1,1,poison
+zcross_b_oh_crossbow_2,오군 노병,,hero,oh,E_ranger,,D,C,hero_crossbow_b_oh,,1,1,ice
+zcross_c_oh_crossbow_1,오군 노병,,hero,oh,E_ranger,,D,C,hero_crossbow_c_oh,,1,1,lightning
+zcross_d_oh_crossbow_1,오군 노병,,hero,oh,E_ranger,,D,C,hero_crossbow_d_oh,,1,1,lightning
+zcross_b_han_crossbow_2,한군 노병,,hero,han,E_ranger,,D,C,hero_crossbow_b_han,,1,1,poison
+zcross_c_han_crossbow_1,한군 노병,,hero,han,E_ranger,,D,C,hero_crossbow_c_han,,1,1,lightning
+zcross_d_han_crossbow_1,한군 노병,,hero,han,E_ranger,,D,C,hero_crossbow_d_han,,1,1,poison
+zcross_b_etc_crossbow_2,이민족 노병,,hero,etc,E_ranger,,D,C,hero_crossbow_b_etc,,1,1,lightning
+zcross_c_etc_crossbow_1,이민족 노병,,hero,etc,E_ranger,,D,C,hero_crossbow_c_etc,,1,1,physic
+zcross_d_etc_crossbow_1,이민족 노병,,hero,etc,E_ranger,,D,C,hero_crossbow_d_etc,,1,1,physic
+zwizard_b_wii_fan_2,위군 책사,,hero,wii,E_wizard,,D,C,hero_wizard_b_wii,,1,1,poison
+zwizard_c_wii_fan_3,위군 책사,,hero,wii,E_wizard,,D,C,hero_wizard_c_wii,,1,1,ice
+zwizard_d_wii_fan_1,위군 책사,,hero,wii,E_wizard,,D,C,hero_wizard_d_wii,,1,1,fire
+zwizard_b_chock_fan_2,촉군 책사,,hero,chock,E_wizard,,D,C,hero_wizard_b_chock,,1,1,ice
+zwizard_c_chock_fan_3,촉군 책사,,hero,chock,E_wizard,,D,C,hero_wizard_c_chock,,1,1,poison
+zwizard_d_chock_fan_1,촉군 책사,,hero,chock,E_wizard,,D,C,hero_wizard_d_chock,,1,1,fire
+zwizard_b_oh_fan_2,오군 책사,,hero,oh,E_wizard,,D,C,hero_wizard_b_oh,,1,1,ice
+zwizard_c_oh_fan_3,오군 책사,,hero,oh,E_wizard,,D,C,hero_wizard_c_oh,,1,1,fire
+zwizard_d_oh_fan_1,오군 책사,,hero,oh,E_wizard,,D,C,hero_wizard_d_oh,,1,1,fire
+zwizard_b_han_fan_2,한군 책사,,hero,han,E_wizard,,D,C,hero_wizard_b_han,,1,1,lightning
+zwizard_c_han_fan_3,한군 책사,,hero,han,E_wizard,,D,C,hero_wizard_c_han,,1,1,fire
+zwizard_d_han_fan_1,한군 책사,,hero,han,E_wizard,,D,C,hero_wizard_d_han,,1,1,poison
+zwizard_b_etc_fan_2,이민족 책사,,hero,etc,E_wizard,,D,C,hero_wizard_b_etc,,1,1,dark
+zwizard_c_etc_fan_3,이민족 책사,,hero,etc,E_wizard,,D,C,hero_wizard_c_etc,,1,1,poison
+zwizard_d_etc_fan_1,이민족 책사,,hero,etc,E_wizard,,D,C,hero_wizard_d_etc,,1,1,lightning
+zbard_c_wii,위군 고수,,hero,wii,E_wizard,,D,C,hero_bard_c_wii,,1,1,divine
+zbard_d_wii,위군 고수,,hero,wii,E_wizard,,D,C,hero_bard_d_wii,,1,1,divine
+zbard_c_chock,촉군 고수,,hero,chock,E_wizard,,D,C,hero_bard_c_chock,,1,1,divine
+zbard_d_chock,촉군 고수,,hero,chock,E_wizard,,D,C,hero_bard_d_chock,,1,1,divine
+zbard_c_oh,오군 고수,,hero,oh,E_wizard,,D,C,hero_bard_c_oh,,1,1,divine
+zbard_d_oh,오군 고수,,hero,oh,E_wizard,,D,C,hero_bard_d_oh,,1,1,divine
+zbard_c_han,한군 고수,,hero,han,E_wizard,,D,C,hero_bard_c_han,,1,1,divine
+zbard_d_han,한군 고수,,hero,han,E_wizard,,D,C,hero_bard_d_han,,1,1,divine
+zbard_c_etc,이민족 고수,,hero,etc,E_wizard,,D,C,hero_bard_c_etc,,1,1,divine
+zbard_d_etc,이민족 고수,,hero,etc,E_wizard,,D,C,hero_bard_d_etc,,1,1,divine
+ztank_b_dun_glaive,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,physic
+ztank_b_dun_glaive_fire,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,fire
+ztank_b_dun_glaive_ice,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,ice
+ztank_b_dun_glaive_light,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,lightning
+ztank_b_dun_glaive_poison,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,poison
+ztank_b_dun_glaive_dark,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,dark
+ztank_b_dun_glaive_divine,호표기 근위대장,,hero,han,E_tank,,S,SS,hero_ztank_b_dungeon,,,1,divine
+ztank_f_b_dun_mighty,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,physic
+ztank_f_b_dun_mighty_fire,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,fire
+ztank_f_b_dun_mighty_ice,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,ice
+ztank_f_b_dun_mighty_light,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,lightning
+ztank_f_b_dun_mighty_poison,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,poison
+ztank_f_b_dun_mighty_dark,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,dark
+ztank_f_b_dun_mighty_divine,호표기 돌격대장,,hero,han,E_tank,,S,SS,hero_ztank_f_b_dungeon,,,1,divine
+zwizard_1_sang_si,일상시,,hero,han,E_wizard,,S,SS,hero_1_sang_si,,,1,fire
+zwizard_2_sang_si,이상시,,hero,han,E_wizard,,S,SS,hero_2_sang_si,,,1,ice
+zwizard_3_sang_si,삼상시,,hero,han,E_wizard,,S,SS,hero_3_sang_si,,,1,lightning
+zwizard_4_sang_si,사상시,,hero,han,E_wizard,,S,SS,hero_4_sang_si,,,1,poison
+zwizard_5_sang_si,오상시,,hero,han,E_wizard,,S,SS,hero_5_sang_si,,,1,dark
+zwizard_6_sang_si,육상시,,hero,han,E_wizard,,S,SS,hero_6_sang_si,,,1,divine
+zwizard_7_sang_si,칠상시,,hero,han,E_wizard,,S,SS,hero_7_sang_si,,,1,fire
+zwizard_8_sang_si,팔상시,,hero,han,E_wizard,,S,SS,hero_8_sang_si,,,1,lightning
+zwizard_9_sang_si,구상시,,hero,han,E_wizard,,S,SS,hero_9_sang_si,,,1,divine
+zwizard_10_sang_si,십상시,,hero,han,E_wizard,,S,SS,hero_10_sang_si,,,1,lightning
+dun_paladin_zwizard,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,physic
+dun_paladin_zwizard_b_fire,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,fire
+dun_paladin_zwizard_b_ice,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,ice
+dun_paladin_zwizard_b_lt,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,lightning
+dun_paladin_zwizard_b_poison,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,poison
+dun_paladin_zwizard_b_dark,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,dark
+dun_paladin_zwizard_b_divine,호표기 군주,,hero,han,paladin_dun,,S,SS,hero_zwizard_b_dungeon,,,1,divine
+ztank_n_b_dun_glaive,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,physic
+ztank_n_b_dun_glaive_fire,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,fire
+ztank_n_b_dun_glaive_ice,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,ice
+ztank_n_b_dun_glaive_lt,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,lightning
+ztank_n_b_dun_glaive_poison,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,poison
+ztank_n_b_dun_glaive_dark,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,dark
+ztank_n_b_dun_glaive_divine,호표기 대도병,,hero,han,E_tank,,S,AA,hero_ztank_n_b_dun_glaive,,,1,divine
+zpaladin_n_b_dun_gt,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,physic
+zpaladin_n_b_dun_gt_fire,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,fire
+zpaladin_n_b_dun_gt_ice,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,ice
+zpaladin_n_b_dun_gt_lt,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,lightning
+zpaladin_n_b_dun_gt_poison,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,poison
+zpaladin_n_b_dun_gt_dark,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,dark
+zpaladin_n_b_dun_gt_divine,호표기 돌격병,,hero,han,E_tank,,S,AA,hero_zpaladin_n_b_dun_gauntlet,,,1,divine
+zrogue_b_dun_spear,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,physic
+zrogue_b_dun_spear_fire,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,fire
+zrogue_b_dun_spear_ice,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,ice
+zrogue_b_dun_spear_lt,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,lightning
+zrogue_b_dun_spear_poison,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,poison
+zrogue_b_dun_spear_dark,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,dark
+zrogue_b_dun_spear_divine,호표기 창병,,hero,han,E_rogue,,S,AA,hero_zrogue_b_dun_spear,,,1,divine
+zrogue_n_b_dun_dual,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,physic
+zrogue_n_b_dun_dual_fire,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,fire
+zrogue_n_b_dun_dual_ice,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,ice
+zrogue_n_b_dun_dual_lt,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,lightning
+zrogue_n_b_dun_dual_poison,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,poison
+zrogue_n_b_dun_dual_dark,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,dark
+zrogue_n_b_dun_dual_divine,호표기 궐병,,hero,han,E_rogue,,S,AA,hero_zrogue_n_b_dun_dual,,,1,divine
+zranger_b_dun_bow,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,physic
+zranger_b_dun_bow_fire,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,fire
+zranger_b_dun_bow_ice,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,ice
+zranger_b_dun_bow_lt,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,lightning
+zranger_b_dun_bow_poison,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,poison
+zranger_b_dun_bow_dark,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,dark
+zranger_b_dun_bow_divine,호표기 궁병,,hero,han,E_ranger,,S,AA,hero_zranger_b_dun_bow,,,1,divine
+zcross_b_dun_crossbow,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,physic
+zcross_b_dun_crossbow_fire,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,fire
+zcross_b_dun_crossbow_ice,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,ice
+zcross_b_dun_crossbow_lt,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,lightning
+zcross_b_dun_crossbow_poison,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,poison
+zcross_b_dun_crossbow_dark,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,dark
+zcross_b_dun_crossbow_divine,호표기 연노병,,hero,han,E_ranger,,S,AA,hero_zcross_b_dun_crossbow,,,1,divine
+zwizard_b_dun_staff,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,physic
+zwizard_b_dun_staff_fire,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,fire
+zwizard_b_dun_staff_ice,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,ice
+zwizard_b_dun_staff_lt,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,lightning
+zwizard_b_dun_staff_poison,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,poison
+zwizard_b_dun_staff_dark,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,dark
+zwizard_b_dun_staff_divine,호표기 책사,,hero,han,E_wizard_dun,,S,AA,hero_zwizard_b_dun_staff,,,1,divine
+screamer_b_dun,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,physic
+screamer_b_dun_fire,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,fire
+screamer_b_dun_ice,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,ice
+screamer_b_dun_lt,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,lightning
+screamer_b_dun_poison,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,poison
+screamer_b_dun_dark,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,dark
+screamer_b_dun_divine,호표기 악사,,hero,han,E_wizard_dun,female,S,AA,hero_screamer_b_dun,,,1,divine
+dun_private_spear_boss,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,physic
+ztank_b_dun_glaive_boss,호표기 근위대장,,hero,han,E_tank,,D,C,hero_ztank_b_dungeon,,,1,physic
+zwizard_1_sang_si_boss,일상시,,hero,han,E_wizard,,D,C,hero_1_sang_si,,,1,fire
+zrogue_b_dun_spear_boss,호표기 창병,,hero,han,E_rogue,,D,C,hero_zrogue_b_dun_spear,,,1,physic
+dun_private_bow_boss,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,physic
+screamer_b_dun_boss,호표기 악사,,hero,han,E_wizard_dun,female,D,C,hero_screamer_b_dun,,,1,physic
+dun_paladin_zwizard_boss,호표기 군주,,hero,han,paladin_dun,,C,C,hero_zwizard_b_dungeon,,,1,physic
+t_yeo_po,여포,봉선,hero,han,E_tank,,S,S,hero_yeo_po,,1,1,dark
+t_gwan_u,관우,운장,hero,chock,E_tank,,S,S,hero_gwan_u,,1,1,lightning
+boss_yeo_po,여포,봉선,hero,han,E_tank,,S,SSS,hero_yeo_po_boss,,1,1,dark
+boss_yeo_po2,여포,봉선,hero,han,E_tank,,S,SSS,hero_yeo_po_boss,,1,1,dark
+boss_yeo_po3,여포,봉선,hero,han,E_tank,,S,SSS,hero_yeo_po_boss,,1,1,dark
+boss_ha_hu_don,하후돈,원양,hero,wii,E_tank,,S,SSS,hero_ha_hu_don,,1,1,lightning
+boss_dong_tak,동탁,중영,hero,han,paladin,,S,SSS,hero_dong_tak,,1,1,dark
+boss_dong_tak2,동탁,중영,hero,han,paladin,,S,SSS,hero_dong_tak,,1,1,dark
+boss_jang_gak,장각,,hero,han,paladin,,S,SSS,hero_jang_gak,,1,1,lightning
+boss_jang_gak2,장각,,hero,han,paladin,,S,SSS,hero_jang_gak,,1,1,lightning
+boss_hwa_ung,화웅,계도,hero,han,ranger,,S,SSS,hero_hwa_ung,,1,1,physic
+m_jang_ryo,장료,문원,hero,wii,rogue,,S,SSS,hero_jang_ryo,,1,1,dark
+boss_maeng_hoek,맹획,,hero,etc,paladin,,S,SSS,hero_maeng_hoek_boss,,1,1,dark
+boss_maeng_hoek_ring,맹획,,hero,etc,rogue,,S,SSS,hero_maeng_hoek_ring,,1,1,ice
+boss_maeng_hoek_torch,맹획,,hero,etc,paladin,,S,SSS,hero_maeng_hoek_torch,,1,1,dark
+boss_maeng_hoek_bow,맹획,,hero,etc,ranger,,S,SSS,hero_maeng_hoek_bow,,1,1,divine
+boss_maeng_hoek_axe,맹획,,hero,etc,rogue,,S,SSS,hero_maeng_hoek_axe,,1,1,lightning
+boss_maeng_hoek_gauntlet,맹획,,hero,etc,tank,,S,SSS,hero_maeng_hoek_gauntlet,,1,1,fire
+boss_maeng_hoek_staff,맹획,,hero,etc,paladin,,S,SSS,hero_maeng_hoek_staff,,1,1,poison
+boss_maeng_hoek_chuk,맹획,,hero,etc,tank,,S,SSS,hero_maeng_hoek_chuk,,1,1,physic
+boss_baek_gi,백기,,hero,ancient,E_tank,,S,SSS,hero_baek_gi,,1,1,dark
+han_sword,한군보병,,troop,han,infantry,,D,C,private_tr_sword_han,,1,1,
+han_spear,한군창병,,troop,han,spearman,,D,C,private_tr_spear_han,,1,1,
+han_bow,한군궁병,,troop,han,bowman,,D,C,private_tr_bow_han,,1,1,
+han_crossbow,한군연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_han,,1,1,
+wii_sword,위군보병,,troop,wii,infantry,,D,C,private_tr_sword_wii,,1,1,
+wii_spear,위군창병,,troop,wii,spearman,,D,C,private_tr_spear_wii,,1,1,
+wii_bow,궁병,,troop,wii,bowman,,D,C,private_tr_bow_wii,,1,1,
+wii_crossbow,연노병,,troop,wii,crossbowman,,D,C,private_tr_crossbow_wii,,1,1,
+chock_sword,보병,,troop,chock,infantry,,D,C,private_tr_sword_chock,,1,1,
+chock_spear,창병,,troop,chock,spearman,,D,C,private_tr_spear_chock,,1,1,
+chock_bow,궁병,,troop,chock,bowman,,D,C,private_tr_bow_chock,,1,1,
+chock_crossbow,연노병,,troop,chock,crossbowman,,D,C,private_tr_crossbow_chock,,1,1,
+oh_sword,보병,,troop,oh,infantry,,D,C,private_tr_sword_oh,,1,1,
+oh_spear,창병,,troop,oh,spearman,,D,C,private_tr_spear_oh,,1,1,
+oh_bow,궁병,,troop,oh,bowman,,D,C,private_tr_bow_oh,,1,1,
+oh_crossbow,연노병,,troop,oh,crossbowman,,D,C,private_tr_crossbow_oh,,1,1,
+tr_catapult,발석차,,troop,etc,catapult,,D,C,tower_catapult,,1,1,
+tr_bigbow,쇠뇌,,troop,etc,bigbow,,D,C,tower_crossbow,,1,1,
+tr_oilthrower,불가마,,troop,etc,oilthrower,,D,C,tower_oil,,1,1,
+hero_tk_yellow_yellowtroop2,황건보병,,troop,etc,infantry,,D,C,private_tr_yellow_sword,,1,1,
+hero_tk_yellow_yellowtroop,황건창병,,troop,etc,spearman,,D,C,private_tr_yellow_spear,,1,1,
+hero_tk_yellow_bowtroop,황건궁수,,troop,etc,bowman,,D,C,private_tr_yellow_bow,,1,1,
+hero_tk_yellow_crossbowtroop,황건노병,,troop,etc,crossbowman,,D,C,private_tr_yellow_crossbow,,1,1,
+tower_bigbow,쇠뇌,,tower,etc,tower_bigbow,,D,C,tower_crossbow,,1,1,
+tower_catapult,발석차,,tower,etc,tower_catapult,,D,C,tower_catapult,,1,1,
+tower_oilthrower,불가마,,tower,etc,tower_oilthrower,,D,C,tower_oil,,1,1,
+tk_castle_gate,성문,,gate,wii,gate,,D,C,tower_catapult,,1,1,
+tr_catapult_wii,발석차,,tower,etc,tower_catapult,,D,C,tower_catapult,,1,1,
+tr_catapult_chock,발석차,,tower,etc,tower_catapult,,D,C,tower_catapult,,1,1,
+tr_catapult_oh,발석차,,tower,etc,tower_catapult,,D,C,tower_catapult,,1,1,
+dev_my_man,내팀[개발용],,hero,oh,tank,,D,C,hero_yellow_spear,,1,1,
+dev_enemy_man,적팀[개발용],,hero,wii,tank,,D,C,hero_yellow_spear,,1,1,
+zhang-fei-enemy,피크네코 [PVP],,invasion,oh,tank,,D,C,hero_jangbi,,1,1,
+motfqe_rogue,병마용,,hero,chock,rogue,,D,C,hero_motfqe,,1,1,
+totem_heal,힐토템,,totem,chock,tank,,D,C,,,1,1,
+sand_obstacle,장애물,,obstacle,wii,tank,,D,C,,,1,1,
+tkhorse_saddle,적토마,,decoration,oh,horse,,D,C,horse,,1,1,
+tkhorse_battle,적토마,,decoration,wii,horse,,D,C,horse,,1,1,
+tkhorse_saddle_gold,금 조공,,,chock,taxobject,,D,C,horse,,1,1,
+catapult_yellow,발석차,,troop,etc,catapult,,D,C,hero_catapult_yellow,,1,1,
+bigbow_yellow,쇠뇌,,troop,etc,bigbow_yellow,,D,C,hero_bigbow_yellow,,1,1,
+oilthrower_yellow,불가마,,troop,etc,oilthrower_yellow,,D,C,hero_flamethrower_yellow,,1,1,
+hwang_sword_elite,정예 보병,,troop,etc,infantry,,D,C,hero_yellow_sword_mask,,1,1,
+hwang_spear_elite,정예 창병,,troop,etc,spearman,,D,C,hero_yellow_spear_mask,,1,1,
+hwang_bow_elite,정예 궁수,,troop,etc,bowman,,D,C,hero_yellow_bow_mask,,1,1,
+hwang_crossbow_elite,정예 노병,,troop,etc,crossbowman,,D,C,hero_yellow_crossbow_mask,,1,1,
+hwang_ninja,암살자,,troop,etc,ninja,,D,C,hero_yellow_flagman,,1,1,
+rams_yellow,충차,,troop,etc,rams_yellow,,D,C,hero_rams,,1,1,
+hwang_ninja_elite,정예 암살자,,troop,etc,ninja,,D,C,hero_yellow_flagman_mask,,1,1,
+etc_sword,이민족 보병,,troop,etc,infantry,,D,C,hero_private_sword_etc,,1,1,
+etc_spear,이민족 창병,,troop,etc,spearman,,D,C,hero_private_spear_etc,,1,1,
+etc_bow,이민족 궁병,,troop,etc,bowman,,D,C,hero_private_bow_etc,,1,1,
+etc_crossbow,이민족 연노병,,troop,etc,crossbowman,,D,C,hero_private_crossbow_ect,,1,1,
+tr_catapult_etc,이민족 발석차,,troop,etc,catapult,,D,C,hero_catapult_ect,,1,1,
+tr_oilthrower_etc,이민족 불가마,,troop,etc,oilthrower,,D,C,hero_flamethrower_etc,,1,1,
+dun_private_bow,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,physic
+dun_private_bow_e_fire,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,fire
+dun_private_bow_e_ice,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,ice
+dun_private_bow_e_lightning,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,lightning
+dun_private_bow_e_poison,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,poison
+dun_private_bow_e_dark,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,dark
+dun_private_bow_e_divine,타락한 궁병,,troop,han,bowman,,D,C,private_tr_bow_dun,,1,1,divine
+dun_private_crossbow,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,physic
+dun_private_crossbow_e_fire,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,fire
+dun_private_crossbow_e_ice,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,ice
+dun_private_crossbow_e_light,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,lightning
+dun_private_crossbow_e_poison,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,poison
+dun_private_crossbow_e_dark,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,dark
+dun_private_crossbow_e_divine,타락한 연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_dun,,1,1,divine
+dun_private_spear,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,physic
+dun_private_spear_e_fire,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,fire
+dun_private_spear_e_ice,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,ice
+dun_private_spear_e_lightning,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,lightning
+dun_private_spear_e_poison,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,poison
+dun_private_spear_e_dark,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,dark
+dun_private_spear_e_divine,타락한 창병,,troop,han,spearman,,D,C,private_tr_spear_dun,,1,1,divine
+dun_private_sword,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,physic
+dun_private_sword_e_fire,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,fire
+dun_private_sword_e_ice,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,ice
+dun_private_sword_e_lightning,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,lightning
+dun_private_sword_e_poison,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,poison
+dun_private_sword_e_dark,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,dark
+dun_private_sword_e_divine,타락한 보병,,troop,han,infantry,,D,C,private_tr_sword_dun,,1,1,divine
+dun_rams_b,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,physic
+dun_rams_b_e_fire,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,fire
+dun_rams_b_e_ice,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,ice
+dun_rams_b_e_lightning,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,lightning
+dun_rams_b_e_poison,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,poison
+dun_rams_b_e_dark,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,dark
+dun_rams_b_e_divine,타락한 충차,,troop,han,rams_yellow_dun,,D,C,hero_rams_b_dungeon,,1,1,divine
+bigbow_dun,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_fire,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_ice,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_lightning,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_poison,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_dark,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+bigbow_dun_e_divine,타락한 쇠뇌,,troop,han,bigbow,,D,C,hero_bigbow_dun,,1,1,
+catapult_dun,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_fire,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_ice,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_lightning,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_poison,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_dark,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+catapult_dun_e_divine,금강 발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+ninja_dun,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_fire,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_ice,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_lightning,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_poison,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_dark,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_e_divine,타락충,,troop,han,spider_dun,,D,C,hero_dun_flagman2,,1,1,
+ninja_dun_elite,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_fire,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_ice,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_lightning,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_poison,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_dark,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_dun_elite_e_divine,타락혈충,,troop,han,spider_dun_elite,,D,C,hero_dun_flagman1,,1,1,
+ninja_etc,남만 독살병,,troop,etc,ninja,,D,C,hero_jungle_flagman,,1,1,
+ninja_elite_etc,남만 정예 독살병,,troop,etc,ninja,,D,C,hero_jungle_flagman,,1,1,
+nam_bigbow_etc,남만 쇠뇌,,troop,etc,bigbow,,D,C,hero_bigbow_etc,,1,1,
+nam_rams_etc,남만 충차,,troop,etc,rams_yellow_dun,,D,C,hero_rams_etc,,1,1,
+nam_toad_etc_tank,남만 금두꺼비,,troop,etc,toad_tank,,S,AA,hero_toad_tank,,1,1,
+nam_toad_etc_rogue,남만 은두꺼비,,troop,etc,toad_rogue,,S,AA,hero_toad_rogue,,1,1,
+go_jung,고정,,hero,etc,E_ranger,,D,C,hero_ranger_d_etc,,1,1,physic
+ak_hwan,악환,,hero,etc,E_rogue,,D,C,hero_rogue2_c_etc,,1,1,dark
+ong_gae,옹개,,hero,etc,E_wizard,,D,C,hero_wizard_c_etc,,1,1,poison
+ju_po,주포,,hero,etc,E_ranger,,D,C,hero_crossbow_c_etc,,1,1,physic
+yang_bong2,양봉,,hero,etc,E_tank,,D,C,hero_paladin_n_b_etc,,1,1,poison
+maeng_u_e,맹우,,hero,etc,E_ranger,,C,C,hero_ranger_c_etc,,1,1,physic
+su_gyeong_seon_saeng,수경 선생,,hero,wii,tank,,D,C,hero_yellow_spear,,1,1,
+gwan_gu_geom,관구검,,hero,wii,E_tank,,C,C,hero_gwan_gu_geom,,,1,ice
+jo_sang,조상,,hero,wii,E_wizard,,C,C,hero_wizard_b_wii,,,1,poison
+dong_cheon_wang_x,동천왕,,hero,etc,E_rogue,,C,C,hero_rogue2_c_etc,,,1,dark
+mil_u_x,밀우,,hero,etc,E_tank,,C,C,hero_paladin_n_d_etc,,,1,physic
+gang_jok_su_ryeong,강족 수령,,hero,etc,E_tank,,C,C,hero_tank_b_etc,,,1,physic
+bi_yeon,비연,,hero,etc,E_rogue,,C,C,hero_rogue_b_etc,,,1,fire
+ju_jeok,주적,,hero,oh,E_tank,,C,C,hero_tank_b_oh,,,1,lightning
+bo_hyeop,보협,,hero,oh,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+ju_i,주이,,hero,oh,E_ranger,,C,C,hero_crossbow_c_oh,,,1,lightning
+hwang_ho,황호,,hero,chock,E_ranger,,C,C,hero_crossbow_d_chock,,,1,poison
+wang_gyeong,왕경,,hero,wii,E_tank,,C,C,hero_tank_d_wii,,,1,dark
+bu_cheom,부첨,,hero,chock,E_rogue,,C,C,hero_rogue2_b_chock,,,1,poison
+wang_gi,왕기,,hero,wii,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+gyeon_hong,견홍,,hero,wii,E_rogue,,C,C,hero_rogue2_d_wii,,,1,poison
+yang_heun,양흔,,hero,wii,E_ranger,,C,C,hero_ranger_b_wii,,,1,physic
+deung_chung,등충,,hero,wii,E_rogue,,C,C,hero_rogue2_c_wii,,,1,lightning
+wi_gwan,위관,,hero,wii,E_wizard,,C,C,hero_bard_c_wii,,,1,divine
+je_gal_cheom,제갈첨,,hero,chock,E_wizard,,C,C,hero_wizard_d_chock,,,1,fire
+jo_hwan,조환,,hero,wii,E_ranger,,C,C,hero_crossbow_c_wii,,,1,poison
+yuk_gae,육개,,hero,oh,E_ranger,,C,C,hero_ranger_c_oh,,,1,lightning
+son_ho,손호,,hero,oh,E_tank,,C,C,hero_tank_n_d_oh,,,1,ice
+bo_cheon,보천,,hero,oh,E_rogue,,C,C,hero_rogue_c_oh,,,1,lightning
+o_eon,오언,,hero,oh,E_rogue,,C,C,hero_rogue_d_oh,,,1,lightning
+do_jun,도준,,hero,oh,E_tank,,C,C,hero_tank_n_c_oh,,,1,physic
+yuk_an,육안,,hero,oh,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+yuk_gyeong,육경,,hero,oh,E_ranger,,C,C,hero_crossbow_b_oh,,,1,ice
+je_gal_jeong,제갈정,,hero,oh,E_ranger,,C,C,hero_ranger_d_oh,,,1,lightning
+jang_ze,장제,,hero,oh,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+jo_mo,조모,,hero,wii,E_ranger,,C,C,hero_crossbow_c_wii,,,1,poison
+son_jun,손준,,hero,oh,E_tank,,C,C,hero_tank_n_c_oh,,,1,physic
+wang_jun,왕준,,hero,wii,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+so_yang_wang,소양왕,,hero,ancient,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+gong_son_hoe,공손회,,hero,ancient,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+mang_myo,망묘,,hero,ancient,E_ranger,,C,C,hero_crossbow_b_oh,,,1,ice
+ga_eon,가언,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+beom_su,범수,,hero,ancient,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+jo_gwal,조괄,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+gwak_oe,곽외,,hero,ancient,E_rogue,,C,C,hero_rogue2_c_han_1,,,1,fire
+so_wang,소왕,,hero,ancient,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+jae_min_wang,제민왕,,hero,ancient,E_tank,,C,C,hero_tank_n_d_wii,,,1,poison
+wang_chock,왕촉,,hero,ancient,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+hye_wang,혜왕,,hero,ancient,E_ranger,,C,C,hero_crossbow_b_oh,,,1,ice
+jeon_dan,전단,,hero,ancient,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+cham_mo_npc,참모,,hero,ancient,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+chaek_sa_npc,책사,,hero,ancient,E_wizard,,C,C,hero_wizard_b_oh,,,1,ice
+hye_mun_wang,혜문왕,,hero,ancient,E_ranger,,C,C,hero_crossbow_b_oh,,,1,ice
+ha_in_1,하인1,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+ha_in_2,하인2,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+hyo_seong_wang,효성왕,,hero,ancient,E_tank,,C,C,hero_paladin_n_c_han,,,1,ice
+wang_hol,왕홀,,hero,ancient,E_tank,,C,C,hero_tank_n_d_wii,,,1,ice
+ak_seung,악승,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+bu_gwan_npc,부관,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+pung_jeong,풍정,,hero,ancient,E_rogue,,C,C,hero_rogue_b_oh,,,1,fire
+sword_bio,보병,,troop,han,infantry,,D,C,private_tr_sword_han,,1,1,
+spear_bio,창병,,troop,han,spearman,,D,C,private_tr_spear_han,,1,1,
+bow_bio,궁병,,troop,han,bowman,,D,C,private_tr_bow_han,,1,1,
+crossbow_bio,연노병,,troop,han,crossbowman,,D,C,private_tr_crossbow_han,,1,1,
+bigbow_bio,쇠뇌,,troop,han,bigbow,,D,C,tower_crossbow,,1,1,
+catapult_bio,발석차,,troop,han,catapult_dun,,D,C,hero_catapult_dun,,1,1,
+zpaladin_n_b_gauntlet_1_bio,수비대,,hero,han,E_tank,,D,C,hero_paladin_n_b_han,,1,1,poison
+zpaladin_n_c_gauntlet_1_bio,수비대,,hero,han,E_tank,,D,C,hero_paladin_n_c_han,,1,1,lightning
+zpaladin_n_d_gauntlet_1_bio,수비대,,hero,han,E_tank,,D,C,hero_paladin_n_d_han,,1,1,physic
+ztank_b_mighty_1_bio,돌격대,,hero,han,E_tank,,D,C,hero_tank_b_han,,1,1,physic
+ztank_d_mighty_2_bio,돌격대,,hero,han,E_tank,,D,C,hero_tank_d_han,,1,1,dark
+ztank_c_mighty_3_bio,돌격대,,hero,han,E_tank,,D,C,hero_tank_c_han,,1,1,physic
+ztank_n_c_glaive_1_bio,공격대,,hero,han,E_tank,,D,C,hero_tank_n_c_han,,1,1,physic
+ztank_n_b_glaive_6_bio,공격대,,hero,han,E_tank,,D,C,hero_tank_n_b_han,,1,1,physic
+ztank_n_d_spear_1_bio,공격대,,hero,han,E_tank,,D,C,hero_tank_n_d_han,,1,1,ice
+zrogue2_b_dualaxe_1_bio,기동대,,hero,han,E_rogue,,D,C,hero_rogue2_b_han,,1,1,lightning
+zrogue2_d_dualaxe_3_bio,기동대,,hero,han,E_rogue,,D,C,hero_rogue2_d_han,,1,1,poison
+zrogue2_c_dualaxe_4_bio,기동대,,hero,han,E_rogue,,D,C,hero_rogue2_c_han,,1,1,lightning
+zrogue_d_spear_1_bio,섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_d_han,,1,1,poison
+zrogue_c_glaive_6_bio,섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_c_han,,1,1,poison
+zrogue_b_spear_5_bio,섬멸대,,hero,han,E_rogue,,D,C,hero_rogue_b_han,,1,1,poison
+zranger_d_bow_0_bio,저격대,,hero,han,E_ranger,,D,C,hero_ranger_d_han,,1,1,lightning
+zranger_c_bow_1_bio,저격대,,hero,han,E_ranger,,D,C,hero_ranger_c_han,,1,1,poison
+zranger_b_bow_2_bio,저격대,,hero,han,E_ranger,,D,C,hero_ranger_b_han,,1,1,physic
+zcross_d_crossbow_1_bio,타격대,,hero,han,E_ranger,,D,C,hero_crossbow_d_han,,1,1,lightning
+zcross_c_crossbow_1_bio,타격대,,hero,han,E_ranger,,D,C,hero_crossbow_c_han,,1,1,poison
+zcross_b_crossbow_2_bio,타격대,,hero,han,E_ranger,,D,C,hero_crossbow_b_han,,1,1,physic
+zwizard_d_fan_1_bio,전술대,,hero,han,E_wizard,,D,C,hero_wizard_d_han,,1,1,poison
+zwizard_b_fan_2_bio,전술대,,hero,han,E_wizard,,D,C,hero_wizard_b_han,,1,1,poison
+zwizard_c_fan_3_bio,전술대,,hero,han,E_wizard,,D,C,hero_wizard_c_han,,1,1,ice
+zbard_c_bio,지원대,,hero,han,E_wizard,,D,C,hero_bard_c_han,,1,1,divine
+zbard_d_bio,지원대,,hero,han,E_wizard,,D,C,hero_bard_d_han,,1,1,divine
+son_tae,손태,,hero,oh,E_tank,,D,C,hero_tank_b_oh,,1,1,lightning
+heo_gong,허공,,hero,han,E_wizard,,D,C,hero_wizard_d_han,,1,1,poison
+jin_woo,진우,,hero,han,E_ranger,,D,C,hero_ranger_b_han,,1,1,poison
+deung_dang,등당,,hero,oh,E_tank,,C,C,hero_tank_n_d_oh,,1,1,ice
+zbard_d_wii_bio,위군 고수,,hero,wii,E_wizard,,D,C,hero_bard_d_wii,,1,1,divine
+zbard_d_chock_bio,촉군 고수,,hero,chock,E_wizard,,D,C,hero_bard_d_chock,,1,1,divine
+zbard_d_oh_bio,오군 고수,,hero,oh,E_wizard,,D,C,hero_bard_d_oh,,1,1,divine
+zbard_d_han_bio,한군 고수,,hero,han,E_wizard,,D,C,hero_bard_d_han,,1,1,divine
+zbard_d_etc_bio,이민족 고수,,hero,etc,E_wizard,,D,C,hero_bard_d_etc,,1,1,divine
+raidboss_lh_fire,화염의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,fire
+raidboss_lh_ice,냉기의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,ice
+raidboss_lh_lightning,번개의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,lightning
+raidboss_lh_poison,극독의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,poison
+raidboss_lh_dark,어둠의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,dark
+raidboss_lh_divine,광휘의 치우,,hero,wii,world_boss,,S,AA,hero_chiwoo,,1,1,divine
+test_bu_cheom,가_부첨,,hero,chock,rogue,,S,SS,hero_bu_cheom,,1,1,fire

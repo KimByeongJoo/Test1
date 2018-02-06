@@ -32,7 +32,7 @@ public class Utility {
     /// <param name="sprite">target</param>
     /// <param name="spriteName">change sprite name</param>
     /// <param name="baseHeight"></param>
-    static public void ChangeSpriteAspectSnap(ref UISprite sprite, string spriteName, Vector2 raw_size)
+    static public void ChangeSpriteAspectSnap( UISprite sprite, string spriteName, Vector2 raw_size)
     {
         sprite.spriteName = spriteName;
         UISpriteData atlasSpriteData = sprite.GetAtlasSprite();        

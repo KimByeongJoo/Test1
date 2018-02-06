@@ -32,7 +32,7 @@ public class AchivementButton : MonoBehaviour {
         label_description.text = description;
         label_kingdom_point.text = kingdompoint.ToString();
 
-        Utility.ChangeSpriteAspectSnap(ref kingdom_reward_icon, kingdom_spriteName, raw_img_Size);
+        Utility.ChangeSpriteAspectSnap( kingdom_reward_icon, kingdom_spriteName, raw_img_Size);
 
         kingdom_reward_icon.spriteName = kingdom_spriteName;
         label_reward_value.text = reward_value.ToString();

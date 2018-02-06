@@ -21,13 +21,13 @@ public class Main : Singleton<Main> {
     private void Start()
     {
         //lst_OpenedPanel = new List<MySingletonPanel>();
-        MakeObjectToTarget("Global_Navigation_Panel");
+        MakeObjectToTarget("UI/Global_Navigation_Panel");
         current_panel_depth = 0;
     }       
 
     public AskPanel MakeAskPanel()
     {   
-        AskPanel askPanel = MakeObjectToTarget("Ask_Panel").GetComponent<AskPanel>();
+        AskPanel askPanel = MakeObjectToTarget("UI/Ask_Panel").GetComponent<AskPanel>();
         askPanel.gameObject.SetActive(true);
 
         return askPanel;
@@ -35,7 +35,7 @@ public class Main : Singleton<Main> {
 
     public AskPanel MakeConfirmPanel()
     {
-        AskPanel askPanel = MakeObjectToTarget("Confirm_Panel").GetComponent<AskPanel>();
+        AskPanel askPanel = MakeObjectToTarget("UI/Confirm_Panel").GetComponent<AskPanel>();
         askPanel.gameObject.SetActive(true);        
 
         return askPanel;

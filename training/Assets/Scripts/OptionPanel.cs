@@ -89,7 +89,7 @@ public class OptionPanel : MyPanel
     {
         DeleteAllContents();
         SetTabLabelColor(OptionTab.Account);
-        GameObject go = Main.Instance.MakeObjectToTarget("Option_account_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_account_tab_content", contentTarget);
         go.GetComponent<UIPanel>().depth = panel.depth + 5;
     }
 
@@ -97,7 +97,7 @@ public class OptionPanel : MyPanel
     {
         DeleteAllContents();
         SetTabLabelColor(OptionTab.Game);
-        GameObject go = Main.Instance.MakeObjectToTarget("Option_game_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_game_tab_content", contentTarget);
         go.GetComponent<UIPanel>().depth = panel.depth + 5;
     }
 
@@ -105,7 +105,7 @@ public class OptionPanel : MyPanel
     {
         DeleteAllContents();
         SetTabLabelColor(OptionTab.Notice);
-        GameObject go = Main.Instance.MakeObjectToTarget("Option_notice_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_notice_tab_content", contentTarget);
         go.GetComponent<UIPanel>().depth = panel.depth + 5;        
     }
 
@@ -114,7 +114,7 @@ public class OptionPanel : MyPanel
         DeleteAllContents();
         SetTabLabelColor(OptionTab.ETC);
 
-        GameObject go = Main.Instance.MakeObjectToTarget("Option_etc_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_etc_tab_content", contentTarget);
         go.GetComponent<UIPanel>().depth = panel.depth + 5;
         
     }

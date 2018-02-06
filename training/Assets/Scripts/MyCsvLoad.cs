@@ -16,11 +16,14 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
     Dictionary<string, List<AchivementConditionData>> cachedByParent;
 
+    Dictionary<string, HeroTypeData> heroTypeDatas = new Dictionary<string, HeroTypeData>();
+
     void Awake()
 	{
         //LoadServers ();        
         LoadAchivementTypeDatas();
         LoadAchivementConditionDatas();
+        LoadHeroTypeDatas();
     }
 
 
@@ -150,10 +153,55 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         MemoryStream ms = new MemoryStream(textAsset.bytes);
         return reader = new CsvReader(new StreamReader(ms), true);
     }
-    
+
+    public void LoadHeroTypeDatas()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/HeroType");
+        
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_name = System.Array.IndexOf(headers, "name");
+        int index_nickname = System.Array.IndexOf(headers, "nickname");
+        int index_category = System.Array.IndexOf(headers, "category");
+        int index_kingdom = System.Array.IndexOf(headers, "kingdom");
+        int index_class = System.Array.IndexOf(headers, "class");
+        int index_gender = System.Array.IndexOf(headers, "gender");
+        int index_tier = System.Array.IndexOf(headers, "tier");
+        int index_rarity = System.Array.IndexOf(headers, "rarity");
+        int index_portrait = System.Array.IndexOf(headers, "portrait");
+        int index_playable = System.Array.IndexOf(headers, "playable");
+        int index_hide_card = System.Array.IndexOf(headers, "hide_card");
+        int index_disabled = System.Array.IndexOf(headers, "disabled");
+        int index_element = System.Array.IndexOf(headers, "element");
+
+        heroTypeDatas.Clear();
+
+        while (reader.ReadNextRecord())
+        {
+            // 제외
+            if (reader[index_category] == "hero" && reader[index_playable] == "1" && reader[index_disabled] != "1")
+            {
+                HeroTypeData data = new HeroTypeData();
+
+                data.Set(reader[index_id],
+                    reader[index_name], reader[index_nickname], reader[index_category],
+                    reader[index_kingdom],
+                    reader[index_class], reader[index_gender],
+                    reader[index_tier], reader[index_rarity],
+                    reader[index_portrait], reader[index_playable],
+                    reader[index_hide_card], reader[index_disabled],
+                    reader[index_element]);
+
+                heroTypeDatas.Add(reader[index_id], data);
+            }
+        }
+    }
     public void LoadAchivementTypeDatas()
     {
-        CsvReader reader = LoadCSVtoPath("AchievementType");
+        CsvReader reader = LoadCSVtoPath("UI/AchievementType");
 
         if (reader == null)
             return;
@@ -205,7 +253,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
     public void LoadAchivementConditionDatas()
     {
-        CsvReader reader = LoadCSVtoPath("AchievementCondition");
+        CsvReader reader = LoadCSVtoPath("UI/AchievementCondition");
 
         if (reader == null)
             return;
