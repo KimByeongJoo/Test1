@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiTarget: {fileID: 372246401}
+  current_panel_depth: 0
 --- !u!4 &297323032
 Transform:
   m_ObjectHideFlags: 0

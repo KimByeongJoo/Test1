@@ -4796,8 +4796,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 120, y: 80.08479, z: 0}
+  m_Center: {x: 0, y: -0.000015258789, z: 0}
 --- !u!65 &6538756
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4832,8 +4832,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 120, y: 77.24414, z: 0}
+  m_Center: {x: 0, y: 0.8739624, z: 0}
 --- !u!65 &6544902
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4844,7 +4844,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
+  m_Size: {x: 120, y: 79.074196, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6545180
 BoxCollider:
@@ -4856,8 +4856,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 120, y: 79.07414, z: 0}
+  m_Center: {x: 0, y: -0.5053406, z: 0}
 --- !u!65 &6547404
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4880,7 +4880,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1173, y: 740, z: 0}
+  m_Size: {x: 1171, y: 740, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6555916
 BoxCollider:
@@ -4988,8 +4988,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 120, y: 79.579475, z: 0}
+  m_Center: {x: 0, y: 0.25265503, z: 0}
 --- !u!65 &6572874
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -5156,8 +5156,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 120, y: 72, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 120, y: 75.75792, z: 0}
+  m_Center: {x: 0, y: -1.8789368, z: 0}
 --- !u!114 &11400736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6472,7 +6472,7 @@ MonoBehaviour:
   onDeselect: []
   onClick:
   - mTarget: {fileID: 11429782}
-    mMethodName: SelfDestroy
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
   onDoubleClick: []
@@ -7702,7 +7702,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666
@@ -9967,7 +9967,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666
@@ -10582,13 +10582,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 1173
+  mWidth: 1171
   mHeight: 740
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.5851351
+  aspectRatio: 1.5824324
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -10685,7 +10685,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666
@@ -10804,7 +10804,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666
@@ -11369,7 +11369,7 @@ MonoBehaviour:
   pixelSnap: 0
   onClick:
   - mTarget: {fileID: 11429782}
-    mMethodName: SelfDestroy
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
 --- !u!114 &11461232
@@ -12619,7 +12619,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666
@@ -15011,7 +15011,7 @@ MonoBehaviour:
   mWidth: 120
   mHeight: 72
   mDepth: 15
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.6666666

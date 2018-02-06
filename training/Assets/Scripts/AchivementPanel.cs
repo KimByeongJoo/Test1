@@ -3,27 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class AchivementPanel : Singleton<AchivementPanel>{
-    
+public class AchivementPanel : MyPanel
+{
+    private static AchivementPanel _instance;
+
+    public static AchivementPanel Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(AchivementPanel)) as AchivementPanel;                
+            }
+            return _instance;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
+
     [SerializeField]
     UIWrapContent wrap;
     [SerializeField]
     UIGrid grid_tab;
     [SerializeField]
     UIScrollView scrollView;
-    
+
     [SerializeField]
     Main.AchivementTab current_tab = Main.AchivementTab.Weekly;
 
     private void Awake()
     {
+        base.Awake();        
+
         if (wrap != null)
-            wrap.onInitializeItem = OnInitializeFriendButton;                
+            wrap.onInitializeItem = OnInitializeFriendButton;
     }
+    
     void Start()
     {
+        scrollView.GetComponent<UIPanel>().depth = panel.depth + 5;        
+
         var buttons = grid_tab.GetComponentsInChildren<UIButton>();
-        
+
         EventDelegate del1 = new EventDelegate(this, "OnClickTab");
         del1.parameters[0].value = Main.AchivementTab.Weekly;
         buttons[0].onClick.Add(del1);
@@ -57,7 +81,7 @@ public class AchivementPanel : Singleton<AchivementPanel>{
         List<AchivementTypeData> type_Data = MyCsvLoad.Instance.GetAchivementTypeDivideByTabName(current_tab);
 
         //Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
-                
+
         wrap.minIndex = -(type_Data.Count - 1);
         if (type_Data.Count == 1)
         {
@@ -83,8 +107,8 @@ public class AchivementPanel : Singleton<AchivementPanel>{
 
         wrap.SortAlphabetically();
         wrap.WrapContent(true);
-                
-        scrollView.ResetPosition();        
+
+        scrollView.ResetPosition();
     }
 
     void OnInitializeFriendButton(GameObject go, int wrapIndex, int realIndex)
@@ -111,12 +135,12 @@ public class AchivementPanel : Singleton<AchivementPanel>{
 
         int reward_value = 0;
         if (conditionData[rand]._reward_cash != 0)
-            reward_value = conditionData[rand]._reward_cash;        
+            reward_value = conditionData[rand]._reward_cash;
         else if (conditionData[rand]._reward_food != 0)
             reward_value = conditionData[rand]._reward_food;
         else if (conditionData[rand]._reward_gold != 0)
             reward_value = conditionData[rand]._reward_gold;
-        
+
         string _description = typeData[lstIndex]._description;
         _description = _description.Replace("{0}", conditionData[rand]._counter.ToString());
 
@@ -130,17 +154,12 @@ public class AchivementPanel : Singleton<AchivementPanel>{
         }
 
         button.Set(typeData[lstIndex]._name, _description,
-            reward_kingdom_or_exp, sprite_name, reward_value);        
+            reward_kingdom_or_exp, sprite_name, reward_value);
     }
 
     public void OnClickTab(Main.AchivementTab tab)
     {
         current_tab = tab;
         WrapSetting();
-    }    
-
-    public void SelfDestroy()
-    {
-        Destroy(gameObject);
     }
 }

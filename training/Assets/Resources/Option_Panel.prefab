@@ -31,21 +31,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &118166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 415962}
-  m_Layer: 20
-  m_Name: Window
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &121258
 GameObject:
   m_ObjectHideFlags: 1
@@ -390,7 +375,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &182552
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -489,19 +474,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 446648}
   m_RootOrder: 0
---- !u!4 &415962
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 468492}
-  m_Father: {fileID: 497088}
-  m_RootOrder: 1
 --- !u!4 &418276
 Transform:
   m_ObjectHideFlags: 1
@@ -630,8 +602,8 @@ Transform:
   - {fileID: 479674}
   - {fileID: 419454}
   - {fileID: 468768}
-  m_Father: {fileID: 415962}
-  m_RootOrder: 0
+  m_Father: {fileID: 497088}
+  m_RootOrder: 1
 --- !u!4 &468768
 Transform:
   m_ObjectHideFlags: 1
@@ -788,7 +760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480106}
-  - {fileID: 415962}
+  - {fileID: 468492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &499022
@@ -909,7 +881,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1173, y: 740, z: 0}
+  m_Size: {x: 1171, y: 740, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400122
 MonoBehaviour:
@@ -937,7 +909,7 @@ MonoBehaviour:
   pixelSnap: 0
   onClick:
   - mTarget: {fileID: 11494144}
-    mMethodName: SelfDestroy
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
 --- !u!114 &11405618
@@ -2359,13 +2331,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 1173
+  mWidth: 1171
   mHeight: 740
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.5851351
+  aspectRatio: 1.5824324
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -2531,7 +2503,7 @@ MonoBehaviour:
   onDeselect: []
   onClick:
   - mTarget: {fileID: 11494144}
-    mMethodName: SelfDestroy
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
   onDoubleClick: []

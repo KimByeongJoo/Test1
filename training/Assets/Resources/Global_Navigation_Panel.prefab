@@ -2311,7 +2311,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 80
+  mDepth: 1000
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
 --- !u!114 &11497466
@@ -2352,7 +2352,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: mDepth
-      value: 80
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

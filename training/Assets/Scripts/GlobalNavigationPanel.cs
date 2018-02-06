@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GlobalNavigationPanel : MonoBehaviour {
+public class GlobalNavigationPanel : MonoBehaviour
+{
 
     [SerializeField]
     UISprite arrow;
@@ -13,7 +14,7 @@ public class GlobalNavigationPanel : MonoBehaviour {
 
     public void OnOffGlobalBar()
     {
-        if(isOpen)
+        if (isOpen)
         {
             bar.rightAnchor.absolute = -30;
             arrow.flip = UIBasicSprite.Flip.Nothing;
@@ -25,14 +26,20 @@ public class GlobalNavigationPanel : MonoBehaviour {
             arrow.flip = UIBasicSprite.Flip.Horizontally;
             isOpen = true;
         }
-    }	
+    }
 
     public void MakeOptionPanel()
     {
         if (OptionPanel.Instance == null)
-        {            
+        {
             GameObject go = Main.Instance.MakeObjectToTarget("Option_Panel");
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             OnOffGlobalBar();
+
+            //if (AchivementPanel.Instance != null)
+            //{
+            //    AchivementPanel.Instance.SelfDestroy();
+            //}
         }
     }
     public void MakeAchivementPanel()
@@ -40,7 +47,12 @@ public class GlobalNavigationPanel : MonoBehaviour {
         if (AchivementPanel.Instance == null)
         {
             GameObject go = Main.Instance.MakeObjectToTarget("Achivement_Panel");
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             OnOffGlobalBar();
+            //if (OptionPanel.Instance != null)
+            //{
+            //    OptionPanel.Instance.SelfDestroy();
+            //}
         }
     }
 

@@ -1,7 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OptionPanel : Singleton<OptionPanel> {
+public class OptionPanel : MyPanel
+{
+    private static OptionPanel _instance;
+
+    public static OptionPanel Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(OptionPanel)) as OptionPanel;
+            }
+            return _instance;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
     
     [SerializeField]
     GameObject contentTarget;
@@ -25,9 +44,9 @@ public class OptionPanel : Singleton<OptionPanel> {
     }
     public void SetTabLabelColor(OptionTab index)
     {
-        switch(index)
+        switch (index)
         {
-            case OptionTab.Account :
+            case OptionTab.Account:
                 {
                     Utility.SetLabelColor(tab_account_label, Color.white);
                     Utility.SetLabelColor(tab_game_label, Color.gray);
@@ -59,7 +78,7 @@ public class OptionPanel : Singleton<OptionPanel> {
                     Utility.SetLabelColor(tab_etc_label, Color.white);
                 }
                 break;
-        }        
+        }
     }
 
     private void Start()
@@ -69,41 +88,39 @@ public class OptionPanel : Singleton<OptionPanel> {
     public void ClickAccountTab()
     {
         DeleteAllContents();
-        SetTabLabelColor(OptionTab.Account);        
-        Main.Instance.MakeObjectToTarget("Option_account_tab_content", contentTarget);
+        SetTabLabelColor(OptionTab.Account);
+        GameObject go = Main.Instance.MakeObjectToTarget("Option_account_tab_content", contentTarget);
+        go.GetComponent<UIPanel>().depth = panel.depth + 5;
     }
 
     public void ClickGameTab()
     {
         DeleteAllContents();
-        SetTabLabelColor(OptionTab.Game);        
-        Main.Instance.MakeObjectToTarget("Option_game_tab_content", contentTarget);        
+        SetTabLabelColor(OptionTab.Game);
+        GameObject go = Main.Instance.MakeObjectToTarget("Option_game_tab_content", contentTarget);
+        go.GetComponent<UIPanel>().depth = panel.depth + 5;
     }
 
     public void ClickNoticeTab()
     {
         DeleteAllContents();
         SetTabLabelColor(OptionTab.Notice);
-        Main.Instance.MakeObjectToTarget("Option_notice_tab_content", contentTarget);
-        //Main.Instance.MakeObjectToTarget("Option_game_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("Option_notice_tab_content", contentTarget);
+        go.GetComponent<UIPanel>().depth = panel.depth + 5;        
     }
 
     public void ClickEtcTab()
     {
         DeleteAllContents();
-        SetTabLabelColor(OptionTab.ETC);        
+        SetTabLabelColor(OptionTab.ETC);
 
-        Main.Instance.MakeObjectToTarget("Option_etc_tab_content", contentTarget);
-        //Main.Instance.MakeObjectToTarget("Option_game_tab_content", contentTarget);
+        GameObject go = Main.Instance.MakeObjectToTarget("Option_etc_tab_content", contentTarget);
+        go.GetComponent<UIPanel>().depth = panel.depth + 5;
+        
     }
 
     public void DeleteAllContents()
     {
         contentTarget.transform.DestroyChildren();
-    }
-
-    public void SelfDestroy()
-    {
-        Destroy(gameObject);
     }
 }

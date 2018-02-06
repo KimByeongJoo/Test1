@@ -6,6 +6,7 @@ public class OptionAccountTab_Content : MonoBehaviour {
 
     public void ClickCouponExchangeButton()
     {
-        Main.Instance.MakeObjectToTarget("TextInputPopup", gameObject, Vector3.left * 100);
+        Main.Instance.MakeObjectToTargetAndSetPanelDepth("TextInputPopup",
+            gameObject, Vector3.left * 100, Main.Instance.current_panel_depth + 10);
     }
 }
