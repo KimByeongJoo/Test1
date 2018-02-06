@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: c5490d4e68261c0418ed2bf09527ef66, type: 2}
   mSprites:
   - name: achievement_bg
-    x: 332
-    y: 80
+    x: 588
+    y: 188
     width: 29
     height: 33
     borderLeft: 13
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: achievement_bg_active
-    x: 332
-    y: 46
+    x: 988
+    y: 444
     width: 29
     height: 33
     borderLeft: 14
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: achievement_bg_dark
-    x: 729
-    y: 418
+    x: 557
+    y: 98
     width: 30
     height: 34
     borderLeft: 14
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: arrow_down
-    x: 333
-    y: 178
+    x: 341
+    y: 315
     width: 18
     height: 15
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: badge_red_point
-    x: 205
-    y: 1
+    x: 588
+    y: 142
     width: 22
     height: 22
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: border_content
-    x: 228
-    y: 4
+    x: 341
+    y: 331
     width: 20
     height: 19
     borderLeft: 9
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_blue
-    x: 334
-    y: 308
+    x: 234
+    y: 62
     width: 18
     height: 47
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_close
-    x: 907
-    y: 456
+    x: 520
+    y: 238
     width: 56
     height: 56
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_dark
-    x: 334
-    y: 199
+    x: 234
+    y: 10
     width: 18
     height: 24
     borderLeft: 8
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_green
-    x: 333
-    y: 140
+    x: 341
+    y: 277
     width: 15
     height: 18
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_red
-    x: 334
-    y: 224
+    x: 557
+    y: 73
     width: 23
     height: 24
     borderLeft: 6
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: button_yellow
-    x: 333
-    y: 159
+    x: 341
+    y: 296
     width: 15
     height: 18
     borderLeft: 7
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 7
   - name: content_brown_frame
-    x: 656
-    y: 418
+    x: 588
+    y: 222
     width: 37
     height: 34
     borderLeft: 12
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: content_frame_brown
-    x: 521
-    y: 145
+    x: 942
+    y: 393
     width: 43
     height: 50
     borderLeft: 15
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: content_frame_brown_opaque
-    x: 521
-    y: 20
+    x: 588
+    y: 296
     width: 39
     height: 39
     borderLeft: 17
@@ -289,8 +289,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: crown
-    x: 577
-    y: 414
+    x: 588
+    y: 257
     width: 40
     height: 38
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: dialog_border
-    x: 153
-    y: 24
+    x: 253
+    y: 265
     width: 87
     height: 85
     borderLeft: 50
@@ -316,7 +316,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: dialog_content_bg
     x: 253
-    y: 356
+    y: 191
     width: 101
     height: 73
     borderLeft: 35
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: dialog_title_bg
-    x: 521
-    y: 60
+    x: 634
+    y: 347
     width: 48
     height: 36
     borderLeft: 20
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_icon_dark
-    x: 964
-    y: 458
+    x: 520
+    y: 183
     width: 53
     height: 54
     borderLeft: 0
@@ -354,8 +354,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_icon_divine
-    x: 521
-    y: 348
+    x: 312
+    y: 136
     width: 48
     height: 54
     borderLeft: 0
@@ -367,8 +367,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_icon_fire
-    x: 521
-    y: 295
+    x: 312
+    y: 83
     width: 49
     height: 52
     borderLeft: 0
@@ -406,8 +406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_icon_physic
-    x: 521
-    y: 97
+    x: 588
+    y: 336
     width: 45
     height: 47
     borderLeft: 0
@@ -419,8 +419,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: element_icon_poison
-    x: 521
-    y: 403
+    x: 520
+    y: 133
     width: 55
     height: 49
     borderLeft: 0
@@ -432,8 +432,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: elite_radio_off
-    x: 618
-    y: 415
+    x: 986
+    y: 406
     width: 37
     height: 37
     borderLeft: 16
@@ -445,8 +445,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: f1
-    x: 440
-    y: 235
+    x: 520
+    y: 373
     width: 67
     height: 70
     borderLeft: 0
@@ -458,8 +458,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 7
   - name: f10
-    x: 362
-    y: 6
+    x: 443
+    y: 10
     width: 68
     height: 69
     borderLeft: 0
@@ -471,8 +471,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 3
   - name: f11
-    x: 755
-    y: 459
+    x: 744
+    y: 390
     width: 77
     height: 53
     borderLeft: 0
@@ -484,8 +484,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 14
   - name: f12
-    x: 521
-    y: 453
+    x: 588
+    y: 384
     width: 77
     height: 59
     borderLeft: 0
@@ -497,7 +497,7 @@ MonoBehaviour:
     paddingTop: 11
     paddingBottom: 10
   - name: f13
-    x: 677
+    x: 910
     y: 453
     width: 77
     height: 59
@@ -510,8 +510,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 8
   - name: f14
-    x: 599
-    y: 453
+    x: 666
+    y: 384
     width: 77
     height: 59
     borderLeft: 0
@@ -523,8 +523,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 8
   - name: f15
-    x: 440
-    y: 174
+    x: 763
+    y: 452
     width: 78
     height: 60
     borderLeft: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
     paddingTop: 10
     paddingBottom: 10
   - name: f16
-    x: 440
+    x: 520
     y: 444
     width: 80
     height: 68
@@ -549,8 +549,8 @@ MonoBehaviour:
     paddingTop: 6
     paddingBottom: 6
   - name: f17
-    x: 253
-    y: 275
+    x: 362
+    y: 432
     width: 80
     height: 80
     borderLeft: 0
@@ -562,8 +562,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: f18
-    x: 440
-    y: 306
+    x: 253
+    y: 3
     width: 80
     height: 68
     borderLeft: 0
@@ -575,8 +575,8 @@ MonoBehaviour:
     paddingTop: 6
     paddingBottom: 6
   - name: f19
-    x: 253
-    y: 194
+    x: 362
+    y: 351
     width: 80
     height: 80
     borderLeft: 0
@@ -588,8 +588,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: f2
-    x: 253
-    y: 35
+    x: 362
+    y: 111
     width: 78
     height: 78
     borderLeft: 0
@@ -601,8 +601,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 2
   - name: f20
-    x: 440
-    y: 375
+    x: 601
+    y: 444
     width: 80
     height: 68
     borderLeft: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
     paddingBottom: 6
   - name: f3
     x: 362
-    y: 436
+    y: 34
     width: 77
     height: 76
     borderLeft: 0
@@ -627,8 +627,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 4
   - name: f4
-    x: 362
-    y: 291
+    x: 443
+    y: 295
     width: 71
     height: 71
     borderLeft: 0
@@ -640,8 +640,8 @@ MonoBehaviour:
     paddingTop: 9
     paddingBottom: 0
   - name: f5
-    x: 362
-    y: 219
+    x: 443
+    y: 223
     width: 70
     height: 71
     borderLeft: 0
@@ -653,8 +653,8 @@ MonoBehaviour:
     paddingTop: 5
     paddingBottom: 4
   - name: f6
-    x: 362
-    y: 148
+    x: 443
+    y: 152
     width: 69
     height: 70
     borderLeft: 0
@@ -666,8 +666,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 6
   - name: f7
-    x: 253
-    y: 114
+    x: 362
+    y: 190
     width: 79
     height: 79
     borderLeft: 0
@@ -679,8 +679,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: f8
-    x: 362
-    y: 363
+    x: 443
+    y: 367
     width: 71
     height: 72
     borderLeft: 0
@@ -692,8 +692,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 0
   - name: f9
-    x: 440
-    y: 105
+    x: 842
+    y: 444
     width: 67
     height: 68
     borderLeft: 0
@@ -705,10 +705,49 @@ MonoBehaviour:
     paddingTop: 9
     paddingBottom: 3
   - name: flag_kr
-    x: 694
-    y: 418
+    x: 988
+    y: 478
     width: 34
     height: 34
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: gnb
+    x: 520
+    y: 68
+    width: 36
+    height: 64
+    borderLeft: 15
+    borderRight: 15
+    borderTop: 8
+    borderBottom: 8
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: guild_icon
+    x: 153
+    y: 15
+    width: 80
+    height: 94
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 1
+    paddingBottom: 1
+  - name: hero_icon
+    x: 253
+    y: 351
+    width: 101
+    height: 78
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -744,8 +783,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hero_tab_info
-    x: 440
-    y: 27
+    x: 520
+    y: 295
     width: 59
     height: 77
     borderLeft: 0
@@ -756,9 +795,48 @@ MonoBehaviour:
     paddingRight: 9
     paddingTop: 3
     paddingBottom: 0
+  - name: horizontal_seperator
+    x: 147
+    y: 344
+    width: 5
+    height: 4
+    borderLeft: 1
+    borderRight: 1
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hud_button_arrow
+    x: 234
+    y: 35
+    width: 18
+    height: 26
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: hud_button_bg
+    x: 253
+    y: 72
+    width: 58
+    height: 118
+    borderLeft: 15
+    borderRight: 35
+    borderTop: 30
+    borderBottom: 30
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 0
   - name: icon_arrow
-    x: 179
-    y: 2
+    x: 986
+    y: 384
     width: 25
     height: 21
     borderLeft: 0
@@ -782,9 +860,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: icon_config
+    x: 443
+    y: 440
+    width: 76
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 0
+    paddingTop: 3
+    paddingBottom: 2
   - name: icon_friend
-    x: 362
-    y: 76
+    x: 443
+    y: 80
     width: 67
     height: 71
     borderLeft: 0
@@ -795,9 +886,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: icon_relic
+    x: 362
+    y: 270
+    width: 80
+    height: 80
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: inner_rounded_frame
-    x: 292
-    y: 4
+    x: 401
+    y: 3
     width: 31
     height: 30
     borderLeft: 14
@@ -848,8 +952,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: player_exp
-    x: 521
-    y: 247
+    x: 520
+    y: 20
     width: 49
     height: 47
     borderLeft: 0
@@ -860,9 +964,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: post_icon
+    x: 682
+    y: 451
+    width: 80
+    height: 61
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: progress_bar_bg
     x: 334
-    y: 281
+    y: 45
     width: 25
     height: 26
     borderLeft: 11
@@ -874,8 +991,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: progress_bar_fg
-    x: 153
-    y: 1
+    x: 588
+    y: 165
     width: 25
     height: 22
     borderLeft: 11
@@ -887,8 +1004,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ranking_tab_inactive
-    x: 253
-    y: 7
+    x: 362
+    y: 6
     width: 38
     height: 27
     borderLeft: 15
@@ -900,8 +1017,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: shield
-    x: 521
-    y: 196
+    x: 896
+    y: 393
     width: 45
     height: 50
     borderLeft: 0
@@ -926,8 +1043,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ui_cash
-    x: 833
-    y: 460
+    x: 822
+    y: 391
     width: 73
     height: 52
     borderLeft: 0
@@ -953,7 +1070,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: X
     x: 334
-    y: 249
+    y: 19
     width: 23
     height: 25
     borderLeft: 0
@@ -1173,19 +1290,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[58].borderLeft
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[58].borderRight
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[58].borderBottom
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[58].borderTop
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[2].borderLeft
@@ -1246,6 +1363,38 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: mSprites.Array.data[30].borderTop
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[52].borderLeft
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[52].borderRight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[52].borderBottom
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[52].borderTop
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[60].borderLeft
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[60].borderRight
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[60].borderBottom
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mSprites.Array.data[60].borderTop
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

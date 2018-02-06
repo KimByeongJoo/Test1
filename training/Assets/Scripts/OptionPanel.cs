@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OptionPanel : MonoBehaviour {
-
+public class OptionPanel : Singleton<OptionPanel> {
+    
     [SerializeField]
     GameObject contentTarget;
 
@@ -100,10 +100,10 @@ public class OptionPanel : MonoBehaviour {
     public void DeleteAllContents()
     {
         contentTarget.transform.DestroyChildren();
-    }    	
+    }
 
-    public void DestroySelf()
+    public void SelfDestroy()
     {
         Destroy(gameObject);
-    }    
+    }
 }

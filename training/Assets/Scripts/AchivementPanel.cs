@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class AchivementPanel : MonoBehaviour {
-
+public class AchivementPanel : Singleton<AchivementPanel>{
+    
     [SerializeField]
     UIWrapContent wrap;
     [SerializeField]
@@ -18,7 +18,7 @@ public class AchivementPanel : MonoBehaviour {
     private void Awake()
     {
         if (wrap != null)
-            wrap.onInitializeItem = OnInitializeFriendButton;
+            wrap.onInitializeItem = OnInitializeFriendButton;                
     }
     void Start()
     {
@@ -57,7 +57,7 @@ public class AchivementPanel : MonoBehaviour {
         List<AchivementTypeData> type_Data = MyCsvLoad.Instance.GetAchivementTypeDivideByTabName(current_tab);
 
         //Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
-
+                
         wrap.minIndex = -(type_Data.Count - 1);
         if (type_Data.Count == 1)
         {
@@ -81,7 +81,7 @@ public class AchivementPanel : MonoBehaviour {
             }
         }
 
-        wrap.SortBasedOnScrollMovement();
+        wrap.SortAlphabetically();
         wrap.WrapContent(true);
                 
         scrollView.ResetPosition();        
@@ -137,5 +137,10 @@ public class AchivementPanel : MonoBehaviour {
     {
         current_tab = tab;
         WrapSetting();
+    }    
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
     }
 }

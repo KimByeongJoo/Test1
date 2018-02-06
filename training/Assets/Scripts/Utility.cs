@@ -26,4 +26,29 @@ public class Utility {
             label.color = color;
         return label;       
     }
+
+    /// <summary>    
+    /// </summary>
+    /// <param name="sprite">target</param>
+    /// <param name="spriteName">change sprite name</param>
+    /// <param name="baseHeight"></param>
+    static public void ChangeSpriteAspectSnap(ref UISprite sprite, string spriteName, Vector2 raw_size)
+    {
+        sprite.spriteName = spriteName;
+        UISpriteData atlasSpriteData = sprite.GetAtlasSprite();        
+        float ratio = (float)atlasSpriteData.width / atlasSpriteData.height;
+
+        //sprite.aspectRatio = ratio;
+        sprite.SetDimensions(Mathf.RoundToInt(ratio * raw_size.y), Mathf.RoundToInt(raw_size.y));
+
+        if (raw_size.x < sprite.width)
+        {
+            sprite.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
+        }        
+        //sprite.SetDimensions(Mathf.RoundToInt(boxSize.x), Mathf.RoundToInt(boxSize.x / ratio));
+        //if (sprite.height > boxSize.y)
+        //{
+        //    sprite.SetDimensions(Mathf.RoundToInt(ratio * boxSize.y), Mathf.RoundToInt(boxSize.y));
+        //}        
+    }
 }

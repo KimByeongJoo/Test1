@@ -190,7 +190,9 @@ public class FriendPanel : Singleton<FriendPanel> {
             popuplabel.text = tempLabel.text;
         }
         else
+        {  
             dropDown.SetActive(false);
+        }
 
         //popuplabel.text = UIPopupList.current.value; 
     }

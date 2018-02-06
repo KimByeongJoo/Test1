@@ -29,22 +29,19 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         if (cachedByParent == null)
             cachedByParent = new Dictionary<string, List<AchivementConditionData>>();
 
-        using (var e = cachedByParent.GetEnumerator())
+        List<AchivementConditionData> data = new List<AchivementConditionData>();
+        
+        if (cachedByParent.TryGetValue(key, out data))
         {
-            while (e.MoveNext())
-            {
-                var curKey = e.Current.Key;
-                if (curKey == key)
-                {
-                    return e.Current.Value;
-                }                
-            }
+            return data;
+        }
+        else
+        {
+            data = GetSelectedConditionList(key);
+            cachedByParent.Add(key, data);
         }
 
-        List<AchivementConditionData> data = GetSelectedConditionList(key);
-        cachedByParent.Add(key, data);
-
-        return data;        
+        return data;
     }
         
 

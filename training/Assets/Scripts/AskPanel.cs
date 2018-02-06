@@ -70,4 +70,8 @@ public class AskPanel : MonoBehaviour {
         if(scrollView != null)
             scrollView.ResetPosition();
     }
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
+    }
 }

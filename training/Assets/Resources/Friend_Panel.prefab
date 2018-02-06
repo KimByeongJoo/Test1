@@ -6094,7 +6094,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 24, z: 0}
+  m_LocalPosition: {x: 8, y: 28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446310}
@@ -6870,7 +6870,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 360, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418444}
@@ -7363,7 +7363,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1300, y: 740, z: 0}
+  m_Size: {x: 7408, y: 4177, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6545922
 BoxCollider:
@@ -10856,13 +10856,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 1300
-  mHeight: 740
+  mWidth: 7408
+  mHeight: 4177
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7567568
+  aspectRatio: 1.7735217
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -15739,7 +15739,7 @@ MonoBehaviour:
   thumb: {fileID: 467496}
   mBG: {fileID: 11470444}
   mFG: {fileID: 11483816}
-  mValue: 0.5
+  mValue: 0.0020512692
   mFill: 3
   numberOfSteps: 0
   onChange:
@@ -15751,7 +15751,7 @@ MonoBehaviour:
   rawValue: 1
   direction: 2
   mInverted: 0
-  mSize: 0.9757576
+  mSize: 0.42477876
   mScroll: 0
   mDir: 2
 --- !u!114 &11452818
@@ -17700,6 +17700,12 @@ MonoBehaviour:
   instantTween: 0
   optionCanBeNone: 0
   onChange:
+  - mTarget: {fileID: 11492718}
+    mMethodName: PlusRotationToTarget
+    mParameters:
+    - obj: {fileID: 0}
+      field: 
+    oneShot: 0
   - mTarget: {fileID: 11441258}
     mMethodName: ChangePopupList
     mParameters: []
@@ -18524,6 +18530,12 @@ MonoBehaviour:
   instantTween: 0
   optionCanBeNone: 0
   onChange:
+  - mTarget: {fileID: 11492718}
+    mMethodName: PlusRotationToTarget
+    mParameters:
+    - obj: {fileID: 0}
+      field: 
+    oneShot: 0
   - mTarget: {fileID: 11441258}
     mMethodName: ChangePopupList
     mParameters: []
