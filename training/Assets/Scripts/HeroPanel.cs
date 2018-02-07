@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HeroPanel : MyPanel {
-    Sprite[] sprites;
 
     private static AchivementPanel _instance;
 
@@ -23,107 +23,160 @@ public class HeroPanel : MyPanel {
         _instance = null;
     }
     
+    Sprite[] sprites;
+
+    public enum Hero_Element
+    {
+        none,
+        physic,
+        fire,
+        ice,
+        lightning,
+        poison,
+        dark,
+        divine
+    }
+    public enum Hero_Kingdom
+    {
+        none,
+        wii,
+        han,
+        oh,
+        chock,
+        samurai,
+        chohan,
+        ancient,
+        etc
+    }
+    public enum Hero_Class
+    {
+        none,
+        tank,
+        rogue,
+        ranger,
+        wizard,
+        paladin
+    }
+
     [SerializeField]
     UIWrapContent wrap;
+
+    [SerializeField]
+    UIScrollView scrollView;
+
+    public Hero_Element hero_Element    = Hero_Element.none;
+    public Hero_Kingdom hero_Kingdom    = Hero_Kingdom.none;
+    public Hero_Class   hero_Class      = Hero_Class.none;
 
     private void Awake()
     {
         base.Awake();
-
+        
         if (wrap != null)
-            wrap.onInitializeItem = OnInitializeFriendButton;
+            wrap.onInitializeItem = OnInitializeHeroCards;
     }
+    void Start()
+    {
+        sprites = Resources.LoadAll<Sprite>("portraits");
+
+        WrapSetting();
+    }
+
     void WrapSetting()
     {
+        List<HeroTypeData> type_Data = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
+
         //List<AchivementTypeData> type_Data = MyCsvLoad.Instance.GetAchivementTypeDivideByTabName(current_tab);
 
-        ////Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
+        //Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
+        int column = type_Data.Count / 7;
 
-        //wrap.minIndex = -(type_Data.Count - 1);
-        //if (type_Data.Count == 1)
-        //{
-        //    wrap.minIndex = 1;
-        //}
-        //wrap.maxIndex = 0;
+        if (type_Data.Count % 7 > 0)
+        {
+            column++;
+        }
 
-        //Transform trans = wrap.transform;
-        //if (type_Data.Count < 10)
-        //{
-        //    for (int i = type_Data.Count; i < trans.childCount; i++)
-        //    {
-        //        trans.GetChild(i).gameObject.SetActive(false);
-        //    }
-        //}
-        //else
-        //{
-        //    for (int i = 0; i < trans.childCount; i++)
-        //    {
-        //        trans.GetChild(i).gameObject.SetActive(true);
-        //    }
-        //}
+        wrap.minIndex = -(column - 1);
+        if (column == 1)
+        {
+            wrap.minIndex = 1;
+        }
+        wrap.maxIndex = 0;
 
-        //wrap.SortAlphabetically();
-        //wrap.WrapContent(true);
+        Transform trans = wrap.transform;
+        if (column < 10)
+        {
+            for (int i = column; i < trans.childCount; i++)
+            {
+                trans.GetChild(i).gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < trans.childCount; i++)
+            {
+                trans.GetChild(i).gameObject.SetActive(true);
+            }
+        }
 
-        //scrollView.ResetPosition();
+        wrap.SortAlphabetically();
+        wrap.WrapContent(true);
+
+        scrollView.ResetPosition();
     }
 
-    void OnInitializeFriendButton(GameObject go, int wrapIndex, int realIndex)
+    void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
     {
-        //Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
-        //Dictionary<string, AchivementConditionData> dic_condition = MyCsvLoad.Instance.GetAchivementConditionDatas();
+        List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
+        //List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroDatasElement(MyCsvLoad.Instance.GetHeroTypeDatas(), Hero_Element.fire.ToString()); 
 
-        //List<AchivementTypeData> typeData = MyCsvLoad.Instance.GetAchivementTypeDivideByTabName(current_tab);
+        if (typeData.Count <= 0)
+            return;
+        if (go == null)
+            return;
 
-        //if (typeData.Count <= 0)
-        //    return;
-        //if (go == null)
-        //    return;
+        int column = typeData.Count / 7;
+        int remain = typeData.Count % 7;
 
-        //int lstIndex = realIndex % typeData.Count;
+        if (remain > 0)
+        {
+            column++;
+        }
 
-        //if (lstIndex < 0)
-        //{
-        //    lstIndex = -lstIndex;
-        //}
-        //AchivementButton button = go.GetComponent<AchivementButton>();
+        int lstIndex = realIndex % column;
 
-        //List<AchivementConditionData> conditionData = MyCsvLoad.Instance.GetCachedByParent(typeData[lstIndex]._id);
-        //int rand = Random.Range(0, conditionData.Count);
+        if (lstIndex < 0)
+        {
+            lstIndex = -lstIndex;
+        }
+        Hero7CardSet cardSet = go.GetComponent<Hero7CardSet>();
 
-        //int reward_value = 0;
-        //if (conditionData[rand]._reward_cash != 0)
-        //    reward_value = conditionData[rand]._reward_cash;
-        //else if (conditionData[rand]._reward_food != 0)
-        //    reward_value = conditionData[rand]._reward_food;
-        //else if (conditionData[rand]._reward_gold != 0)
-        //    reward_value = conditionData[rand]._reward_gold;
-
-        //string _description = typeData[lstIndex]._description;
-        //_description = _description.Replace("{0}", conditionData[rand]._counter.ToString());
-
-        //int reward_kingdom_or_exp = conditionData[rand]._reward_kingdom_point;
-        //string sprite_name = "crown";
-
-        //if (reward_kingdom_or_exp == 0)
-        //{
-        //    reward_kingdom_or_exp = conditionData[rand]._reward_exp;
-        //    sprite_name = "player_exp";
-        //}
-
+        int card_num = 7;
+        
+        for (int j = 0; j < card_num; j++)
+        {
+            if (lstIndex == column - 1 && j >= remain)
+            {
+                cardSet.cards[j].gameObject.SetActive(false);
+            }
+            else
+            {
+                cardSet.cards[j].gameObject.SetActive(true);
+                HeroTypeData data = typeData[7 * lstIndex + j];
+                cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._element, data._hero_class);
+            }
+        }        
         //button.Set(typeData[lstIndex]._name, _description,
         //    reward_kingdom_or_exp, sprite_name, reward_value);
     }
 
-
-    // Use this for initialization
-    void Start () {
-        sprites = Resources.LoadAll<Sprite>("portraits");
-	}
-	
+    //번쾌
     public Sprite GetCardSpriteByName(string fileName)
     {
-        for(int i=0; i< sprites.Length; i++)
+        if (sprites == null)
+            return null;
+
+        for (int i=0; i< sprites.Length; i++)
         {
             if(sprites[i].name == fileName)
             {
@@ -132,9 +185,4 @@ public class HeroPanel : MyPanel {
         }
         return null;
     }
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

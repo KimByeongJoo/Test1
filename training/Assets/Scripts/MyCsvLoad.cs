@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using LumenWorks.Framework.IO.Csv;
 
 public class MyCsvLoad : Singleton<MyCsvLoad> {
@@ -16,14 +17,14 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
     Dictionary<string, List<AchivementConditionData>> cachedByParent;
 
-    Dictionary<string, HeroTypeData> heroTypeDatas = new Dictionary<string, HeroTypeData>();
+    List<HeroTypeData> heroTypeDatas = new List<HeroTypeData>();
 
     void Awake()
 	{
         //LoadServers ();        
         LoadAchivementTypeDatas();
         LoadAchivementConditionDatas();
-        LoadHeroTypeDatas();
+        LoadHeroTypeDatas();        
     }
 
 
@@ -134,6 +135,61 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return AchivementConditionDatas;
     }
 
+    public List<HeroTypeData> GetHeroTypeDatas()
+    {
+        return heroTypeDatas;
+    }
+
+    public List<HeroTypeData> GetHeroTypeDatas(HeroPanel.Hero_Element element, HeroPanel.Hero_Kingdom kingdom, HeroPanel.Hero_Class hero_class)
+    {
+        List<HeroTypeData> findHeroDatas;
+
+        if (element != HeroPanel.Hero_Element.none)
+        {
+            findHeroDatas = GetHeroDatasElement(heroTypeDatas, element.ToString());
+        }
+        else
+        {
+            findHeroDatas = heroTypeDatas;
+        }
+
+        if (kingdom != HeroPanel.Hero_Kingdom.none)
+        {
+            findHeroDatas = findHeroDatas.Where(x => x._kingdom.Contains(kingdom.ToString())).ToList();
+        }
+
+        if (hero_class != HeroPanel.Hero_Class.none)
+        {
+            findHeroDatas = findHeroDatas.Where(x => x._hero_class.Contains(hero_class.ToString())).ToList();
+        }
+
+        return findHeroDatas;
+    }
+
+    public List<HeroTypeData> GetHeroDatasElement(List<HeroTypeData> lst, string element)
+    {        
+        //heroTypeDatas = heroTypeDatas.OrderBy(node => node.Value._name).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+        var result = lst.Where(x => x._element.Contains(element)).ToList();
+        
+        return result;
+    }
+
+    public List<HeroTypeData> GetHeroDatasKingdom(List<HeroTypeData> lst, string kingdom)
+    {
+        var result = lst.Where(x => x._kingdom == kingdom).ToList();
+                
+        return result;
+    }
+
+    public List<HeroTypeData> GetHeroDatasClass(List<HeroTypeData> lst, string hero_class)
+    {
+        var result = lst.Where(x => x._hero_class == hero_class).ToList();        
+
+        return result;
+    }
+
+
     public AchivementTypeData GetAchivementTypeDataByID(string id)
     {
         return AchivementTypeDatas[id];
@@ -195,7 +251,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
                     reader[index_hide_card], reader[index_disabled],
                     reader[index_element]);
 
-                heroTypeDatas.Add(reader[index_id], data);
+                heroTypeDatas.Add(data);
             }
         }
     }
@@ -289,32 +345,34 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
             AchivementConditionDatas.Add(reader[index_id], data);
         }
     }
+    /*
+    void LoadServers()
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>("servers") as TextAsset;
 
- //   void LoadServers()
-	//{
-	//	TextAsset textAsset = Resources.Load<TextAsset> ("servers") as TextAsset;
+        MemoryStream ms = new MemoryStream(textAsset.bytes);
+        reader = new CsvReader(new StreamReader(ms), true);
 
-	//	MemoryStream ms = new MemoryStream (textAsset.bytes);
-	//	reader = new CsvReader (new StreamReader (ms), true);
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_name = System.Array.IndexOf(headers, "name");
 
-	//	string[] headers = reader.GetFieldHeaders ();
- //       int index_id = System.Array.IndexOf(headers, "id");
- //       int index_name = System.Array.IndexOf(headers, "name");
+        while (reader.ReadNextRecord())
+        {
+            var go = NGUITools.AddChild(grid.gameObject, button_Prefab);
 
- //       while (reader.ReadNextRecord ()) {			
-	//		var go = NGUITools.AddChild (grid.gameObject, button_Prefab);
+            ShowServerName comp = go.GetComponent<ShowServerName>();
 
- //           ShowServerName comp = go.GetComponent<ShowServerName>();
-
- //           comp.Set(reader[index_id], reader[index_name]);
- //          /* 
-	//		int r = Random.Range (10, 50);
-	//		int r2 = Random.Range (40000, 60000);
-	//		go.transform.Find ("label_top_second").GetComponent<UILabel> ().text = "[00ff00]원활[-]\n[606060]Lv" + r + "킹덤 " + r2;
- //           */
-	//		// 0 == id
-	//		// 1 = name
-	//	}
-	//	grid.Reposition ();
-	//}
+            comp.Set(reader[index_id], reader[index_name]);
+             
+             //int r = Random.Range (10, 50);
+             //int r2 = Random.Range (40000, 60000);
+             //go.transform.Find ("label_top_second").GetComponent<UILabel> ().text = "[00ff00]원활[-]\n[606060]Lv" + r + "킹덤 " + r2;
+             
+            // 0 == id
+            // 1 = name
+        }
+        grid.Reposition();
+    }
+    */
 }

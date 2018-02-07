@@ -10,11 +10,14 @@ public class HeroCard : MonoBehaviour {
     [SerializeField]
     UISprite icon_Class;
 
-    public void Set(Sprite sprite, string icon_Element_Name, string icon_Class_Name)
+    public void Set(Sprite sprite, string element, string hero_class)
     {
-        _sprite.mainTexture = sprite.texture;
-        icon_Element.spriteName = icon_Element_Name;
-        icon_Class.spriteName = icon_Class_Name;
+        if (sprite)
+        {
+            _sprite.sprite2D = sprite;
+        }
+        
+        icon_Element.spriteName = string.Format("{0}{1}", "element_icon_", element);
+        icon_Class.spriteName = string.Format("{0}{1}", "class_icon_", hero_class);
     }
-
 }

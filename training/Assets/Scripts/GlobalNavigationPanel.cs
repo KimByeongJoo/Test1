@@ -39,7 +39,7 @@ public class GlobalNavigationPanel : MonoBehaviour
     {
         if (OptionPanel.Instance == null)
         {
-            GameObject go = Main.Instance.MakeObjectToTarget("Option_Panel");
+            GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_Panel");
             Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             OnOffGlobalBar();
 
@@ -53,7 +53,7 @@ public class GlobalNavigationPanel : MonoBehaviour
     {
         if (AchivementPanel.Instance == null)
         {
-            GameObject go = Main.Instance.MakeObjectToTarget("Achivement_Panel");
+            GameObject go = Main.Instance.MakeObjectToTarget("UI/Achivement_Panel");
             Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             OnOffGlobalBar();
             //if (OptionPanel.Instance != null)
