@@ -35,6 +35,21 @@ public class GlobalNavigationPanel : MonoBehaviour
         }
     }
 
+    public void MakeHeroPanel()
+    {
+        if (HeroPanel.Instance == null)
+        {
+            GameObject go = Main.Instance.MakeObjectToTarget("UI/Hero_Panel");
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
+            OnOffGlobalBar();
+
+            //if (AchivementPanel.Instance != null)
+            //{
+            //    AchivementPanel.Instance.SelfDestroy();
+            //}
+        }
+    }
+
     public void MakeOptionPanel()
     {
         if (OptionPanel.Instance == null)

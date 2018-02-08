@@ -150,19 +150,37 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         }
         else
         {
-            findHeroDatas = heroTypeDatas;
+            findHeroDatas = new List<HeroTypeData>(heroTypeDatas);
         }
 
         if (kingdom != HeroPanel.Hero_Kingdom.none)
         {
             findHeroDatas = findHeroDatas.Where(x => x._kingdom.Contains(kingdom.ToString())).ToList();
+
+            List<HeroTypeData> datas = new List<HeroTypeData>();
+
+            for (int i = 0; i < findHeroDatas.Count; i++)
+            {
+                string[] str_Split = findHeroDatas[i]._kingdom.Split('\n');
+
+                for(int j = 0; j < str_Split.Length; j++)
+                {
+                    if (str_Split[j] == kingdom.ToString())
+                    {
+                        datas.Add(findHeroDatas[i]);
+                        break;
+                    }
+                }                
+            }
+
+            findHeroDatas = datas;
         }
 
         if (hero_class != HeroPanel.Hero_Class.none)
         {
             findHeroDatas = findHeroDatas.Where(x => x._hero_class.Contains(hero_class.ToString())).ToList();
-        }
-
+        }       
+            
         return findHeroDatas;
     }
 
@@ -254,7 +272,19 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
                 heroTypeDatas.Add(data);
             }
         }
+
+        // Sort Name
+        heroTypeDatas = heroTypeDatas.OrderBy(x => x._name).ToList();
+
+        // Sort Hero Class
+        string[] classOrder = { "tank", "paladin", "ranger", "rogue", "wizard" };
+        heroTypeDatas = heroTypeDatas.OrderBy(x => System.Array.IndexOf(classOrder, x._hero_class)).ToList();
+
+        // Sort Rarity
+        string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
+        heroTypeDatas = heroTypeDatas.OrderBy(x => System.Array.IndexOf(rarityOrder, x._rarity)).ToList();
     }
+
     public void LoadAchivementTypeDatas()
     {
         CsvReader reader = LoadCSVtoPath("UI/AchievementType");
