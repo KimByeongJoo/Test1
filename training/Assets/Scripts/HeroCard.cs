@@ -13,6 +13,8 @@ public class HeroCard : MonoBehaviour {
     [SerializeField]
     UISprite icon_Class;
 
+    Vector2 raw_ClassIconSize = new Vector2(26, 26);    
+
     public void Set(Sprite sprite, string name, string element, string hero_class)
     {
         if (sprite)
@@ -21,7 +23,9 @@ public class HeroCard : MonoBehaviour {
         }
 
         label_name.text = name;
-        icon_Element.spriteName = string.Format("{0}{1}", "element_icon_", element);
-        icon_Class.spriteName = string.Format("{0}{1}", "class_icon_", hero_class);
+        Utility.ChangeSpriteAspectSnap(icon_Element, string.Format("element_icon_{0}", element), raw_ClassIconSize);
+        Utility.ChangeSpriteAspectSnap(icon_Class, string.Format("class_icon_{0}", hero_class), raw_ClassIconSize);
+        //icon_Element.spriteName = ;
+        //icon_Class.spriteName = string.Format("{0}{1}", "class_icon_", hero_class);
     }
 }

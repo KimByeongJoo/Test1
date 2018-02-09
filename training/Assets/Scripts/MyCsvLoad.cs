@@ -18,6 +18,8 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     Dictionary<string, List<AchivementConditionData>> cachedByParent;
 
     List<HeroTypeData> heroTypeDatas = new List<HeroTypeData>();
+    
+    static string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
 
     void Awake()
 	{
@@ -33,7 +35,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         if (cachedByParent == null)
             cachedByParent = new Dictionary<string, List<AchivementConditionData>>();
 
-        List<AchivementConditionData> data = new List<AchivementConditionData>();
+        List<AchivementConditionData> data = null;// new List<AchivementConditionData>();
         
         if (cachedByParent.TryGetValue(key, out data))
         {
@@ -140,73 +142,87 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return heroTypeDatas;
     }
 
+    public bool CheckHaveKingdom(HeroTypeData data, string kingdom)
+    {
+        string[] str_Split = data._kingdom.Split('\n');
+
+        for (int j = 0; j < str_Split.Length; j++)
+        {
+            if (str_Split[j] == kingdom)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<HeroTypeData> GetHeroTypeDatas(HeroPanel.Hero_Element element, HeroPanel.Hero_Kingdom kingdom, HeroPanel.Hero_Class hero_class)
     {
-        List<HeroTypeData> findHeroDatas;
+        bool chk_kingdom = false;
+        bool chk_element = false;
 
-        if (element != HeroPanel.Hero_Element.none)
+        List<HeroTypeData> findHeroDatas = new List<HeroTypeData>();
+        for (int i = 0; i < heroTypeDatas.Count; i++)
         {
-            findHeroDatas = GetHeroDatasElement(heroTypeDatas, element.ToString());
-        }
-        else
-        {
-            findHeroDatas = new List<HeroTypeData>(heroTypeDatas);
-        }
-
-        if (kingdom != HeroPanel.Hero_Kingdom.none)
-        {
-            findHeroDatas = findHeroDatas.Where(x => x._kingdom.Contains(kingdom.ToString())).ToList();
-
-            List<HeroTypeData> datas = new List<HeroTypeData>();
-
-            for (int i = 0; i < findHeroDatas.Count; i++)
+            if (element == HeroPanel.Hero_Element.all && kingdom == HeroPanel.Hero_Kingdom.all && hero_class == HeroPanel.Hero_Class.all)
             {
-                string[] str_Split = findHeroDatas[i]._kingdom.Split('\n');
-
-                for(int j = 0; j < str_Split.Length; j++)
-                {
-                    if (str_Split[j] == kingdom.ToString())
-                    {
-                        datas.Add(findHeroDatas[i]);
-                        break;
-                    }
-                }                
+                findHeroDatas.Add(heroTypeDatas[i]);
+                continue;
             }
 
-            findHeroDatas = datas;
+            // check conditions
+            // Kingdom check           
+            chk_kingdom = false;
+            chk_element = false;
+
+            if (kingdom != HeroPanel.Hero_Kingdom.all)
+            {
+                chk_kingdom = CheckHaveKingdom(heroTypeDatas[i], kingdom.ToString());
+            }
+            else
+            {
+                chk_kingdom = true;
+            }
+
+            if (chk_kingdom)
+            {
+                // element check
+                if (element != HeroPanel.Hero_Element.all)
+                {
+                    if (heroTypeDatas[i]._element == element)
+                    {
+                        chk_element = true;
+                    }
+                    else
+                    {
+                        chk_element = false;
+                        continue;
+                    }
+                }
+                else
+                {
+                    chk_element = true;
+                }
+                //class check                
+                if (chk_element)
+                {
+                    if (hero_class != HeroPanel.Hero_Class.all)
+                    {
+                        if (heroTypeDatas[i]._hero_class == hero_class)
+                        {
+                            findHeroDatas.Add(heroTypeDatas[i]);
+                        }
+                    }
+                    else
+                    {
+                        findHeroDatas.Add(heroTypeDatas[i]);
+                    }
+                }
+            }
         }
-
-        if (hero_class != HeroPanel.Hero_Class.none)
-        {
-            findHeroDatas = findHeroDatas.Where(x => x._hero_class.Contains(hero_class.ToString())).ToList();
-        }       
-            
+        //findHeroDatas.Sort(CompareHeroDatas);
         return findHeroDatas;
-    }
-
-    public List<HeroTypeData> GetHeroDatasElement(List<HeroTypeData> lst, string element)
-    {        
-        //heroTypeDatas = heroTypeDatas.OrderBy(node => node.Value._name).ToDictionary(pair => pair.Key, pair => pair.Value);
-
-        var result = lst.Where(x => x._element.Contains(element)).ToList();
-        
-        return result;
-    }
-
-    public List<HeroTypeData> GetHeroDatasKingdom(List<HeroTypeData> lst, string kingdom)
-    {
-        var result = lst.Where(x => x._kingdom == kingdom).ToList();
-                
-        return result;
-    }
-
-    public List<HeroTypeData> GetHeroDatasClass(List<HeroTypeData> lst, string hero_class)
-    {
-        var result = lst.Where(x => x._hero_class == hero_class).ToList();        
-
-        return result;
-    }
-
+    }    
 
     public AchivementTypeData GetAchivementTypeDataByID(string id)
     {
@@ -259,30 +275,110 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
             if (reader[index_category] == "hero" && reader[index_playable] == "1" && reader[index_disabled] != "1")
             {
                 HeroTypeData data = new HeroTypeData();
-
+                
+                HeroPanel.Hero_Class hero_class = GetClassStringToEnum(reader[index_class]);
+                HeroPanel.Hero_Element element = GetElementStringToEnum(reader[index_element]);
+                 
                 data.Set(reader[index_id],
                     reader[index_name], reader[index_nickname], reader[index_category],
                     reader[index_kingdom],
-                    reader[index_class], reader[index_gender],
+                    hero_class, reader[index_gender],
                     reader[index_tier], reader[index_rarity],
                     reader[index_portrait], reader[index_playable],
                     reader[index_hide_card], reader[index_disabled],
-                    reader[index_element]);
+                    element);
 
                 heroTypeDatas.Add(data);
             }
         }
 
-        // Sort Name
-        heroTypeDatas = heroTypeDatas.OrderBy(x => x._name).ToList();
+        // Sort
+        heroTypeDatas.Sort(CompareHeroDatas);     
+    }
 
-        // Sort Hero Class
-        string[] classOrder = { "tank", "paladin", "ranger", "rogue", "wizard" };
-        heroTypeDatas = heroTypeDatas.OrderBy(x => System.Array.IndexOf(classOrder, x._hero_class)).ToList();
 
-        // Sort Rarity
-        string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
-        heroTypeDatas = heroTypeDatas.OrderBy(x => System.Array.IndexOf(rarityOrder, x._rarity)).ToList();
+    public HeroPanel.Hero_Class GetClassStringToEnum(string str_class)
+    {
+        switch (str_class)
+        {
+            case "tank":
+                return HeroPanel.Hero_Class.tank;          
+            case "rogue":
+                return HeroPanel.Hero_Class.rogue;         
+            case "ranger":
+                return HeroPanel.Hero_Class.ranger;     
+            case "paladin":
+                return HeroPanel.Hero_Class.paladin;        
+            case "wizard":
+                return HeroPanel.Hero_Class.wizard;           
+            default:
+                return HeroPanel.Hero_Class.all;                
+        }
+    }
+    public HeroPanel.Hero_Element GetElementStringToEnum(string str_Element)
+    {
+        switch (str_Element)
+        {
+            case "physic":
+                return HeroPanel.Hero_Element.physic;
+            case "fire":
+                return HeroPanel.Hero_Element.fire;
+            case "ice":
+                return HeroPanel.Hero_Element.ice;
+            case "lightning":
+                return HeroPanel.Hero_Element.lightning;
+            case "poison":
+                return HeroPanel.Hero_Element.poison;
+            case "dark":
+                return HeroPanel.Hero_Element.dark;
+            case "divine":
+                return HeroPanel.Hero_Element.divine;
+            default:
+                return HeroPanel.Hero_Element.all;
+        }
+    }
+
+    static int CompareHeroDatas(HeroTypeData x, HeroTypeData y)
+    {
+        if (x == null || y == null)
+            return 0;
+
+        int result = CompareHeroRarity(x, y);
+        
+        if(result == 0)
+        {
+            result = CompareHeroClass(x, y);
+        }
+
+        if (result == 0)
+        {
+            result = CompareHeroName(x,y);
+        }
+
+        return result;
+    }
+    static int CompareHeroName(HeroTypeData x, HeroTypeData y)
+    {
+        if (x == null || y == null)
+            return 0;
+
+        return x._name.CompareTo(y._name);
+    }
+
+    static int CompareHeroClass(HeroTypeData x, HeroTypeData y)
+    {
+        if (x == null || y == null)
+            return 0;
+
+        return x._hero_class.CompareTo(y._hero_class); 
+    }
+
+    static int CompareHeroRarity(HeroTypeData x, HeroTypeData y)
+    {
+        if (x == null || y == null)
+            return 0;
+
+        return System.Array.IndexOf(rarityOrder, x._rarity).CompareTo(System.Array.IndexOf(rarityOrder, y._rarity));
     }
 
     public void LoadAchivementTypeDatas()
@@ -374,35 +470,5 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
             AchivementConditionDatas.Add(reader[index_id], data);
         }
-    }
-    /*
-    void LoadServers()
-    {
-        TextAsset textAsset = Resources.Load<TextAsset>("servers") as TextAsset;
-
-        MemoryStream ms = new MemoryStream(textAsset.bytes);
-        reader = new CsvReader(new StreamReader(ms), true);
-
-        string[] headers = reader.GetFieldHeaders();
-        int index_id = System.Array.IndexOf(headers, "id");
-        int index_name = System.Array.IndexOf(headers, "name");
-
-        while (reader.ReadNextRecord())
-        {
-            var go = NGUITools.AddChild(grid.gameObject, button_Prefab);
-
-            ShowServerName comp = go.GetComponent<ShowServerName>();
-
-            comp.Set(reader[index_id], reader[index_name]);
-             
-             //int r = Random.Range (10, 50);
-             //int r2 = Random.Range (40000, 60000);
-             //go.transform.Find ("label_top_second").GetComponent<UILabel> ().text = "[00ff00]원활[-]\n[606060]Lv" + r + "킹덤 " + r2;
-             
-            // 0 == id
-            // 1 = name
-        }
-        grid.Reposition();
-    }
-    */
+    }    
 }

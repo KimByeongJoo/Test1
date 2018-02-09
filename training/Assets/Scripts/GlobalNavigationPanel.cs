@@ -38,9 +38,10 @@ public class GlobalNavigationPanel : MonoBehaviour
     public void MakeHeroPanel()
     {
         if (HeroPanel.Instance == null)
-        {
-            GameObject go = Main.Instance.MakeObjectToTarget("UI/Hero_Panel");
-            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
+        {            
+            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/Hero_Panel", Main.Instance.uiTarget, Vector3.one, 502);
+            //Main.Instance.AddPanel(go.GetComponent<MyPanel>());
+            //add
             OnOffGlobalBar();
 
             //if (AchivementPanel.Instance != null)

@@ -23,11 +23,9 @@ public class HeroPanel : MyPanel {
         _instance = null;
     }
     
-    Sprite[] sprites;
-
     public enum Hero_Element
     {
-        none,
+        all,
         physic,
         fire,
         ice,
@@ -38,7 +36,7 @@ public class HeroPanel : MyPanel {
     }
     public enum Hero_Kingdom
     {
-        none,
+        all,
         wii,
         chock,
         oh,
@@ -50,13 +48,15 @@ public class HeroPanel : MyPanel {
     }
     public enum Hero_Class
     {
-        none,
+        all,
         tank,
         rogue,
         ranger,
         paladin,
         wizard
     }
+    
+    Sprite[] sprites;
 
     [SerializeField]
     UIWrapContent wrap;
@@ -64,13 +64,16 @@ public class HeroPanel : MyPanel {
     [SerializeField]
     UIScrollView scrollView;
 
+    [SerializeField]
+    UIPanel panel_Scrollbar;
+
     [Header("Panels")]
     [SerializeField]
-    UIPanel popup_Panel1;
+    UIPanel panel_Element_Filter;
     [SerializeField]
-    UIPanel popup_Panel2;
+    UIPanel panel_Kingdom_Filter;
     [SerializeField]
-    UIPanel popup_Panel3;
+    UIPanel panel_Class_Filter;
 
     [Header("Element")]
     [SerializeField]
@@ -88,7 +91,7 @@ public class HeroPanel : MyPanel {
     [SerializeField]
     UISprite arrow_Kingdom;
     [SerializeField]
-    UILabel label_Kingdom;
+    UILabel label_Kingdom;    
 
     [Header("Hero_Class")]
     [SerializeField]
@@ -100,9 +103,63 @@ public class HeroPanel : MyPanel {
     [SerializeField]
     UILabel label_Class;
 
-    public Hero_Element hero_Element    = Hero_Element.none;
-    public Hero_Kingdom hero_Kingdom    = Hero_Kingdom.none;
-    public Hero_Class   hero_Class      = Hero_Class.none;
+    public Hero_Element hero_Element    = Hero_Element.all;
+    public Hero_Kingdom hero_Kingdom    = Hero_Kingdom.all;
+    public Hero_Class   hero_Class      = Hero_Class.all;
+
+    [Header("Toggle Element")]
+    [SerializeField]
+    UIToggle toggle_element_all;
+    [SerializeField]
+    UIToggle toggle_physic;
+    [SerializeField]
+    UIToggle toggle_fire;
+    [SerializeField]
+    UIToggle toggle_ice;
+    [SerializeField]
+    UIToggle toggle_lightning;
+    [SerializeField]
+    UIToggle toggle_poison;
+    [SerializeField]
+    UIToggle toggle_dark;
+    [SerializeField]
+    UIToggle toggle_divine;
+
+    [Header("Toggle Kingdom")]
+    [SerializeField]
+    UIToggle toggle_kingdom_all;
+    [SerializeField]
+    UIToggle toggle_wii;
+    [SerializeField]
+    UIToggle toggle_chock;
+    [SerializeField]
+    UIToggle toggle_oh;
+    [SerializeField]
+    UIToggle toggle_han;
+    [SerializeField]
+    UIToggle toggle_etc;
+    [SerializeField]
+    UIToggle toggle_ancient;
+    [SerializeField]
+    UIToggle toggle_samurai;
+    [SerializeField]
+    UIToggle toggle_chohan;
+
+    [Header("Toggle Class")]
+    [SerializeField]
+    UIToggle toggle_class_all;
+    [SerializeField]
+    UIToggle toggle_tank;
+    [SerializeField]
+    UIToggle toggle_rogue;
+    [SerializeField]
+    UIToggle toggle_ranger;
+    [SerializeField]
+    UIToggle toggle_paladin;
+    [SerializeField]
+    UIToggle toggle_wizard;
+    
+    int card_num = 7;
 
     private void Awake()
     {                
@@ -118,12 +175,13 @@ public class HeroPanel : MyPanel {
         WrapSetting();
 
         scrollView.GetComponent<UIPanel>().depth = panel.depth + 5;
-        popup_Panel1.depth = panel.depth + 6;
-        popup_Panel2.depth = panel.depth + 7;
-        popup_Panel3.depth = panel.depth + 8;
+        panel_Scrollbar.depth = panel.depth + 6;
+        panel_Element_Filter.depth = panel.depth + 7;
+        panel_Kingdom_Filter.depth = panel.depth + 8;
+        panel_Class_Filter.depth = panel.depth + 9;
 
     }
-    public void AllPopupListClose()
+    public void AllFilterListClose()
     {
         elementList.alpha = 0;
         kingdomList.alpha = 0;
@@ -138,7 +196,7 @@ public class HeroPanel : MyPanel {
     {
         if (elementList.alpha == 0)
         {
-            AllPopupListClose();
+            AllFilterListClose();
             arrow_Element.flip = UIBasicSprite.Flip.Nothing;            
             elementList.alpha = 1;
         }
@@ -152,7 +210,7 @@ public class HeroPanel : MyPanel {
     {
         if (kingdomList.alpha == 0)
         {
-            AllPopupListClose();            
+            AllFilterListClose();            
             arrow_Kingdom.flip = UIBasicSprite.Flip.Nothing;
             kingdomList.alpha = 1;
         }
@@ -166,7 +224,7 @@ public class HeroPanel : MyPanel {
     {
         if (classList.alpha == 0)
         {
-            AllPopupListClose();            
+            AllFilterListClose();            
             arrow_Class.flip = UIBasicSprite.Flip.Nothing;
             classList.alpha = 1;
         }
@@ -180,21 +238,21 @@ public class HeroPanel : MyPanel {
     void WrapSetting()
     {
         List<HeroTypeData> type_Data = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
+        
+        int column = type_Data.Count / card_num;
 
-        //List<AchivementTypeData> type_Data = MyCsvLoad.Instance.GetAchivementTypeDivideByTabName(current_tab);
-
-        //Dictionary<string, AchivementTypeData> dic_type = MyCsvLoad.Instance.GetAchivementTypeDatas();
-        int column = type_Data.Count / 7;
-
-        if (type_Data.Count % 7 > 0)
+        if (type_Data.Count % card_num > 0)
         {
             column++;
         }
 
-        wrap.minIndex = -(column - 1);
         if (column == 1)
         {
-            wrap.minIndex = 1;
+            wrap.minIndex = -1;
+        }
+        else
+        {
+            wrap.minIndex = -(column - 1);
         }
         wrap.maxIndex = 0;
 
@@ -226,15 +284,14 @@ public class HeroPanel : MyPanel {
     void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
     {
         List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
-        //List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroDatasElement(MyCsvLoad.Instance.GetHeroTypeDatas(), Hero_Element.fire.ToString()); 
-
+        
         if (typeData.Count <= 0)
             return;
         if (go == null)
             return;
-
-        int column = typeData.Count / 7;
-        int remain = typeData.Count % 7;
+        
+        int column = typeData.Count / card_num;
+        int remain = typeData.Count % card_num;
 
         if (remain > 0)
         {
@@ -242,7 +299,7 @@ public class HeroPanel : MyPanel {
         }
         else if (column != 0 && remain == 0)
         {
-            remain = 7;
+            remain = card_num;
         }
         
         int lstIndex = realIndex % column;
@@ -252,8 +309,6 @@ public class HeroPanel : MyPanel {
             lstIndex = -lstIndex;
         }
         Hero7CardSet cardSet = go.GetComponent<Hero7CardSet>();
-
-        int card_num = 7;
         
         for (int j = 0; j < card_num; j++)
         {
@@ -264,111 +319,179 @@ public class HeroPanel : MyPanel {
             else
             {
                 cardSet.cards[j].gameObject.SetActive(true);
-                HeroTypeData data = typeData[7 * lstIndex + j];
-                cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._name, data._element, data._hero_class);
+                HeroTypeData data = typeData[card_num * lstIndex + j];
+                cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._name, data._element.ToString(), data._hero_class.ToString());
             }
-        }        
+        }
+        
         //button.Set(typeData[lstIndex]._name, _description,
         //    reward_kingdom_or_exp, sprite_name, reward_value);
     }
 
     public void ClickElementToggle()
-    {
-        UIToggle selectedToggle = UIToggle.GetActiveToggle(20);
-        if (selectedToggle != null && selectedToggle.value)
-        {            
-            string[] element = selectedToggle.name.Split('_');
-            hero_Element = (Hero_Element)int.Parse(element[1]);
+    {        
+        Vector2 size = new Vector2(50, 54);
 
-            if (hero_Element != Hero_Element.none)
-            {
-                label_Element.alpha = 0;
-                icon_Element.alpha = 1;
-
-                Vector2 size = new Vector2(50, 54);
-                Utility.ChangeSpriteAspectSnap(icon_Element, string.Format("{0}{1}", "element_icon_", hero_Element.ToString()), size);
-                //icon_Element.spriteName = string.Format("{0}{1}", "element_icon_", hero_Element.ToString());
-            }
-            else
-            {
-                label_Element.alpha = 1;
-                icon_Element.alpha = 0;
-            }
-            WrapSetting();
-            OnOffElementList();
+        if (toggle_element_all.value)
+        {
+            label_Element.alpha = 1;
+            icon_Element.alpha = 0;
+            hero_Element = Hero_Element.all;
         }
+        else if (toggle_physic.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_physic", size);
+            hero_Element = Hero_Element.physic;
+        }
+        else if (toggle_fire.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_fire", size);
+            hero_Element = Hero_Element.fire;
+        }        
+        else if (toggle_ice.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_ice", size);
+            hero_Element = Hero_Element.ice;
+        }
+        else if (toggle_lightning.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_lightning", size);
+            hero_Element = Hero_Element.lightning;
+        }
+        else if (toggle_poison.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_poison", size);
+            hero_Element = Hero_Element.poison;
+        }
+        else if (toggle_dark.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_dark", size);
+            hero_Element = Hero_Element.dark;
+        }
+        else if (toggle_divine.value)
+        {
+            ElementIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_divine", size);
+            hero_Element = Hero_Element.divine;
+        }
+
+        WrapSetting();
+        OnOffElementList();
+        
+    }
+    public void ElementIconOn()
+    {
+        label_Element.alpha = 0;
+        icon_Element.alpha = 1;
+    }
+    public void ClassIconOn()
+    {
+        label_Class.alpha = 0;
+        icon_Class.alpha = 1;
     }
 
     public void ClickKingdomToggle()
     {
-        UIToggle selectedToggle = UIToggle.GetActiveToggle(21);
-        if (selectedToggle != null && selectedToggle.value)
-        {            
-            string[] kingdom = selectedToggle.name.Split('_');
-            hero_Kingdom = (Hero_Kingdom)int.Parse(kingdom[1]);
+        Vector2 size = new Vector2(50, 54);
 
-            // ...
-            switch(hero_Kingdom)
-            {
-                case Hero_Kingdom.none:
-                    label_Kingdom.text = "국가";
-                    break;
-                case Hero_Kingdom.wii:
-                    label_Kingdom.text = "위나라";
-                    break;
-                case Hero_Kingdom.chock:
-                    label_Kingdom.text = "촉나라";
-                    break;
-                case Hero_Kingdom.oh:
-                    label_Kingdom.text = "오나라";
-                    break;
-                case Hero_Kingdom.han:
-                    label_Kingdom.text = "한나라";
-                    break;
-                case Hero_Kingdom.etc:
-                    label_Kingdom.text = "세외";
-                    break;
-                case Hero_Kingdom.ancient:
-                    label_Kingdom.text = "춘추전국";
-                    break;
-                case Hero_Kingdom.samurai:
-                    label_Kingdom.text = "사무라이";
-                    break;
-                case Hero_Kingdom.chohan:
-                    label_Kingdom.text = "초한쟁패";
-                    break;
-            }
-
-            WrapSetting();
-            OnOffKingdomList();
+        if (toggle_kingdom_all.value)
+        {                        
+            label_Kingdom.text = "국가";
+            hero_Kingdom = Hero_Kingdom.all;
         }
+        else if (toggle_wii.value)
+        {          
+            label_Kingdom.text = "위나라";
+            hero_Kingdom = Hero_Kingdom.wii;
+        }
+        else if (toggle_chock.value)
+        {         
+            label_Kingdom.text = "촉나라";
+            hero_Kingdom = Hero_Kingdom.chock;
+        }
+        else if (toggle_oh.value)
+        {         
+            label_Kingdom.text = "오나라";
+            hero_Kingdom = Hero_Kingdom.oh;
+        }
+        else if (toggle_han.value)
+        {
+            label_Kingdom.text = "한나라";
+            hero_Kingdom = Hero_Kingdom.han;
+        }
+        else if (toggle_etc.value)
+        {
+            label_Kingdom.text = "세외";
+            hero_Kingdom = Hero_Kingdom.etc;
+        }
+        else if (toggle_ancient.value)
+        {
+            label_Kingdom.text = "춘추전국";
+            hero_Kingdom = Hero_Kingdom.ancient;
+        }
+        else if (toggle_samurai.value)
+        {
+            label_Kingdom.text = "사무라이";
+            hero_Kingdom = Hero_Kingdom.samurai;
+        }
+        else if (toggle_chohan.value)
+        {
+            label_Kingdom.text = "초한쟁패";
+            hero_Kingdom = Hero_Kingdom.chohan;
+        }
+
+        WrapSetting();
+        OnOffKingdomList();
     }
 
     public void ClickClassToggle()
     {
-        UIToggle selectedToggle = UIToggle.GetActiveToggle(22);
-        if (selectedToggle != null && selectedToggle.value)
-        {            
-            string[] heroClass = selectedToggle.name.Split('_');
-            hero_Class= (Hero_Class)int.Parse(heroClass[1]);
+        Vector2 size = new Vector2(56, 50);
 
-            if (hero_Class!= Hero_Class.none)
-            {
-                label_Class.alpha = 0;
-                icon_Class.alpha = 1;
-
-                Vector2 size = new Vector2(56, 50);
-                Utility.ChangeSpriteAspectSnap(icon_Class, string.Format("{0}{1}", "class_icon_", hero_Class.ToString()), size);
-                //icon_Class.spriteName = string.Format("{0}{1}", "class_icon_", hero_Class.ToString());
-            }
-            else
-            {
-                label_Class.alpha = 1;
-                icon_Class.alpha = 0;
-            }
-            WrapSetting();            
-            OnOffClassList();
+        if (toggle_class_all.value)
+        {
+            label_Class.alpha = 1;
+            icon_Class.alpha = 0;
+            hero_Class = Hero_Class.all;
         }
+        else if (toggle_tank.value)
+        {
+            ClassIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_tank", size);
+            hero_Class = Hero_Class.tank;
+        }
+        else if (toggle_rogue.value)
+        {
+            ClassIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_rogue", size);
+            hero_Class = Hero_Class.rogue;
+        }
+        else if (toggle_ranger.value)
+        {
+            ClassIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_ranger", size);
+            hero_Class = Hero_Class.ranger;
+        }
+        else if (toggle_paladin.value)
+        {
+            ClassIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_paladin", size);
+            hero_Class = Hero_Class.paladin;
+        }
+        else if (toggle_wizard.value)
+        {
+            ClassIconOn();
+            Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_wizard", size);
+            hero_Class = Hero_Class.wizard;
+        }        
+        WrapSetting();            
+        OnOffClassList();        
     }
 
 
