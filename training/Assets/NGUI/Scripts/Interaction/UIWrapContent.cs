@@ -324,7 +324,9 @@ public class UIWrapContent : MonoBehaviour
                         if (!cullContent && activeCount < 4)
                         { }
                         else
+                        {
                             t.localPosition = pos;
+                        }
 
                         UpdateItem(t, i);
                     }
@@ -346,7 +348,9 @@ public class UIWrapContent : MonoBehaviour
                         if (!cullContent && activeCount < 4)
                         { }
                         else
+                        {
                             t.localPosition = pos;
+                        }
                         UpdateItem(t, i);
                     }
                     else
@@ -387,7 +391,9 @@ public class UIWrapContent : MonoBehaviour
                         if (!cullContent && activeCount < 4)
                         { }
                         else
+                        {
                             t.localPosition = pos;
+                        }
                         UpdateItem(t, i);
                     }
                     else
@@ -408,7 +414,9 @@ public class UIWrapContent : MonoBehaviour
                         if (!cullContent && activeCount < 4)
                         { }
                         else
+                        {
                             t.localPosition = pos;
+                        }
                         UpdateItem(t, i);
                     }
                     else

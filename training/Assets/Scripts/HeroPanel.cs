@@ -63,17 +63,20 @@ public class HeroPanel : MyPanel {
         
     [SerializeField]
     UIScrollView scrollView;
-
     [SerializeField]
-    UIPanel panel_Scrollbar;
+    UIScrollBar scrollBar;
 
     [Header("Panels")]
+    [SerializeField]
+    UIPanel panel_Scrollbar;
     [SerializeField]
     UIPanel panel_Element_Filter;
     [SerializeField]
     UIPanel panel_Kingdom_Filter;
     [SerializeField]
     UIPanel panel_Class_Filter;
+
+    UIPanel panel_ScrollView;
 
     [Header("Element")]
     [SerializeField]
@@ -161,26 +164,35 @@ public class HeroPanel : MyPanel {
     
     int card_num = 7;
 
+    int save_ScrollView_Column = 1;
+
+    MyBar wrapScrollBar;
+
     private void Awake()
     {                
         base.Awake();
         
         if (wrap != null)
             wrap.onInitializeItem = OnInitializeHeroCards;
+
+        wrapScrollBar = GetComponent<MyBar>();
     }
     void Start()
     {
         sprites = Resources.LoadAll<Sprite>("portraits");
+        panel_ScrollView = scrollView.GetComponent<UIPanel>();
 
         WrapSetting();
 
-        scrollView.GetComponent<UIPanel>().depth = panel.depth + 5;
+        panel_ScrollView.depth = panel.depth + 5;
         panel_Scrollbar.depth = panel.depth + 6;
         panel_Element_Filter.depth = panel.depth + 7;
         panel_Kingdom_Filter.depth = panel.depth + 8;
         panel_Class_Filter.depth = panel.depth + 9;
+        
+        wrapScrollBar.SetScrollViewLocalPosition(scrollView.transform.localPosition);
+    }    
 
-    }
     public void AllFilterListClose()
     {
         elementList.alpha = 0;
@@ -277,8 +289,9 @@ public class HeroPanel : MyPanel {
 
         wrap.SortAlphabetically();
         wrap.WrapContent(true);
-
         scrollView.ResetPosition();
+
+        wrapScrollBar.Set(save_ScrollView_Column);
     }
 
     void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
@@ -309,6 +322,8 @@ public class HeroPanel : MyPanel {
         {
             lstIndex = -lstIndex;
         }
+        save_ScrollView_Column = column;
+
         Hero7CardSet cardSet = go.GetComponent<Hero7CardSet>();
         
         for (int j = 0; j < card_num; j++)
