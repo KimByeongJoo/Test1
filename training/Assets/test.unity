@@ -406,6 +406,30 @@ Prefab:
       propertyPath: aspectRatio
       value: 0.02310231
       objectReference: {fileID: 0}
+    - target: {fileID: 11478118, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: mValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423926, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 493666, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 153.99933
+      objectReference: {fileID: 0}
+    - target: {fileID: 448904, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -427
+      objectReference: {fileID: 0}
+    - target: {fileID: 480438, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417200, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
+      propertyPath: cullContent
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77f2b61da8920654a9705bea5991c609, type: 2}
   m_IsPrefabParent: 0

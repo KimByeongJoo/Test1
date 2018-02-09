@@ -283,6 +283,7 @@ public class HeroPanel : MyPanel {
 
     void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
     {
+        //Debug.Log("real index : " + realIndex + " wrapIndex : " + wrapIndex);
         List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
         
         if (typeData.Count <= 0)

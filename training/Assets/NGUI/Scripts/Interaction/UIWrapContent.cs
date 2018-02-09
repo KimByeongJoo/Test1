@@ -273,8 +273,22 @@ public class UIWrapContent : MonoBehaviour
     /// </summary>
     virtual public void WrapContent(bool forceUpdate = false)
     {
-        float extents = itemSize * mChildren.Count * 0.5f;
-        
+        float extents;
+        int activeCount = 0;
+
+        if (!cullContent)
+        {
+            for (int i = 0; i < mChildren.Count; i++)
+            {
+                if (mChildren[i].gameObject.activeSelf)
+                    activeCount++;
+            }
+
+            extents = itemSize * activeCount * 0.5f;
+        }
+        else
+            extents = itemSize * mChildren.Count * 0.5f;
+
         Vector3[] corners = mPanel.worldCorners;
 
         for (int i = 0; i < 4; ++i)
@@ -307,7 +321,11 @@ public class UIWrapContent : MonoBehaviour
 
                     if (minIndex == maxIndex || (minIndex <= realIndex && realIndex <= maxIndex))
                     {
-                        t.localPosition = pos;
+                        if (!cullContent && activeCount < 4)
+                        { }
+                        else
+                            t.localPosition = pos;
+
                         UpdateItem(t, i);
                     }
                     else
@@ -325,7 +343,10 @@ public class UIWrapContent : MonoBehaviour
 
                     if (minIndex == maxIndex || (minIndex <= realIndex && realIndex <= maxIndex))
                     {
-                        t.localPosition = pos;
+                        if (!cullContent && activeCount < 4)
+                        { }
+                        else
+                            t.localPosition = pos;
                         UpdateItem(t, i);
                     }
                     else
@@ -363,7 +384,10 @@ public class UIWrapContent : MonoBehaviour
 
                     if (minIndex == maxIndex || (minIndex <= realIndex && realIndex <= maxIndex))
                     {
-                        t.localPosition = pos;
+                        if (!cullContent && activeCount < 4)
+                        { }
+                        else
+                            t.localPosition = pos;
                         UpdateItem(t, i);
                     }
                     else
@@ -381,7 +405,10 @@ public class UIWrapContent : MonoBehaviour
 
                     if (minIndex == maxIndex || (minIndex <= realIndex && realIndex <= maxIndex))
                     {
-                        t.localPosition = pos;
+                        if (!cullContent && activeCount < 4)
+                        { }
+                        else
+                            t.localPosition = pos;
                         UpdateItem(t, i);
                     }
                     else
