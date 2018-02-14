@@ -675,7 +675,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 497088}
@@ -881,7 +881,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1171, y: 740, z: 0}
+  m_Size: {x: 1299, y: 740, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400122
 MonoBehaviour:
@@ -1543,7 +1543,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
   mText: "\uC124\uC815"
-  mFontSize: 30
+  mFontSize: 35
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -2331,13 +2331,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 1171
+  mWidth: 1299
   mHeight: 740
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.5824324
+  aspectRatio: 1.7554054
   mType: 1
   mFillDirection: 4
   mFillAmount: 1

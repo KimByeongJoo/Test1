@@ -10,7 +10,18 @@ public class GlobalNavigationPanel : MonoBehaviour
     [SerializeField]
     UISprite bar;
 
-    bool isOpen = true;    
+    [SerializeField]
+    UIPanel panel;
+
+    bool isOpen = true;
+    
+    public void SetGlobalNavigationDepthToTop(bool ok = true)
+    {
+        if(ok)
+            panel.depth =  Main.Instance.current_panel_depth + 1;
+        else
+            panel.depth = Main.Instance.current_panel_depth - 1;
+    }
 
     public void OnOffGlobalBar()
     {
@@ -21,7 +32,7 @@ public class GlobalNavigationPanel : MonoBehaviour
             bar.transform.localPosition = pos;
 
             //bar.rightAnchor.absolute = -30;
-            arrow.flip = UIBasicSprite.Flip.Nothing;
+            arrow.flip = UIBasicSprite.Flip.Horizontally;
             isOpen = false;
         }
         else
@@ -30,19 +41,39 @@ public class GlobalNavigationPanel : MonoBehaviour
             pos.x -= bar.width;
             bar.transform.localPosition = pos;
 
-            arrow.flip = UIBasicSprite.Flip.Horizontally;
+            arrow.flip = UIBasicSprite.Flip.Nothing;
             isOpen = true;
+        }
+    }
+
+    public void MakeFriendPanel()
+    {
+        if (FriendPanel.Instance == null)
+        {
+            GameObject go = Main.Instance.MakeObjectToTarget("UI/Friend_Panel", Main.Instance.uiTarget);
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
+
+            //add
+            OnOffGlobalBar();
+            
         }
     }
 
     public void MakeHeroPanel()
     {
         if (HeroPanel.Instance == null)
-        {            
-            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/Hero_Panel", Main.Instance.uiTarget, Vector3.one, 502);
+        {
+            Main.Instance.current_panel_depth += 500;
+
+            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/Hero_Panel", Main.Instance.uiTarget, Vector3.one,
+                Main.Instance.current_panel_depth);
+
+            
             //Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             //add
             OnOffGlobalBar();
+
+            SetGlobalNavigationDepthToTop(false);
 
             //if (AchivementPanel.Instance != null)
             //{

@@ -106,7 +106,8 @@ public class OptionPanel : MyPanel
         DeleteAllContents();
         SetTabLabelColor(OptionTab.Notice);
         GameObject go = Main.Instance.MakeObjectToTarget("UI/Option_notice_tab_content", contentTarget);
-        go.GetComponent<UIPanel>().depth = panel.depth + 5;        
+        go.GetComponent<UIPanel>().depth = panel.depth + 5;
+        go.GetComponent<OptionNoticeTab_Content>().SetPanelDepth(panel.depth + 6);
     }
 
     public void ClickEtcTab()

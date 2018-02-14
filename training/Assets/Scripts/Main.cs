@@ -75,6 +75,23 @@ public class Main : Singleton<Main> {
     /// </summary>
     /// <param name="path">"Resources/..."</param>
     /// <param name="target">parent target</param>
+    /// <param name="nameNumber"> object name + nameNumber </param>
+    public GameObject MakeObjectToTarget(string path, GameObject target, int nameNumber)
+    {
+        GameObject go = Instantiate(Resources.Load(path) as GameObject);
+        Transform trans = go.transform;
+        trans.parent = target.transform;
+        trans.localScale = Vector3.one;
+        trans.localPosition = Vector3.zero;
+        go.name = string.Format ("{0}{1}", go.name, nameNumber);
+        return go;
+    }
+
+    /// <summary>    
+    /// Scale = Vector3.one
+    /// </summary>
+    /// <param name="path">"Resources/..."</param>
+    /// <param name="target">parent target</param>
     /// <param name="local_pos">pos</param>
     public GameObject MakeObjectToTarget(string path, GameObject target, Vector3 local_pos)
     {
@@ -83,6 +100,21 @@ public class Main : Singleton<Main> {
         trans.parent = target.transform;
         trans.localScale = Vector3.one;
         trans.localPosition = local_pos;
+        return go;
+    }
+
+    /// <summary>    
+    /// Scale = Vector3.one
+    /// </summary>
+    /// <param name="path">"Resources/..."</param>
+    /// <param name="target">parent target</param>
+    public GameObject MakeObjectToTarget(string path, GameObject target, Vector3 local_pos, Vector3 localScale)
+    {
+        GameObject go = Instantiate(Resources.Load(path) as GameObject);
+        Transform trans = go.transform;
+        trans.parent = target.transform;
+        trans.localScale = localScale;
+        trans.localPosition = Vector3.zero;
         return go;
     }
 

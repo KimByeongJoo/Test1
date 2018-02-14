@@ -367,7 +367,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 786, y: 468, z: 0}
+  m_Size: {x: 1299, y: 740, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6566898
 BoxCollider:
@@ -696,7 +696,7 @@ MonoBehaviour:
   savedAs: 
   selectOnTab: {fileID: 0}
   activeTextColor: {r: 0, g: 0, b: 0, a: 1}
-  caretColor: {r: 1, g: 1, b: 1, a: 0.8}
+  caretColor: {r: 0, g: 0, b: 0, a: 0.8}
   selectionColor: {r: 1, g: 0.8745098, b: 0.5529412, a: 0.5}
   onSubmit: []
   onChange: []
@@ -788,7 +788,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3005
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1165,8 +1165,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 786
-  mHeight: 468
+  mWidth: 1299
+  mHeight: 740
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0

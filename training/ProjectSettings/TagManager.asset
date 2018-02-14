@@ -14,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Hero
+  - UI_Front
   - 
   - 
   - 
@@ -41,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI_Back
+    uniqueID: 309667637
+    locked: 0
+  - name: Hero
+    uniqueID: 395117645
+    locked: 0
+  - name: UI_Front
+    uniqueID: 1257618809
     locked: 0

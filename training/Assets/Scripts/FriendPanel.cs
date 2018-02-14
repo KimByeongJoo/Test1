@@ -5,8 +5,28 @@ using System.Collections;
 using SimpleJSON;
 using System.Collections.Generic;
 
-public class FriendPanel : Singleton<FriendPanel> {
-            
+public class FriendPanel : MyPanel {
+
+    private static FriendPanel _instance;
+
+    public static FriendPanel Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(FriendPanel)) as FriendPanel;
+            }
+            return _instance;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
+
+
     [SerializeField]
     GameObject button_Prefab;
     [SerializeField]
@@ -31,7 +51,7 @@ public class FriendPanel : Singleton<FriendPanel> {
     UIToggle toggleSortByLastLogin;
 
     [SerializeField]
-    GameObject dropDown;
+    UIPanel dropDown;
     
     List<FriendButton> lst = new List<FriendButton>();
 
@@ -39,13 +59,15 @@ public class FriendPanel : Singleton<FriendPanel> {
     
     private void Awake()
     {
+        base.Awake();
+
         if(wrap != null)
             wrap.onInitializeItem = OnInitializeFriendButton;
 
         lstDatas = new List<FriendData>();
         
         //wrap dummy data setting
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 1000; i++)
         {
             int rand = Random.Range(0, 100000);
             FriendData data = new FriendData();
@@ -60,7 +82,10 @@ public class FriendPanel : Singleton<FriendPanel> {
         //AddAllButton();
         //AddAllButton2();   
 
-        WrapSetting();        
+        WrapSetting();
+
+        scrollView.GetComponent<UIPanel>().depth = panel.depth + 5;
+        dropDown.depth = panel.depth + 6;
     }
 
     void WrapSetting()
@@ -169,10 +194,10 @@ public class FriendPanel : Singleton<FriendPanel> {
     
     public void DropDownOnOff()
     {
-        if (dropDown.activeSelf)
-            dropDown.SetActive(false);
+        if (dropDown.alpha == 1)
+            dropDown.alpha = 0;
         else
-            dropDown.SetActive(true);        
+            dropDown.alpha = 1;
     }
 
     public void ChangePopupList()
@@ -191,7 +216,7 @@ public class FriendPanel : Singleton<FriendPanel> {
         }
         else
         {  
-            dropDown.SetActive(false);
+            dropDown.alpha = 0;
         }
 
         //popuplabel.text = UIPopupList.current.value; 
@@ -239,7 +264,7 @@ public class FriendPanel : Singleton<FriendPanel> {
     {       
         return x._lastlogin.CompareTo(y._lastlogin);
     }
-
+    /*
     static public void RequestDeleteFriend(string fid)
     {
         if( Instance != null )
@@ -259,6 +284,7 @@ public class FriendPanel : Singleton<FriendPanel> {
             }
         }
     }
+    */
 
     void _RequestDeleteFriend2(string fid)
     {
@@ -312,7 +338,7 @@ public class FriendPanel : Singleton<FriendPanel> {
         }
         return datas;
     }
-
+    /*
     public List<FriendButton> GetPresentSelectedCheckBoxs()
     {
         List<FriendButton> tempLst = new List<FriendButton>();
@@ -325,8 +351,8 @@ public class FriendPanel : Singleton<FriendPanel> {
             }
         }
         return tempLst;
-    }
-
+    }*/
+    /*
     public void SetColorPresentSendButton()
     {
         List<FriendButton> selectedLst = GetPresentSelectedCheckBoxs();
@@ -340,7 +366,7 @@ public class FriendPanel : Singleton<FriendPanel> {
             presentSendButton.color = Color.gray;
         }        
     }
-
+    */
     public void SetColorPresentSendButton2()
     {
         List<FriendData> selectedLst = GetPresentSelectedCheckBoxs2();
@@ -354,7 +380,7 @@ public class FriendPanel : Singleton<FriendPanel> {
             presentSendButton.color = Color.gray;
         }
     }
-
+    /*
     public void OnClickPresentSendButton()
     {
         List<FriendButton> selectedLst = GetPresentSelectedCheckBoxs();
@@ -385,7 +411,7 @@ public class FriendPanel : Singleton<FriendPanel> {
             confirm.Open("선물 보내기", "선택된 친구가 없습니다.");
         }
     }
-
+    */
     public void OnClickPresentSendButton2()
     {
         List<FriendData> selectedLst = GetPresentSelectedCheckBoxs2();
@@ -429,10 +455,5 @@ public class FriendPanel : Singleton<FriendPanel> {
     {
         AskPanel confirm = Main.Instance.MakeConfirmPanel();
         confirm.Open("선물 보내기", "선물을 정상적으로 보냈습니다.");        
-    }
-
-    public void DestroySelf()
-    {
-        Destroy(gameObject);
     }
 }

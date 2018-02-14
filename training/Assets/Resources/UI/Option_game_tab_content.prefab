@@ -1578,8 +1578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 103, y: 36, z: 0}
+  m_Center: {x: 34, y: 0, z: 0}
 --- !u!65 &6518444
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1602,8 +1602,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 125, y: 36, z: 0}
+  m_Center: {x: 45, y: 0, z: 0}
 --- !u!65 &6525324
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1626,8 +1626,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 103, y: 36, z: 0}
+  m_Center: {x: 34, y: 0, z: 0}
 --- !u!65 &6529084
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1638,8 +1638,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 125, y: 36, z: 0}
+  m_Center: {x: 45, y: 0, z: 0}
 --- !u!65 &6530120
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1650,8 +1650,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 103, y: 36, z: 0}
+  m_Center: {x: 34, y: 0, z: 0}
 --- !u!65 &6542758
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1674,8 +1674,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 132.7985, y: 36, z: 0}
+  m_Center: {x: 49.399124, y: 0.000015258789, z: 0}
 --- !u!65 &6551942
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1686,8 +1686,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 125, y: 36, z: 0}
+  m_Center: {x: 45, y: 0, z: 0}
 --- !u!65 &6575780
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1698,8 +1698,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 116.42585, y: 36, z: 0}
+  m_Center: {x: 39.712925, y: 0, z: 0}
 --- !u!65 &6588156
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1710,8 +1710,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34, y: 36, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 132.79839, y: 36, z: 0}
+  m_Center: {x: 49.39917, y: 0, z: 0}
 --- !u!65 &6588346
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3044,7 +3044,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3005
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -3419,12 +3419,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 368
-  mHeight: 22
+  mHeight: 16
   mDepth: 15
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 16.727272
+  aspectRatio: 23
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3653,12 +3653,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 368
-  mHeight: 22
+  mHeight: 16
   mDepth: 15
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 16.727272
+  aspectRatio: 23
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -4669,7 +4669,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 368
-  mHeight: 22
+  mHeight: 20
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -4719,7 +4719,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 368
-  mHeight: 22
+  mHeight: 20
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0

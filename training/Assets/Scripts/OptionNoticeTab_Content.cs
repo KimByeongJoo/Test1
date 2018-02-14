@@ -9,8 +9,11 @@ public class OptionNoticeTab_Content : MonoBehaviour {
     [SerializeField]
     UIGrid grid;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    UIPanel panel_scrollView;
+
+    // Use this for initialization
+    void Start () {
         lst_CheckBoxes = new List<OnOffCheckBox>();
 
         OnOffCheckBox[] chk_Boxes = grid.GetComponentsInChildren<OnOffCheckBox>();
@@ -20,7 +23,12 @@ public class OptionNoticeTab_Content : MonoBehaviour {
             chk_Boxes[i].SetToggleGroup(10 + i);
 
             lst_CheckBoxes.Add(chk_Boxes[i]);
-        }
+        }        
+    }
+
+    public void SetPanelDepth(int depth)
+    {
+        panel_scrollView.depth = depth;
     }
 
     /// <summary>

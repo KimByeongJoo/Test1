@@ -22,7 +22,7 @@ public class MyBar : MonoBehaviour
     void Start()
     {
         scrollView.onMomentumMove += UpdateScrollbar;
-
+        
         save_StartLocalPos = scrollView.transform.localPosition;
                         
         if (null != scrollBar.backgroundWidget)
@@ -30,7 +30,7 @@ public class MyBar : MonoBehaviour
             UIEventListener bg_listen = UIEventListener.Get(scrollBar.backgroundWidget.gameObject);
             if (null != bg_listen)
             {
-                bg_listen.onPress += OnScrollBarPressed;
+                bg_listen.onDrag += OnScrollBarDragged;
             }
             UIEventListener fg_listen = UIEventListener.Get(scrollBar.foregroundWidget.gameObject);
             if (null != fg_listen)
@@ -39,11 +39,10 @@ public class MyBar : MonoBehaviour
             }
         }
     }
-
-    [ContextMenu("Debug LocalPosition")]
-    public void DebugLocalPosition()
+    private void Update()
     {
-        Debug.Log(scrollView.transform.localPosition);
+        if (scrollView.isDragging)
+            UpdateScrollbar();
     }
 
     public void Set(int itemNum, bool initValue = true)
@@ -60,10 +59,9 @@ public class MyBar : MonoBehaviour
     public void SetScrollViewLocalPosition(Vector3 localPos)
     {
         save_StartLocalPos = localPos;
-        DebugLocalPosition();
     }
 
-    void UpdateScrollbar()
+    public void UpdateScrollbar()
     {
         float calc_value = 0.0f;
         if (scrollView.movement == UIScrollView.Movement.Horizontal)
@@ -74,18 +72,20 @@ public class MyBar : MonoBehaviour
         else if (scrollView.movement == UIScrollView.Movement.Vertical)
         {
             endPos = scrollLength - panel_ScrollView.GetViewSize().y;
-            calc_value = Mathf.Clamp((scrollView.transform.localPosition.y - save_StartLocalPos.y) / endPos, 0f, 1f);            
+            calc_value = Mathf.Clamp((scrollView.transform.localPosition.y - save_StartLocalPos.y) / endPos, 0f, 1f);
         }
-        scrollBar.value = Mathf.Lerp(scrollBar.value, calc_value, 0.1f);
-    }
 
-    void OnScrollBarPressed(GameObject go, bool isPressed)
-    {
-        if (!isPressed)
-        {
-            OnScrollBarChange();
-        }
-    }
+        scrollBar.value = calc_value;
+        //scrollBar.value = Mathf.Lerp(scrollBar.value, calc_value, 0.1f);
+    }    
+
+    //void OnScrollBarPressed(GameObject go, bool isPressed)
+    //{
+    //    if (!isPressed)
+    //    {
+    //        OnScrollBarChange();
+    //    }
+    //}
 
     void OnScrollBarDragged(GameObject go, Vector2 delta)
     {
@@ -97,15 +97,11 @@ public class MyBar : MonoBehaviour
         Vector3 newLocalPos = scrollView.transform.localPosition;
         if (scrollView.movement == UIScrollView.Movement.Vertical)
         {
-            newLocalPos.y = scrollBar.value *
-                            (scrollLength - panel_ScrollView.GetViewSize().y) +
-                            save_StartLocalPos.y;
+            newLocalPos.y = scrollBar.value * (scrollLength - panel_ScrollView.GetViewSize().y) + save_StartLocalPos.y;
         }
         else if (scrollView.movement == UIScrollView.Movement.Horizontal)
         {
-            newLocalPos.x = scrollBar.value *
-                            (scrollLength - panel_ScrollView.GetViewSize().x) +
-                            save_StartLocalPos.x;
+            newLocalPos.x = scrollBar.value * (scrollLength - panel_ScrollView.GetViewSize().x) + save_StartLocalPos.x;
         }
         SpringPanel.Begin(scrollView.panel.cachedGameObject, newLocalPos, 8);
     }    

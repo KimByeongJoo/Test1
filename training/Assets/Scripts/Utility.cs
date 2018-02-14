@@ -52,4 +52,39 @@ public class Utility {
             sprite.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
         }         
     }
+
+    static public string GetSpriteNameByEnum(HeroPanel.Hero_Class hero_class, bool isWhite = false)
+    {
+        if(isWhite)
+            return string.Format("class_icon_{0}_white", hero_class.ToString());
+        else
+            return string.Format("class_icon_{0}", hero_class.ToString());        
+
+    }
+    static public string GetSpriteNameByEnum(HeroPanel.Hero_Element hero_element)
+    {
+        return string.Format("element_icon_{0}", hero_element.ToString());        
+    }
+
+    static public void SetSpriteSortingLayerRecursive(GameObject root, string layerName)
+    {
+        if (root != null)
+        {
+            SpriteRenderer sprite = root.GetComponent<SpriteRenderer>();
+            if(sprite)
+            {
+                sprite.sortingLayerName = layerName;
+            }
+
+            Transform trans = root.transform;
+
+            if (trans.childCount > 0)
+            {
+                for(int i=0; i< trans.childCount; i++)
+                {
+                    SetSpriteSortingLayerRecursive(trans.GetChild(i).gameObject, layerName);
+                }
+            }
+        }
+    }
 }

@@ -20,7 +20,10 @@ public class HeroPanel : MyPanel {
 
     private void OnDestroy()
     {
-        _instance = null;
+        if(Main.Instance)
+            Main.Instance.current_panel_depth -= 500;
+
+        _instance = null;        
     }
     
     public enum Hero_Element
@@ -161,7 +164,11 @@ public class HeroPanel : MyPanel {
     UIToggle toggle_paladin;
     [SerializeField]
     UIToggle toggle_wizard;
-    
+
+    [SerializeField]
+    HeroCardSet[] CardSets;
+
+    [SerializeField]
     int card_num = 7;
 
     int save_ScrollView_Column = 1;
@@ -182,6 +189,13 @@ public class HeroPanel : MyPanel {
         sprites = Resources.LoadAll<Sprite>("portraits");
         panel_ScrollView = scrollView.GetComponent<UIPanel>();
 
+        // 4:3
+        if (Screen.height - 0.5f <= ((float)Screen.width / 4 * 3) && ((float)Screen.width / 4 * 3) <= Screen.height + 0.5f)
+        {
+            card_num -= 2 ;
+        }
+
+        AddCards();
         WrapSetting();
 
         panel_ScrollView.depth = panel.depth + 5;
@@ -191,6 +205,17 @@ public class HeroPanel : MyPanel {
         panel_Class_Filter.depth = panel.depth + 9;
         
         wrapScrollBar.SetScrollViewLocalPosition(scrollView.transform.localPosition);
+    }    
+
+    void AddCards()
+    {
+        //Transform trans = wrap.transform;
+        //HeroCardSet cardSet;
+        for (int i = 0; i < CardSets.Length; i++)
+        {
+            CardSets[i].SetCardNumber(card_num);
+            //cardSet.SetCardNumber(card_num);
+        }
     }    
 
     public void AllFilterListClose()
@@ -267,26 +292,32 @@ public class HeroPanel : MyPanel {
             wrap.minIndex = -(column - 1);
         }
         wrap.maxIndex = 0;
-
+        
         Transform trans = wrap.transform;
+        
         if (column < 10)
         {
             for (int i = 0; i < trans.childCount; i++)
             {
-                if(i >= column)
+                if (i >= column)
+                {                    
                     trans.GetChild(i).gameObject.SetActive(false);
+                }
                 else
+                {
                     trans.GetChild(i).gameObject.SetActive(true);
+                }
             }
         }
         else
         {
             for (int i = 0; i < trans.childCount; i++)
             {
+                
                 trans.GetChild(i).gameObject.SetActive(true);
             }
         }
-
+                
         wrap.SortAlphabetically();
         wrap.WrapContent(true);
         scrollView.ResetPosition();
@@ -324,24 +355,37 @@ public class HeroPanel : MyPanel {
         }
         save_ScrollView_Column = column;
 
-        Hero7CardSet cardSet = go.GetComponent<Hero7CardSet>();
-        
-        for (int j = 0; j < card_num; j++)
+        HeroCardSet cardSet = go.GetComponent<HeroCardSet>();
+
+        if (cardSet.cards.Count > 0)
         {
-            if (lstIndex == column - 1 && j >= remain)
+            for (int j = 0; j < card_num; j++)
             {
-                cardSet.cards[j].gameObject.SetActive(false);
-            }
-            else
-            {
-                cardSet.cards[j].gameObject.SetActive(true);
-                HeroTypeData data = typeData[card_num * lstIndex + j];
-                cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._name, data._element.ToString(), data._hero_class.ToString());
+                if (lstIndex == column - 1 && j >= remain)
+                {
+                    cardSet.cards[j].gameObject.SetActive(false);
+                }
+                else
+                {
+                    cardSet.cards[j].gameObject.SetActive(true);
+                    HeroTypeData data = typeData[card_num * lstIndex + j];
+                    cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._name, data._element, data._hero_class);
+                }
             }
         }
-        
         //button.Set(typeData[lstIndex]._name, _description,
         //    reward_kingdom_or_exp, sprite_name, reward_value);
+    }
+    
+    public void ElementIconOn()
+    {
+        label_Element.alpha = 0;
+        icon_Element.alpha = 1;
+    }
+    public void ClassIconOn()
+    {
+        label_Class.alpha = 0;
+        icon_Class.alpha = 1;
     }
 
     public void ClickElementToggle()
@@ -354,45 +398,42 @@ public class HeroPanel : MyPanel {
             icon_Element.alpha = 0;
             hero_Element = Hero_Element.all;
         }
-        else if (toggle_physic.value)
+        else
         {
             ElementIconOn();
+        }
+        if (toggle_physic.value)
+        {
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_physic", size);
             hero_Element = Hero_Element.physic;
         }
         else if (toggle_fire.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_fire", size);
             hero_Element = Hero_Element.fire;
         }        
         else if (toggle_ice.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_ice", size);
             hero_Element = Hero_Element.ice;
         }
         else if (toggle_lightning.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_lightning", size);
             hero_Element = Hero_Element.lightning;
         }
         else if (toggle_poison.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_poison", size);
             hero_Element = Hero_Element.poison;
         }
         else if (toggle_dark.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_dark", size);
             hero_Element = Hero_Element.dark;
         }
         else if (toggle_divine.value)
         {
-            ElementIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Element, "element_icon_divine", size);
             hero_Element = Hero_Element.divine;
         }
@@ -400,16 +441,6 @@ public class HeroPanel : MyPanel {
         WrapSetting();
         OnOffElementList();
         
-    }
-    public void ElementIconOn()
-    {
-        label_Element.alpha = 0;
-        icon_Element.alpha = 1;
-    }
-    public void ClassIconOn()
-    {
-        label_Class.alpha = 0;
-        icon_Class.alpha = 1;
     }
 
     public void ClickKingdomToggle()
@@ -476,33 +507,33 @@ public class HeroPanel : MyPanel {
             icon_Class.alpha = 0;
             hero_Class = Hero_Class.all;
         }
-        else if (toggle_tank.value)
+        else
         {
             ClassIconOn();
+        }
+
+        if (toggle_tank.value)
+        {            
             Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_tank", size);
             hero_Class = Hero_Class.tank;
         }
         else if (toggle_rogue.value)
         {
-            ClassIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_rogue", size);
             hero_Class = Hero_Class.rogue;
         }
         else if (toggle_ranger.value)
         {
-            ClassIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_ranger", size);
             hero_Class = Hero_Class.ranger;
         }
         else if (toggle_paladin.value)
         {
-            ClassIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_paladin", size);
             hero_Class = Hero_Class.paladin;
         }
         else if (toggle_wizard.value)
         {
-            ClassIconOn();
             Utility.ChangeSpriteAspectSnap(icon_Class, "class_icon_wizard", size);
             hero_Class = Hero_Class.wizard;
         }        
@@ -524,5 +555,5 @@ public class HeroPanel : MyPanel {
             }
         }
         return null;
-    }
+    }    
 }

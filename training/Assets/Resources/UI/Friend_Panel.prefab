@@ -3514,7 +3514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &190878
 GameObject:
   m_ObjectHideFlags: 1
@@ -3698,7 +3698,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &195468
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -3772,21 +3772,6 @@ GameObject:
   - 114: {fileID: 11473478}
   m_Layer: 20
   m_Name: VisitButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &196622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 452746}
-  m_Layer: 20
-  m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4300,7 +4285,7 @@ Transform:
   - {fileID: 423228}
   - {fileID: 472708}
   - {fileID: 450844}
-  m_Father: {fileID: 452746}
+  m_Father: {fileID: 418444}
   m_RootOrder: 0
 --- !u!4 &411596
 Transform:
@@ -4322,7 +4307,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 410634}
@@ -4499,7 +4484,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 452746}
+  - {fileID: 410634}
   - {fileID: 489744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5708,19 +5693,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 445808}
   m_RootOrder: 2
---- !u!4 &452746
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 410634}
-  m_Father: {fileID: 418444}
-  m_RootOrder: 0
 --- !u!4 &453382
 Transform:
   m_ObjectHideFlags: 1
@@ -6870,7 +6842,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 360, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418444}
@@ -7363,7 +7335,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7408, y: 4177, z: 0}
+  m_Size: {x: 1299, y: 740, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6545922
 BoxCollider:
@@ -10856,13 +10828,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0.772}
   mPivot: 4
-  mWidth: 7408
-  mHeight: 4177
+  mWidth: 1299
+  mHeight: 740
   mDepth: -10
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7735217
+  aspectRatio: 1.7554054
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -11121,12 +11093,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 810
-  mHeight: 500
+  mHeight: 460
   mDepth: 21
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.62
+  aspectRatio: 1.7608696
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -14099,7 +14071,7 @@ MonoBehaviour:
   presentSendButton: {fileID: 11467960}
   toggleSortByName: {fileID: 11471226}
   toggleSortByLastLogin: {fileID: 11467228}
-  dropDown: {fileID: 190400}
+  dropDown: {fileID: 11464328}
 --- !u!114 &11441270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16556,18 +16528,18 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 66
-  mHeight: 28
+  mWidth: 72
+  mHeight: 40
   mDepth: 27
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.357143
+  aspectRatio: 1.8
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
   mText: "\uC774\uB984\uC21C"
-  mFontSize: 20
+  mFontSize: 25
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -17258,9 +17230,9 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3004
+  startingRenderQueue: 3011
   mClipTexture: {fileID: 0}
-  mAlpha: 1
+  mAlpha: 0
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
@@ -17642,7 +17614,7 @@ MonoBehaviour:
   onDeselect: []
   onClick:
   - mTarget: {fileID: 11441258}
-    mMethodName: DestroySelf
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
   onDoubleClick: []
@@ -21155,7 +21127,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
   mText: "\uCE5C\uAD6C"
-  mFontSize: 30
+  mFontSize: 35
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -22211,7 +22183,7 @@ MonoBehaviour:
   pixelSnap: 0
   onClick:
   - mTarget: {fileID: 11441258}
-    mMethodName: DestroySelf
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
 --- !u!114 &11498928
