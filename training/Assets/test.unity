@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 20234822}
   - 114: {fileID: 20234823}
-  - 114: {fileID: 20234824}
   m_Layer: 20
   m_Name: bg_sky
   m_TagString: Untagged
@@ -164,18 +163,6 @@ MonoBehaviour:
   mAtlas: {fileID: 11468656, guid: e79210bb4863a4b41a63c536eae59bf9, type: 2}
   mSpriteName: white
   mFillCenter: 1
---- !u!114 &20234824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 20234821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe5b50fe867a79346989b71fcf3d9ba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 20234823}
 --- !u!1 &41192968
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +258,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966527
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -299,7 +286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &202595345
 AudioListener:
   m_ObjectHideFlags: 0
@@ -345,7 +332,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
