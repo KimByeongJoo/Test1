@@ -10,7 +10,7 @@ public class EquipWeapon : MonoBehaviour {
     string weapon_path = "Unit/atlas_tkman_ha_hu_don/weapon-mighty_5";
 
 	// Use this for initialization
-	void Start () {        
+	void Awake () {        
         GameObject go = Main.Instance.MakeObjectToTarget(weapon_path, target_Weapon);
     }
 	

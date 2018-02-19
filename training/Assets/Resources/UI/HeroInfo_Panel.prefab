@@ -2161,6 +2161,7 @@ MonoBehaviour:
   _power: {fileID: 11434160}
   panel_front: {fileID: 11482340}
   panel_scrollView: {fileID: 11492440}
+  testSprite: {fileID: 11403934}
 --- !u!114 &11468120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2631,7 +2632,7 @@ MonoBehaviour:
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 1
-  mSortingOrder: 1
+  mSortingOrder: 2
   mClipOffset: {x: 0, y: 0}
 --- !u!114 &11482370
 MonoBehaviour:

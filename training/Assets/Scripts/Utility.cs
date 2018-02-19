@@ -66,17 +66,17 @@ public class Utility {
         return string.Format("element_icon_{0}", hero_element.ToString());        
     }
 
-    static public void SetSpriteSortingLayerRecursive(GameObject root, string layerName)
+    static public void SetSpriteSortingLayerRecursive(GameObject parent, string layerName)
     {
-        if (root != null)
+        if (parent != null)
         {
-            SpriteRenderer sprite = root.GetComponent<SpriteRenderer>();
+            SpriteRenderer sprite = parent.GetComponent<SpriteRenderer>();
             if(sprite)
             {
                 sprite.sortingLayerName = layerName;
             }
 
-            Transform trans = root.transform;
+            Transform trans = parent.transform;
 
             if (trans.childCount > 0)
             {
@@ -84,6 +84,75 @@ public class Utility {
                 {
                     SetSpriteSortingLayerRecursive(trans.GetChild(i).gameObject, layerName);
                 }
+            }
+        }
+    }
+
+    static public void SetRenderQueue(Material material, int queue)
+    {
+        material.renderQueue = queue;
+    }
+
+    static public void SetRenderQueueRecursive(GameObject parent, int queue)
+    {
+        if (parent != null)
+        {
+            SpriteRenderer sprite = parent.GetComponent<SpriteRenderer>();
+
+            if (sprite != null)
+            {
+                sprite.material.renderQueue = queue;
+            }
+
+            Transform trans = parent.transform;
+
+            if (trans.childCount > 0)
+            {
+                for (int i = 0; i < trans.childCount; i++)
+                {
+                    SetRenderQueueRecursive(trans.GetChild(i).gameObject, queue);
+                }
+            }
+        }
+    }
+
+    static public void SetSpriteSortingOrderRecursive(GameObject parent, int sortingOrder)
+    {
+        if (parent != null)
+        {
+            SpriteRenderer sprite = parent.GetComponent<SpriteRenderer>();
+
+            if (sprite != null)
+            {
+                sprite.sortingOrder = sortingOrder;                
+            }
+
+            Transform trans = parent.transform;
+
+            if (trans.childCount > 0)
+            {
+                for (int i = 0; i < trans.childCount; i++)
+                {
+                    SetSpriteSortingOrderRecursive(trans.GetChild(i).gameObject, sortingOrder);
+                }
+            }
+        }
+    }
+
+    // test
+    static public void LogRenderQueue(UISprite sprite)
+    {
+        if(sprite.drawCall)
+            Debug.Log(sprite.drawCall.renderQueue);
+    }
+
+    static public void LogRenderQueue(UIPanel panel)
+    {
+        if (panel != null)        
+        {
+            for (int i = 0; i < panel.drawCalls.Count; i++)
+            {
+                Debug.Log(panel.drawCalls[i].renderQueue);
             }
         }
     }
