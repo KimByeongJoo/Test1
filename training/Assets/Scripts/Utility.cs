@@ -55,12 +55,11 @@ public class Utility {
 
     static public void ChangeSpriteAspectSnap(UITexture texture, string textureName, Vector2 raw_size)
     {
-        Texture tex = Main.Instance.GetItemTextureByName(textureName);
-        Vector2 size = new Vector2(tex.width, tex.height);
+        Sprite sprite = Main.Instance.GetItemSpriteByName(textureName);
 
-        texture.mainTexture = Main.Instance.GetItemTextureByName(textureName);
+        texture.mainTexture = sprite.texture;        
         
-        float ratio = size.x / size.y;
+        float ratio = sprite.rect.width / sprite.rect.height;
 
         texture.SetDimensions(Mathf.RoundToInt(ratio * raw_size.y), Mathf.RoundToInt(raw_size.y));        
 

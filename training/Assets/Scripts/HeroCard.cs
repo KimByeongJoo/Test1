@@ -22,6 +22,8 @@ public class HeroCard : MonoBehaviour {
     HeroPanel.Hero_Element _element;
     HeroPanel.Hero_Class _hero_class;
 
+    public string _id { get; set; }
+
     [SerializeField]
     bool _isHeroPanel = true;
 
@@ -48,7 +50,7 @@ public class HeroCard : MonoBehaviour {
         _sprite_card.height = height;
     }
 
-    public void Set(Sprite sprite, string name, HeroPanel.Hero_Element element, HeroPanel.Hero_Class hero_class, bool isHeroPanel = true)
+    public void Set(Sprite sprite, string name, string id, HeroPanel.Hero_Element element, HeroPanel.Hero_Class hero_class, bool isHeroPanel = true)
     {
         if (sprite)
         {
@@ -58,6 +60,7 @@ public class HeroCard : MonoBehaviour {
         label_name.text = name;
         _element = element;
         _hero_class = hero_class;
+        _id = id;
 
         Utility.ChangeSpriteAspectSnap(icon_Element, Utility.GetSpriteNameByEnum(element), raw_ClassIconSize);
         Utility.ChangeSpriteAspectSnap(icon_Class, Utility.GetSpriteNameByEnum(hero_class), raw_ClassIconSize);
@@ -81,5 +84,10 @@ public class HeroCard : MonoBehaviour {
     public void ClicKMedicineHeroCard(GameObject go)
     {
         MedicineShopPanel.Instance.ClickHeroCard(this);
+    }
+
+    public string GetHeroName()
+    {
+        return label_name.text;
     }
 }

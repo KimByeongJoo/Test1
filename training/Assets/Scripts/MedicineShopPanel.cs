@@ -163,6 +163,11 @@ public class MedicineShopPanel : MyPanel {
 
     Vector3 scrollView_StartPos;
 
+    string selectedCardID = "";
+
+    [SerializeField]
+    UILabel label_Hero_Name;
+
     // Use this for initialization
     private void Awake()
     {
@@ -210,7 +215,7 @@ public class MedicineShopPanel : MyPanel {
     {
         GameObject go = Main.Instance.MakeObjectToTarget("UI/card_bg", wrap.gameObject);
         HeroCard card = go.GetComponent<HeroCard>();
-        card.SetCardHeight(Mathf.CeilToInt(panel_ScrollView.GetViewSize().y));
+        card.SetCardHeight(Mathf.CeilToInt(panel_ScrollView.GetViewSize().y - 6));
 
         lst_Cards.Add(card);
         return card;
@@ -237,10 +242,14 @@ public class MedicineShopPanel : MyPanel {
         yield return null;
         AddAllCards();
         WrapSetting();
+
         scrollView_StartPos = scrollView.panel.transform.localPosition;
         SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
 
+        scrollView.ResetPosition();
         scrollView_rightItems.ResetPosition();
+
+        //SetItemButtonWidth();
         StopCoroutine("initScroll");
     }
 
@@ -256,14 +265,22 @@ public class MedicineShopPanel : MyPanel {
         {
             if (datas[i] != null)
             {
-                GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);
-                MedicineItemButton item = go.GetComponent<MedicineItemButton>();
-                
+                GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);                
+                MedicineItemButton item = go.GetComponent<MedicineItemButton>();                
                 item.Set(datas[i]._sprite, datas[i]._max_stack, datas[i]._name, datas[i]._description);
                 //items[i].Set(datas[i]._sprite,datas[i]._max_stack, datas[i]._name, datas[i]._description);
             }
+        }        
+    }
+
+    public void SetItemButtonWidth()
+    {
+        for (int i = 0; i < grid_items.transform.childCount; i++)
+        {
+            MedicineItemButton item = grid_items.transform.GetChild(i).GetComponent<MedicineItemButton>();
+            if(item != null)
+                item.SetWidth((int)scrollView_rightItems.panel.GetViewSize().x);
         }
-        
     }
 
     [ContextMenu("SortCards")]
@@ -290,6 +307,8 @@ public class MedicineShopPanel : MyPanel {
     {
         List<HeroTypeData> type_Data = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
 
+        RemoveSelectedHero(type_Data, selectedCardID);
+
         wrap.minIndex = 0;
         wrap.maxIndex = type_Data.Count - 1;
         wrap.SortBasedOnScrollMovement();
@@ -302,14 +321,7 @@ public class MedicineShopPanel : MyPanel {
         {
             for (int i = 0; i < card_num; i++)
             {
-                if (i >= type_Data.Count)
-                {
-                    trans.GetChild(i).gameObject.SetActive(false);
-                }
-                else
-                {
-                    trans.GetChild(i).gameObject.SetActive(true);
-                }
+                trans.GetChild(i).gameObject.SetActive((i >= type_Data.Count) ? false : true);                
             }
         }
         else
@@ -318,14 +330,124 @@ public class MedicineShopPanel : MyPanel {
             {
                 trans.GetChild(i).gameObject.SetActive(true);
             }
-        }                    
+        }
         wrap.WrapContent(true);
-
         scrollView.ResetPosition();
-
-        //init position
-        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 12);
     }    
+        
+    void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
+    {
+        //Debug.Log("real index : " + realIndex + " wrapIndex : " + wrapIndex);
+        List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
+
+        RemoveSelectedHero(typeData, selectedCardID);
+
+        if (typeData.Count <= 0)
+            return;
+        if (go == null)
+            return;
+
+        int lstIndex = realIndex % typeData.Count;
+
+        if (lstIndex < 0)
+        {
+            lstIndex = -lstIndex;
+        }
+
+        HeroCard card = go.GetComponent<HeroCard>();
+        
+        card.Set(Main.Instance.GetHeroPortraitByName(typeData[lstIndex]._portrait),
+            typeData[lstIndex]._name, typeData[lstIndex]._id, typeData[lstIndex]._element, typeData[lstIndex]._hero_class, false);
+        
+    }
+
+    public bool RemoveSelectedHero(List<HeroTypeData> heroDatas, string id)
+    {
+        if (id == "")
+            return false;
+
+        for (int i = heroDatas.Count - 1; i >= 0; i--)
+        {
+            if(heroDatas[i]._id == id)
+            {
+                heroDatas.RemoveAt(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool FindHeroByID(List<HeroTypeData> heroDatas, string id)
+    {
+        if (id == "")
+            return false;
+
+        for (int i = heroDatas.Count - 1; i >= 0; i--)
+        {
+            if (heroDatas[i]._id == id)
+            {                
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void ClickHeroCard(HeroCard card)
+    {
+        List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
+        bool existed = FindHeroByID(typeData, selectedCardID);
+        bool removed = false;
+
+        selectedCardID = card._id;
+        if (!existed)
+        {            
+            removed = RemoveSelectedHero(typeData, selectedCardID);
+        }
+
+        if (removed)
+        {
+            Transform activeObj = GetLastActiveObject();
+
+            if (activeObj != null)
+                activeObj.gameObject.SetActive(false);
+
+            wrap.maxIndex--;
+        }
+
+        label_Hero_Name.text = card.GetHeroName();
+
+        Transform trans = target.transform;
+
+        if (trans.childCount > 0)
+            trans.DestroyChildren();
+
+        GameObject go = Main.Instance.MakeObjectToTarget("Unit/tkc-ha_hu_don", target, Vector3.one, Vector3.one * 80);
+        Utility.SetSpriteSortingOrderRecursive(go, 1);
+
+        hero_info.SetActive(true);
+        hero_info.transform.position = target.transform.position;
+
+        wrap.WrapContent(true);
+        Transform wrap_trans = wrap.transform;
+
+        //if (CheckActiveCards() < card_num)
+        //    wrap_trans.GetChild(wrap_trans.childCount - 1).gameObject.SetActive(false);
+
+        //WrapSetting();
+        //wrap.SortBasedOnScrollMovement();        
+    }
+
+    public Transform GetLastActiveObject()
+    {        
+        Transform trans = wrap.transform;
+
+        for (int i = 0; i < trans.childCount; i++)
+        {
+            if (trans.GetChild(i).gameObject.activeSelf == false)
+                return trans.GetChild(i-1);
+        }
+        return null;
+    }
 
     static int SortHeroCardByPositionX(HeroCard a, HeroCard b)
     {
@@ -342,46 +464,6 @@ public class MedicineShopPanel : MyPanel {
 
         return a.transform.localPosition.y.CompareTo(b.transform.localPosition.y);
     }
-
-    void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
-    {
-        //Debug.Log("real index : " + realIndex + " wrapIndex : " + wrapIndex);
-        List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
-        
-        if (typeData.Count <= 0)
-            return;
-        if (go == null)
-            return;
-
-        int lstIndex = realIndex % typeData.Count;
-
-        if (lstIndex < 0)
-        {
-            lstIndex = -lstIndex;
-        }
-
-        HeroCard card = go.GetComponent<HeroCard>();
-        
-        card.Set(Main.Instance.GetHeroPortraitByName(typeData[lstIndex]._portrait),
-            typeData[lstIndex]._name, typeData[lstIndex]._element, typeData[lstIndex]._hero_class, false);
-        
-    }
-
-    public void ClickHeroCard(HeroCard card)
-    {
-        //card.name        
-        Transform trans = target.transform;
-
-        if (trans.childCount > 0)
-            trans.DestroyChildren();
-            
-        GameObject go = Main.Instance.MakeObjectToTarget("Unit/tkc-ha_hu_don", target, Vector3.one, Vector3.one * 80);
-        Utility.SetSpriteSortingOrderRecursive(go, 1);
-
-        hero_info.SetActive(true);
-        hero_info.transform.position = target.transform.position;        
-    }
-
 
     public void OnOffpanel_Element_Filter()
     {
@@ -499,8 +581,9 @@ public class MedicineShopPanel : MyPanel {
         }
 
         WrapSetting();
+        scrollView.ResetPosition();
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
         OnOffpanel_Element_Filter();
-
     }
 
     public void ClickKingdomToggle()
@@ -552,6 +635,8 @@ public class MedicineShopPanel : MyPanel {
         }
 
         WrapSetting();
+        scrollView.ResetPosition();
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
         OnOffpanel_Kingdom_Filter();
     }
 
@@ -596,6 +681,8 @@ public class MedicineShopPanel : MyPanel {
             hero_Class = HeroPanel.Hero_Class.wizard;
         }
         WrapSetting();
+        scrollView.ResetPosition();
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
         OnOffpanel_Class_Filter();
     }
 

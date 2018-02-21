@@ -362,7 +362,7 @@ public class HeroPanel : MyPanel {
                 {
                     cardSet.cards[j].gameObject.SetActive(true);
                     HeroTypeData data = typeData[card_num * lstIndex + j];
-                    cardSet.cards[j].Set(Main.Instance.GetHeroPortraitByName(data._portrait), data._name, data._element, data._hero_class);
+                    cardSet.cards[j].Set(Main.Instance.GetHeroPortraitByName(data._portrait), data._name, data._id, data._element, data._hero_class);
                     //cardSet.cards[j].SetCardHeight(205);
                 }
             }

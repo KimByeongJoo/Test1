@@ -203,24 +203,24 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 443060}
     relative: 0
-    absolute: 2
+    absolute: 4
   rightAnchor:
     target: {fileID: 443060}
     relative: 1
-    absolute: -1
+    absolute: -4
   bottomAnchor:
     target: {fileID: 443060}
     relative: 0
-    absolute: 3
+    absolute: 6
   topAnchor:
     target: {fileID: 443060}
     relative: 1
-    absolute: -2
+    absolute: -5
   updateAnchors: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 120
-  mHeight: 160
+  mWidth: 116
+  mHeight: 154
   mDepth: 30
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mSprite: {fileID: 21300000, guid: 6abf16dca2b23d542be3bf8a2e302004, type: 3}
+  mSprite: {fileID: 21300000, guid: bd59a4659355ebf4faecc0127b201430, type: 3}
   mMat: {fileID: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -346,26 +346,26 @@ MonoBehaviour:
   bottomAnchor:
     target: {fileID: 443060}
     relative: 0
-    absolute: 23
+    absolute: 17
   topAnchor:
     target: {fileID: 443060}
-    relative: 0.5
-    absolute: -40
-  updateAnchors: 1
+    relative: 0
+    absolute: 48
+  updateAnchors: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 114
-  mHeight: 20
+  mHeight: 31
   mDepth: 33
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.7
+  aspectRatio: 3.6774194
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
   mText: "\uAC00\uBE44\uB2A5"
-  mFontSize: 28
+  mFontSize: 25
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -493,12 +493,12 @@ MonoBehaviour:
   bottomAnchor:
     target: {fileID: 429782}
     relative: 0
-    absolute: -25
+    absolute: -26
   topAnchor:
     target: {fileID: 429782}
     relative: 0
-    absolute: 1
-  updateAnchors: 1
+    absolute: 0
+  updateAnchors: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 26

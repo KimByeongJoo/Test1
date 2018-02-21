@@ -11,7 +11,7 @@ public class Main : Singleton<Main> {
     UIRoot ui_Root;
 
     Sprite[] sprites_portraits;
-    Texture[] textures_items;
+    Sprite[] sprites_items;
 
     //List<MySingletonPanel> lst_OpenedPanel;
 
@@ -27,7 +27,7 @@ public class Main : Singleton<Main> {
     private void Start()
     {
         sprites_portraits = Resources.LoadAll<Sprite>("portraits");
-        textures_items = Resources.LoadAll<Texture>("items");
+        sprites_items = Resources.LoadAll<Sprite>("items");
         //lst_OpenedPanel = new List<MySingletonPanel>();
         MakeObjectToTarget("UI/Global_Navigation_Panel");
         current_panel_depth = 0;      
@@ -52,16 +52,16 @@ public class Main : Singleton<Main> {
         }
         return null;
     }
-    public Texture GetItemTextureByName(string fileName)
+    public Sprite GetItemSpriteByName(string fileName)
     {
-        if (textures_items == null)
+        if (sprites_items == null)
             return null;
 
-        for (int i = 0; i < textures_items.Length; i++)
+        for (int i = 0; i < sprites_items.Length; i++)
         {
-            if (textures_items[i].name == fileName)
+            if (sprites_items[i].name == fileName)
             {
-                return textures_items[i];
+                return sprites_items[i];
             }
         }
         return null;

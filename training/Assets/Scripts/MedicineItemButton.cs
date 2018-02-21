@@ -17,7 +17,7 @@ public class MedicineItemButton : MonoBehaviour {
 
     Vector2 rawSize = Vector2.one;
 
-    private void Start()
+    private void Awake()
     {
         rawSize.x = texture_icon.width;
         rawSize.y = texture_icon.height;
@@ -31,4 +31,14 @@ public class MedicineItemButton : MonoBehaviour {
         label_name.text = name;
         label_desciption.text = description;
     }
+    public void SetWidth(int x)
+    {
+        sprite_button.width = x;        
+    }
+
+    public void SetHeight(int y)
+    {
+        sprite_button.height = y;
+    }
+    
 }
