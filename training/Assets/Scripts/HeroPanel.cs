@@ -58,12 +58,9 @@ public class HeroPanel : MyPanel {
         paladin,
         wizard
     }
-    
-    Sprite[] sprites;
 
     [SerializeField]
-    UIWrapContent wrap;
-        
+    UIWrapContent wrap;        
     [SerializeField]
     UIScrollView scrollView;
     [SerializeField]
@@ -83,8 +80,6 @@ public class HeroPanel : MyPanel {
 
     [Header("Element")]
     [SerializeField]
-    UIPanel elementList;
-    [SerializeField]
     UISprite arrow_Element;
     [SerializeField]
     UISprite icon_Element;
@@ -93,15 +88,11 @@ public class HeroPanel : MyPanel {
 
     [Header("Kingdom")]
     [SerializeField]
-    UIPanel kingdomList;
-    [SerializeField]
     UISprite arrow_Kingdom;
     [SerializeField]
     UILabel label_Kingdom;    
 
     [Header("Hero_Class")]
-    [SerializeField]
-    UIPanel classList;
     [SerializeField]
     UISprite arrow_Class;
     [SerializeField]
@@ -185,16 +176,9 @@ public class HeroPanel : MyPanel {
         wrapScrollBar = GetComponent<MyBar>();
     }
     void Start()
-    {
-        sprites = Resources.LoadAll<Sprite>("portraits");
+    {        
         panel_ScrollView = scrollView.GetComponent<UIPanel>();
-
-        // 4:3
-        if (Screen.height - 0.5f <= ((float)Screen.width / 4 * 3) && ((float)Screen.width / 4 * 3) <= Screen.height + 0.5f)
-        {
-            card_num -= 2 ;
-        }
-
+        
         AddCards();
         WrapSetting();
 
@@ -203,9 +187,18 @@ public class HeroPanel : MyPanel {
         panel_Element_Filter.depth = panel.depth + 7;
         panel_Kingdom_Filter.depth = panel.depth + 8;
         panel_Class_Filter.depth = panel.depth + 9;
-        
-        wrapScrollBar.SetScrollViewLocalPosition(scrollView.transform.localPosition);
+
+        StartCoroutine("initScroll");
+        //wrapScrollBar.SetScrollViewLocalPosition(scrollView.transform.localPosition);         
     }    
+    
+    IEnumerator initScroll()
+    {
+        yield return null;
+        scrollView.ResetPosition();
+        wrapScrollBar.SetScrollViewLocalPosition(scrollView.transform.localPosition);
+        StopCoroutine("initScroll");
+    }
 
     void AddCards()
     {
@@ -220,55 +213,55 @@ public class HeroPanel : MyPanel {
 
     public void AllFilterListClose()
     {
-        elementList.alpha = 0;
-        kingdomList.alpha = 0;
-        classList.alpha = 0;
+        panel_Element_Filter.alpha = 0;
+        panel_Kingdom_Filter.alpha = 0;
+        panel_Class_Filter.alpha = 0;
 
         arrow_Element.flip = UIBasicSprite.Flip.Vertically;
         arrow_Kingdom.flip = UIBasicSprite.Flip.Vertically;
         arrow_Class.flip = UIBasicSprite.Flip.Vertically;
     }
 
-    public void OnOffElementList()
+    public void OnOffpanel_Element_Filter()
     {
-        if (elementList.alpha == 0)
+        if (panel_Element_Filter.alpha == 0)
         {
             AllFilterListClose();
             arrow_Element.flip = UIBasicSprite.Flip.Nothing;            
-            elementList.alpha = 1;
+            panel_Element_Filter.alpha = 1;
         }
         else
         {
             arrow_Element.flip = UIBasicSprite.Flip.Vertically;
-            elementList.alpha = 0;
+            panel_Element_Filter.alpha = 0;
         }
     }
-    public void OnOffKingdomList()
+    public void OnOffpanel_Kingdom_Filter()
     {
-        if (kingdomList.alpha == 0)
+        if (panel_Kingdom_Filter.alpha == 0)
         {
             AllFilterListClose();            
             arrow_Kingdom.flip = UIBasicSprite.Flip.Nothing;
-            kingdomList.alpha = 1;
+            panel_Kingdom_Filter.alpha = 1;
         }
         else
         {
             arrow_Kingdom.flip = UIBasicSprite.Flip.Vertically;
-            kingdomList.alpha = 0;
+            panel_Kingdom_Filter.alpha = 0;
         }
     }
-    public void OnOffClassList()
+    public void OnOffpanel_Class_Filter()
     {
-        if (classList.alpha == 0)
+        if (panel_Class_Filter.alpha == 0)
         {
             AllFilterListClose();            
             arrow_Class.flip = UIBasicSprite.Flip.Nothing;
-            classList.alpha = 1;
+            panel_Class_Filter.alpha = 1;
         }
         else
         {
             arrow_Class.flip = UIBasicSprite.Flip.Vertically;
-            classList.alpha = 0;
+            panel_Class_Filter.alpha = 0;
         }
     }
 
@@ -321,7 +314,7 @@ public class HeroPanel : MyPanel {
         wrap.SortAlphabetically();
         wrap.WrapContent(true);
         scrollView.ResetPosition();
-
+                
         wrapScrollBar.Set(save_ScrollView_Column);
     }
 
@@ -369,7 +362,8 @@ public class HeroPanel : MyPanel {
                 {
                     cardSet.cards[j].gameObject.SetActive(true);
                     HeroTypeData data = typeData[card_num * lstIndex + j];
-                    cardSet.cards[j].Set(GetCardSpriteByName(data._portrait), data._name, data._element, data._hero_class);
+                    cardSet.cards[j].Set(Main.Instance.GetHeroPortraitByName(data._portrait), data._name, data._element, data._hero_class);
+                    //cardSet.cards[j].SetCardHeight(205);
                 }
             }
         }
@@ -439,14 +433,12 @@ public class HeroPanel : MyPanel {
         }
 
         WrapSetting();
-        OnOffElementList();
+        OnOffpanel_Element_Filter();
         
     }
 
     public void ClickKingdomToggle()
     {
-        Vector2 size = new Vector2(50, 54);
-
         if (toggle_kingdom_all.value)
         {                        
             label_Kingdom.text = "국가";
@@ -494,7 +486,7 @@ public class HeroPanel : MyPanel {
         }
 
         WrapSetting();
-        OnOffKingdomList();
+        OnOffpanel_Kingdom_Filter();
     }
 
     public void ClickClassToggle()
@@ -538,22 +530,6 @@ public class HeroPanel : MyPanel {
             hero_Class = Hero_Class.wizard;
         }        
         WrapSetting();            
-        OnOffClassList();        
+        OnOffpanel_Class_Filter();        
     }
-
-
-    public Sprite GetCardSpriteByName(string fileName)
-    {
-        if (sprites == null)
-            return null;
-
-        for (int i=0; i< sprites.Length; i++)
-        {
-            if(sprites[i].name == fileName)
-            {
-                return sprites[i];
-            }
-        }
-        return null;
-    }    
 }

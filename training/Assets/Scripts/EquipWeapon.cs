@@ -11,7 +11,7 @@ public class EquipWeapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {        
-        GameObject go = Main.Instance.MakeObjectToTarget(weapon_path, target_Weapon);
+        Main.Instance.MakeObjectToTarget(weapon_path, target_Weapon);
     }
 	
 }

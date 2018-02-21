@@ -7,6 +7,12 @@ public class Main : Singleton<Main> {
 
     public int current_panel_depth;
 
+    [SerializeField]
+    UIRoot ui_Root;
+
+    Sprite[] sprites_portraits;
+    Texture[] textures_items;
+
     //List<MySingletonPanel> lst_OpenedPanel;
 
     public enum AchivementTab
@@ -20,10 +26,46 @@ public class Main : Singleton<Main> {
     }
     private void Start()
     {
+        sprites_portraits = Resources.LoadAll<Sprite>("portraits");
+        textures_items = Resources.LoadAll<Texture>("items");
         //lst_OpenedPanel = new List<MySingletonPanel>();
         MakeObjectToTarget("UI/Global_Navigation_Panel");
-        current_panel_depth = 0;
-    }       
+        current_panel_depth = 0;      
+        
+        if(Utility.CheckScreenRatio4to3())
+        {
+            ui_Root.manualHeight = 1024;
+        }  
+    }
+
+    public Sprite GetHeroPortraitByName(string fileName)
+    {
+        if (sprites_portraits == null)
+            return null;
+
+        for (int i = 0; i < sprites_portraits.Length; i++)
+        {
+            if (sprites_portraits[i].name == fileName)
+            {
+                return sprites_portraits[i];
+            }
+        }
+        return null;
+    }
+    public Texture GetItemTextureByName(string fileName)
+    {
+        if (textures_items == null)
+            return null;
+
+        for (int i = 0; i < textures_items.Length; i++)
+        {
+            if (textures_items[i].name == fileName)
+            {
+                return textures_items[i];
+            }
+        }
+        return null;
+    }
 
     public AskPanel MakeAskPanel()
     {   

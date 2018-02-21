@@ -14,6 +14,7 @@ public class MyBar : MonoBehaviour
 
     public int itemNum = 10;
     public int row = 1;
+    [SerializeField]
     private Vector3 save_StartLocalPos;
     private float scrollLength;
 
@@ -23,7 +24,7 @@ public class MyBar : MonoBehaviour
     {
         scrollView.onMomentumMove += UpdateScrollbar;
         
-        save_StartLocalPos = scrollView.transform.localPosition;
+        //save_StartLocalPos = scrollView.transform.localPosition;
                         
         if (null != scrollBar.backgroundWidget)
         {
@@ -53,7 +54,7 @@ public class MyBar : MonoBehaviour
             scrollBar.value = 0;
 
         scrollLength = wrap.itemSize * Mathf.CeilToInt(itemNum / (float)row);
-        scrollBar.barSize = panel_ScrollView.GetViewSize().y / scrollLength;
+        scrollBar.barSize = panel_ScrollView.GetViewSize().y / scrollLength;        
     }
 
     public void SetScrollViewLocalPosition(Vector3 localPos)

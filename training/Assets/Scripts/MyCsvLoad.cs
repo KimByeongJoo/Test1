@@ -18,7 +18,8 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     Dictionary<string, List<AchivementConditionData>> cachedByParent;
 
     List<HeroTypeData> heroTypeDatas = new List<HeroTypeData>();
-    
+    List<ItemTypeData> itemTypeDatas = new List<ItemTypeData>();
+
     static string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
 
     void Awake()
@@ -26,7 +27,8 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         //LoadServers ();        
         LoadAchivementTypeDatas();
         LoadAchivementConditionDatas();
-        LoadHeroTypeDatas();        
+        LoadHeroTypeDatas();
+        LoadGameItemTypeDatas();
     }
 
 
@@ -141,6 +143,11 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     {
         return heroTypeDatas;
     }
+    public List<ItemTypeData> GetGameItemTypeDatas()
+    {
+        return itemTypeDatas;
+    }
+
 
     public bool CheckHaveKingdom(HeroTypeData data, string kingdom)
     {
@@ -242,6 +249,53 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
         MemoryStream ms = new MemoryStream(textAsset.bytes);
         return reader = new CsvReader(new StreamReader(ms), true);
+    }
+
+    public void LoadGameItemTypeDatas()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/GameItemType");
+
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id                    = System.Array.IndexOf(headers, "id");
+        int index_name                  = System.Array.IndexOf(headers, "name");        
+        int index_description           = System.Array.IndexOf(headers, "description");
+        int index_short_description     = System.Array.IndexOf(headers, "short_description");
+        int index_category              = System.Array.IndexOf(headers, "category");
+        int index_sub_category          = System.Array.IndexOf(headers, "sub_category");
+        int index_grade                 = System.Array.IndexOf(headers, "grade");
+        int index_star                  = System.Array.IndexOf(headers, "star");
+        int index_sprite                = System.Array.IndexOf(headers, "sprite");
+        int index_max_stack             = System.Array.IndexOf(headers, "max_stack");
+        int index_option                = System.Array.IndexOf(headers, "option");
+        int index_option_client_only    = System.Array.IndexOf(headers, "option_client_only");
+        int index_price                 = System.Array.IndexOf(headers, "price");
+        int index_sell_price            = System.Array.IndexOf(headers, "sell_price");
+        int index_cash                  = System.Array.IndexOf(headers, "cash");
+        int index_ladder_point          = System.Array.IndexOf(headers, "ladder_point");
+        int index_boss_point            = System.Array.IndexOf(headers, "boss_point");
+        int index_crusade_point         = System.Array.IndexOf(headers, "crusade_point");
+        int index_arena_point           = System.Array.IndexOf(headers, "arena_point");
+        int index_worth                 = System.Array.IndexOf(headers, "worth");
+        int index_disabled              = System.Array.IndexOf(headers, "disabled");
+        
+
+        while (reader.ReadNextRecord())
+        {
+            ItemTypeData data = new ItemTypeData();
+            
+            data.Set(reader[index_id],
+                reader[index_name], reader[index_description], reader[index_short_description],
+                reader[index_category], reader[index_sub_category], reader[index_grade],
+                reader[index_star], reader[index_sprite], reader[index_max_stack],
+                reader[index_option], reader[index_option_client_only], reader[index_price], reader[index_sell_price],
+                reader[index_cash], reader[index_ladder_point], reader[index_boss_point], reader[index_crusade_point],
+                reader[index_arena_point], reader[index_worth], reader[index_disabled]);
+
+            itemTypeDatas.Add(data);
+        }
     }
 
     public void LoadHeroTypeDatas()

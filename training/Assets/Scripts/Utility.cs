@@ -53,6 +53,23 @@ public class Utility {
         }         
     }
 
+    static public void ChangeSpriteAspectSnap(UITexture texture, string textureName, Vector2 raw_size)
+    {
+        Texture tex = Main.Instance.GetItemTextureByName(textureName);
+        Vector2 size = new Vector2(tex.width, tex.height);
+
+        texture.mainTexture = Main.Instance.GetItemTextureByName(textureName);
+        
+        float ratio = size.x / size.y;
+
+        texture.SetDimensions(Mathf.RoundToInt(ratio * raw_size.y), Mathf.RoundToInt(raw_size.y));        
+
+        if (raw_size.x < texture.width)
+        {
+            texture.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
+        }
+    }
+
     static public string GetSpriteNameByEnum(HeroPanel.Hero_Class hero_class, bool isWhite = false)
     {
         if(isWhite)
@@ -138,6 +155,12 @@ public class Utility {
             }
         }
     }
+
+    static public bool CheckScreenRatio4to3()
+    {
+        return Screen.height - 0.5f <= ((float)Screen.width / 4 * 3) && ((float)Screen.width / 4 * 3) <= Screen.height + 0.5f;
+    }
+
 
     // test
     static public void LogRenderQueue(UISprite sprite)

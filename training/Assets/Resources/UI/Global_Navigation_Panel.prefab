@@ -448,7 +448,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422958}
@@ -659,7 +659,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -641, y: 1, z: 0}
+  m_LocalPosition: {x: -482, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407982}
@@ -899,19 +899,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -539
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -431
   updateAnchors: 0
@@ -999,19 +999,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 1
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -3
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -107
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: 1
   updateAnchors: 0
@@ -1049,19 +1049,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -215
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -107
   updateAnchors: 0
@@ -1244,22 +1244,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 439630}
     relative: 0
-    absolute: -124
+    absolute: -126
   rightAnchor:
-    target: {fileID: 0}
-    relative: 1
-    absolute: 0
-  bottomAnchor:
-    target: {fileID: 0}
+    target: {fileID: 439630}
     relative: 0
-    absolute: 152
+    absolute: -1
+  bottomAnchor:
+    target: {fileID: 439630}
+    relative: 0
+    absolute: 1
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 439630}
     relative: 1
-    absolute: -152
-  updateAnchors: 1
+    absolute: 1
+  updateAnchors: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 5
   mWidth: 125
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
-  mText: "\uAD70\uB2E8"
+  mText: "\uC57D\uC7AC\uC0C1"
   mFontSize: 25
   mFontStyle: 0
   mAlignment: 0
@@ -1501,19 +1501,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -431
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -323
   updateAnchors: 0
@@ -1849,19 +1849,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -323
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -215
   updateAnchors: 0
@@ -2130,19 +2130,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -725
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -647
   updateAnchors: 0
@@ -2242,7 +2242,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 11484786}
+    mMethodName: MakeMedicinePanel
+    mParameters: []
+    oneShot: 0
 --- !u!114 &11489952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2255,19 +2259,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 0
-    absolute: 0
+    absolute: 2
   rightAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
-    absolute: -4
+    absolute: 1
   bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
+    target: {fileID: 407982}
+    relative: 1
     absolute: -647
   topAnchor:
-    target: {fileID: 0}
+    target: {fileID: 407982}
     relative: 1
     absolute: -539
   updateAnchors: 0
@@ -2380,7 +2384,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3001
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0

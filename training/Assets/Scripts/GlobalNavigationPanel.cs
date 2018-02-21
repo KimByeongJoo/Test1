@@ -59,6 +59,21 @@ public class GlobalNavigationPanel : MonoBehaviour
         }
     }
 
+    public void MakeMedicinePanel()
+    {
+        if (MedicineShopPanel.Instance == null)
+        {
+            Main.Instance.current_panel_depth += 500;
+
+            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/MedicineShop_Panel", Main.Instance.uiTarget, Vector3.one,
+                Main.Instance.current_panel_depth);
+                        
+            OnOffGlobalBar();
+
+            SetGlobalNavigationDepthToTop(false);            
+        }
+    }
+
     public void MakeHeroPanel()
     {
         if (HeroPanel.Instance == null)

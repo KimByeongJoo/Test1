@@ -70,14 +70,12 @@ public class HeroInfoPanel : MyPanel {
 
         // 
         GameObject go = Main.Instance.MakeObjectToTarget("Unit/tkc-ha_hu_don", target,Vector3.one, Vector3.one * 130);
-
         Utility.SetSpriteSortingOrderRecursive(go, 1);        
     }
 
     [ContextMenu("TestRenderQueue")]
     public void TestRenderQueue()
     {
-        Utility.LogRenderQueue(testSprite);
         Utility.LogRenderQueue(panel);
         Utility.LogRenderQueue(panel_front);
     }

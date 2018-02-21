@@ -13,7 +13,9 @@ public class HeroCardSet : MonoBehaviour {
     public void AddCard()
     {
         GameObject go = Main.Instance.MakeObjectToTarget("UI/card_bg", grid.gameObject, cards.Count);
-        cards.Add(go.GetComponent<HeroCard>());
+        HeroCard card = go.GetComponent<HeroCard>();
+        card.SetCardHeight(205);
+        cards.Add(card);        
         grid.Reposition();       
     }
 

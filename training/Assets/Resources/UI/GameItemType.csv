@@ -1,0 +1,7 @@
+id,name,description,short_description,category,sub_category,grade,star,sprite,max_stack,option,option_client_only,price,sell_price,cash,ladder_point,boss_point,crusade_point,arena_point,worth,disabled
+exp_potion_1,연명포,장수 경험치 +20,,potion,hero_exp,trash,,exp_potion_1,999,20 0,,1000,,5,3,3,3,,1000,
+exp_potion_2,행군산,장수 경험치 +50,,potion,hero_exp,normal,,exp_potion_2,999,50 0,,2000,,10,10,10,10,3,2000,
+exp_potion_3,오석산,장수 경험치 +150,,potion,hero_exp,magic,,exp_potion_3,999,150 0,,5000,,25,20,20,20,9,5000,
+exp_potion_4,견혈환,장수 경험치 +500,,potion,hero_exp,rare,,exp_potion_4,999,500 0,,20000,,100,30,30,30,30,20000,
+exp_potion_5,청점환,장수 경험치 +1500,,potion,hero_exp,unique,,exp_potion_5,999,1500 0,,60000,,300,50,50,50,,60000,
+exp_potion_6,견자단,장수 경험치 +5500,,potion,hero_exp,hero,,exp_potion_6,999,5500 0,,150000,,750,75,75,75,,150000,
