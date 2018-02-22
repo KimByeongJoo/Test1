@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MedicineShopPanel : MyPanel {
-
+public class MedicineShopPanel : MyPanel
+{
     private static MedicineShopPanel _instance;
 
     public static MedicineShopPanel Instance
@@ -30,7 +30,7 @@ public class MedicineShopPanel : MyPanel {
     int card_num = 10;
     [SerializeField]
     GameObject target;
-    
+
     [SerializeField]
     GameObject background_43;
     [SerializeField]
@@ -62,7 +62,7 @@ public class MedicineShopPanel : MyPanel {
 
     [SerializeField]
     UIScrollBar scrollBar;
-    
+
     [Header("Panels")]
     [SerializeField]
     UIPanel panel_Scrollbar;
@@ -162,6 +162,8 @@ public class MedicineShopPanel : MyPanel {
     List<HeroCard> lst_Cards = new List<HeroCard>();
 
     Vector3 scrollView_StartPos;
+    Vector3 scrollView_SelectedPos;
+    Vector2 scrollView_SaveClipOffset;
 
     string selectedCardID = "";
 
@@ -174,7 +176,7 @@ public class MedicineShopPanel : MyPanel {
         base.Awake();
 
         if (wrap != null)
-            wrap.onInitializeItem = OnInitializeHeroCards;        
+            wrap.onInitializeItem = OnInitializeHeroCards;
     }
 
     void Start()
@@ -184,7 +186,7 @@ public class MedicineShopPanel : MyPanel {
         SetItemDatas();
 
         WindowRatioAdjust();
-                
+
         panel_RightContent.depth = panel.depth + 4;
         panel_ScrollView.depth = panel.depth + 5;
         scrollView_rightItems.panel.depth = panel.depth + 6;
@@ -194,15 +196,15 @@ public class MedicineShopPanel : MyPanel {
         panel_Kingdom_Filter.depth = panel.depth + 9;
         panel_Class_Filter.depth = panel.depth + 10;
 
-        StartCoroutine("initScroll");            
+        StartCoroutine("initScroll");
     }
 
     public void AddAllCards()
-    {        
-        HeroCard card = AddCard();        
+    {
+        HeroCard card = AddCard();
         Vector2 cardSize = card.GetCardSize();
 
-        int num = Mathf.CeilToInt(panel_ScrollView.GetViewSize().x / cardSize.x);        
+        int num = Mathf.CeilToInt(panel_ScrollView.GetViewSize().x / cardSize.x);
         card_num = num + 1;
 
         for (int i = 0; i < num; i++)
@@ -260,17 +262,17 @@ public class MedicineShopPanel : MyPanel {
         //MedicineItemButton[] items = content.GetComponentsInChildren<MedicineItemButton>();
 
         List<ItemTypeData> datas = MyCsvLoad.Instance.GetGameItemTypeDatas();
-        
-        for (int i=0; i< datas.Count; i++)
+
+        for (int i = 0; i < datas.Count; i++)
         {
             if (datas[i] != null)
             {
-                GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);                
-                MedicineItemButton item = go.GetComponent<MedicineItemButton>();                
+                GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);
+                MedicineItemButton item = go.GetComponent<MedicineItemButton>();
                 item.Set(datas[i]._sprite, datas[i]._max_stack, datas[i]._name, datas[i]._description);
                 //items[i].Set(datas[i]._sprite,datas[i]._max_stack, datas[i]._name, datas[i]._description);
             }
-        }        
+        }
     }
 
     public void SetItemButtonWidth()
@@ -278,7 +280,7 @@ public class MedicineShopPanel : MyPanel {
         for (int i = 0; i < grid_items.transform.childCount; i++)
         {
             MedicineItemButton item = grid_items.transform.GetChild(i).GetComponent<MedicineItemButton>();
-            if(item != null)
+            if (item != null)
                 item.SetWidth((int)scrollView_rightItems.panel.GetViewSize().x);
         }
     }
@@ -297,7 +299,7 @@ public class MedicineShopPanel : MyPanel {
     {
         lst_Cards.Sort(SortHeroCardByPositionX);
 
-        for(int i=0; i< lst_Cards.Count; i++)
+        for (int i = 0; i < lst_Cards.Count; i++)
         {
             Debug.Log(lst_Cards[i].transform.localPosition);
         }
@@ -321,7 +323,7 @@ public class MedicineShopPanel : MyPanel {
         {
             for (int i = 0; i < card_num; i++)
             {
-                trans.GetChild(i).gameObject.SetActive((i >= type_Data.Count) ? false : true);                
+                trans.GetChild(i).gameObject.SetActive((i >= type_Data.Count) ? false : true);
             }
         }
         else
@@ -332,9 +334,9 @@ public class MedicineShopPanel : MyPanel {
             }
         }
         wrap.WrapContent(true);
-        scrollView.ResetPosition();
-    }    
-        
+        scrollView.ResetPosition();        
+    }
+
     void OnInitializeHeroCards(GameObject go, int wrapIndex, int realIndex)
     {
         //Debug.Log("real index : " + realIndex + " wrapIndex : " + wrapIndex);
@@ -355,10 +357,10 @@ public class MedicineShopPanel : MyPanel {
         }
 
         HeroCard card = go.GetComponent<HeroCard>();
-        
+
         card.Set(Main.Instance.GetHeroPortraitByName(typeData[lstIndex]._portrait),
             typeData[lstIndex]._name, typeData[lstIndex]._id, typeData[lstIndex]._element, typeData[lstIndex]._hero_class, false);
-        
+
     }
 
     public bool RemoveSelectedHero(List<HeroTypeData> heroDatas, string id)
@@ -368,7 +370,7 @@ public class MedicineShopPanel : MyPanel {
 
         for (int i = heroDatas.Count - 1; i >= 0; i--)
         {
-            if(heroDatas[i]._id == id)
+            if (heroDatas[i]._id == id)
             {
                 heroDatas.RemoveAt(i);
                 return true;
@@ -385,31 +387,56 @@ public class MedicineShopPanel : MyPanel {
         for (int i = heroDatas.Count - 1; i >= 0; i--)
         {
             if (heroDatas[i]._id == id)
-            {                
+            {
                 return true;
             }
         }
         return false;
     }
+    public void ClickHeroModel()
+    {
+        scrollView_SelectedPos = scrollView.transform.localPosition;
+        scrollView_SaveClipOffset = scrollView.panel.clipOffset;
+        Debug.Log("start pos : " + scrollView_StartPos + " local pos : " + scrollView_SelectedPos + " clip offset : " + scrollView_SaveClipOffset);
+        selectedCardID = "";
+        WrapSetting();
+
+        Transform trans = target.transform;
+        if (trans.childCount > 0)
+            trans.DestroyChildren();
+
+        hero_info.SetActive(false);
+
+        //SetScrollViewLocalPosition(scrollView, scrollView_SelectedPos);
+    }
+
+
+    public void SetScrollViewLocalPosition(UIScrollView scrollView, Vector3 pos)
+    {
+        scrollView.panel.cachedTransform.localPosition = pos;
+        scrollView.panel.clipOffset = scrollView_SaveClipOffset;
+    }
 
     public void ClickHeroCard(HeroCard card)
     {
+        scrollView_SelectedPos = scrollView.transform.localPosition;
+
         List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
         bool existed = FindHeroByID(typeData, selectedCardID);
         bool removed = false;
 
         selectedCardID = card._id;
         if (!existed)
-        {            
+        {
             removed = RemoveSelectedHero(typeData, selectedCardID);
         }
 
         if (removed)
         {
-            Transform activeObj = GetLastActiveObject();
+            GameObject activeObj = GetLastActiveObject();
 
             if (activeObj != null)
-                activeObj.gameObject.SetActive(false);
+                activeObj.SetActive(false);
 
             wrap.maxIndex--;
         }
@@ -417,19 +444,19 @@ public class MedicineShopPanel : MyPanel {
         label_Hero_Name.text = card.GetHeroName();
 
         Transform trans = target.transform;
-
         if (trans.childCount > 0)
             trans.DestroyChildren();
-
-        GameObject go = Main.Instance.MakeObjectToTarget("Unit/tkc-ha_hu_don", target, Vector3.one, Vector3.one * 80);
-        Utility.SetSpriteSortingOrderRecursive(go, 1);
 
         hero_info.SetActive(true);
         hero_info.transform.position = target.transform.position;
 
+        GameObject go = Main.Instance.MakeObjectToTarget("Unit/tkc-ha_hu_don", target, Vector3.one, Vector3.one * 80);
+        Utility.SetSpriteSortingOrderRecursive(go, 1);
+
         wrap.WrapContent(true);
         Transform wrap_trans = wrap.transform;
 
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_SelectedPos, 8);
         //if (CheckActiveCards() < card_num)
         //    wrap_trans.GetChild(wrap_trans.childCount - 1).gameObject.SetActive(false);
 
@@ -437,16 +464,52 @@ public class MedicineShopPanel : MyPanel {
         //wrap.SortBasedOnScrollMovement();        
     }
 
-    public Transform GetLastActiveObject()
-    {        
+    //public Transform GetLastActiveObject()
+    //{
+    //    Transform trans = wrap.transform;
+
+    //    for (int i = 0; i < trans.childCount; i++)
+    //    {
+    //        if (trans.GetChild(i).gameObject.activeSelf == false)
+    //            return trans.GetChild(i - 1);
+
+    //        if (i == trans.childCount - 1)
+    //            return trans.GetChild(i);
+
+    //    }
+    //    return null;
+    //}
+
+    public GameObject GetLastActiveObject()
+    {
         Transform trans = wrap.transform;
+
+        GameObject lastObj;
+
+        List<GameObject> lst_Sort = new List<GameObject>();
 
         for (int i = 0; i < trans.childCount; i++)
         {
-            if (trans.GetChild(i).gameObject.activeSelf == false)
-                return trans.GetChild(i-1);
+            GameObject child = trans.GetChild(i).gameObject;
+            if (child.activeSelf == false)
+            {
+                continue;
+            }
+            else
+                lst_Sort.Add(child);
         }
-        return null;
+
+        lst_Sort.Sort(SortByLocalPositionX);
+
+        return lst_Sort[lst_Sort.Count - 1];
+    }
+
+    static int SortByLocalPositionX(GameObject a, GameObject b)
+    {
+        if (a == null || b == null)
+            return 0;
+
+        return a.transform.localPosition.x.CompareTo(b.transform.localPosition.x);
     }
 
     static int SortHeroCardByPositionX(HeroCard a, HeroCard b)
