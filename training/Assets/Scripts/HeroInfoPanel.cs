@@ -9,10 +9,6 @@ public class HeroInfoPanel : MyPanel {
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(HeroInfoPanel)) as HeroInfoPanel;
-            }
             return _instance;
         }
     }
@@ -50,6 +46,8 @@ public class HeroInfoPanel : MyPanel {
     private void Awake()
     {
         base.Awake();
+        _instance = this;
+
         raw_element_size = new Vector2(41, 43);
         raw_class_size = new Vector2(40, 35);
     }

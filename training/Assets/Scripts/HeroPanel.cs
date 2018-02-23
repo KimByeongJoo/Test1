@@ -10,10 +10,6 @@ public class HeroPanel : MyPanel {
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(HeroPanel)) as HeroPanel;
-            }
             return _instance;
         }
     }
@@ -169,7 +165,9 @@ public class HeroPanel : MyPanel {
     private void Awake()
     {                
         base.Awake();
-        
+
+        _instance = this;
+
         if (wrap != null)
             wrap.onInitializeItem = OnInitializeHeroCards;
 

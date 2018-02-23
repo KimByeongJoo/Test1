@@ -20,6 +20,9 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     List<HeroTypeData> heroTypeDatas = new List<HeroTypeData>();
     List<ItemTypeData> itemTypeDatas = new List<ItemTypeData>();
 
+    List<LevelInfo> levelInfoDatas = new List<LevelInfo>();
+    List<TitleInfo> titleInfoDatas = new List<TitleInfo>();
+
     static string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
 
     void Awake()
@@ -29,6 +32,9 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         LoadAchivementConditionDatas();
         LoadHeroTypeDatas();
         LoadGameItemTypeDatas();
+
+        LoadLevelInfo();
+        LoadTitleInfo();
     }
 
 
@@ -249,6 +255,99 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
         MemoryStream ms = new MemoryStream(textAsset.bytes);
         return reader = new CsvReader(new StreamReader(ms), true);
+    }
+    public void LoadTitleInfo()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/TitleInfo");
+
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_value = System.Array.IndexOf(headers, "value");
+        int index_order = System.Array.IndexOf(headers, "order");
+        int index_category = System.Array.IndexOf(headers, "category");
+        int index_title = System.Array.IndexOf(headers, "title");
+        int index_sprite = System.Array.IndexOf(headers, "sprite");
+
+
+        while (reader.ReadNextRecord())
+        {
+            TitleInfo data = new TitleInfo();
+
+            data.Set(reader[index_id], reader[index_value], reader[index_order], reader[index_category], reader[index_title], reader[index_sprite]);
+
+            titleInfoDatas.Add(data);
+        }
+    }
+
+    public TitleInfo GetTitleInfoByKingdomPoint(int kingdomPoint)
+    {
+        for(int i=0; i<titleInfoDatas.Count; i++)
+        {
+            if(titleInfoDatas[i]._category == "point")
+            {
+                if(titleInfoDatas[i]._value_min <= kingdomPoint)
+                {
+                    return titleInfoDatas[i];
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public void LoadLevelInfo()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/LevelInfo");
+
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_exp = System.Array.IndexOf(headers, "exp");
+        int index_reward_gold = System.Array.IndexOf(headers, "reward gold");
+        int index_reward_food = System.Array.IndexOf(headers, "reward food");
+        int index_reward_items = System.Array.IndexOf(headers, "reward items");
+        int index_building_per_cash = System.Array.IndexOf(headers, "building_per_cash");
+        int index_research_per_cash = System.Array.IndexOf(headers, "research_per_cash");
+        int index_crusade_battle_gold = System.Array.IndexOf(headers, "crusade_battle_gold");
+        int index_refresh_arena_gold = System.Array.IndexOf(headers, "refresh_arena_gold");
+        int index_reward_unlocks = System.Array.IndexOf(headers, "reward unlocks");
+        int index_reward_ladder_point = System.Array.IndexOf(headers, "reward ladder_point");
+        int index_invasion_cash_per_day = System.Array.IndexOf(headers, "invasion_cash_per_day");
+
+
+        while (reader.ReadNextRecord())
+        {
+            LevelInfo data = new LevelInfo();
+
+            data.Set(reader[index_id], reader[index_exp]);
+
+            levelInfoDatas.Add(data);
+        }
+    }
+
+    public int GetLevelExp(int level)
+    {
+        if (level >= 100)
+            return 99999999;
+
+        if (levelInfoDatas == null || levelInfoDatas.Count == 0)
+        {
+            LoadLevelInfo();
+        }
+
+        for (int i = 0; i< levelInfoDatas.Count; i++ )
+        {
+            if (levelInfoDatas[i]._id == level)
+                return levelInfoDatas[i]._exp;
+        }
+        
+        return 99999999;        
+        //return levelInfoDatas.Where(x => x._id == level).Select(x => x._exp);        
     }
 
     public void LoadGameItemTypeDatas()

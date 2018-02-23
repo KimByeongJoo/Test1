@@ -12,6 +12,7 @@ public class Main : Singleton<Main> {
 
     Sprite[] sprites_portraits;
     Sprite[] sprites_items;
+    Sprite[] sprites_playertitle;
 
     //List<MySingletonPanel> lst_OpenedPanel;
 
@@ -28,6 +29,8 @@ public class Main : Singleton<Main> {
     {
         sprites_portraits = Resources.LoadAll<Sprite>("portraits");
         sprites_items = Resources.LoadAll<Sprite>("items");
+        sprites_playertitle = Resources.LoadAll<Sprite>("playertitle");
+
         //lst_OpenedPanel = new List<MySingletonPanel>();
         MakeObjectToTarget("UI/Global_Navigation_Panel");
         current_panel_depth = 0;      
@@ -62,6 +65,21 @@ public class Main : Singleton<Main> {
             if (sprites_items[i].name == fileName)
             {
                 return sprites_items[i];
+            }
+        }
+        return null;
+    }
+
+    public Sprite GetPlayerTitleSpriteByName(string fileName)
+    {
+        if (sprites_playertitle == null)
+            return null;
+
+        for (int i = 0; i < sprites_playertitle.Length; i++)
+        {
+            if (sprites_playertitle[i].name == fileName)
+            {
+                return sprites_playertitle[i];
             }
         }
         return null;
@@ -106,6 +124,20 @@ public class Main : Singleton<Main> {
     {
         GameObject go = Instantiate(Resources.Load(path) as GameObject);
         Transform trans = go.transform;        
+        trans.parent = target.transform;
+        trans.localScale = Vector3.one;
+        trans.localPosition = Vector3.zero;
+        return go;
+    }
+
+    /// <summary>    
+    /// Scale = Vector3.one, localPosition = Vector3.zero
+    /// </summary>
+    /// <param name="target">parent target</param>
+    public GameObject MakeObjectToTarget(GameObject prefab, GameObject target)
+    {
+        GameObject go = Instantiate(prefab);
+        Transform trans = go.transform;
         trans.parent = target.transform;
         trans.localScale = Vector3.one;
         trans.localPosition = Vector3.zero;

@@ -50,7 +50,23 @@ public class Utility {
         if (raw_size.x < sprite.width)
         {
             sprite.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
-        }         
+        }
+        sprite.Update();            
+    }
+
+    static public void ChangeSpriteAspectSnap(UI2DSprite ui_sprite2d, Sprite sprite, Vector2 raw_size)
+    {        
+        ui_sprite2d.sprite2D = sprite;
+
+        float ratio = sprite.rect.width / sprite.rect.height;
+
+        ui_sprite2d.SetDimensions(Mathf.RoundToInt(ratio * raw_size.y), Mathf.RoundToInt(raw_size.y));
+
+        if (raw_size.x < ui_sprite2d.width)
+        {
+            ui_sprite2d.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
+        }
+        ui_sprite2d.Update();
     }
 
     static public void ChangeSpriteAspectSnap(UITexture texture, string textureName, Vector2 raw_size)
@@ -67,6 +83,7 @@ public class Utility {
         {
             texture.SetDimensions(Mathf.RoundToInt(raw_size.x), Mathf.RoundToInt(raw_size.x / ratio));
         }
+        texture.Update();
     }
 
     static public string GetSpriteNameByEnum(HeroPanel.Hero_Class hero_class, bool isWhite = false)

@@ -11,10 +11,6 @@ public class AchivementPanel : MyPanel
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(AchivementPanel)) as AchivementPanel;                
-            }
             return _instance;
         }
     }
@@ -36,7 +32,9 @@ public class AchivementPanel : MyPanel
 
     private void Awake()
     {
-        base.Awake();        
+        base.Awake();
+
+        _instance = this;
 
         if (wrap != null)
             wrap.onInitializeItem = OnInitializeFriendButton;

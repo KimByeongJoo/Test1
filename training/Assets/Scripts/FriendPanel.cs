@@ -13,10 +13,6 @@ public class FriendPanel : MyPanel {
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(FriendPanel)) as FriendPanel;
-            }
             return _instance;
         }
     }
@@ -60,6 +56,8 @@ public class FriendPanel : MyPanel {
     private void Awake()
     {
         base.Awake();
+
+        _instance = this;
 
         if(wrap != null)
             wrap.onInitializeItem = OnInitializeFriendButton;

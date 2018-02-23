@@ -10,10 +10,6 @@ public class MedicineShopPanel : MyPanel
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(MedicineShopPanel)) as MedicineShopPanel;
-            }
             return _instance;
         }
     }
@@ -169,11 +165,13 @@ public class MedicineShopPanel : MyPanel
 
     [SerializeField]
     UILabel label_Hero_Name;
-
+    
     // Use this for initialization
     private void Awake()
     {
         base.Awake();
+
+        _instance = this;
 
         if (wrap != null)
             wrap.onInitializeItem = OnInitializeHeroCards;
@@ -199,46 +197,6 @@ public class MedicineShopPanel : MyPanel
         StartCoroutine("initScroll");
     }
 
-    public void AddAllCards()
-    {
-        HeroCard card = AddCard();
-        Vector2 cardSize = card.GetCardSize();
-
-        int num = Mathf.CeilToInt(panel_ScrollView.GetViewSize().x / cardSize.x);
-        card_num = num + 1;
-
-        for (int i = 0; i < num; i++)
-        {
-            AddCard();
-        }
-    }
-
-    public HeroCard AddCard()
-    {
-        GameObject go = Main.Instance.MakeObjectToTarget("UI/card_bg", wrap.gameObject);
-        HeroCard card = go.GetComponent<HeroCard>();
-        card.SetCardHeight(Mathf.CeilToInt(panel_ScrollView.GetViewSize().y - 6));
-
-        lst_Cards.Add(card);
-        return card;
-    }
-
-
-    public void WindowRatioAdjust()
-    {
-        if (Utility.CheckScreenRatio4to3())
-        {
-            background_43.SetActive(true);
-            background_16.SetActive(false);
-            target = target_43;
-        }
-        else
-        {
-            background_43.SetActive(false);
-            background_16.SetActive(true);
-            target = target_16;
-        }
-    }
     IEnumerator initScroll()
     {
         yield return null;
@@ -255,7 +213,62 @@ public class MedicineShopPanel : MyPanel
         StopCoroutine("initScroll");
     }
 
-    public void SetItemDatas()
+    public void AddAllCards()
+    {
+        HeroCard card = AddCard();
+        Vector2 cardSize = card.GetCardSize();
+
+        int num = Mathf.CeilToInt(panel_ScrollView.GetViewSize().x / cardSize.x);
+        card_num = num + 1;
+
+        for (int i = 0; i < num; i++)
+        {
+            AddCard();
+        }
+    }
+
+    GameObject _cachedPrefab;
+    GameObject cachedPrefab
+    {
+        get
+        {
+            if( _cachedPrefab == null )
+            {
+                // load
+                _cachedPrefab = Resources.Load("UI/card_bg") as GameObject;
+            }
+
+            return _cachedPrefab;
+        }
+    }
+
+    public HeroCard AddCard()
+    {
+        GameObject go = Main.Instance.MakeObjectToTarget(cachedPrefab, wrap.gameObject);
+        HeroCard card = go.GetComponent<HeroCard>();
+        card.SetCardHeight(Mathf.CeilToInt(panel_ScrollView.GetViewSize().y - 6));
+
+        lst_Cards.Add(card);
+        return card;
+    }
+
+    void WindowRatioAdjust()
+    {
+        if (Utility.CheckScreenRatio4to3())
+        {
+            background_43.SetActive(true);
+            background_16.SetActive(false);
+            target = target_43;
+        }
+        else
+        {
+            background_43.SetActive(false);
+            background_16.SetActive(true);
+            target = target_16;
+        }
+    }    
+
+    void SetItemDatas()
     {
         Transform trans = content.transform;
 
@@ -286,7 +299,7 @@ public class MedicineShopPanel : MyPanel
     }
 
     [ContextMenu("SortCards")]
-    public void SortCards()
+    void SortCards()
     {
         for (int i = 0; i < card_num; i++)
         {
@@ -295,7 +308,7 @@ public class MedicineShopPanel : MyPanel
     }
 
     [ContextMenu("list sort")]
-    public void ListSortX()
+    void ListSortX()
     {
         lst_Cards.Sort(SortHeroCardByPositionX);
 
@@ -396,8 +409,7 @@ public class MedicineShopPanel : MyPanel
     public void ClickHeroModel()
     {
         scrollView_SelectedPos = scrollView.transform.localPosition;
-        scrollView_SaveClipOffset = scrollView.panel.clipOffset;
-        Debug.Log("start pos : " + scrollView_StartPos + " local pos : " + scrollView_SelectedPos + " clip offset : " + scrollView_SaveClipOffset);
+        scrollView_SaveClipOffset = scrollView.panel.clipOffset;        
         selectedCardID = "";
         WrapSetting();
 
@@ -406,7 +418,8 @@ public class MedicineShopPanel : MyPanel
             trans.DestroyChildren();
 
         hero_info.SetActive(false);
-
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
+        
         //SetScrollViewLocalPosition(scrollView, scrollView_SelectedPos);
     }
 
@@ -415,6 +428,7 @@ public class MedicineShopPanel : MyPanel
     {
         scrollView.panel.cachedTransform.localPosition = pos;
         scrollView.panel.clipOffset = scrollView_SaveClipOffset;
+        //scrollView.MoveRelative(Vector3.right);
     }
 
     public void ClickHeroCard(HeroCard card)
@@ -456,12 +470,7 @@ public class MedicineShopPanel : MyPanel
         wrap.WrapContent(true);
         Transform wrap_trans = wrap.transform;
 
-        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_SelectedPos, 8);
-        //if (CheckActiveCards() < card_num)
-        //    wrap_trans.GetChild(wrap_trans.childCount - 1).gameObject.SetActive(false);
-
-        //WrapSetting();
-        //wrap.SortBasedOnScrollMovement();        
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_SelectedPos, 8);        
     }
 
     //public Transform GetLastActiveObject()

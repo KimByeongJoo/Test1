@@ -9,10 +9,6 @@ public class OptionPanel : MyPanel
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType(typeof(OptionPanel)) as OptionPanel;
-            }
             return _instance;
         }
     }
@@ -80,6 +76,13 @@ public class OptionPanel : MyPanel
                 break;
         }
     }
+
+    private void Awake()
+    {
+        base.Awake();
+        _instance = this;
+    }
+    
 
     private void Start()
     {

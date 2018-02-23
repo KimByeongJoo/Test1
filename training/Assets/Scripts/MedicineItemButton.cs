@@ -7,7 +7,7 @@ public class MedicineItemButton : MonoBehaviour {
     UISprite sprite_button;
 
     [SerializeField]
-    UITexture texture_icon;
+    UI2DSprite sprite_icon;
     [SerializeField]
     UILabel label_count;
     [SerializeField]
@@ -19,13 +19,13 @@ public class MedicineItemButton : MonoBehaviour {
 
     private void Awake()
     {
-        rawSize.x = texture_icon.width;
-        rawSize.y = texture_icon.height;
+        rawSize.x = 66;
+        rawSize.y = 64;
     }
 
     public void Set(string sprite_Name, int count, string name, string description)
     {
-        Utility.ChangeSpriteAspectSnap(texture_icon, sprite_Name, rawSize);
+        Utility.ChangeSpriteAspectSnap(sprite_icon, Main.Instance.GetItemSpriteByName(sprite_Name), rawSize);
                 
         label_count.text = count.ToString();
         label_name.text = name;
