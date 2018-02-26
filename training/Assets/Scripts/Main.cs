@@ -28,7 +28,7 @@ public class Main : Singleton<Main> {
     private void Start()
     {
         sprites_portraits = Resources.LoadAll<Sprite>("portraits");
-        sprites_items = Resources.LoadAll<Sprite>("items");
+        sprites_items = Resources.LoadAll<Sprite>("allitems");
         sprites_playertitle = Resources.LoadAll<Sprite>("playertitle");
 
         //lst_OpenedPanel = new List<MySingletonPanel>();

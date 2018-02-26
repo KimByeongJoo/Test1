@@ -49,6 +49,7 @@ public class PlayerHUDPanel : MyPanel
 	
 	// Update is called once per frame
 	void Update () {
+
         _exp += exp_Plus_Amount;
         _kingdomPoint += kingdomPoint_Plus_Amount;
 

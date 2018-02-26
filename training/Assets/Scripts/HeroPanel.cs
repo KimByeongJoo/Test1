@@ -175,7 +175,7 @@ public class HeroPanel : MyPanel {
     }
     void Start()
     {        
-        panel_ScrollView = scrollView.GetComponent<UIPanel>();
+        panel_ScrollView = scrollView.panel;
         
         AddCards();
         WrapSetting();

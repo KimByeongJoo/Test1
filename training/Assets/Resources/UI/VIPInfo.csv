@@ -1,0 +1,19 @@
+id,cash_purchase_count,daily food,daily items
+1,0,,
+2,300,100,sweep_ticket 10
+3,900,120,sweep_ticket 12
+4,4000,140,sweep_ticket 14
+5,10000,160,sweep_ticket 16
+6,15000,200,sweep_ticket 20
+7,26000,300,sweep_ticket 30
+8,40000,400,sweep_ticket 40
+9,60000,500,sweep_ticket 50
+10,100000,600,sweep_ticket 60
+11,200000,700,sweep_ticket 70
+12,350000,800,sweep_ticket 80
+13,500000,1000,sweep_ticket 100
+14,1000000,1200,sweep_ticket 120
+15,1500000,1500,sweep_ticket 150
+16,2500000,1800,sweep_ticket 180
+17,3500000,2100,sweep_ticket 210
+18,5000000,2500,sweep_ticket 250

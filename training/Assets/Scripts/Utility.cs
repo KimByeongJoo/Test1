@@ -55,7 +55,10 @@ public class Utility {
     }
 
     static public void ChangeSpriteAspectSnap(UI2DSprite ui_sprite2d, Sprite sprite, Vector2 raw_size)
-    {        
+    {
+        if (sprite == null)
+            return; 
+
         ui_sprite2d.sprite2D = sprite;
 
         float ratio = sprite.rect.width / sprite.rect.height;

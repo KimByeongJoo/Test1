@@ -23,6 +23,8 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     List<LevelInfo> levelInfoDatas = new List<LevelInfo>();
     List<TitleInfo> titleInfoDatas = new List<TitleInfo>();
 
+    List<VIPInfo> VIPInfoDatas = new List<VIPInfo>();
+
     static string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
 
     void Awake()
@@ -35,6 +37,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
 
         LoadLevelInfo();
         LoadTitleInfo();
+        LoadVipInfoInfo();
     }
 
 
@@ -154,6 +157,17 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return itemTypeDatas;
     }
 
+    public ItemTypeData GetGameItemTypeByID(string id)
+    {
+        for(int i=0; i< itemTypeDatas.Count; i++)
+        {
+            if(itemTypeDatas[i]._id == id)
+            {
+                return itemTypeDatas[i];
+            }
+        }
+        return null;
+    }
 
     public bool CheckHaveKingdom(HeroTypeData data, string kingdom)
     {
@@ -247,6 +261,16 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return AchivementConditionDatas[id];
     }
 
+
+    public List<VIPInfo> GetVIPInfoDatas()
+    {
+        return VIPInfoDatas;
+    }
+    /// <summary>
+    /// 확장자를 제외한 CSV 파일이름
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
     public CsvReader LoadCSVtoPath(string path)
     {
         CsvReader reader;
@@ -256,6 +280,32 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         MemoryStream ms = new MemoryStream(textAsset.bytes);
         return reader = new CsvReader(new StreamReader(ms), true);
     }
+
+
+    public void LoadVipInfoInfo()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/VIPInfo");
+
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_cash_purchase_count = System.Array.IndexOf(headers, "cash_purchase_count");
+        int index_daily_food = System.Array.IndexOf(headers, "daily food");
+        int index_daily_items = System.Array.IndexOf(headers, "daily items");
+
+
+        while (reader.ReadNextRecord())
+        {
+            VIPInfo data = new VIPInfo();
+
+            data.Set(reader[index_id], reader[index_cash_purchase_count], reader[index_daily_food], reader[index_daily_items]);
+
+            VIPInfoDatas.Add(data);
+        }
+    }
+
     public void LoadTitleInfo()
     {
         CsvReader reader = LoadCSVtoPath("UI/TitleInfo");
@@ -604,7 +654,8 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         int index_reward_exp = System.Array.IndexOf(headers, "reward exp");
         int index_reward_gold = System.Array.IndexOf(headers, "reward gold");
         int index_reward_cash = System.Array.IndexOf(headers, "reward cash");
-        int index_reward_food = System.Array.IndexOf(headers, "reward food");                
+        int index_reward_food = System.Array.IndexOf(headers, "reward food");
+        int index_reward_items = System.Array.IndexOf(headers, "reward items");
         int index_option = System.Array.IndexOf(headers, "option");
 
         AchivementConditionDatas.Clear();
@@ -619,6 +670,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
                 reader[index_condition], reader[index_reward_kingdom_point],
                 reader[index_reward_exp], reader[index_reward_gold],
                 reader[index_reward_cash], reader[index_reward_food],
+                reader[index_reward_items],
                 reader[index_option]);
 
             AchivementConditionDatas.Add(reader[index_id], data);

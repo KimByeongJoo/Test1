@@ -227,24 +227,9 @@ public class MedicineShopPanel : MyPanel
         }
     }
 
-    GameObject _cachedPrefab;
-    GameObject cachedPrefab
-    {
-        get
-        {
-            if( _cachedPrefab == null )
-            {
-                // load
-                _cachedPrefab = Resources.Load("UI/card_bg") as GameObject;
-            }
-
-            return _cachedPrefab;
-        }
-    }
-
     public HeroCard AddCard()
     {
-        GameObject go = Main.Instance.MakeObjectToTarget(cachedPrefab, wrap.gameObject);
+        GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/card_bg"), wrap.gameObject);
         HeroCard card = go.GetComponent<HeroCard>();
         card.SetCardHeight(Mathf.CeilToInt(panel_ScrollView.GetViewSize().y - 6));
 
@@ -280,9 +265,12 @@ public class MedicineShopPanel : MyPanel
         {
             if (datas[i] != null)
             {
-                GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);
-                MedicineItemButton item = go.GetComponent<MedicineItemButton>();
-                item.Set(datas[i]._sprite, datas[i]._max_stack, datas[i]._name, datas[i]._description);
+                if (datas[i]._sub_category == "hero_exp")
+                {
+                    GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);
+                    MedicineItemButton item = go.GetComponent<MedicineItemButton>();
+                    item.Set(datas[i]._sprite, datas[i]._max_stack, datas[i]._name, datas[i]._description);
+                }
                 //items[i].Set(datas[i]._sprite,datas[i]._max_stack, datas[i]._name, datas[i]._description);
             }
         }

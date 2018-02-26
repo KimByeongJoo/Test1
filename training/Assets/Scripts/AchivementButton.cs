@@ -26,7 +26,7 @@ public class AchivementButton : MonoBehaviour {
         raw_img_Size = new Vector2( kingdom_reward_icon.height, kingdom_reward_icon.width );
     }
 
-    public void Set(string name, string description, int kingdompoint, string kingdom_spriteName, int reward_value)
+    public void Set(string name, string description, int kingdompoint, string kingdom_spriteName, uint reward_value)
     {
         label_name.text = name;
         label_description.text = description;

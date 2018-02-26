@@ -131,7 +131,7 @@ public class AchivementPanel : MyPanel
         List<AchivementConditionData> conditionData = MyCsvLoad.Instance.GetCachedByParent(typeData[lstIndex]._id);
         int rand = Random.Range(0, conditionData.Count);
 
-        int reward_value = 0;
+        uint reward_value = 0;
         if (conditionData[rand]._reward_cash != 0)
             reward_value = conditionData[rand]._reward_cash;
         else if (conditionData[rand]._reward_food != 0)
