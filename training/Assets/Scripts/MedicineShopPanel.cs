@@ -16,9 +16,6 @@ public class MedicineShopPanel : MyPanel
 
     private void OnDestroy()
     {
-        if (Main.Instance)
-            Main.Instance.current_panel_depth -= 500;
-
         _instance = null;
     }
 

@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 2d1a86aa4d40d4b44a1991385b65e143
-timeCreated: 1517898461
-licenseType: Free
+guid: 4d8633130193d9a40a14ebef30b1425a
+timeCreated: 1506336244
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_sa_ma_jun_body
+    21300002: hero_sa_ma_jun_face
+    21300004: hero_sa_ma_jun_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,13 +26,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,99 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5301724, y: 0.5261438}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_sa_ma_jun_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 49.5}
+        - {x: 31, y: 48.5}
+        - {x: 34, y: 45.5}
+        - {x: 36, y: 45.5}
+        - {x: 41, y: 46.5}
+        - {x: 30, y: 64.5}
+        - {x: 22, y: 68.5}
+        - {x: 9, y: 74.5}
+        - {x: 1, y: 76.5}
+        - {x: -47, y: 76.5}
+        - {x: -58, y: 52.5}
+        - {x: -58, y: 4.5}
+        - {x: -49, y: -8.5}
+        - {x: -58, y: -33.5}
+        - {x: -58, y: -73.5}
+        - {x: -54, y: -76.5}
+        - {x: 48, y: -76.5}
+        - {x: 48, y: 42.5}
+        - {x: 33, y: 45.5}
+    - name: hero_sa_ma_jun_face
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 38
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.5, y: 42.5}
+        - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 37.5, y: -42.5}
+        - {x: 41.5, y: -2.5}
+        - {x: 41.5, y: 28.5}
+        - {x: 39.5, y: 33.5}
+    - name: hero_sa_ma_jun_skill
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 43
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 37.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

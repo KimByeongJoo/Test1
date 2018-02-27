@@ -74,7 +74,7 @@ GameObject:
   - 4: {fileID: 425930}
   - 114: {fileID: 11443142}
   m_Layer: 20
-  m_Name: Label
+  m_Name: label_name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   mTrueTypeFont: {fileID: 12800000, guid: 987bbfcb016e9214db2c90f443eb3ab7, type: 3}
   mFont: {fileID: 0}
   mText: "\uAC00\uBE44\uB2A5"
-  mFontSize: 25
+  mFontSize: 30
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1

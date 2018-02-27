@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 0b74fb628430ff4499f0ddd5fa32637c
-timeCreated: 1517898458
-licenseType: Free
+guid: f584902a5859fd646a3e85394a9679e4
+timeCreated: 1506336180
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_jang_yang_body
+    21300002: hero_jang_yang_face
+    21300004: hero_jang_yang_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +32,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,84 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.50431037, y: 0.5392157}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_jang_yang_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 76.5}
+        - {x: -58, y: 37.5}
+        - {x: -58, y: -76.5}
+        - {x: 58, y: -76.5}
+        - {x: 58, y: 62.5}
+        - {x: 14, y: 76.5}
+    - name: hero_jang_yang_face
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 40
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: -1.5}
+        - {x: 37.5, y: 42.5}
+    - name: hero_jang_yang_skill
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 45
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 37.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

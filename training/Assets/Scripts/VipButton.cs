@@ -9,26 +9,31 @@ public class VipButton : MonoBehaviour {
     UIGrid grid;
 
     [SerializeField]
+    UIGrid grid_daily;
+    [SerializeField]
+    UILabel label_daily;
+
+    [SerializeField]
     UISprite sprite;
 
     [SerializeField]
     UILabel label_Vip_Level;
+    
+    [SerializeField]
+    GameObject mask;
 
     private void OnDestroy()
     {
         if(ObjectPool.Instance)
             ObjectPool.Instance.RemovePrefab("UI/Reward_ItemBox");
     }
-
-    private void Start()
-    {
-    }
+        
     public Vector2 GetSize()
     {
         return new Vector2(sprite.width, sprite.height);
     }    
     
-    public void Set(int order, AchivementConditionData conditionData, VIPInfo VipInfo)
+    public void Set(int order, AchivementConditionData conditionData, VIPInfo vipInfo)
     {
         Reward reward = new Reward();
         List<RewardItem> items = reward.GetItems();
@@ -64,12 +69,10 @@ public class VipButton : MonoBehaviour {
                 items.Add(rewardItem);
             }
         }
-
         //split end
 
-        items.Sort(SortByID);
-
         // check overlap
+        items.Sort(SortByID);        
         for(int j = items.Count - 1; j > 0; j--)
         {                
             if(items[j].itemId == items[j - 1].itemId)
@@ -78,14 +81,6 @@ public class VipButton : MonoBehaviour {
                 items.Remove(items[j]);
             }
         }
-
-        //for (int j = 0; j < items.Count; j++)
-        //{
-        //    if (items[j].itemId == rewardItem.itemId)
-        //    {
-
-        //    }
-        //}
 
         RewardItem goods = new RewardItem();
 
@@ -105,8 +100,56 @@ public class VipButton : MonoBehaviour {
             goods.itemId = "ui_cash";
         }
 
-        items.Add(goods);
+        items.Add(goods);        
         SetRewardItemBox(reward);
+
+        SetDaily(vipInfo);
+
+        // mask
+        if(!VIPRewardPanel.Instance.CheckVipRewarded(order - 1))
+        {
+            mask.SetActive(false);
+        }
+        else
+        {
+            mask.SetActive(true);
+        }
+    }
+
+    public void SetDaily(VIPInfo vipInfo)
+    {
+        if (vipInfo._daily_item_count <= 0)
+        {
+            label_daily.gameObject.SetActive(false);
+            grid_daily.gameObject.SetActive(false);
+            return;
+        }
+        else
+        {
+            label_daily.gameObject.SetActive(true);
+            grid_daily.gameObject.SetActive(true);            
+        }
+
+        int diffCount = 2 - grid_daily.GetChildList().Count;
+                
+        while (diffCount > 0)
+        {
+            GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/Reward_ItemBox"), grid_daily.gameObject);
+            diffCount--;
+        }
+
+        Reward_ItemBox[] itemBoxes = grid_daily.GetComponentsInChildren<Reward_ItemBox>();
+
+        RewardItem reward_Item = new RewardItem();
+        reward_Item.itemKind = "GameItemType";
+        reward_Item.itemId = vipInfo._daily_item_name;
+        reward_Item.count = vipInfo._daily_item_count;
+        itemBoxes[0].Set(reward_Item);
+
+        RewardItem reward_Item2 = new RewardItem();
+        reward_Item2.itemId = "icon_bread";
+        reward_Item2.count = vipInfo._daily_food;
+        itemBoxes[1].Set(reward_Item2);
     }
 
     public void SetRewardItemBox(Reward reward)
@@ -115,24 +158,25 @@ public class VipButton : MonoBehaviour {
         
         int childCount = grid.GetChildList().Count;
 
-        int tempChild = childCount - lst_items.Count;
+        int diffChild = childCount - lst_items.Count;
 
-        if(tempChild < 0)
+        if(diffChild < 0)
         {
-            while (tempChild < 0)
+            while (diffChild < 0)
             {
                 GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/Reward_ItemBox"), grid.gameObject);
-                tempChild++;
+                diffChild++;
             }
         }
-        else if(tempChild > 0)
+        else if(diffChild > 0)
         {
-            int tempCount = childCount;
-            while (tempChild > 0)
+            int index = childCount;
+            while (diffChild > 0)
             {
-                Destroy(grid.GetChild(tempCount - 1).gameObject);
-                tempChild--;
-                tempCount--;
+                //                
+                Destroy(grid.GetChild(index - 1).gameObject);
+                diffChild--;
+                index--;
             }
         }
 
@@ -152,5 +196,12 @@ public class VipButton : MonoBehaviour {
             return 0;
 
         return a.itemId.CompareTo(b.itemId);
+    }
+
+    public void ClickButton()
+    {
+        mask.gameObject.SetActive(true);
+
+        VIPRewardPanel.Instance.SetVipRewarded(int.Parse(label_Vip_Level.text) - 1, true);
     }
 }

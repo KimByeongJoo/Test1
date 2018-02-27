@@ -33,9 +33,9 @@ public class Reward_ItemBox : MonoBehaviour {
     [SerializeField]
     UILabel label_count;    
     
-    public void Set(RewardItem reward)
+    public void Set(RewardItem reward_Item)
     {
-        if (reward.itemKind == "GameItemType")
+        if (reward_Item.itemKind == "GameItemType")
         {
             frame_item.gameObject.SetActive(true);
             frame_hero.gameObject.SetActive(false);
@@ -44,15 +44,18 @@ public class Reward_ItemBox : MonoBehaviour {
             label_count.gameObject.SetActive(true);
             black_bg.gameObject.SetActive(true);
 
-            ItemTypeData itemData = MyCsvLoad.Instance.GetGameItemTypeByID(reward.itemId);
-            label_count.text = reward.count.ToString();
+            ItemTypeData itemData = MyCsvLoad.Instance.GetGameItemTypeByID(reward_Item.itemId);
+            label_count.text = reward_Item.count.ToString();
 
+            icon_sprite2d.ConvertPortrait = -1;
             //icon_sprite2d.sprite2D = Main.Instance.GetItemSpriteByName(itemData._sprite);
-
-            Utility.ChangeSpriteAspectSnap(icon_sprite2d, Main.Instance.GetItemSpriteByName(itemData._sprite),
-                new Vector2(icon_sprite2d.width, icon_sprite2d.height));            
+            if (itemData != null)
+            {
+                Utility.ChangeSpriteAspectSnap(icon_sprite2d, Main.Instance.GetItemSpriteByName(itemData._sprite),
+                  new Vector2(icon_sprite2d.width, icon_sprite2d.height));
+            }
         }
-        else if (reward.itemKind == "HeroLetter")
+        else if (reward_Item.itemKind == "HeroLetter")
         {
             frame_item.gameObject.SetActive(false);
             frame_hero.gameObject.SetActive(true);
@@ -61,14 +64,15 @@ public class Reward_ItemBox : MonoBehaviour {
             label_count.gameObject.SetActive(true);
             black_bg.gameObject.SetActive(true);
 
-            label_count.text = reward.count.ToString();
+            label_count.text = reward_Item.count.ToString();
 
-            icon_sprite2d.sprite2D = Main.Instance.GetHeroPortraitByName(string.Format("hero_{0}", reward.itemId));
-
+            icon_sprite2d.sprite2D = Main.Instance.GetHeroPortraitByName(string.Format("hero_{0}", reward_Item.itemId));
+            icon_sprite2d.ConvertPortrait = 42.5f;
+            
             //Utility.ChangeSpriteAspectSnap(icon_sprite2d, Main.Instance.GetHeroPortraitByName(string.Format("hero_{0}", reward.itemId)),
             //    new Vector2(icon_sprite2d.width, icon_sprite2d.height));
             label_starLv.gameObject.SetActive(true);
-            label_starLv.text = reward.star;            
+            label_starLv.text = reward_Item.star;
         }
         else
         {
@@ -79,8 +83,8 @@ public class Reward_ItemBox : MonoBehaviour {
             label_count.gameObject.SetActive(false);
             black_bg.gameObject.SetActive(false);
 
-            Utility.ChangeSpriteAspectSnap(icon_sprite, reward.itemId, new Vector2(icon_sprite.width, icon_sprite.height));
-            label_amount.text = reward.count.ToString();
+            Utility.ChangeSpriteAspectSnap(icon_sprite, reward_Item.itemId, new Vector2(icon_sprite.width, icon_sprite.height));
+            label_amount.text = reward_Item.count.ToString();
         }
     }
 }

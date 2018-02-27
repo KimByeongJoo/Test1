@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: f8f0f0a37704c184bb5e36d4a809491a
-timeCreated: 1517898482
-licenseType: Free
+guid: 753a7d4d70e3a624f8ff7d7c6102ff8f
+timeCreated: 1506336135
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_crossbow_b_wii_skill
+    21300002: hero_crossbow_b_wii_face
+    21300004: hero_crossbow_b_wii_body
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +32,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,85 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.51293105, y: 0.53267974}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_crossbow_b_wii_skill
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 45
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 37.5}
+    - name: hero_crossbow_b_wii_face
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 39
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 32.5, y: -42.5}
+        - {x: 42.5, y: -39.5}
+        - {x: 42.5, y: 42.5}
+    - name: hero_crossbow_b_wii_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 9
+      pivot: {x: 0.50913095, y: 0.534614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.05919, y: 65.204056}
+        - {x: -59.05919, y: 61.204056}
+        - {x: -59.05919, y: -76.795944}
+        - {x: -54.05919, y: -81.795944}
+        - {x: 56.94081, y: -81.795944}
+        - {x: 56.94081, y: 43.204056}
+        - {x: 41.94081, y: 65.204056}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

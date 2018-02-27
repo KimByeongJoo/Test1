@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 899c2b76cc7a8134081d97063fc08c27
-timeCreated: 1517898471
-licenseType: Free
+guid: 47d1476641b56ae498f9eb92a8ac5df0
+timeCreated: 1506336283
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_wi_yeon_body
+    21300002: hero_wi_yeon_face
+    21300004: hero_wi_yeon_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,13 +26,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,86 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.6163793, y: 0.5588235}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_wi_yeon_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5110023, y: 0.5333667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.723732, y: 70.3949}
+        - {x: -26.276268, y: 70.3949}
+        - {x: -44.276268, y: 63.394897}
+        - {x: -56.276268, y: 20.394897}
+        - {x: -59.276268, y: 3.3948975}
+        - {x: -59.276268, y: -81.6051}
+        - {x: 56.723732, y: -81.6051}
+        - {x: 56.723732, y: 40.394897}
+        - {x: 54.723732, y: 58.394897}
+    - name: hero_wi_yeon_face
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 43
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: 42.5}
+        - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+    - name: hero_wi_yeon_skill
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 54
+        width: 75
+        height: 75
+      alignment: 9
+      pivot: {x: 0.51238614, y: 0.42258647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.428955, y: 43.306015}
+        - {x: -38.428955, y: -31.693985}
+        - {x: 36.571045, y: -31.693985}
+        - {x: 36.571045, y: 43.306015}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

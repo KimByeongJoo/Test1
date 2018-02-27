@@ -5,6 +5,9 @@ public class MyPanel : MonoBehaviour
 {
     protected UIPanel panel;
 
+    [SerializeField]
+    public int plusDepth = 50;
+
     protected void Awake()
     {
         panel = GetComponent<UIPanel>();
@@ -22,7 +25,7 @@ public class MyPanel : MonoBehaviour
 
     public void SelfDestroyDepth()
     {
-        Main.Instance.DeletePanelAndDepth(gameObject);
+        Main.Instance.DeletePanelAndDepth(this);
     }
 
     public void SelfDestroy()

@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 85f4ea2c672e6c345a1e1d8b7e0e56db
-timeCreated: 1517898470
-licenseType: Free
+guid: 916f02c051f75c24dae12b97467dae86
+timeCreated: 1506336168
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_hwang_so_face
+    21300002: hero_hwang_so_body
+    21300004: hero_hwang_so_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +32,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,110 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.57327586, y: 0.60457516}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_hwang_so_face
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 50
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 42.5}
+        - {x: -35.5, y: 42.5}
+        - {x: -42.5, y: 35.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: -23.5}
+        - {x: 41.5, y: -17.5}
+      - - {x: 31.5, y: -11.5}
+        - {x: 29.5, y: -13.5}
+        - {x: 31.5, y: -18.5}
+        - {x: 34.5, y: -18.5}
+        - {x: 36.5, y: -16.5}
+        - {x: 36.5, y: -14.5}
+        - {x: 33.5, y: -11.5}
+    - name: hero_hwang_so_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 76.5}
+        - {x: -54, y: 76.5}
+        - {x: -58, y: 73.5}
+        - {x: -58, y: -73.5}
+        - {x: -57, y: -76.5}
+        - {x: 58, y: -76.5}
+        - {x: 58, y: 6.5}
+        - {x: 18, y: 72.5}
+      - - {x: 40, y: 4.5}
+        - {x: 38, y: 2.5}
+        - {x: 40, y: -2.5}
+        - {x: 43, y: -2.5}
+        - {x: 45, y: -0.5}
+        - {x: 45, y: 1.5}
+        - {x: 42, y: 4.5}
+    - name: hero_hwang_so_skill
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 56
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: -5.5}
+        - {x: 19.5, y: 37.5}
+      - - {x: 31.5, y: -12.5}
+        - {x: 29.5, y: -14.5}
+        - {x: 31.5, y: -19.5}
+        - {x: 34.5, y: -19.5}
+        - {x: 36.5, y: -17.5}
+        - {x: 36.5, y: -15.5}
+        - {x: 33.5, y: -12.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -212,7 +212,7 @@ public class Main : Singleton<Main> {
     public void AddPanel(MyPanel panel)
     {
         //lst_OpenedPanel.Add(panel);
-        current_panel_depth += 50;
+        current_panel_depth += panel.plusDepth;
         panel.SetPanelDepth(current_panel_depth);
     }
 
@@ -236,11 +236,12 @@ public class Main : Singleton<Main> {
     //    return top_depth;
     //}
 
-    public void DeletePanelAndDepth(GameObject go_panel)
+    public void DeletePanelAndDepth(MyPanel myPanel)
     {
         //lst_OpenedPanel.Remove(panel);
-        Destroy(go_panel);
-        current_panel_depth -= 50;
+
+        current_panel_depth -= myPanel.plusDepth;
+        Destroy(myPanel.gameObject);
     }
 
     public void DeletePanel(GameObject go_panel)

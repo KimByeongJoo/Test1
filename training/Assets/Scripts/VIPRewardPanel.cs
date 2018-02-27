@@ -14,16 +14,15 @@ public class VIPRewardPanel : MyPanel {
         }
     }
 
+    private void OnDestroy()
+    {
+        _instance = null;
+    }
+
     List<AchivementConditionData> lst_VipReward;
     List<VIPInfo> lst_VipRewardDaily;
 
-    private void OnDestroy()
-    {
-        if (Main.Instance)
-            Main.Instance.current_panel_depth -= 500;
-
-        _instance = null;
-    }
+    bool[] vipReward;
 
     int button_num;
 
@@ -48,12 +47,36 @@ public class VIPRewardPanel : MyPanel {
         lst_VipRewardDaily = MyCsvLoad.Instance.GetVIPInfoDatas();
         lst_VipReward = MyCsvLoad.Instance.GetCachedByParent("vip-level");
 
+        vipReward = new bool[lst_VipReward.Count];
+
         panel_ScrollView = scrollView.panel;
 
         AddAllButton();
         WrapSetting();
 
         panel_ScrollView.depth = panel.depth + 5;
+
+        if(Utility.CheckScreenRatio4to3())
+        {
+            StartCoroutine("InitScroll");
+        }
+    }
+
+    public bool CheckVipRewarded(int index)
+    {
+        return vipReward[index];
+    }
+
+    public void SetVipRewarded(int index, bool rewarded)
+    {
+        vipReward[index] = rewarded;
+    }
+
+    IEnumerator InitScroll()
+    {
+        yield return null;
+        scrollView.ResetPosition();
+        StopCoroutine("InitScroll");
     }
 
     void WrapSetting()
@@ -109,10 +132,15 @@ public class VIPRewardPanel : MyPanel {
 
     public void AddAllButton()
     {
+        // add 1
         VipButton button = AddButton();
         Vector2 buttonSize = button.GetSize();
 
         int num = Mathf.CeilToInt(panel_ScrollView.GetViewSize().y / buttonSize.y);
+        
+        // add 1
+        num += 1;
+
         button_num = num + 1;
 
         for (int i = 0; i < num; i++)

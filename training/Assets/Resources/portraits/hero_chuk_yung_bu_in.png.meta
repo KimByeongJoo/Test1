@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: d32359270b9382643a2f57f6dbc1d5f2
-timeCreated: 1517898478
-licenseType: Free
+guid: 99f2f0e01d8968646b75c2d4dea6fa7e
+timeCreated: 1506336132
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_chuk_yung_bu_in_body
+    21300002: hero_chuk_yung_bu_in_face
+    21300004: hero_chuk_yung_bu_in_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,35 +26,119 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5301724, y: 0.53267974}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_chuk_yung_bu_in_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 63.5}
+        - {x: -58, y: 59.5}
+        - {x: -58, y: -76.5}
+        - {x: 57, y: -76.5}
+        - {x: 57, y: 25.5}
+        - {x: 44, y: 63.5}
+      - - {x: 44, y: 38.5}
+        - {x: 43, y: 35.5}
+        - {x: 46, y: 31.5}
+        - {x: 48, y: 31.5}
+        - {x: 50, y: 33.5}
+        - {x: 50, y: 34.5}
+        - {x: 46, y: 38.5}
+      - - {x: 46, y: 46.5}
+        - {x: 44, y: 44.5}
+        - {x: 44, y: 42.5}
+        - {x: 46, y: 40.5}
+        - {x: 48, y: 40.5}
+        - {x: 50, y: 42.5}
+        - {x: 50, y: 44.5}
+        - {x: 48, y: 46.5}
+    - name: hero_chuk_yung_bu_in_face
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 39
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29.5, y: 42.5}
+        - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: 32.5}
+      - - {x: 39.5, y: 30.5}
+        - {x: 41.5, y: 28.5}
+        - {x: 42.5, y: 28.5}
+        - {x: 42.5, y: 33.5}
+        - {x: 40.5, y: 33.5}
+    - name: hero_chuk_yung_bu_in_skill
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 44
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 31.5}
+        - {x: 33.5, y: 37.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

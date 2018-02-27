@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 886269181603d5f4b882f179ca2607ac
-timeCreated: 1517898471
-licenseType: Free
+guid: a7020d6eb4cc51545a351a92f0c5102b
+timeCreated: 1506336254
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_son_sang_hyang_body
+    21300002: hero_son_sang_hyang_face
+    21300004: hero_son_sang_hyang_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,13 +26,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,135 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.51293105, y: 0.53267974}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_son_sang_hyang_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 68.5}
+        - {x: -37, y: 57.5}
+        - {x: -58, y: 34.5}
+        - {x: -58, y: -14.5}
+        - {x: -51, y: -17.5}
+        - {x: -58, y: -34.5}
+        - {x: -58, y: -72.5}
+        - {x: -57, y: -74.5}
+        - {x: -54, y: -76.5}
+        - {x: 53, y: -76.5}
+        - {x: 53, y: -3.5}
+        - {x: 49, y: 40.5}
+        - {x: 34, y: 59.5}
+        - {x: 14, y: 68.5}
+      - - {x: 36, y: -33.5}
+        - {x: 39, y: -32.5}
+        - {x: 39, y: -29.5}
+        - {x: 36, y: -28.5}
+        - {x: 34, y: -30.5}
+      - - {x: 37, y: -27.5}
+        - {x: 38, y: -29.5}
+        - {x: 41, y: -29.5}
+        - {x: 45, y: -25.5}
+        - {x: 45, y: -21.5}
+        - {x: 44, y: -19.5}
+        - {x: 41, y: -19.5}
+        - {x: 37, y: -23.5}
+      - - {x: -24, y: 71.5}
+        - {x: -24, y: 69.5}
+        - {x: -22, y: 67.5}
+        - {x: -21, y: 67.5}
+        - {x: -18, y: 70.5}
+        - {x: -19, y: 73.5}
+        - {x: -22, y: 73.5}
+    - name: hero_son_sang_hyang_face
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 39
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 33.5, y: -42.5}
+        - {x: 42.5, y: -29.5}
+        - {x: 42.5, y: 42.5}
+      - - {x: 31.5, y: -39.5}
+        - {x: 30.5, y: -42.5}
+        - {x: 38.5, y: -42.5}
+        - {x: 38.5, y: -40.5}
+        - {x: 35.5, y: -39.5}
+      - - {x: 34.5, y: -38.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: -34.5}
+        - {x: 34.5, y: -33.5}
+        - {x: 32.5, y: -35.5}
+      - - {x: 39.5, y: -24.5}
+        - {x: 35.5, y: -28.5}
+        - {x: 35.5, y: -32.5}
+        - {x: 36.5, y: -34.5}
+        - {x: 39.5, y: -34.5}
+        - {x: 42.5, y: -31.5}
+        - {x: 42.5, y: -24.5}
+    - name: hero_son_sang_hyang_skill
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 44
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 28.5, y: -37.5}
+        - {x: 37.5, y: -27.5}
+        - {x: 37.5, y: 37.5}
+      - - {x: 33.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: -34.5}
+        - {x: 34.5, y: -33.5}
+        - {x: 32.5, y: -35.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: e4a4e0aec73393848aeb7bf58c5f3a0a
-timeCreated: 1517898480
-licenseType: Free
+guid: 916dc1a43bf02ea469b4a094e64f2e50
+timeCreated: 1506336251
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_son_deung_body
+    21300002: hero_son_deung_face
+    21300004: hero_son_deung_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +32,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,87 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.50431037, y: 0.53267974}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_son_deung_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -72.5}
+        - {x: -55, y: -76.5}
+        - {x: 58, y: -76.5}
+        - {x: 58, y: 0.5}
+        - {x: 37, y: 71.5}
+        - {x: -42, y: 71.5}
+        - {x: -58, y: 43.5}
+    - name: hero_son_deung_face
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 39
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 42.5}
+        - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: -11.5}
+        - {x: 31.5, y: 34.5}
+    - name: hero_son_deung_skill
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 44
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 28.5}
+        - {x: 25.5, y: 37.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

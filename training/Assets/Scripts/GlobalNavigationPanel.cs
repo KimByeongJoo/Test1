@@ -63,13 +63,11 @@ public class GlobalNavigationPanel : MonoBehaviour
     {
         if (MedicineShopPanel.Instance == null)
         {
-            Main.Instance.current_panel_depth += 500;
-
-            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/MedicineShop_Panel", Main.Instance.uiTarget, Vector3.one,
+            GameObject go = Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/MedicineShop_Panel", Main.Instance.uiTarget, Vector3.one,
                 Main.Instance.current_panel_depth);
-                        
-            OnOffGlobalBar();
 
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
+            OnOffGlobalBar();
             SetGlobalNavigationDepthToTop(false);            
         }
     }
@@ -78,22 +76,25 @@ public class GlobalNavigationPanel : MonoBehaviour
     {
         if (HeroPanel.Instance == null)
         {
-            Main.Instance.current_panel_depth += 500;
+            GameObject go = Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/Hero_Panel", Main.Instance.uiTarget, Vector3.one,
+                Main.Instance.current_panel_depth);
+            
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());     
+            OnOffGlobalBar();
+            SetGlobalNavigationDepthToTop(false);            
+        }
+    }
 
-            Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/Hero_Panel", Main.Instance.uiTarget, Vector3.one,
+    public void MakeVIPPanel()
+    {
+        if (HeroPanel.Instance == null)
+        {
+            GameObject go = Main.Instance.MakeObjectToTargetAndSetPanelDepth("UI/VIPReward_Panel", Main.Instance.uiTarget, Vector3.one,
                 Main.Instance.current_panel_depth);
 
-            
-            //Main.Instance.AddPanel(go.GetComponent<MyPanel>());
-            //add
+            Main.Instance.AddPanel(go.GetComponent<MyPanel>());
             OnOffGlobalBar();
-
             SetGlobalNavigationDepthToTop(false);
-
-            //if (AchivementPanel.Instance != null)
-            //{
-            //    AchivementPanel.Instance.SelfDestroy();
-            //}
         }
     }
 

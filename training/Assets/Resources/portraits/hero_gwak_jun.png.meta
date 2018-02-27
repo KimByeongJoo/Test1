@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 578d57e11004dc34d88d2ac2b3ae4193
-timeCreated: 1517898465
-licenseType: Free
+guid: e98f9f114eff31a4595a97084c04e458
+timeCreated: 1506336155
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hero_gwak_jun_body
+    21300002: hero_gwak_jun_face
+    21300004: hero_gwak_jun_skill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,13 +26,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -37,21 +40,102 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
+  allowsAlphaSplitting: 1
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5301724, y: 0.5261438}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 5
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hero_gwak_jun_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 38.5}
+        - {x: -58, y: -76.5}
+        - {x: 54, y: -76.5}
+        - {x: 54, y: -12.5}
+        - {x: 51, y: 21.5}
+        - {x: 20, y: 76.5}
+        - {x: -39, y: 76.5}
+        - {x: -49, y: 74.5}
+      - - {x: 50, y: -7.5}
+        - {x: 47, y: -8.5}
+        - {x: 47, y: -14.5}
+        - {x: 48, y: -16.5}
+        - {x: 52, y: -16.5}
+        - {x: 55, y: -11.5}
+        - {x: 55, y: -9.5}
+        - {x: 54, y: -7.5}
+      - - {x: 22, y: 59.5}
+        - {x: 25, y: 56.5}
+        - {x: 28, y: 57.5}
+        - {x: 28, y: 60.5}
+        - {x: 25, y: 63.5}
+        - {x: 22, y: 62.5}
+    - name: hero_gwak_jun_face
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 38
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.5, y: 42.5}
+        - {x: -42.5, y: 42.5}
+        - {x: -42.5, y: -42.5}
+        - {x: 42.5, y: -42.5}
+        - {x: 42.5, y: 30.5}
+        - {x: 29.5, y: 41.5}
+    - name: hero_gwak_jun_skill
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 43
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 37.5}
+        - {x: -37.5, y: -37.5}
+        - {x: 37.5, y: -37.5}
+        - {x: 37.5, y: 28.5}
+        - {x: 31.5, y: 37.5}
     outline: []
-  spritePackingTag: portraits
+  spritePackingTag: kingdom_portraits
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -2459,7 +2459,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 318, y: -38, z: 0}
+  m_LocalPosition: {x: 382, y: -38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436616}
@@ -2955,7 +2955,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -363, y: 319, z: 0}
+  m_LocalPosition: {x: -427, y: 319, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 412382}
@@ -3358,7 +3358,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -536, y: 320, z: 0}
+  m_LocalPosition: {x: -600, y: 320, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 412382}
@@ -3823,7 +3823,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1152, y: 720, z: 0}
+  m_Size: {x: 1280, y: 720, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6509392
 BoxCollider:
@@ -5210,13 +5210,13 @@ MonoBehaviour:
   updateAnchors: 0
   mColor: {r: 0.6313726, g: 0.5921569, b: 0.5529412, a: 1}
   mPivot: 4
-  mWidth: 1152
+  mWidth: 1280
   mHeight: 720
   mDepth: 21
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.6
+  aspectRatio: 1.7777778
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -5611,7 +5611,7 @@ MonoBehaviour:
   pixelSnap: 0
   onClick:
   - mTarget: {fileID: 11440492}
-    mMethodName: SelfDestroy
+    mMethodName: SelfDestroyDepth
     mParameters: []
     oneShot: 0
 --- !u!114 &11417200
@@ -7841,6 +7841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e033d837a05d641845ab3b06578533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plusDepth: 500
   wrap: {fileID: 11417200}
   scrollView: {fileID: 11431754}
   scrollBar: {fileID: 11478118}
@@ -10767,7 +10768,7 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: -0.5, y: 17.611694, z: 1131, w: 610}
+  mClipRange: {x: -0.5, y: 17.611694, z: 1259, w: 610}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 34
   mSortingOrder: 0
@@ -11711,13 +11712,13 @@ MonoBehaviour:
   updateAnchors: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1132
+  mWidth: 1260
   mHeight: 616
   mDepth: 23
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.8376623
+  aspectRatio: 2.0454545
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
