@@ -41,6 +41,19 @@ public class Main : Singleton<Main> {
         }  
     }
 
+    //Vector3 topLeft = new Vector3(-1, 1, 1);
+    //Vector3 topRight = new Vector3(1, 1, 1);
+    //Vector3 bottomRight = new Vector3(1, -1, 1);
+    //Vector3 bottomLeft = new Vector3(-1, -1, 1);
+
+    //private void Update()
+    //{
+    //    Debug.DrawLine(topLeft, topRight, Color.red);
+    //    Debug.DrawLine(topRight, bottomRight, Color.red);
+    //    Debug.DrawLine(bottomRight, bottomLeft, Color.red);
+    //    Debug.DrawLine(bottomLeft, topLeft, Color.red);
+    //}
+
     public Sprite GetHeroPortraitByName(string fileName)
     {
         if (sprites_portraits == null)

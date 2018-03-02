@@ -181,6 +181,16 @@ public class VIPRewardPanel : MyPanel {
                 }
                 Utility.CalcPopupPosition(panel_popup, popup, itemBox);
 
+                UISprite popupBgSprite = popup.GetSpriteWidget();
+                UIWidget box = itemBox.GetBoxWidget();
+
+                StartCoroutine(DrawBox(box.worldCorners[1], box.worldCorners[2],
+                    box.worldCorners[3], box.worldCorners[0], Color.blue));
+
+                StartCoroutine(DrawBox(popupBgSprite.worldCorners[1], popupBgSprite.worldCorners[2],
+                    popupBgSprite.worldCorners[3], popupBgSprite.worldCorners[0],Color.red));
+
+
                 StartCoroutine(ActiveAfterOneFrame());
             }
             else
@@ -189,6 +199,20 @@ public class VIPRewardPanel : MyPanel {
             }
         }          
     }
+
+    IEnumerator DrawBox(Vector3 topLeft, Vector3 topRight, Vector3 bottomRight, Vector3 bottomLeft, Color color)
+    {
+        for (int i=0; i<30; i++)
+        {            
+            Debug.DrawLine(topLeft, topRight, color);
+            Debug.DrawLine(topRight, bottomRight, color);
+            Debug.DrawLine(bottomRight, bottomLeft, color);
+            Debug.DrawLine(bottomLeft, topLeft, color);
+
+            yield return null;
+        }
+    }
+
     IEnumerator ActiveAfterOneFrame()
     {
         yield return null;

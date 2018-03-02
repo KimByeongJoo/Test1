@@ -142,7 +142,7 @@ public class Utility {
         // 아랫쪽에 생성
         Debug.Log("itemBox_world_Pos : " + itemBox.transform.position + "half_size_y : " + box_half_size_y);
         Debug.Log("popup half size : " + popup_half_size_y);
-
+        
         Vector3 worldPos = itemBox.transform.position;
         if (box_WorldPos.y > UICamera.mainCamera.transform.position.y)
         {
@@ -156,10 +156,16 @@ public class Utility {
             worldPos.y += box_half_size_y;
             worldPos.y += popup_half_size_y;
         }
+
+        UIWidget tempWidget = popup.GetWidget();
+        float diff_y = tempWidget.transform.position.y - popupBgSprite.transform.position.y;
+
+        worldPos.y += diff_y;
         popup.SetPosition(worldPos);
 
-        //CapturedPositionByPanel(panel_popup, popup);
-    }
+        CapturedPositionByPanel(panel_popup, popup);
+    }        
+    
 
     static public void CapturedPositionByPanel(UIPanel targetPanel, ItemBoxPopup popup)
     {
