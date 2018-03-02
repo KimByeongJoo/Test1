@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class MedicineShopPanel : MyPanel
 {
@@ -56,6 +57,9 @@ public class MedicineShopPanel : MyPanel
     [SerializeField]
     UIScrollBar scrollBar;
 
+    //[SerializeField]
+    ItemBoxPopup popup;
+
     [Header("Panels")]
     [SerializeField]
     UIPanel panel_Scrollbar;
@@ -73,6 +77,9 @@ public class MedicineShopPanel : MyPanel
     UIPanel panel_ScrollView;
     [SerializeField]
     UIPanel panel_RightContent;
+
+    [SerializeField]
+    UIPanel panel_popup;
 
     [Header("Element")]
     [SerializeField]
@@ -172,6 +179,8 @@ public class MedicineShopPanel : MyPanel
 
         if (wrap != null)
             wrap.onInitializeItem = OnInitializeHeroCards;
+
+        panel.alpha = 0;
     }
 
     void Start()
@@ -191,17 +200,22 @@ public class MedicineShopPanel : MyPanel
         panel_Kingdom_Filter.depth = panel.depth + 9;
         panel_Class_Filter.depth = panel.depth + 10;
 
+        panel_popup.depth = panel.depth + 11;
+
+        AddAllCards();
+        WrapSetting();
+
+        scrollView_StartPos = scrollView.panel.transform.localPosition;
+        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
+
         StartCoroutine("initScroll");
     }
 
     IEnumerator initScroll()
     {
         yield return null;
-        AddAllCards();
-        WrapSetting();
 
-        scrollView_StartPos = scrollView.panel.transform.localPosition;
-        SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
+        panel.alpha = 1;
 
         scrollView.ResetPosition();
         scrollView_rightItems.ResetPosition();
@@ -264,9 +278,9 @@ public class MedicineShopPanel : MyPanel
             {
                 if (datas[i]._sub_category == "hero_exp")
                 {
-                    GameObject go = Main.Instance.MakeObjectToTarget("UI/medicine_item_bg", grid_items.gameObject);
+                    GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/medicine_item_bg"), grid_items.gameObject);
                     MedicineItemButton item = go.GetComponent<MedicineItemButton>();
-                    item.Set(datas[i]._sprite, datas[i]._max_stack, datas[i]._name, datas[i]._description);
+                    item.Set(datas[i]);
                 }
                 //items[i].Set(datas[i]._sprite,datas[i]._max_stack, datas[i]._name, datas[i]._description);
             }
@@ -339,7 +353,7 @@ public class MedicineShopPanel : MyPanel
     {
         //Debug.Log("real index : " + realIndex + " wrapIndex : " + wrapIndex);
         List<HeroTypeData> typeData = MyCsvLoad.Instance.GetHeroTypeDatas(hero_Element, hero_Kingdom, hero_Class);
-
+        
         RemoveSelectedHero(typeData, selectedCardID);
 
         if (typeData.Count <= 0)
@@ -743,4 +757,37 @@ public class MedicineShopPanel : MyPanel
         OnOffpanel_Class_Filter();
     }
 
+    public void PressItemBox(Reward_ItemBox itemBox, bool press, string itemKind)
+    {
+        if (itemKind.Length != 0)
+        {
+            if (press)
+            {
+                if (popup == null)
+                {
+                    GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/ItemBox_Popup"), panel_popup.gameObject);
+                    popup = go.GetComponent<ItemBoxPopup>();
+                    popup.Set(itemBox, itemKind);
+                    panel_popup.depth = panel.depth + 10;
+                }
+                else
+                {
+                    popup.Set(itemBox, itemKind);
+                }                
+                StartCoroutine(ActiveAfterOneFrame(itemBox));
+            }
+            else
+            {
+                panel_popup.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    IEnumerator ActiveAfterOneFrame(Reward_ItemBox itemBox)
+    {
+        yield return null;
+        panel_popup.gameObject.SetActive(true);
+        Utility.CalcPopupPosition(panel_popup, popup, itemBox);
+        StopCoroutine(ActiveAfterOneFrame(itemBox));
+    }
 }

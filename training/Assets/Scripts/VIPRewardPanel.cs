@@ -31,7 +31,12 @@ public class VIPRewardPanel : MyPanel {
     [SerializeField]
     UIScrollView scrollView;
 
+    [SerializeField]
+    UIPanel panel_popup;
+
     UIPanel panel_ScrollView;
+
+    ItemBoxPopup popup;
 
     private void Awake()
     {
@@ -156,4 +161,38 @@ public class VIPRewardPanel : MyPanel {
         return go.GetComponent<VipButton>();
         //return card;
     }
+         
+    public void PressItemBox(Reward_ItemBox itemBox, bool press, string itemKind)
+    {
+        if (itemKind.Length != 0)
+        {
+            if (press)
+            {                
+                if (popup == null)
+                {
+                    GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/ItemBox_Popup"), panel_popup.gameObject);
+                    popup = go.GetComponent<ItemBoxPopup>();
+                    popup.Set(itemBox, itemKind);
+                    panel_popup.depth = panel.depth + 10;
+                }
+                else
+                {
+                    popup.Set(itemBox, itemKind);
+                }
+                Utility.CalcPopupPosition(panel_popup, popup, itemBox);
+
+                StartCoroutine(ActiveAfterOneFrame());
+            }
+            else
+            {
+                panel_popup.gameObject.SetActive(false);                
+            }
+        }          
+    }
+    IEnumerator ActiveAfterOneFrame()
+    {
+        yield return null;
+        panel_popup.gameObject.SetActive(true);        
+        StopCoroutine(ActiveAfterOneFrame());
+    }    
 }

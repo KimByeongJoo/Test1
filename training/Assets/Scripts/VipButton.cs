@@ -22,12 +22,22 @@ public class VipButton : MonoBehaviour {
     [SerializeField]
     GameObject mask;
 
+    List<Reward_ItemBox> lst_ItemBoxes;
+    List<Reward_ItemBox> lst_ItemBoxes_Daily;
+
+    Vector2 size = new Vector2(65,65);
+
     private void OnDestroy()
     {
         if(ObjectPool.Instance)
             ObjectPool.Instance.RemovePrefab("UI/Reward_ItemBox");
     }
-        
+
+    private void Awake()
+    {
+        lst_ItemBoxes = new List<Reward_ItemBox>();
+        lst_ItemBoxes_Daily = new List<Reward_ItemBox>();
+    }
     public Vector2 GetSize()
     {
         return new Vector2(sprite.width, sprite.height);
@@ -99,7 +109,7 @@ public class VipButton : MonoBehaviour {
             goods.count = conditionData._reward_cash;
             goods.itemId = "ui_cash";
         }
-
+        goods.itemKind = "";
         items.Add(goods);        
         SetRewardItemBox(reward);
 
@@ -131,25 +141,32 @@ public class VipButton : MonoBehaviour {
         }
 
         int diffCount = 2 - grid_daily.GetChildList().Count;
-                
+
+        for (int i = 0; i < lst_ItemBoxes_Daily.Count; i++)
+        {
+            lst_ItemBoxes_Daily[i].gameObject.SetActive(true);
+        }
+
         while (diffCount > 0)
         {
             GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/Reward_ItemBox"), grid_daily.gameObject);
+            lst_ItemBoxes_Daily.Add(go.GetComponent<Reward_ItemBox>());
             diffCount--;
         }
-
-        Reward_ItemBox[] itemBoxes = grid_daily.GetComponentsInChildren<Reward_ItemBox>();
-
+                
         RewardItem reward_Item = new RewardItem();
         reward_Item.itemKind = "GameItemType";
         reward_Item.itemId = vipInfo._daily_item_name;
         reward_Item.count = vipInfo._daily_item_count;
-        itemBoxes[0].Set(reward_Item);
+        lst_ItemBoxes_Daily[0].SetSize(size);
+        lst_ItemBoxes_Daily[0].Set(reward_Item);
 
         RewardItem reward_Item2 = new RewardItem();
+        reward_Item.itemKind = "";
         reward_Item2.itemId = "icon_bread";
         reward_Item2.count = vipInfo._daily_food;
-        itemBoxes[1].Set(reward_Item2);
+        lst_ItemBoxes_Daily[1].SetSize(size);
+        lst_ItemBoxes_Daily[1].Set(reward_Item2);
     }
 
     public void SetRewardItemBox(Reward reward)
@@ -160,11 +177,17 @@ public class VipButton : MonoBehaviour {
 
         int diffChild = childCount - lst_items.Count;
 
+        for(int i = 0; i < lst_ItemBoxes.Count; i++)
+        {
+            lst_ItemBoxes[i].gameObject.SetActive(true);
+        }
+
         if(diffChild < 0)
         {
             while (diffChild < 0)
             {
                 GameObject go = Main.Instance.MakeObjectToTarget(ObjectPool.Instance.GetPrefab("UI/Reward_ItemBox"), grid.gameObject);
+                lst_ItemBoxes.Add(go.GetComponent<Reward_ItemBox>());
                 diffChild++;
             }
         }
@@ -173,19 +196,18 @@ public class VipButton : MonoBehaviour {
             int index = childCount;
             while (diffChild > 0)
             {
-                //                
-                Destroy(grid.GetChild(index - 1).gameObject);
+                lst_ItemBoxes[index - 1].gameObject.SetActive(false);                
                 diffChild--;
                 index--;
             }
         }
-
-        Reward_ItemBox[] itemBoxes = grid.GetComponentsInChildren<Reward_ItemBox>();
-
+        
         for(int i=0; i< lst_items.Count; i++)
         {
             ItemTypeData itemData = MyCsvLoad.Instance.GetGameItemTypeByID(lst_items[i].itemId);
-            itemBoxes[i].Set(lst_items[i]);
+            lst_ItemBoxes[i].SetSize(size);
+            lst_ItemBoxes[i].Set(lst_items[i]);
+
         }
         grid.Reposition();     
     }

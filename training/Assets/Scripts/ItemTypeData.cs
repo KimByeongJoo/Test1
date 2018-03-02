@@ -13,7 +13,7 @@ public class ItemTypeData {
     public string _grade;
     public string _star;
     public string _sprite;
-    public int _max_stack;
+    public uint _max_stack;
     public string _option;
     public string _option_client_only;
     public int _price;
@@ -41,7 +41,7 @@ public class ItemTypeData {
         _sprite = sprite;
 
         if (max_stack.Length != 0)
-            _max_stack = int.Parse(max_stack);
+            _max_stack = uint.Parse(max_stack);
 
         _option = option;
         _option_client_only = option_client_only;

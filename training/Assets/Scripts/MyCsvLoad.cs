@@ -24,6 +24,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     List<TitleInfo> titleInfoDatas = new List<TitleInfo>();
 
     List<VIPInfo> VIPInfoDatas = new List<VIPInfo>();
+    List<GameItemGrade> gameItemGrades = new List<GameItemGrade>();
 
     static string[] rarityOrder = { "SSS", "SS", "S", "AAA", "AA", "A", "B", "C", "D" };
 
@@ -38,6 +39,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         LoadLevelInfo();
         LoadTitleInfo();
         LoadVipInfoInfo();
+        LoadGameItemGrade();
     }
 
 
@@ -152,6 +154,19 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     {
         return heroTypeDatas;
     }
+
+    public HeroTypeData GetHeroTypeByID(string id)
+    {
+        for (int i = 0; i < heroTypeDatas.Count; i++)
+        {
+            if (heroTypeDatas[i]._id == id)
+            {
+                return heroTypeDatas[i];
+            }
+        }
+        return null;
+    }
+
     public List<ItemTypeData> GetGameItemTypeDatas()
     {
         return itemTypeDatas;
@@ -169,6 +184,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return null;
     }
 
+    
     public bool CheckHaveKingdom(HeroTypeData data, string kingdom)
     {
         string[] str_Split = data._kingdom.Split('\n');
@@ -247,7 +263,10 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
                 }
             }
         }
-        //findHeroDatas.Sort(CompareHeroDatas);
+
+        findHeroDatas = findHeroDatas.Where(x => x._category == "hero" && x._playable == 1 && x._disabled != 1).ToList();
+
+        findHeroDatas.Sort(CompareHeroDatas);
         return findHeroDatas;
     }    
 
@@ -260,8 +279,7 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
     {
         return AchivementConditionDatas[id];
     }
-
-
+    
     public List<VIPInfo> GetVIPInfoDatas()
     {
         return VIPInfoDatas;
@@ -281,6 +299,49 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         return reader = new CsvReader(new StreamReader(ms), true);
     }
 
+    public List<GameItemGrade> GetGameItemGrades()
+    {
+        return gameItemGrades;
+    }
+
+    public GameItemGrade GetGameItemGradeByGradeID(string gradeId)
+    {
+        for(int i=0; i< gameItemGrades.Count; i++)
+        {
+            if (gameItemGrades[i]._id == gradeId)
+                return gameItemGrades[i];
+        }
+        return null;
+    }
+
+    public void LoadGameItemGrade()
+    {
+        CsvReader reader = LoadCSVtoPath("UI/GameItemGrade");
+
+        if (reader == null)
+            return;
+
+        string[] headers = reader.GetFieldHeaders();
+        int index_id = System.Array.IndexOf(headers, "id");
+        int index_grade = System.Array.IndexOf(headers, "grade");
+        int index_name = System.Array.IndexOf(headers, "name");
+        int index_star = System.Array.IndexOf(headers, "star");
+        int index_order = System.Array.IndexOf(headers, "order");
+        int index_color = System.Array.IndexOf(headers, "color");
+        int index_tier = System.Array.IndexOf(headers, "tier");
+
+
+        while (reader.ReadNextRecord())
+        {
+            GameItemGrade data = new GameItemGrade();
+
+            data.Set(reader[index_id], reader[index_grade], reader[index_name], reader[index_star], reader[index_order], reader[index_color],
+                reader[index_tier]);
+
+            gameItemGrades.Add(data);
+            //titleInfoDatas.Add(data);
+        }
+    }
 
     public void LoadVipInfoInfo()
     {
@@ -473,26 +534,22 @@ public class MyCsvLoad : Singleton<MyCsvLoad> {
         heroTypeDatas.Clear();
 
         while (reader.ReadNextRecord())
-        {
-            // 제외
-            if (reader[index_category] == "hero" && reader[index_playable] == "1" && reader[index_disabled] != "1")
-            {
-                HeroTypeData data = new HeroTypeData();
+        {            
+            HeroTypeData data = new HeroTypeData();
                 
-                HeroPanel.Hero_Class hero_class = GetClassStringToEnum(reader[index_class]);
-                HeroPanel.Hero_Element element = GetElementStringToEnum(reader[index_element]);
+            HeroPanel.Hero_Class hero_class = GetClassStringToEnum(reader[index_class]);
+            HeroPanel.Hero_Element element = GetElementStringToEnum(reader[index_element]);
                  
-                data.Set(reader[index_id],
-                    reader[index_name], reader[index_nickname], reader[index_category],
-                    reader[index_kingdom],
-                    hero_class, reader[index_gender],
-                    reader[index_tier], reader[index_rarity],
-                    reader[index_portrait], reader[index_playable],
-                    reader[index_hide_card], reader[index_disabled],
-                    element);
+            data.Set(reader[index_id],
+                reader[index_name], reader[index_nickname], reader[index_category],
+                reader[index_kingdom],
+                hero_class, reader[index_gender],
+                reader[index_tier], reader[index_rarity],
+                reader[index_portrait], reader[index_playable],
+                reader[index_hide_card], reader[index_disabled],
+                element);
 
-                heroTypeDatas.Add(data);
-            }
+            heroTypeDatas.Add(data);            
         }
 
         // Sort

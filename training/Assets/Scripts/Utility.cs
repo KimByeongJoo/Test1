@@ -101,6 +101,106 @@ public class Utility {
     {
         return string.Format("element_icon_{0}", hero_element.ToString());        
     }
+    
+    static public string KingdomEnumToKoreanString(HeroPanel.Hero_Kingdom kingdom)
+    {
+        switch (kingdom)
+        {
+            case HeroPanel.Hero_Kingdom.all:
+                return "국가";
+            case HeroPanel.Hero_Kingdom.ancient:
+                return "춘추전국";
+            case HeroPanel.Hero_Kingdom.chock:
+                return "촉나라";
+            case HeroPanel.Hero_Kingdom.chohan:
+                return "초한쟁패";
+            case HeroPanel.Hero_Kingdom.etc:
+                return "세외";
+            case HeroPanel.Hero_Kingdom.han:
+                return "한나라";
+            case HeroPanel.Hero_Kingdom.oh:
+                return "오나라";
+            case HeroPanel.Hero_Kingdom.samurai:
+                return "사무라이";
+            case HeroPanel.Hero_Kingdom.wii:
+                return "위나라";
+            default:
+                return "";
+        }
+    }
+
+    static public void CalcPopupPosition(UIPanel panel_popup, ItemBoxPopup popup, Reward_ItemBox itemBox)
+    {
+        UIWidget boxWidget = itemBox.GetBoxWidget();
+        Vector3 box_WorldPos = boxWidget.worldCenter;
+
+        UIWidget popupBgSprite = popup.GetSpriteWidget();       
+
+        float box_half_size_y = (boxWidget.worldCorners[1].y - boxWidget.worldCorners[0].y) / 2;
+        float popup_half_size_y = (popupBgSprite.worldCorners[1].y - popupBgSprite.worldCorners[0].y) / 2;
+        
+        // 아랫쪽에 생성
+        Debug.Log("itemBox_world_Pos : " + itemBox.transform.position + "half_size_y : " + box_half_size_y);
+        Debug.Log("popup half size : " + popup_half_size_y);
+
+        Vector3 worldPos = itemBox.transform.position;
+        if (box_WorldPos.y > UICamera.mainCamera.transform.position.y)
+        {
+            worldPos.y -= box_half_size_y;
+            worldPos.y -= popup_half_size_y;
+        }
+
+        //popup.transform.position = worldPos;        
+        if (box_WorldPos.y <= UICamera.mainCamera.transform.position.y)
+        {
+            worldPos.y += box_half_size_y;
+            worldPos.y += popup_half_size_y;
+        }
+        popup.SetPosition(worldPos);
+
+        //CapturedPositionByPanel(panel_popup, popup);
+    }
+
+    static public void CapturedPositionByPanel(UIPanel targetPanel, ItemBoxPopup popup)
+    {
+        UIWidget popupWidget = popup.GetWidget();
+
+        // right 
+        float value = popupWidget.worldCorners[3].x - targetPanel.worldCorners[3].x;
+        if (value > 0)
+        {
+            Vector3 tempPos = popupWidget.transform.position;
+            tempPos.x -= value;
+            popupWidget.transform.position = tempPos;
+        }
+
+        // left
+        value = popupWidget.worldCorners[0].x - targetPanel.worldCorners[0].x;
+        if (value < 0)
+        {
+            Vector3 tempPos = popupWidget.transform.position;
+            tempPos.x -= value;
+            popupWidget.transform.position = tempPos;
+        }
+
+        // top
+        value = popupWidget.worldCorners[1].y - targetPanel.worldCorners[1].y;
+        if (value > 0)
+        {
+            Vector3 tempPos = popupWidget.transform.position;
+            tempPos.y -= value;
+            popupWidget.transform.position = tempPos;
+        }
+
+        // bottom
+        value = popupWidget.worldCorners[0].y - targetPanel.worldCorners[0].y;
+        if (value < 0)
+        {
+            Vector3 tempPos = popupWidget.transform.position;
+            tempPos.y -= value;
+            popupWidget.transform.position = tempPos;
+        }        
+    }
 
     static public void SetSpriteSortingLayerRecursive(GameObject parent, string layerName)
     {

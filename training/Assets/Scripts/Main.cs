@@ -214,27 +214,7 @@ public class Main : Singleton<Main> {
         //lst_OpenedPanel.Add(panel);
         current_panel_depth += panel.plusDepth;
         panel.SetPanelDepth(current_panel_depth);
-    }
-
-    //public int GetTopDepth()
-    //{
-    //    if (lst_OpenedPanel.Count == 0)
-    //        return 0;
-
-    //    int top_depth = 0;
-
-    //    for(int i = 0; i < lst_OpenedPanel.Count; i++)
-    //    {
-    //        int panel_depth = lst_OpenedPanel[i].GetPanelDepth();
-
-    //        if (panel_depth > top_depth)
-    //        {
-    //            top_depth = panel_depth;
-    //        }
-    //    }
-
-    //    return top_depth;
-    //}
+    }        
 
     public void DeletePanelAndDepth(MyPanel myPanel)
     {

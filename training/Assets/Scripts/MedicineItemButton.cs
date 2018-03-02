@@ -15,6 +15,9 @@ public class MedicineItemButton : MonoBehaviour {
     [SerializeField]
     UILabel label_desciption;
 
+    [SerializeField]
+    Reward_ItemBox reward_ItemBox;
+
     Vector2 rawSize = Vector2.one;
 
     private void Awake()
@@ -23,13 +26,22 @@ public class MedicineItemButton : MonoBehaviour {
         rawSize.y = 64;
     }
 
-    public void Set(string sprite_Name, int count, string name, string description)
+    public void Set(ItemTypeData data)
     {
-        Utility.ChangeSpriteAspectSnap(sprite_icon, Main.Instance.GetItemSpriteByName(sprite_Name), rawSize);
+        //Utility.ChangeSpriteAspectSnap(sprite_icon, Main.Instance.GetItemSpriteByName(data._sprite), rawSize);
                 
-        label_count.text = count.ToString();
-        label_name.text = name;
-        label_desciption.text = description;
+        label_count.text = data._max_stack.ToString();
+        label_name.text = data._name;
+        label_desciption.text = data._description;
+
+        //Color tempColor = MyCsvLoad.Instance.GetGameItemGradeByGradeID(data._grade)._color;
+        RewardItem item = new RewardItem();
+        item.itemId = data._id;
+        item.count = data._max_stack;
+        item.itemKind = "GameItemType";
+        item.star = data._star;
+
+        reward_ItemBox.Set(item);
     }
     public void SetWidth(int x)
     {

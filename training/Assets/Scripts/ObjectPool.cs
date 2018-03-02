@@ -18,7 +18,9 @@ public class ObjectPool : MonoBehaviour {
 
     private void OnDestroy()
     {
-        prefabs.Clear();
+        if(prefabs != null)
+            prefabs.Clear();
+
         _instance = null;
     }
     
