@@ -1,0 +1,10 @@
+﻿string,string,string,int,uint,int,string
+id,grade,name,star,order,color,tier
+trash,T,하급,1,7,194 189 126,D
+normal,N,일반,2,6,255 255 255,D
+magic,M,고급,3,5,16 189 16,C
+rare,R,희귀,4,4,0 168 255,B
+unique,U,유물,5,3,141 72 255,A
+hero,H,영웅,6,2,211 50 0,S
+legend,L,전설,7,1,255 237 0,S
+set,S,세트,6,2,0 255 0,

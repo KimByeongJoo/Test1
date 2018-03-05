@@ -181,6 +181,8 @@ public class MedicineShopPanel : MyPanel
             wrap.onInitializeItem = OnInitializeHeroCards;
 
         panel.alpha = 0;
+        panel_popup.alpha = 0;
+
     }
 
     void Start()
@@ -208,7 +210,7 @@ public class MedicineShopPanel : MyPanel
         scrollView_StartPos = scrollView.panel.transform.localPosition;
         SpringPanel.Begin(scrollView.panel.cachedGameObject, scrollView_StartPos, 8);
 
-        StartCoroutine("initScroll");
+        StartCoroutine("initScroll");        
     }
 
     IEnumerator initScroll()
@@ -219,6 +221,8 @@ public class MedicineShopPanel : MyPanel
 
         scrollView.ResetPosition();
         scrollView_rightItems.ResetPosition();
+
+        panel_popup.alpha = 1;
 
         //SetItemButtonWidth();
         StopCoroutine("initScroll");
@@ -773,21 +777,16 @@ public class MedicineShopPanel : MyPanel
                 else
                 {
                     popup.Set(itemBox, itemKind);
-                }                
-                StartCoroutine(ActiveAfterOneFrame(itemBox));
+                }
+                panel_popup.alpha = 1;                     
+                //panel_popup.gameObject.SetActive(true);
+                Utility.CalcPopupPosition(panel_popup, popup, itemBox);
             }
             else
             {
-                panel_popup.gameObject.SetActive(false);
+                panel_popup.alpha = 0;
+                //panel_popup.gameObject.SetActive(false);
             }
         }
-    }
-
-    IEnumerator ActiveAfterOneFrame(Reward_ItemBox itemBox)
-    {
-        yield return null;
-        panel_popup.gameObject.SetActive(true);
-        Utility.CalcPopupPosition(panel_popup, popup, itemBox);
-        StopCoroutine(ActiveAfterOneFrame(itemBox));
-    }
+    }    
 }

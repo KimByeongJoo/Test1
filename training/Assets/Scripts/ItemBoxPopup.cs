@@ -89,19 +89,25 @@ public class ItemBoxPopup : MonoBehaviour {
             }
             _itemBox.SetActiveCount(false);
         }
+        Vector3[] sprite_bg_worldCorners = sprite_bg.worldCorners;
+        Vector3[] label_description_worldCorners = label_description.worldCorners;
 
-        float value = sprite_bg.worldCorners[0].y - label_description.worldCorners[0].y;
+        float value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
 
         while (value < 0)
         {
             NGUIMath.ResizeWidget(sprite_bg, UIWidget.Pivot.Bottom, 0, 10, 0, 0, 1000, 1000);
-            value = sprite_bg.worldCorners[0].y - label_description.worldCorners[0].y;
+            value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
+            sprite_bg_worldCorners = sprite_bg.worldCorners;
+            label_description_worldCorners = label_description.worldCorners;
         }        
 
         while (value > 0)
         {
             NGUIMath.ResizeWidget(sprite_bg, UIWidget.Pivot.Bottom, 0, -10, 0, 0, 1000, 1000);
-            value = sprite_bg.worldCorners[0].y - label_description.worldCorners[0].y;
+            value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
+            sprite_bg_worldCorners = sprite_bg.worldCorners;
+            label_description_worldCorners = label_description.worldCorners;
         }
         NGUIMath.ResizeWidget(sprite_bg, UIWidget.Pivot.Bottom, 0, -10, 0, 0, 1000, 1000);        
     }

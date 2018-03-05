@@ -134,15 +134,15 @@ public class Utility {
         UIWidget boxWidget = itemBox.GetBoxWidget();
         Vector3 box_WorldPos = boxWidget.worldCenter;
 
-        UIWidget popupBgSprite = popup.GetSpriteWidget();       
+        UIWidget popupBgSprite = popup.GetSpriteWidget();
 
-        float box_half_size_y = (boxWidget.worldCorners[1].y - boxWidget.worldCorners[0].y) / 2;
-        float popup_half_size_y = (popupBgSprite.worldCorners[1].y - popupBgSprite.worldCorners[0].y) / 2;
+        Vector3[] boxWidget_worldCorners = boxWidget.worldCorners;
+        Vector3[] popupBgSprite_worldCorners = popupBgSprite.worldCorners;
+
+        float box_half_size_y = (boxWidget_worldCorners[1].y - boxWidget_worldCorners[0].y) / 2;
+        float popup_half_size_y = (popupBgSprite_worldCorners[1].y - popupBgSprite_worldCorners[0].y) / 2;
         
-        // 아랫쪽에 생성
-        Debug.Log("itemBox_world_Pos : " + itemBox.transform.position + "half_size_y : " + box_half_size_y);
-        Debug.Log("popup half size : " + popup_half_size_y);
-        
+        // 아랫쪽에 생성        
         Vector3 worldPos = itemBox.transform.position;
         if (box_WorldPos.y > UICamera.mainCamera.transform.position.y)
         {
@@ -171,8 +171,11 @@ public class Utility {
     {
         UIWidget popupWidget = popup.GetWidget();
 
+        Vector3[] popupWidget_worldCorners = popupWidget.worldCorners;
+        Vector3[] targetPanel_worldCorners = targetPanel.worldCorners;
+
         // right 
-        float value = popupWidget.worldCorners[3].x - targetPanel.worldCorners[3].x;
+        float value = popupWidget_worldCorners[3].x - targetPanel_worldCorners[3].x;
         if (value > 0)
         {
             Vector3 tempPos = popupWidget.transform.position;
@@ -181,7 +184,7 @@ public class Utility {
         }
 
         // left
-        value = popupWidget.worldCorners[0].x - targetPanel.worldCorners[0].x;
+        value = popupWidget_worldCorners[0].x - targetPanel_worldCorners[0].x;
         if (value < 0)
         {
             Vector3 tempPos = popupWidget.transform.position;
@@ -190,7 +193,7 @@ public class Utility {
         }
 
         // top
-        value = popupWidget.worldCorners[1].y - targetPanel.worldCorners[1].y;
+        value = popupWidget_worldCorners[1].y - targetPanel_worldCorners[1].y;
         if (value > 0)
         {
             Vector3 tempPos = popupWidget.transform.position;
@@ -199,7 +202,7 @@ public class Utility {
         }
 
         // bottom
-        value = popupWidget.worldCorners[0].y - targetPanel.worldCorners[0].y;
+        value = popupWidget_worldCorners[0].y - targetPanel_worldCorners[0].y;
         if (value < 0)
         {
             Vector3 tempPos = popupWidget.transform.position;
