@@ -274,7 +274,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -452, y: 288, z: 0}
+  m_LocalPosition: {x: -389, y: 287, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 447418}
@@ -289,7 +289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -565, y: 285, z: 0}
+  m_LocalPosition: {x: -502, y: 284, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 409206}
@@ -587,7 +587,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mSprite: {fileID: 21300000, guid: 78a47af7d54597f40a2d5867fefbe6fc, type: 3}
+  mSprite: {fileID: 21300000, guid: df28cd892f3384a45a2671384a00d247, type: 3}
   mMat: {fileID: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -780,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1c884f9ef8c3e4ea0905a097e0af74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plusDepth: 50
   exp_Plus_Amount: 1
   kingdomPoint_Plus_Amount: 1
   panel_Mask: {fileID: 11434146}

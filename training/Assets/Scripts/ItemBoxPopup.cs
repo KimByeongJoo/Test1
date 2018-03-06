@@ -94,7 +94,7 @@ public class ItemBoxPopup : MonoBehaviour {
 
         float value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
 
-        while (value < 0)
+        while (value < 0.01f)
         {
             NGUIMath.ResizeWidget(sprite_bg, UIWidget.Pivot.Bottom, 0, 10, 0, 0, 1000, 1000);
             value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
@@ -102,7 +102,7 @@ public class ItemBoxPopup : MonoBehaviour {
             label_description_worldCorners = label_description.worldCorners;
         }        
 
-        while (value > 0)
+        while (value > 0.01f)
         {
             NGUIMath.ResizeWidget(sprite_bg, UIWidget.Pivot.Bottom, 0, -10, 0, 0, 1000, 1000);
             value = sprite_bg_worldCorners[0].y - label_description_worldCorners[0].y;
